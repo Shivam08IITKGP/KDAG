@@ -5,6 +5,6 @@ source:
       option_title: "PAT Credentials"
       personal_access_token: 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  # Your GitHub Personal Access Token
     repositories:
-      - your-org/your-repo  # e.g., pathwaycom/pathway
+      - Shivam08IITKGP/KDAG  # e.g., pathwaycom/pathway
     api_url: "https://api.github.com/"
   streams: commits  # What to ingest
