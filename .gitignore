@@ -4,3 +4,9 @@ neo4j.txt
 __pycache__/
 *.pyc
 .env
+Graphrag/output/checkpoint*
+Graphrag/output/checkpoints/
+Graphrag/__pycache__/
+OPENAI_API_KEY.txt
+pathway_project_key.txt
+

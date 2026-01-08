@@ -1,2 +1,7 @@
-pathway
-airbyte-source-github
+<!-- graphiti-core -->
+<!-- openai -->
+python-dotenv
+gdown
+pydantic
+neo4j
+zep_cloud
