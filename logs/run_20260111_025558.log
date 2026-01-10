@@ -1,0 +1,2 @@
+2026-01-11 02:55:58 | INFO     | root | setup_logging:74 | Logging initialized. Log file: logs/run_20260111_025558.log
+2026-01-11 02:55:58 | INFO     | __main__ | main:168 | Starting Evidence-Grounded Backstory Consistency System

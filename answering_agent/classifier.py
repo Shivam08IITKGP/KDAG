@@ -52,6 +52,7 @@ def classify(
     character_name: str,
     backstory: str,
     graph_path: str | None,
+    character_summary: str,
     llm: ChatOpenAI,
 ) -> ClassificationOutput:
     """Classify backstory as consistent or contradicting.
@@ -61,6 +62,7 @@ def classify(
         character_name: Name of the character.
         backstory: The backstory to check.
         graph_path: Path to the graph file.
+        character_summary: Canonical summary of the character.
         llm: ChatOpenAI instance.
         
     Returns:
@@ -88,6 +90,7 @@ def classify(
         character_name=character_name,
         backstory=backstory,
         graph_summary=graph_summary,
+        character_summary=character_summary,
     )
     
     logger.debug(f"Classification prompt: {prompt[:200]}...")

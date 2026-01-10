@@ -167,17 +167,22 @@ def main():
     logger = logging.getLogger(__name__)
     logger.info("Starting Evidence-Grounded Backstory Consistency System")
 
-    # Get number of rows to process from user input
+    # Get row range to process from user input
     try:
-        num_rows = int(input("Enter number of rows to process from train.csv (default: 2): ") or "2")
+        start_row = int(input("Enter start row index (0-indexed, default: 0): ") or "0")
+        end_row = int(input(f"Enter end row index (0-indexed, default: {start_row}): ") or str(start_row))
+        if start_row > end_row:
+            logger.warning(f"Start row {start_row} > end row {end_row}. Swapping them.")
+            start_row, end_row = end_row, start_row
     except ValueError:
-        num_rows = 2
-        logger.info("Invalid input, using default: 2 rows")
+        start_row = 0
+        end_row = 0
+        logger.info("Invalid input, using default: start=0, end=0")
 
     # Read data using input.py function
     try:
-        df = get_input_data(num_rows)
-        logger.info(f"Loaded {len(df)} rows from train.csv")
+        df = get_input_data(start_row, end_row)
+        logger.info(f"Loaded rows {start_row} to {end_row} ({len(df)} total) from train.csv")
         logger.info(f"Processing {len(df)} backstories")
     except Exception as e:
         logger.error(f"Error reading train.csv: {e}")
@@ -191,9 +196,9 @@ def main():
     logger.info(f"Initialized {output_file}")
 
     flag = defaultdict(int)
-    for idx, row in df.iterrows():
+    for i, (idx, row) in enumerate(df.iterrows()):
         print(f"\n{'='*80}")
-        print(f"Processing Row {idx + 1}/{len(df)}")
+        print(f"[{i + 1}/{len(df)}] Processing CSV Row Index: {idx}")
         print(f"Character: {row['char']}")
         print(f"Book: {row['book_name']}")
         print(f"{'='*80}\n")
@@ -243,7 +248,7 @@ def main():
             logger.info(f"Appended result for {row['char']} to {output_file}")
             
         except Exception as e:
-            logger.error(f"Error processing row {idx + 1}: {e}", exc_info=True)
+            logger.error(f"Error processing row index {idx}: {e}", exc_info=True)
             print(f"❌ Error processing this row: {e}")
             continue
     

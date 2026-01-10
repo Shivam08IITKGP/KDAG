@@ -1,0 +1,862 @@
+2026-01-11 02:59:46 | INFO     | root | setup_logging:74 | Logging initialized. Log file: logs/run_20260111_025946.log
+2026-01-11 02:59:46 | INFO     | __main__ | main:168 | Starting Evidence-Grounded Backstory Consistency System
+2026-01-11 03:00:15 | INFO     | __main__ | main:185 | Loaded rows 3 to 5 (3 total) from train.csv
+2026-01-11 03:00:15 | INFO     | __main__ | main:186 | Processing 3 backstories
+2026-01-11 03:00:15 | INFO     | __main__ | main:196 | Initialized output.csv
+2026-01-11 03:00:15 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 03:00:15 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x124b8c380>
+2026-01-11 03:00:15 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'GET']>
+2026-01-11 03:00:15 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:15 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'GET']>
+2026-01-11 03:00:15 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:15 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'GET']>
+2026-01-11 03:00:15 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-type', b'application/json'), (b'content-encoding', b'zstd'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'date', b'Sat, 10 Jan 2026 21:30:15 GMT')])
+2026-01-11 03:00:15 | INFO     | httpx | _send_single_request:1025 | HTTP Request: GET http://localhost:6333 "HTTP/1.1 200 OK"
+2026-01-11 03:00:15 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'GET']>
+2026-01-11 03:00:15 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:15 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:15 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:15 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 03:00:15 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 03:00:15 | INFO     | sentence_transformers.SentenceTransformer | __init__:219 | Use pytorch device_name: mps
+2026-01-11 03:00:15 | INFO     | sentence_transformers.SentenceTransformer | __init__:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-11 03:00:15 | DEBUG    | urllib3.connectionpool | _new_conn:1049 | Starting new HTTPS connection (1): huggingface.co:443
+2026-01-11 03:00:16 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-11 03:00:16 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2026-01-11 03:00:16 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-11 03:00:16 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-11 03:00:17 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-11 03:00:17 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-11 03:00:17 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 307 0
+2026-01-11 03:00:17 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md HTTP/1.1" 200 0
+2026-01-11 03:00:17 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-11 03:00:18 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2026-01-11 03:00:18 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 307 0
+2026-01-11 03:00:18 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json HTTP/1.1" 200 0
+2026-01-11 03:00:18 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2026-01-11 03:00:18 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 307 0
+2026-01-11 03:00:18 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json HTTP/1.1" 200 0
+2026-01-11 03:00:19 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2026-01-11 03:00:19 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json HTTP/1.1" 200 0
+2026-01-11 03:00:19 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2026-01-11 03:00:19 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=True&expand=False HTTP/1.1" 200 6465
+2026-01-11 03:00:20 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
+2026-01-11 03:00:20 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
+2026-01-11 03:00:20 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6908
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x124f877a0>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'GET']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'GET']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'GET']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-encoding', b'zstd'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-type', b'application/json'), (b'date', b'Sat, 10 Jan 2026 21:30:36 GMT')])
+2026-01-11 03:00:36 | INFO     | httpx | _send_single_request:1025 | HTTP Request: GET http://localhost:6333 "HTTP/1.1 200 OK"
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'GET']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1249f8470>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'GET']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'GET']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'GET']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-type', b'application/json'), (b'content-encoding', b'zstd'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'date', b'Sat, 10 Jan 2026 21:30:36 GMT')])
+2026-01-11 03:00:36 | INFO     | httpx | _send_single_request:1025 | HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'GET']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x124972d20>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-encoding', b'zstd'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-type', b'application/json'), (b'date', b'Sat, 10 Jan 2026 21:30:36 GMT')])
+2026-01-11 03:00:36 | INFO     | httpx | _send_single_request:1025 | HTTP Request: PUT http://localhost:6333/collections/the%20count%20of%20monte%20cristo_collection/points?wait=true "HTTP/1.1 200 OK"
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1249f8380>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-encoding', b'zstd'), (b'content-type', b'application/json'), (b'date', b'Sat, 10 Jan 2026 21:30:36 GMT')])
+2026-01-11 03:00:36 | INFO     | httpx | _send_single_request:1025 | HTTP Request: PUT http://localhost:6333/collections/the%20count%20of%20monte%20cristo_collection/points?wait=true "HTTP/1.1 200 OK"
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x124a48e90>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-type', b'application/json'), (b'content-encoding', b'zstd'), (b'date', b'Sat, 10 Jan 2026 21:30:36 GMT')])
+2026-01-11 03:00:36 | INFO     | httpx | _send_single_request:1025 | HTTP Request: PUT http://localhost:6333/collections/the%20count%20of%20monte%20cristo_collection/points?wait=true "HTTP/1.1 200 OK"
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x124f87fb0>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-type', b'application/json'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-encoding', b'zstd'), (b'date', b'Sat, 10 Jan 2026 21:30:36 GMT')])
+2026-01-11 03:00:36 | INFO     | httpx | _send_single_request:1025 | HTTP Request: PUT http://localhost:6333/collections/the%20count%20of%20monte%20cristo_collection/points?wait=true "HTTP/1.1 200 OK"
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x124f87bc0>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-encoding', b'zstd'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-type', b'application/json'), (b'date', b'Sat, 10 Jan 2026 21:30:36 GMT')])
+2026-01-11 03:00:36 | INFO     | httpx | _send_single_request:1025 | HTTP Request: PUT http://localhost:6333/collections/the%20count%20of%20monte%20cristo_collection/points?wait=true "HTTP/1.1 200 OK"
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x124f84b90>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-type', b'application/json'), (b'content-encoding', b'zstd'), (b'date', b'Sat, 10 Jan 2026 21:30:36 GMT')])
+2026-01-11 03:00:36 | INFO     | httpx | _send_single_request:1025 | HTTP Request: PUT http://localhost:6333/collections/the%20count%20of%20monte%20cristo_collection/points?wait=true "HTTP/1.1 200 OK"
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 03:00:36 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x124f85d90>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'PUT']>
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:36 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'PUT']>
+2026-01-11 03:00:37 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-type', b'application/json'), (b'content-encoding', b'zstd'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'date', b'Sat, 10 Jan 2026 21:30:36 GMT')])
+2026-01-11 03:00:37 | INFO     | httpx | _send_single_request:1025 | HTTP Request: PUT http://localhost:6333/collections/the%20count%20of%20monte%20cristo_collection/points?wait=true "HTTP/1.1 200 OK"
+2026-01-11 03:00:37 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'PUT']>
+2026-01-11 03:00:37 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:37 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:37 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:37 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 03:00:37 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 03:00:37 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 03:00:37 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x124f86c60>
+2026-01-11 03:00:37 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'GET']>
+2026-01-11 03:00:37 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:37 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'GET']>
+2026-01-11 03:00:37 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:37 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'GET']>
+2026-01-11 03:00:37 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-encoding', b'zstd'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-type', b'application/json'), (b'date', b'Sat, 10 Jan 2026 21:30:36 GMT')])
+2026-01-11 03:00:37 | INFO     | httpx | _send_single_request:1025 | HTTP Request: GET http://localhost:6333 "HTTP/1.1 200 OK"
+2026-01-11 03:00:37 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'GET']>
+2026-01-11 03:00:37 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:37 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:37 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:37 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 03:00:37 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 03:00:37 | INFO     | sentence_transformers.SentenceTransformer | __init__:219 | Use pytorch device_name: mps
+2026-01-11 03:00:37 | INFO     | sentence_transformers.SentenceTransformer | __init__:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-11 03:00:37 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-11 03:00:37 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2026-01-11 03:00:37 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-11 03:00:37 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-11 03:00:38 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-11 03:00:38 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-11 03:00:38 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 307 0
+2026-01-11 03:00:38 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md HTTP/1.1" 200 0
+2026-01-11 03:00:38 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-11 03:00:38 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2026-01-11 03:00:39 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 307 0
+2026-01-11 03:00:39 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json HTTP/1.1" 200 0
+2026-01-11 03:00:39 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2026-01-11 03:00:39 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 307 0
+2026-01-11 03:00:39 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json HTTP/1.1" 200 0
+2026-01-11 03:00:40 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2026-01-11 03:00:40 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json HTTP/1.1" 200 0
+2026-01-11 03:00:40 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2026-01-11 03:00:40 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=True&expand=False HTTP/1.1" 200 6465
+2026-01-11 03:00:41 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
+2026-01-11 03:00:41 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
+2026-01-11 03:00:41 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6908
+2026-01-11 03:00:41 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 03:00:41 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x125056d80>
+2026-01-11 03:00:41 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:41 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:41 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-11 03:00:41 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:41 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:41 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-type', b'application/json'), (b'content-encoding', b'zstd'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'date', b'Sat, 10 Jan 2026 21:30:41 GMT')])
+2026-01-11 03:00:41 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST http://localhost:6333/collections/the%20count%20of%20monte%20cristo_collection/points/query "HTTP/1.1 200 OK"
+2026-01-11 03:00:41 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-11 03:00:41 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:41 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:41 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:41 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 03:00:41 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 03:00:41 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /cross-encoder/ms-marco-MiniLM-L-6-v2/resolve/main/config.json HTTP/1.1" 307 0
+2026-01-11 03:00:42 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /cross-encoder/ms-marco-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 307 0
+2026-01-11 03:00:42 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/cross-encoder/ms-marco-MiniLM-L6-v2/c5ee24cb16019beea0893ab7796b1df96625c6b8/config.json HTTP/1.1" 200 0
+2026-01-11 03:00:42 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /cross-encoder/ms-marco-MiniLM-L-6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2026-01-11 03:00:42 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /cross-encoder/ms-marco-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2026-01-11 03:00:42 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/cross-encoder/ms-marco-MiniLM-L6-v2/c5ee24cb16019beea0893ab7796b1df96625c6b8/tokenizer_config.json HTTP/1.1" 200 0
+2026-01-11 03:00:42 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 307 147
+2026-01-11 03:00:43 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2026-01-11 03:00:43 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main?recursive=True&expand=False HTTP/1.1" 307 120
+2026-01-11 03:00:43 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main?recursive=True&expand=False HTTP/1.1" 200 5436
+2026-01-11 03:00:44 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /cross-encoder/ms-marco-MiniLM-L-6-v2/resolve/main/README.md HTTP/1.1" 307 0
+2026-01-11 03:00:44 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /cross-encoder/ms-marco-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 307 0
+2026-01-11 03:00:44 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/cross-encoder/ms-marco-MiniLM-L6-v2/c5ee24cb16019beea0893ab7796b1df96625c6b8/README.md HTTP/1.1" 200 0
+2026-01-11 03:00:44 | INFO     | sentence_transformers.cross_encoder.CrossEncoder | __init__:228 | Use pytorch device: mps
+2026-01-11 03:00:45 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/cross-encoder/ms-marco-MiniLM-L-6-v2 HTTP/1.1" 307 82
+2026-01-11 03:00:45 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/cross-encoder/ms-marco-MiniLM-L6-v2 HTTP/1.1" 200 5370
+2026-01-11 03:00:46 | INFO     | __main__ | run_pipeline_for_row:135 | Processing: Noirtier from The Count of Monte Cristo
+2026-01-11 03:00:46 | INFO     | __main__ | run_pipeline_for_row:154 | Running pipeline
+2026-01-11 03:00:46 | INFO     | extraction_agent.main | extract:48 | Starting extraction agent
+2026-01-11 03:00:46 | INFO     | extraction_agent.main | extract:49 | Book: The Count of Monte Cristo, Character: Noirtier
+2026-01-11 03:00:46 | INFO     | extraction_agent.main | extract:54 | Using character summary for Noirtier
+2026-01-11 03:00:46 | DEBUG    | extraction_agent.main | extract:55 | Summary length: 1922 characters
+2026-01-11 03:00:46 | DEBUG    | extraction_agent.main | extract:72 | Extraction prompt: You are a neutral query generator.
+
+Your goal is to verify the factual correctness of a character backstory by retrieving *all relevant canonical information* about the character from the book.
+
+CHARACTER CANONICAL INFORMATION:
+Noirtier de Villefort is the father of the Procureur du Roi, Gérard de Villefort, and a former French revolutionary of significant influence. Previously a Girondin and a Senator under Napoleon, he was a zealous Bonapartist and president of a Bonapartist club in Paris. In the novel's present timeline, he is an old man suffering from complete paralysis; he is mute and immobile, described as a "dumb and frozen carcass" who communicates solely through the expression of his eyes, which retain his formidable intelligence and commanding will.
+
+Historically, Noirtier was the intended recipient of the conspiratorial letter from the Island of Elba carried by Edmond Dantès, a fact his son concealed to protect his own career, leading to Dantès' imprisonment. He was also responsible for the death of General Quesnel (Baron d'Épinay) in a duel in 1815, a secret that drives his fierce opposition to the marriage of his granddaughter, Valentine, to Quesnel's son, Franz d'Épinay. Despite his physical helplessness, Noirtier successfully prevents this union by dictating a will that disinherits Valentine if she marries Franz. Later, Noirtier becomes the target of a poisoning attempt by Madame de Villefort; he survives lethal lemonade because his medical treatment for paralysis involves the ingestion of brucine, making him immune to the poison, though the draught kills his faithful servant, Barrois.
+
+Noirtier shares a deep, protective bond with his granddaughter, Valentine de Villefort, who is his sole comfort and the only person capable of interpreting his silent communication. His relationship with his son, Villefort, is strained by their opposing political histories—Villefort being a Royalist and Noirtier a Bonapartist—and is maintained largely for the sake of reputation and safety. He holds his grandson, Edward, in disfavor. He was faithfully served by Barrois for twenty-five years until the servant's death.
+
+RULES:
+- DO NOT assume the backstory is true.
+- DO NOT generate queries that presuppose events (e.g., "Where was Faria re-arrested in 1815?").
+- Use the canonical character information above to understand who the character is.
+- Generate queries that retrieve:
+  • the character's biography
+  • their timeline (birth, arrest, imprisonment)
+  • major events involving them
+  • relationships with important characters
+  • any canonical event that might confirm OR contradict the backstory
+
+TASK:
+Generate up to 5 diagnostic queries that help verify the backstory.
+
+Book: The Count of Monte Cristo
+Character: Noirtier
+Backstory: Villefort’s drift toward the royalists disappointed him; father and son argued politics at every family gathering.
+
+Return ONLY a JSON list of strings.
+Example: ["Noirtier biography timeline", "Noirtier arrest imprisonment history", "Noirtier family relationships"]
+
+2026-01-11 03:00:46 | INFO     | extraction_agent.main | extract:75 | Generating queries via LLM
+2026-01-11 03:00:46 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse', 'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-fdf5ce42-58ec-44d2-8595-25a6bb4f7d53', 'post_parser': <function Completions.parse.<locals>.parser at 0x139912840>, 'json_data': {'messages': [{'content': 'You are a neutral query generator.\n\nYour goal is to verify the factual correctness of a character backstory by retrieving *all relevant canonical information* about the character from the book.\n\nCHARACTER CANONICAL INFORMATION:\nNoirtier de Villefort is the father of the Procureur du Roi, Gérard de Villefort, and a former French revolutionary of significant influence. Previously a Girondin and a Senator under Napoleon, he was a zealous Bonapartist and president of a Bonapartist club in Paris. In the novel\'s present timeline, he is an old man suffering from complete paralysis; he is mute and immobile, described as a "dumb and frozen carcass" who communicates solely through the expression of his eyes, which retain his formidable intelligence and commanding will.\n\nHistorically, Noirtier was the intended recipient of the conspiratorial letter from the Island of Elba carried by Edmond Dantès, a fact his son concealed to protect his own career, leading to Dantès\' imprisonment. He was also responsible for the death of General Quesnel (Baron d\'Épinay) in a duel in 1815, a secret that drives his fierce opposition to the marriage of his granddaughter, Valentine, to Quesnel\'s son, Franz d\'Épinay. Despite his physical helplessness, Noirtier successfully prevents this union by dictating a will that disinherits Valentine if she marries Franz. Later, Noirtier becomes the target of a poisoning attempt by Madame de Villefort; he survives lethal lemonade because his medical treatment for paralysis involves the ingestion of brucine, making him immune to the poison, though the draught kills his faithful servant, Barrois.\n\nNoirtier shares a deep, protective bond with his granddaughter, Valentine de Villefort, who is his sole comfort and the only person capable of interpreting his silent communication. His relationship with his son, Villefort, is strained by their opposing political histories—Villefort being a Royalist and Noirtier a Bonapartist—and is maintained largely for the sake of reputation and safety. He holds his grandson, Edward, in disfavor. He was faithfully served by Barrois for twenty-five years until the servant\'s death.\n\nRULES:\n- DO NOT assume the backstory is true.\n- DO NOT generate queries that presuppose events (e.g., "Where was Faria re-arrested in 1815?").\n- Use the canonical character information above to understand who the character is.\n- Generate queries that retrieve:\n  • the character\'s biography\n  • their timeline (birth, arrest, imprisonment)\n  • major events involving them\n  • relationships with important characters\n  • any canonical event that might confirm OR contradict the backstory\n\nTASK:\nGenerate up to 5 diagnostic queries that help verify the backstory.\n\nBook: The Count of Monte Cristo\nCharacter: Noirtier\nBackstory: Villefort’s drift toward the royalists disappointed him; father and son argued politics at every family gathering.\n\nReturn ONLY a JSON list of strings.\nExample: ["Noirtier biography timeline", "Noirtier arrest imprisonment history", "Noirtier family relationships"]\n', 'role': 'user'}], 'model': 'nvidia/nemotron-3-nano-30b-a3b:free', 'response_format': {'type': 'json_schema', 'json_schema': {'name': 'QueryListOutput', 'description': 'Structured output format for query extraction.', 'strict': False, 'schema': {'type': 'object', 'properties': {'queries': {'type': 'array', 'items': {'type': 'string'}}}, 'required': ['queries']}}}, 'stream': False}}
+2026-01-11 03:00:46 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-11 03:00:46 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='openrouter.ai' port=443 local_address=None timeout=None socket_options=None
+2026-01-11 03:00:46 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x124cfd220>
+2026-01-11 03:00:46 | DEBUG    | httpcore.connection | trace:47 | start_tls.started ssl_context=<ssl.SSLContext object at 0x1251ee9d0> server_hostname='openrouter.ai' timeout=None
+2026-01-11 03:00:46 | DEBUG    | httpcore.connection | trace:47 | start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x124cfd0d0>
+2026-01-11 03:00:46 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:46 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:46 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-11 03:00:46 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:46 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:47 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sat, 10 Jan 2026 21:30:47 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-RAY', b'9bbf470a4bfd98f2-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'X-RateLimit-Limit', b'50'), (b'X-RateLimit-Remaining', b'0'), (b'X-RateLimit-Reset', b'1768089600000'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare')])
+2026-01-11 03:00:47 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-11 03:00:47 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-11 03:00:47 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:47 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:47 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:47 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "429 Too Many Requests" Headers({'date': 'Sat, 10 Jan 2026 21:30:47 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9bbf470a4bfd98f2-DEL', 'access-control-allow-origin': '*', 'x-ratelimit-limit': '50', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1768089600000', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare'})
+2026-01-11 03:00:47 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-11 03:00:47 | DEBUG    | openai._base_client | request:1029 | Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1027, in request
+    response.raise_for_status()
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-01-11 03:00:47 | DEBUG    | openai._base_client | _should_retry:774 | Retrying due to status code 429
+2026-01-11 03:00:47 | DEBUG    | openai._base_client | _sleep_for_retry:1068 | 2 retries left
+2026-01-11 03:00:47 | INFO     | openai._base_client | _sleep_for_retry:1071 | Retrying request to /chat/completions in 0.386911 seconds
+2026-01-11 03:00:47 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse', 'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-fdf5ce42-58ec-44d2-8595-25a6bb4f7d53', 'post_parser': <function Completions.parse.<locals>.parser at 0x139912840>, 'json_data': {'messages': [{'content': 'You are a neutral query generator.\n\nYour goal is to verify the factual correctness of a character backstory by retrieving *all relevant canonical information* about the character from the book.\n\nCHARACTER CANONICAL INFORMATION:\nNoirtier de Villefort is the father of the Procureur du Roi, Gérard de Villefort, and a former French revolutionary of significant influence. Previously a Girondin and a Senator under Napoleon, he was a zealous Bonapartist and president of a Bonapartist club in Paris. In the novel\'s present timeline, he is an old man suffering from complete paralysis; he is mute and immobile, described as a "dumb and frozen carcass" who communicates solely through the expression of his eyes, which retain his formidable intelligence and commanding will.\n\nHistorically, Noirtier was the intended recipient of the conspiratorial letter from the Island of Elba carried by Edmond Dantès, a fact his son concealed to protect his own career, leading to Dantès\' imprisonment. He was also responsible for the death of General Quesnel (Baron d\'Épinay) in a duel in 1815, a secret that drives his fierce opposition to the marriage of his granddaughter, Valentine, to Quesnel\'s son, Franz d\'Épinay. Despite his physical helplessness, Noirtier successfully prevents this union by dictating a will that disinherits Valentine if she marries Franz. Later, Noirtier becomes the target of a poisoning attempt by Madame de Villefort; he survives lethal lemonade because his medical treatment for paralysis involves the ingestion of brucine, making him immune to the poison, though the draught kills his faithful servant, Barrois.\n\nNoirtier shares a deep, protective bond with his granddaughter, Valentine de Villefort, who is his sole comfort and the only person capable of interpreting his silent communication. His relationship with his son, Villefort, is strained by their opposing political histories—Villefort being a Royalist and Noirtier a Bonapartist—and is maintained largely for the sake of reputation and safety. He holds his grandson, Edward, in disfavor. He was faithfully served by Barrois for twenty-five years until the servant\'s death.\n\nRULES:\n- DO NOT assume the backstory is true.\n- DO NOT generate queries that presuppose events (e.g., "Where was Faria re-arrested in 1815?").\n- Use the canonical character information above to understand who the character is.\n- Generate queries that retrieve:\n  • the character\'s biography\n  • their timeline (birth, arrest, imprisonment)\n  • major events involving them\n  • relationships with important characters\n  • any canonical event that might confirm OR contradict the backstory\n\nTASK:\nGenerate up to 5 diagnostic queries that help verify the backstory.\n\nBook: The Count of Monte Cristo\nCharacter: Noirtier\nBackstory: Villefort’s drift toward the royalists disappointed him; father and son argued politics at every family gathering.\n\nReturn ONLY a JSON list of strings.\nExample: ["Noirtier biography timeline", "Noirtier arrest imprisonment history", "Noirtier family relationships"]\n', 'role': 'user'}], 'model': 'nvidia/nemotron-3-nano-30b-a3b:free', 'response_format': {'type': 'json_schema', 'json_schema': {'name': 'QueryListOutput', 'description': 'Structured output format for query extraction.', 'strict': False, 'schema': {'type': 'object', 'properties': {'queries': {'type': 'array', 'items': {'type': 'string'}}}, 'required': ['queries']}}}, 'stream': False}}
+2026-01-11 03:00:47 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-11 03:00:47 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:47 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:47 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-11 03:00:47 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:47 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:47 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sat, 10 Jan 2026 21:30:48 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-RAY', b'9bbf47106f2298f2-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'X-RateLimit-Limit', b'50'), (b'X-RateLimit-Remaining', b'0'), (b'X-RateLimit-Reset', b'1768089600000'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare')])
+2026-01-11 03:00:47 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-11 03:00:47 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-11 03:00:47 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:47 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:47 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:47 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "429 Too Many Requests" Headers({'date': 'Sat, 10 Jan 2026 21:30:48 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9bbf47106f2298f2-DEL', 'access-control-allow-origin': '*', 'x-ratelimit-limit': '50', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1768089600000', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare'})
+2026-01-11 03:00:47 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-11 03:00:47 | DEBUG    | openai._base_client | request:1029 | Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1027, in request
+    response.raise_for_status()
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-01-11 03:00:47 | DEBUG    | openai._base_client | _should_retry:774 | Retrying due to status code 429
+2026-01-11 03:00:47 | DEBUG    | openai._base_client | _sleep_for_retry:1066 | 1 retry left
+2026-01-11 03:00:47 | INFO     | openai._base_client | _sleep_for_retry:1071 | Retrying request to /chat/completions in 0.845554 seconds
+2026-01-11 03:00:48 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse', 'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-fdf5ce42-58ec-44d2-8595-25a6bb4f7d53', 'post_parser': <function Completions.parse.<locals>.parser at 0x139912840>, 'json_data': {'messages': [{'content': 'You are a neutral query generator.\n\nYour goal is to verify the factual correctness of a character backstory by retrieving *all relevant canonical information* about the character from the book.\n\nCHARACTER CANONICAL INFORMATION:\nNoirtier de Villefort is the father of the Procureur du Roi, Gérard de Villefort, and a former French revolutionary of significant influence. Previously a Girondin and a Senator under Napoleon, he was a zealous Bonapartist and president of a Bonapartist club in Paris. In the novel\'s present timeline, he is an old man suffering from complete paralysis; he is mute and immobile, described as a "dumb and frozen carcass" who communicates solely through the expression of his eyes, which retain his formidable intelligence and commanding will.\n\nHistorically, Noirtier was the intended recipient of the conspiratorial letter from the Island of Elba carried by Edmond Dantès, a fact his son concealed to protect his own career, leading to Dantès\' imprisonment. He was also responsible for the death of General Quesnel (Baron d\'Épinay) in a duel in 1815, a secret that drives his fierce opposition to the marriage of his granddaughter, Valentine, to Quesnel\'s son, Franz d\'Épinay. Despite his physical helplessness, Noirtier successfully prevents this union by dictating a will that disinherits Valentine if she marries Franz. Later, Noirtier becomes the target of a poisoning attempt by Madame de Villefort; he survives lethal lemonade because his medical treatment for paralysis involves the ingestion of brucine, making him immune to the poison, though the draught kills his faithful servant, Barrois.\n\nNoirtier shares a deep, protective bond with his granddaughter, Valentine de Villefort, who is his sole comfort and the only person capable of interpreting his silent communication. His relationship with his son, Villefort, is strained by their opposing political histories—Villefort being a Royalist and Noirtier a Bonapartist—and is maintained largely for the sake of reputation and safety. He holds his grandson, Edward, in disfavor. He was faithfully served by Barrois for twenty-five years until the servant\'s death.\n\nRULES:\n- DO NOT assume the backstory is true.\n- DO NOT generate queries that presuppose events (e.g., "Where was Faria re-arrested in 1815?").\n- Use the canonical character information above to understand who the character is.\n- Generate queries that retrieve:\n  • the character\'s biography\n  • their timeline (birth, arrest, imprisonment)\n  • major events involving them\n  • relationships with important characters\n  • any canonical event that might confirm OR contradict the backstory\n\nTASK:\nGenerate up to 5 diagnostic queries that help verify the backstory.\n\nBook: The Count of Monte Cristo\nCharacter: Noirtier\nBackstory: Villefort’s drift toward the royalists disappointed him; father and son argued politics at every family gathering.\n\nReturn ONLY a JSON list of strings.\nExample: ["Noirtier biography timeline", "Noirtier arrest imprisonment history", "Noirtier family relationships"]\n', 'role': 'user'}], 'model': 'nvidia/nemotron-3-nano-30b-a3b:free', 'response_format': {'type': 'json_schema', 'json_schema': {'name': 'QueryListOutput', 'description': 'Structured output format for query extraction.', 'strict': False, 'schema': {'type': 'object', 'properties': {'queries': {'type': 'array', 'items': {'type': 'string'}}}, 'required': ['queries']}}}, 'stream': False}}
+2026-01-11 03:00:48 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-11 03:00:48 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:48 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:48 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-11 03:00:48 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:48 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sat, 10 Jan 2026 21:30:49 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-RAY', b'9bbf4717bb5a98f2-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'X-RateLimit-Limit', b'50'), (b'X-RateLimit-Remaining', b'0'), (b'X-RateLimit-Reset', b'1768089600000'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare')])
+2026-01-11 03:00:49 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:49 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "429 Too Many Requests" Headers({'date': 'Sat, 10 Jan 2026 21:30:49 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9bbf4717bb5a98f2-DEL', 'access-control-allow-origin': '*', 'x-ratelimit-limit': '50', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1768089600000', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare'})
+2026-01-11 03:00:49 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-11 03:00:49 | DEBUG    | openai._base_client | request:1029 | Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1027, in request
+    response.raise_for_status()
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-01-11 03:00:49 | DEBUG    | openai._base_client | request:1046 | Re-raising status error
+2026-01-11 03:00:49 | WARNING  | extraction_agent.main | extract:90 | Structured output failed: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1768089600000'}, 'provider_name': None}}, 'user_id': 'user_31puWUjDHkZySmuspwMp8zKBle1'}. Falling back to JSON parsing
+2026-01-11 03:00:49 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-8067af86-e35d-4ab5-9378-92e4b3fa6e2a', 'json_data': {'messages': [{'content': 'You are a neutral query generator.\n\nYour goal is to verify the factual correctness of a character backstory by retrieving *all relevant canonical information* about the character from the book.\n\nCHARACTER CANONICAL INFORMATION:\nNoirtier de Villefort is the father of the Procureur du Roi, Gérard de Villefort, and a former French revolutionary of significant influence. Previously a Girondin and a Senator under Napoleon, he was a zealous Bonapartist and president of a Bonapartist club in Paris. In the novel\'s present timeline, he is an old man suffering from complete paralysis; he is mute and immobile, described as a "dumb and frozen carcass" who communicates solely through the expression of his eyes, which retain his formidable intelligence and commanding will.\n\nHistorically, Noirtier was the intended recipient of the conspiratorial letter from the Island of Elba carried by Edmond Dantès, a fact his son concealed to protect his own career, leading to Dantès\' imprisonment. He was also responsible for the death of General Quesnel (Baron d\'Épinay) in a duel in 1815, a secret that drives his fierce opposition to the marriage of his granddaughter, Valentine, to Quesnel\'s son, Franz d\'Épinay. Despite his physical helplessness, Noirtier successfully prevents this union by dictating a will that disinherits Valentine if she marries Franz. Later, Noirtier becomes the target of a poisoning attempt by Madame de Villefort; he survives lethal lemonade because his medical treatment for paralysis involves the ingestion of brucine, making him immune to the poison, though the draught kills his faithful servant, Barrois.\n\nNoirtier shares a deep, protective bond with his granddaughter, Valentine de Villefort, who is his sole comfort and the only person capable of interpreting his silent communication. His relationship with his son, Villefort, is strained by their opposing political histories—Villefort being a Royalist and Noirtier a Bonapartist—and is maintained largely for the sake of reputation and safety. He holds his grandson, Edward, in disfavor. He was faithfully served by Barrois for twenty-five years until the servant\'s death.\n\nRULES:\n- DO NOT assume the backstory is true.\n- DO NOT generate queries that presuppose events (e.g., "Where was Faria re-arrested in 1815?").\n- Use the canonical character information above to understand who the character is.\n- Generate queries that retrieve:\n  • the character\'s biography\n  • their timeline (birth, arrest, imprisonment)\n  • major events involving them\n  • relationships with important characters\n  • any canonical event that might confirm OR contradict the backstory\n\nTASK:\nGenerate up to 5 diagnostic queries that help verify the backstory.\n\nBook: The Count of Monte Cristo\nCharacter: Noirtier\nBackstory: Villefort’s drift toward the royalists disappointed him; father and son argued politics at every family gathering.\n\nReturn ONLY a JSON list of strings.\nExample: ["Noirtier biography timeline", "Noirtier arrest imprisonment history", "Noirtier family relationships"]\n', 'role': 'user'}], 'model': 'nvidia/nemotron-3-nano-30b-a3b:free', 'stream': False}}
+2026-01-11 03:00:49 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sat, 10 Jan 2026 21:30:49 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-RAY', b'9bbf471a1cdb98f2-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'X-RateLimit-Limit', b'50'), (b'X-RateLimit-Remaining', b'0'), (b'X-RateLimit-Reset', b'1768089600000'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare')])
+2026-01-11 03:00:49 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:49 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "429 Too Many Requests" Headers({'date': 'Sat, 10 Jan 2026 21:30:49 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9bbf471a1cdb98f2-DEL', 'access-control-allow-origin': '*', 'x-ratelimit-limit': '50', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1768089600000', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare'})
+2026-01-11 03:00:49 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-11 03:00:49 | DEBUG    | openai._base_client | request:1029 | Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/extraction_agent/main.py", line 81, in extract
+    response_data: QueryListOutput = structured_llm.invoke(prompt)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py", line 3149, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py", line 5557, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 402, in invoke
+    self.generate_prompt(
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1121, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 931, in generate
+    self._generate_with_cache(
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1233, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1386, in _generate
+    raise e
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1354, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_legacy_response.py", line 364, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 184, in parse
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1768089600000'}, 'provider_name': None}}, 'user_id': 'user_31puWUjDHkZySmuspwMp8zKBle1'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1027, in request
+    response.raise_for_status()
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-01-11 03:00:49 | DEBUG    | openai._base_client | _should_retry:774 | Retrying due to status code 429
+2026-01-11 03:00:49 | DEBUG    | openai._base_client | _sleep_for_retry:1068 | 2 retries left
+2026-01-11 03:00:49 | INFO     | openai._base_client | _sleep_for_retry:1071 | Retrying request to /chat/completions in 0.457041 seconds
+2026-01-11 03:00:49 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-8067af86-e35d-4ab5-9378-92e4b3fa6e2a', 'json_data': {'messages': [{'content': 'You are a neutral query generator.\n\nYour goal is to verify the factual correctness of a character backstory by retrieving *all relevant canonical information* about the character from the book.\n\nCHARACTER CANONICAL INFORMATION:\nNoirtier de Villefort is the father of the Procureur du Roi, Gérard de Villefort, and a former French revolutionary of significant influence. Previously a Girondin and a Senator under Napoleon, he was a zealous Bonapartist and president of a Bonapartist club in Paris. In the novel\'s present timeline, he is an old man suffering from complete paralysis; he is mute and immobile, described as a "dumb and frozen carcass" who communicates solely through the expression of his eyes, which retain his formidable intelligence and commanding will.\n\nHistorically, Noirtier was the intended recipient of the conspiratorial letter from the Island of Elba carried by Edmond Dantès, a fact his son concealed to protect his own career, leading to Dantès\' imprisonment. He was also responsible for the death of General Quesnel (Baron d\'Épinay) in a duel in 1815, a secret that drives his fierce opposition to the marriage of his granddaughter, Valentine, to Quesnel\'s son, Franz d\'Épinay. Despite his physical helplessness, Noirtier successfully prevents this union by dictating a will that disinherits Valentine if she marries Franz. Later, Noirtier becomes the target of a poisoning attempt by Madame de Villefort; he survives lethal lemonade because his medical treatment for paralysis involves the ingestion of brucine, making him immune to the poison, though the draught kills his faithful servant, Barrois.\n\nNoirtier shares a deep, protective bond with his granddaughter, Valentine de Villefort, who is his sole comfort and the only person capable of interpreting his silent communication. His relationship with his son, Villefort, is strained by their opposing political histories—Villefort being a Royalist and Noirtier a Bonapartist—and is maintained largely for the sake of reputation and safety. He holds his grandson, Edward, in disfavor. He was faithfully served by Barrois for twenty-five years until the servant\'s death.\n\nRULES:\n- DO NOT assume the backstory is true.\n- DO NOT generate queries that presuppose events (e.g., "Where was Faria re-arrested in 1815?").\n- Use the canonical character information above to understand who the character is.\n- Generate queries that retrieve:\n  • the character\'s biography\n  • their timeline (birth, arrest, imprisonment)\n  • major events involving them\n  • relationships with important characters\n  • any canonical event that might confirm OR contradict the backstory\n\nTASK:\nGenerate up to 5 diagnostic queries that help verify the backstory.\n\nBook: The Count of Monte Cristo\nCharacter: Noirtier\nBackstory: Villefort’s drift toward the royalists disappointed him; father and son argued politics at every family gathering.\n\nReturn ONLY a JSON list of strings.\nExample: ["Noirtier biography timeline", "Noirtier arrest imprisonment history", "Noirtier family relationships"]\n', 'role': 'user'}], 'model': 'nvidia/nemotron-3-nano-30b-a3b:free', 'stream': False}}
+2026-01-11 03:00:49 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:49 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:50 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sat, 10 Jan 2026 21:30:50 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-RAY', b'9bbf471eff5398f2-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'X-RateLimit-Limit', b'50'), (b'X-RateLimit-Remaining', b'0'), (b'X-RateLimit-Reset', b'1768089600000'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare')])
+2026-01-11 03:00:50 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-11 03:00:50 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-11 03:00:50 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:50 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:50 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:50 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "429 Too Many Requests" Headers({'date': 'Sat, 10 Jan 2026 21:30:50 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9bbf471eff5398f2-DEL', 'access-control-allow-origin': '*', 'x-ratelimit-limit': '50', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1768089600000', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare'})
+2026-01-11 03:00:50 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-11 03:00:50 | DEBUG    | openai._base_client | request:1029 | Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/extraction_agent/main.py", line 81, in extract
+    response_data: QueryListOutput = structured_llm.invoke(prompt)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py", line 3149, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py", line 5557, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 402, in invoke
+    self.generate_prompt(
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1121, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 931, in generate
+    self._generate_with_cache(
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1233, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1386, in _generate
+    raise e
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1354, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_legacy_response.py", line 364, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 184, in parse
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1768089600000'}, 'provider_name': None}}, 'user_id': 'user_31puWUjDHkZySmuspwMp8zKBle1'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1027, in request
+    response.raise_for_status()
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-01-11 03:00:50 | DEBUG    | openai._base_client | _should_retry:774 | Retrying due to status code 429
+2026-01-11 03:00:50 | DEBUG    | openai._base_client | _sleep_for_retry:1066 | 1 retry left
+2026-01-11 03:00:50 | INFO     | openai._base_client | _sleep_for_retry:1071 | Retrying request to /chat/completions in 0.955844 seconds
+2026-01-11 03:00:51 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-8067af86-e35d-4ab5-9378-92e4b3fa6e2a', 'json_data': {'messages': [{'content': 'You are a neutral query generator.\n\nYour goal is to verify the factual correctness of a character backstory by retrieving *all relevant canonical information* about the character from the book.\n\nCHARACTER CANONICAL INFORMATION:\nNoirtier de Villefort is the father of the Procureur du Roi, Gérard de Villefort, and a former French revolutionary of significant influence. Previously a Girondin and a Senator under Napoleon, he was a zealous Bonapartist and president of a Bonapartist club in Paris. In the novel\'s present timeline, he is an old man suffering from complete paralysis; he is mute and immobile, described as a "dumb and frozen carcass" who communicates solely through the expression of his eyes, which retain his formidable intelligence and commanding will.\n\nHistorically, Noirtier was the intended recipient of the conspiratorial letter from the Island of Elba carried by Edmond Dantès, a fact his son concealed to protect his own career, leading to Dantès\' imprisonment. He was also responsible for the death of General Quesnel (Baron d\'Épinay) in a duel in 1815, a secret that drives his fierce opposition to the marriage of his granddaughter, Valentine, to Quesnel\'s son, Franz d\'Épinay. Despite his physical helplessness, Noirtier successfully prevents this union by dictating a will that disinherits Valentine if she marries Franz. Later, Noirtier becomes the target of a poisoning attempt by Madame de Villefort; he survives lethal lemonade because his medical treatment for paralysis involves the ingestion of brucine, making him immune to the poison, though the draught kills his faithful servant, Barrois.\n\nNoirtier shares a deep, protective bond with his granddaughter, Valentine de Villefort, who is his sole comfort and the only person capable of interpreting his silent communication. His relationship with his son, Villefort, is strained by their opposing political histories—Villefort being a Royalist and Noirtier a Bonapartist—and is maintained largely for the sake of reputation and safety. He holds his grandson, Edward, in disfavor. He was faithfully served by Barrois for twenty-five years until the servant\'s death.\n\nRULES:\n- DO NOT assume the backstory is true.\n- DO NOT generate queries that presuppose events (e.g., "Where was Faria re-arrested in 1815?").\n- Use the canonical character information above to understand who the character is.\n- Generate queries that retrieve:\n  • the character\'s biography\n  • their timeline (birth, arrest, imprisonment)\n  • major events involving them\n  • relationships with important characters\n  • any canonical event that might confirm OR contradict the backstory\n\nTASK:\nGenerate up to 5 diagnostic queries that help verify the backstory.\n\nBook: The Count of Monte Cristo\nCharacter: Noirtier\nBackstory: Villefort’s drift toward the royalists disappointed him; father and son argued politics at every family gathering.\n\nReturn ONLY a JSON list of strings.\nExample: ["Noirtier biography timeline", "Noirtier arrest imprisonment history", "Noirtier family relationships"]\n', 'role': 'user'}], 'model': 'nvidia/nemotron-3-nano-30b-a3b:free', 'stream': False}}
+2026-01-11 03:00:51 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sat, 10 Jan 2026 21:30:51 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-RAY', b'9bbf47272c4298f2-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'X-RateLimit-Limit', b'50'), (b'X-RateLimit-Remaining', b'0'), (b'X-RateLimit-Reset', b'1768089600000'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare')])
+2026-01-11 03:00:51 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:51 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "429 Too Many Requests" Headers({'date': 'Sat, 10 Jan 2026 21:30:51 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9bbf47272c4298f2-DEL', 'access-control-allow-origin': '*', 'x-ratelimit-limit': '50', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1768089600000', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare'})
+2026-01-11 03:00:51 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-11 03:00:51 | DEBUG    | openai._base_client | request:1029 | Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/extraction_agent/main.py", line 81, in extract
+    response_data: QueryListOutput = structured_llm.invoke(prompt)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py", line 3149, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py", line 5557, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 402, in invoke
+    self.generate_prompt(
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1121, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 931, in generate
+    self._generate_with_cache(
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1233, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1386, in _generate
+    raise e
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1354, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_legacy_response.py", line 364, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 184, in parse
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1768089600000'}, 'provider_name': None}}, 'user_id': 'user_31puWUjDHkZySmuspwMp8zKBle1'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1027, in request
+    response.raise_for_status()
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-01-11 03:00:51 | DEBUG    | openai._base_client | request:1046 | Re-raising status error
+2026-01-11 03:00:51 | ERROR    | extraction_agent.main | extract:129 | Fallback parsing also failed: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1768089600000'}, 'provider_name': None}}, 'user_id': 'user_31puWUjDHkZySmuspwMp8zKBle1'}
+2026-01-11 03:00:51 | ERROR    | extraction_agent.main | extract:130 | Response text: N/A
+2026-01-11 03:00:51 | INFO     | extraction_agent.main | extract:148 | Retrieved 0 evidence items
+2026-01-11 03:00:51 | INFO     | extraction_agent.main | extract:161 | Extraction agent completed
+2026-01-11 03:00:51 | INFO     | graph_creator_agent.main | create_graph:26 | Starting graph creator agent
+2026-01-11 03:00:51 | INFO     | graph_creator_agent.main | create_graph:27 | Book: The Count of Monte Cristo, Character: Noirtier
+2026-01-11 03:00:51 | INFO     | graph_creator_agent.graph_store | load_graph:79 | Loading existing graph from graph_creator_agent/graph/The Count of Monte Cristo_Noirtier.graphml
+2026-01-11 03:00:51 | INFO     | graph_creator_agent.graph_store | load_graph:84 | Loaded graph with 31 nodes and 30 edges
+2026-01-11 03:00:51 | INFO     | graph_creator_agent.utils | filter_new_evidence:22 | Filtered evidence: 0 new out of 0 total
+2026-01-11 03:00:51 | INFO     | graph_creator_agent.main | create_graph:43 | No new evidence to process
+2026-01-11 03:00:51 | INFO     | answering_agent.main | answer:22 | Starting answering agent
+2026-01-11 03:00:51 | INFO     | answering_agent.main | answer:23 | Book: The Count of Monte Cristo, Character: Noirtier
+2026-01-11 03:00:51 | INFO     | answering_agent.main | answer:39 | Running classifier
+2026-01-11 03:00:51 | INFO     | answering_agent.classifier | classify:71 | Starting classification
+2026-01-11 03:00:51 | INFO     | answering_agent.classifier | classify:81 | Loaded graph from graph_creator_agent/graph/The Count of Monte Cristo_Noirtier.graphml
+2026-01-11 03:00:51 | DEBUG    | answering_agent.classifier | classify:96 | Classification prompt: 
+You are a verification agent responsible for determining whether a character backstory 
+is CONSISTENT or CONTRADICTORY with the canonical facts represented in a knowledge graph 
+and the provided char...
+2026-01-11 03:00:51 | INFO     | answering_agent.classifier | classify:99 | Calling LLM for classification
+2026-01-11 03:00:51 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-0047cbb5-f9d9-447d-af31-acb279c7af5d', 'json_data': {'messages': [{'content': '\nYou are a verification agent responsible for determining whether a character backstory \nis CONSISTENT or CONTRADICTORY with the canonical facts represented in a knowledge graph \nand the provided character summary.\n\n---CANONICAL CONTEXT---\nBook: The Count of Monte Cristo\nCharacter: Noirtier\n\nCanonical Character Summary:\nNoirtier de Villefort is the father of the Procureur du Roi, Gérard de Villefort, and a former French revolutionary of significant influence. Previously a Girondin and a Senator under Napoleon, he was a zealous Bonapartist and president of a Bonapartist club in Paris. In the novel\'s present timeline, he is an old man suffering from complete paralysis; he is mute and immobile, described as a "dumb and frozen carcass" who communicates solely through the expression of his eyes, which retain his formidable intelligence and commanding will.\n\nHistorically, Noirtier was the intended recipient of the conspiratorial letter from the Island of Elba carried by Edmond Dantès, a fact his son concealed to protect his own career, leading to Dantès\' imprisonment. He was also responsible for the death of General Quesnel (Baron d\'Épinay) in a duel in 1815, a secret that drives his fierce opposition to the marriage of his granddaughter, Valentine, to Quesnel\'s son, Franz d\'Épinay. Despite his physical helplessness, Noirtier successfully prevents this union by dictating a will that disinherits Valentine if she marries Franz. Later, Noirtier becomes the target of a poisoning attempt by Madame de Villefort; he survives lethal lemonade because his medical treatment for paralysis involves the ingestion of brucine, making him immune to the poison, though the draught kills his faithful servant, Barrois.\n\nNoirtier shares a deep, protective bond with his granddaughter, Valentine de Villefort, who is his sole comfort and the only person capable of interpreting his silent communication. His relationship with his son, Villefort, is strained by their opposing political histories—Villefort being a Royalist and Noirtier a Bonapartist—and is maintained largely for the sake of reputation and safety. He holds his grandson, Edward, in disfavor. He was faithfully served by Barrois for twenty-five years until the servant\'s death.\n\nKnowledge Graph Summary (facts and relations):\nGraph has 31 nodes and 30 edges.\n\nKey relationships:\nNoirtier --[REACTED_TO_NAME]--> Franz\nNoirtier --[FORMER_ROLE]--> Jacobin\nNoirtier --[FORMER_ROLE]--> Senator\nNoirtier --[FORMER_ROLE]--> Girondin\nNoirtier --[LOCATED_AT]--> armchair\nNoirtier --[INDICATED_WILL]--> listen\nNoirtier --[SLEPT_STATE]--> calm\nNoirtier --[GRANDFATHER_OF]--> Valentine\nNoirtier --[GRANDFATHER_OF]--> Edward\nNoirtier --[CONTACT_WITH]--> d’Épinay\n\n---INPUT---\nBackstory to Verify:\nVillefort’s drift toward the royalists disappointed him; father and son argued politics at every family gathering.\n\n---DECISION RULES---\n1. **Fact Contradiction**: The backstory is CONTRADICTORY if it directly opposes a specific entry in the knowledge graph or the canonical summary.\n2. **Additional Information**: If information in the backstory is NOT present in the graph or summary, it is treated as "extra information". This extra information is CONSISTENT by default, as it expands the character\'s story without contradicting the known canonical facts of the novel.\n3. **Consistency Over Time**: The backstory must fit with how characters and events develop later in the canonical story.\n4. **Causal Reasoning**: The system determines whether later events in the novel still make sense given the earlier conditions introduced by the backstory.\n5. **Respect for Narrative Constraints**: The backstory must respect narrative logic and coincidences. Even if no direct sentence contradicts it, a mismatch in narrative "feel" or logical impossibility (e.g. being in two places at once) is a CONTRADICTION.\n6. **Evidence-Based Decisions**: Your conclusion must be supported by signals drawn from the text (graph/summary), not just a single convenient passage. If a category is described completely (e.g. all known arrests), adding an extra event is a contradiction.\n\n---OUTPUT FORMAT (STRICT JSON ONLY)---\n{\n  "label": 1 or 0,\n  "reasoning": "Step-by-step justification referencing specific graph facts, character traits from the summary, or narrative/causal logic.",\n  "evidence_queries": [\n    "Query 1 to find exact verbatim evidence from novel to justify this decision",\n    "Query 2 to verify specific claims in the backstory",\n    "Query 3 to check causal consistency in the novel"\n  ]\n}\n', 'role': 'user'}], 'model': 'nvidia/nemotron-3-nano-30b-a3b:free', 'stream': False}}
+2026-01-11 03:00:51 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sat, 10 Jan 2026 21:30:51 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-RAY', b'9bbf47292dbe98f2-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'X-RateLimit-Limit', b'50'), (b'X-RateLimit-Remaining', b'0'), (b'X-RateLimit-Reset', b'1768089600000'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare')])
+2026-01-11 03:00:51 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:51 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:51 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "429 Too Many Requests" Headers({'date': 'Sat, 10 Jan 2026 21:30:51 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9bbf47292dbe98f2-DEL', 'access-control-allow-origin': '*', 'x-ratelimit-limit': '50', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1768089600000', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare'})
+2026-01-11 03:00:51 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-11 03:00:51 | DEBUG    | openai._base_client | request:1029 | Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1027, in request
+    response.raise_for_status()
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-01-11 03:00:51 | DEBUG    | openai._base_client | _should_retry:774 | Retrying due to status code 429
+2026-01-11 03:00:51 | DEBUG    | openai._base_client | _sleep_for_retry:1068 | 2 retries left
+2026-01-11 03:00:51 | INFO     | openai._base_client | _sleep_for_retry:1071 | Retrying request to /chat/completions in 0.422003 seconds
+2026-01-11 03:00:52 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-0047cbb5-f9d9-447d-af31-acb279c7af5d', 'json_data': {'messages': [{'content': '\nYou are a verification agent responsible for determining whether a character backstory \nis CONSISTENT or CONTRADICTORY with the canonical facts represented in a knowledge graph \nand the provided character summary.\n\n---CANONICAL CONTEXT---\nBook: The Count of Monte Cristo\nCharacter: Noirtier\n\nCanonical Character Summary:\nNoirtier de Villefort is the father of the Procureur du Roi, Gérard de Villefort, and a former French revolutionary of significant influence. Previously a Girondin and a Senator under Napoleon, he was a zealous Bonapartist and president of a Bonapartist club in Paris. In the novel\'s present timeline, he is an old man suffering from complete paralysis; he is mute and immobile, described as a "dumb and frozen carcass" who communicates solely through the expression of his eyes, which retain his formidable intelligence and commanding will.\n\nHistorically, Noirtier was the intended recipient of the conspiratorial letter from the Island of Elba carried by Edmond Dantès, a fact his son concealed to protect his own career, leading to Dantès\' imprisonment. He was also responsible for the death of General Quesnel (Baron d\'Épinay) in a duel in 1815, a secret that drives his fierce opposition to the marriage of his granddaughter, Valentine, to Quesnel\'s son, Franz d\'Épinay. Despite his physical helplessness, Noirtier successfully prevents this union by dictating a will that disinherits Valentine if she marries Franz. Later, Noirtier becomes the target of a poisoning attempt by Madame de Villefort; he survives lethal lemonade because his medical treatment for paralysis involves the ingestion of brucine, making him immune to the poison, though the draught kills his faithful servant, Barrois.\n\nNoirtier shares a deep, protective bond with his granddaughter, Valentine de Villefort, who is his sole comfort and the only person capable of interpreting his silent communication. His relationship with his son, Villefort, is strained by their opposing political histories—Villefort being a Royalist and Noirtier a Bonapartist—and is maintained largely for the sake of reputation and safety. He holds his grandson, Edward, in disfavor. He was faithfully served by Barrois for twenty-five years until the servant\'s death.\n\nKnowledge Graph Summary (facts and relations):\nGraph has 31 nodes and 30 edges.\n\nKey relationships:\nNoirtier --[REACTED_TO_NAME]--> Franz\nNoirtier --[FORMER_ROLE]--> Jacobin\nNoirtier --[FORMER_ROLE]--> Senator\nNoirtier --[FORMER_ROLE]--> Girondin\nNoirtier --[LOCATED_AT]--> armchair\nNoirtier --[INDICATED_WILL]--> listen\nNoirtier --[SLEPT_STATE]--> calm\nNoirtier --[GRANDFATHER_OF]--> Valentine\nNoirtier --[GRANDFATHER_OF]--> Edward\nNoirtier --[CONTACT_WITH]--> d’Épinay\n\n---INPUT---\nBackstory to Verify:\nVillefort’s drift toward the royalists disappointed him; father and son argued politics at every family gathering.\n\n---DECISION RULES---\n1. **Fact Contradiction**: The backstory is CONTRADICTORY if it directly opposes a specific entry in the knowledge graph or the canonical summary.\n2. **Additional Information**: If information in the backstory is NOT present in the graph or summary, it is treated as "extra information". This extra information is CONSISTENT by default, as it expands the character\'s story without contradicting the known canonical facts of the novel.\n3. **Consistency Over Time**: The backstory must fit with how characters and events develop later in the canonical story.\n4. **Causal Reasoning**: The system determines whether later events in the novel still make sense given the earlier conditions introduced by the backstory.\n5. **Respect for Narrative Constraints**: The backstory must respect narrative logic and coincidences. Even if no direct sentence contradicts it, a mismatch in narrative "feel" or logical impossibility (e.g. being in two places at once) is a CONTRADICTION.\n6. **Evidence-Based Decisions**: Your conclusion must be supported by signals drawn from the text (graph/summary), not just a single convenient passage. If a category is described completely (e.g. all known arrests), adding an extra event is a contradiction.\n\n---OUTPUT FORMAT (STRICT JSON ONLY)---\n{\n  "label": 1 or 0,\n  "reasoning": "Step-by-step justification referencing specific graph facts, character traits from the summary, or narrative/causal logic.",\n  "evidence_queries": [\n    "Query 1 to find exact verbatim evidence from novel to justify this decision",\n    "Query 2 to verify specific claims in the backstory",\n    "Query 3 to check causal consistency in the novel"\n  ]\n}\n', 'role': 'user'}], 'model': 'nvidia/nemotron-3-nano-30b-a3b:free', 'stream': False}}
+2026-01-11 03:00:52 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-11 03:00:52 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:52 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:52 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-11 03:00:52 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:52 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:52 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sat, 10 Jan 2026 21:30:52 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-RAY', b'9bbf472dc86698f2-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'X-RateLimit-Limit', b'50'), (b'X-RateLimit-Remaining', b'0'), (b'X-RateLimit-Reset', b'1768089600000'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare')])
+2026-01-11 03:00:52 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-11 03:00:52 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-11 03:00:52 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:52 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:52 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:52 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "429 Too Many Requests" Headers({'date': 'Sat, 10 Jan 2026 21:30:52 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9bbf472dc86698f2-DEL', 'access-control-allow-origin': '*', 'x-ratelimit-limit': '50', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1768089600000', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare'})
+2026-01-11 03:00:52 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-11 03:00:52 | DEBUG    | openai._base_client | request:1029 | Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1027, in request
+    response.raise_for_status()
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-01-11 03:00:52 | DEBUG    | openai._base_client | _should_retry:774 | Retrying due to status code 429
+2026-01-11 03:00:52 | DEBUG    | openai._base_client | _sleep_for_retry:1066 | 1 retry left
+2026-01-11 03:00:52 | INFO     | openai._base_client | _sleep_for_retry:1071 | Retrying request to /chat/completions in 0.857020 seconds
+2026-01-11 03:00:53 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-0047cbb5-f9d9-447d-af31-acb279c7af5d', 'json_data': {'messages': [{'content': '\nYou are a verification agent responsible for determining whether a character backstory \nis CONSISTENT or CONTRADICTORY with the canonical facts represented in a knowledge graph \nand the provided character summary.\n\n---CANONICAL CONTEXT---\nBook: The Count of Monte Cristo\nCharacter: Noirtier\n\nCanonical Character Summary:\nNoirtier de Villefort is the father of the Procureur du Roi, Gérard de Villefort, and a former French revolutionary of significant influence. Previously a Girondin and a Senator under Napoleon, he was a zealous Bonapartist and president of a Bonapartist club in Paris. In the novel\'s present timeline, he is an old man suffering from complete paralysis; he is mute and immobile, described as a "dumb and frozen carcass" who communicates solely through the expression of his eyes, which retain his formidable intelligence and commanding will.\n\nHistorically, Noirtier was the intended recipient of the conspiratorial letter from the Island of Elba carried by Edmond Dantès, a fact his son concealed to protect his own career, leading to Dantès\' imprisonment. He was also responsible for the death of General Quesnel (Baron d\'Épinay) in a duel in 1815, a secret that drives his fierce opposition to the marriage of his granddaughter, Valentine, to Quesnel\'s son, Franz d\'Épinay. Despite his physical helplessness, Noirtier successfully prevents this union by dictating a will that disinherits Valentine if she marries Franz. Later, Noirtier becomes the target of a poisoning attempt by Madame de Villefort; he survives lethal lemonade because his medical treatment for paralysis involves the ingestion of brucine, making him immune to the poison, though the draught kills his faithful servant, Barrois.\n\nNoirtier shares a deep, protective bond with his granddaughter, Valentine de Villefort, who is his sole comfort and the only person capable of interpreting his silent communication. His relationship with his son, Villefort, is strained by their opposing political histories—Villefort being a Royalist and Noirtier a Bonapartist—and is maintained largely for the sake of reputation and safety. He holds his grandson, Edward, in disfavor. He was faithfully served by Barrois for twenty-five years until the servant\'s death.\n\nKnowledge Graph Summary (facts and relations):\nGraph has 31 nodes and 30 edges.\n\nKey relationships:\nNoirtier --[REACTED_TO_NAME]--> Franz\nNoirtier --[FORMER_ROLE]--> Jacobin\nNoirtier --[FORMER_ROLE]--> Senator\nNoirtier --[FORMER_ROLE]--> Girondin\nNoirtier --[LOCATED_AT]--> armchair\nNoirtier --[INDICATED_WILL]--> listen\nNoirtier --[SLEPT_STATE]--> calm\nNoirtier --[GRANDFATHER_OF]--> Valentine\nNoirtier --[GRANDFATHER_OF]--> Edward\nNoirtier --[CONTACT_WITH]--> d’Épinay\n\n---INPUT---\nBackstory to Verify:\nVillefort’s drift toward the royalists disappointed him; father and son argued politics at every family gathering.\n\n---DECISION RULES---\n1. **Fact Contradiction**: The backstory is CONTRADICTORY if it directly opposes a specific entry in the knowledge graph or the canonical summary.\n2. **Additional Information**: If information in the backstory is NOT present in the graph or summary, it is treated as "extra information". This extra information is CONSISTENT by default, as it expands the character\'s story without contradicting the known canonical facts of the novel.\n3. **Consistency Over Time**: The backstory must fit with how characters and events develop later in the canonical story.\n4. **Causal Reasoning**: The system determines whether later events in the novel still make sense given the earlier conditions introduced by the backstory.\n5. **Respect for Narrative Constraints**: The backstory must respect narrative logic and coincidences. Even if no direct sentence contradicts it, a mismatch in narrative "feel" or logical impossibility (e.g. being in two places at once) is a CONTRADICTION.\n6. **Evidence-Based Decisions**: Your conclusion must be supported by signals drawn from the text (graph/summary), not just a single convenient passage. If a category is described completely (e.g. all known arrests), adding an extra event is a contradiction.\n\n---OUTPUT FORMAT (STRICT JSON ONLY)---\n{\n  "label": 1 or 0,\n  "reasoning": "Step-by-step justification referencing specific graph facts, character traits from the summary, or narrative/causal logic.",\n  "evidence_queries": [\n    "Query 1 to find exact verbatim evidence from novel to justify this decision",\n    "Query 2 to verify specific claims in the backstory",\n    "Query 3 to check causal consistency in the novel"\n  ]\n}\n', 'role': 'user'}], 'model': 'nvidia/nemotron-3-nano-30b-a3b:free', 'stream': False}}
+2026-01-11 03:00:53 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sat, 10 Jan 2026 21:30:53 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-RAY', b'9bbf47350ccd98f2-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'X-RateLimit-Limit', b'50'), (b'X-RateLimit-Remaining', b'0'), (b'X-RateLimit-Reset', b'1768089600000'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare')])
+2026-01-11 03:00:53 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:53 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "429 Too Many Requests" Headers({'date': 'Sat, 10 Jan 2026 21:30:53 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9bbf47350ccd98f2-DEL', 'access-control-allow-origin': '*', 'x-ratelimit-limit': '50', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1768089600000', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare'})
+2026-01-11 03:00:53 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-11 03:00:53 | DEBUG    | openai._base_client | request:1029 | Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1027, in request
+    response.raise_for_status()
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-01-11 03:00:53 | DEBUG    | openai._base_client | request:1046 | Re-raising status error
+2026-01-11 03:00:53 | ERROR    | __main__ | main:251 | Error processing row index 3: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1768089600000'}, 'provider_name': None}}, 'user_id': 'user_31puWUjDHkZySmuspwMp8zKBle1'}
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/main.py", line 232, in main
+    final_state = run_pipeline_for_row(row_data)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/main.py", line 157, in run_pipeline_for_row
+    final_state = app.invoke(initial_state)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py", line 3068, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py", line 2643, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py", line 167, in tick
+    run_with_retry(
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/answering_agent/main.py", line 40, in answer
+    classification: ClassificationOutput = classify(
+                                           ^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/answering_agent/classifier.py", line 100, in classify
+    response = llm.invoke(prompt)
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 402, in invoke
+    self.generate_prompt(
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1121, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 931, in generate
+    self._generate_with_cache(
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1233, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1386, in _generate
+    raise e
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1381, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_legacy_response.py", line 364, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1768089600000'}, 'provider_name': None}}, 'user_id': 'user_31puWUjDHkZySmuspwMp8zKBle1'}
+During task with name 'answer' and id '31066a33-61ed-da8a-1c8c-6a8968d884f3'
+2026-01-11 03:00:53 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 03:00:53 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x124cfe1b0>
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-encoding', b'zstd'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-type', b'application/json'), (b'date', b'Sat, 10 Jan 2026 21:30:53 GMT')])
+2026-01-11 03:00:53 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST http://localhost:6333/collections/the%20count%20of%20monte%20cristo_collection/points/query "HTTP/1.1 200 OK"
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:53 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:53 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 03:00:53 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 03:00:54 | INFO     | __main__ | run_pipeline_for_row:135 | Processing: Noirtier from The Count of Monte Cristo
+2026-01-11 03:00:54 | INFO     | __main__ | run_pipeline_for_row:154 | Running pipeline
+2026-01-11 03:00:54 | INFO     | extraction_agent.main | extract:48 | Starting extraction agent
+2026-01-11 03:00:54 | INFO     | extraction_agent.main | extract:49 | Book: The Count of Monte Cristo, Character: Noirtier
+2026-01-11 03:00:54 | INFO     | extraction_agent.main | extract:54 | Using character summary for Noirtier
+2026-01-11 03:00:54 | DEBUG    | extraction_agent.main | extract:55 | Summary length: 1922 characters
+2026-01-11 03:00:54 | DEBUG    | extraction_agent.main | extract:72 | Extraction prompt: You are a neutral query generator.
+
+Your goal is to verify the factual correctness of a character backstory by retrieving *all relevant canonical information* about the character from the book.
+
+CHARACTER CANONICAL INFORMATION:
+Noirtier de Villefort is the father of the Procureur du Roi, Gérard de Villefort, and a former French revolutionary of significant influence. Previously a Girondin and a Senator under Napoleon, he was a zealous Bonapartist and president of a Bonapartist club in Paris. In the novel's present timeline, he is an old man suffering from complete paralysis; he is mute and immobile, described as a "dumb and frozen carcass" who communicates solely through the expression of his eyes, which retain his formidable intelligence and commanding will.
+
+Historically, Noirtier was the intended recipient of the conspiratorial letter from the Island of Elba carried by Edmond Dantès, a fact his son concealed to protect his own career, leading to Dantès' imprisonment. He was also responsible for the death of General Quesnel (Baron d'Épinay) in a duel in 1815, a secret that drives his fierce opposition to the marriage of his granddaughter, Valentine, to Quesnel's son, Franz d'Épinay. Despite his physical helplessness, Noirtier successfully prevents this union by dictating a will that disinherits Valentine if she marries Franz. Later, Noirtier becomes the target of a poisoning attempt by Madame de Villefort; he survives lethal lemonade because his medical treatment for paralysis involves the ingestion of brucine, making him immune to the poison, though the draught kills his faithful servant, Barrois.
+
+Noirtier shares a deep, protective bond with his granddaughter, Valentine de Villefort, who is his sole comfort and the only person capable of interpreting his silent communication. His relationship with his son, Villefort, is strained by their opposing political histories—Villefort being a Royalist and Noirtier a Bonapartist—and is maintained largely for the sake of reputation and safety. He holds his grandson, Edward, in disfavor. He was faithfully served by Barrois for twenty-five years until the servant's death.
+
+RULES:
+- DO NOT assume the backstory is true.
+- DO NOT generate queries that presuppose events (e.g., "Where was Faria re-arrested in 1815?").
+- Use the canonical character information above to understand who the character is.
+- Generate queries that retrieve:
+  • the character's biography
+  • their timeline (birth, arrest, imprisonment)
+  • major events involving them
+  • relationships with important characters
+  • any canonical event that might confirm OR contradict the backstory
+
+TASK:
+Generate up to 5 diagnostic queries that help verify the backstory.
+
+Book: The Count of Monte Cristo
+Character: Noirtier
+Backstory: His parents were targeted in a reprisal for supporting the Revolution; his mother was killed, deepening his distrust of authority.
+
+Return ONLY a JSON list of strings.
+Example: ["Noirtier biography timeline", "Noirtier arrest imprisonment history", "Noirtier family relationships"]
+
+2026-01-11 03:00:54 | INFO     | extraction_agent.main | extract:75 | Generating queries via LLM
+2026-01-11 03:00:54 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse', 'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-58f2c6f6-126f-4dea-b30a-925498ea81d2', 'post_parser': <function Completions.parse.<locals>.parser at 0x139c43740>, 'json_data': {'messages': [{'content': 'You are a neutral query generator.\n\nYour goal is to verify the factual correctness of a character backstory by retrieving *all relevant canonical information* about the character from the book.\n\nCHARACTER CANONICAL INFORMATION:\nNoirtier de Villefort is the father of the Procureur du Roi, Gérard de Villefort, and a former French revolutionary of significant influence. Previously a Girondin and a Senator under Napoleon, he was a zealous Bonapartist and president of a Bonapartist club in Paris. In the novel\'s present timeline, he is an old man suffering from complete paralysis; he is mute and immobile, described as a "dumb and frozen carcass" who communicates solely through the expression of his eyes, which retain his formidable intelligence and commanding will.\n\nHistorically, Noirtier was the intended recipient of the conspiratorial letter from the Island of Elba carried by Edmond Dantès, a fact his son concealed to protect his own career, leading to Dantès\' imprisonment. He was also responsible for the death of General Quesnel (Baron d\'Épinay) in a duel in 1815, a secret that drives his fierce opposition to the marriage of his granddaughter, Valentine, to Quesnel\'s son, Franz d\'Épinay. Despite his physical helplessness, Noirtier successfully prevents this union by dictating a will that disinherits Valentine if she marries Franz. Later, Noirtier becomes the target of a poisoning attempt by Madame de Villefort; he survives lethal lemonade because his medical treatment for paralysis involves the ingestion of brucine, making him immune to the poison, though the draught kills his faithful servant, Barrois.\n\nNoirtier shares a deep, protective bond with his granddaughter, Valentine de Villefort, who is his sole comfort and the only person capable of interpreting his silent communication. His relationship with his son, Villefort, is strained by their opposing political histories—Villefort being a Royalist and Noirtier a Bonapartist—and is maintained largely for the sake of reputation and safety. He holds his grandson, Edward, in disfavor. He was faithfully served by Barrois for twenty-five years until the servant\'s death.\n\nRULES:\n- DO NOT assume the backstory is true.\n- DO NOT generate queries that presuppose events (e.g., "Where was Faria re-arrested in 1815?").\n- Use the canonical character information above to understand who the character is.\n- Generate queries that retrieve:\n  • the character\'s biography\n  • their timeline (birth, arrest, imprisonment)\n  • major events involving them\n  • relationships with important characters\n  • any canonical event that might confirm OR contradict the backstory\n\nTASK:\nGenerate up to 5 diagnostic queries that help verify the backstory.\n\nBook: The Count of Monte Cristo\nCharacter: Noirtier\nBackstory: His parents were targeted in a reprisal for supporting the Revolution; his mother was killed, deepening his distrust of authority.\n\nReturn ONLY a JSON list of strings.\nExample: ["Noirtier biography timeline", "Noirtier arrest imprisonment history", "Noirtier family relationships"]\n', 'role': 'user'}], 'model': 'nvidia/nemotron-3-nano-30b-a3b:free', 'response_format': {'type': 'json_schema', 'json_schema': {'name': 'QueryListOutput', 'description': 'Structured output format for query extraction.', 'strict': False, 'schema': {'type': 'object', 'properties': {'queries': {'type': 'array', 'items': {'type': 'string'}}}, 'required': ['queries']}}}, 'stream': False}}
+2026-01-11 03:00:54 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-11 03:00:54 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:54 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:54 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-11 03:00:54 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:54 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:54 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sat, 10 Jan 2026 21:30:54 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-RAY', b'9bbf47395fc498f2-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'X-RateLimit-Limit', b'50'), (b'X-RateLimit-Remaining', b'0'), (b'X-RateLimit-Reset', b'1768089600000'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare')])
+2026-01-11 03:00:54 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-11 03:00:54 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-11 03:00:54 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:54 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:54 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:54 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "429 Too Many Requests" Headers({'date': 'Sat, 10 Jan 2026 21:30:54 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9bbf47395fc498f2-DEL', 'access-control-allow-origin': '*', 'x-ratelimit-limit': '50', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1768089600000', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare'})
+2026-01-11 03:00:54 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-11 03:00:54 | DEBUG    | openai._base_client | request:1029 | Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1027, in request
+    response.raise_for_status()
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-01-11 03:00:54 | DEBUG    | openai._base_client | _should_retry:774 | Retrying due to status code 429
+2026-01-11 03:00:54 | DEBUG    | openai._base_client | _sleep_for_retry:1068 | 2 retries left
+2026-01-11 03:00:54 | INFO     | openai._base_client | _sleep_for_retry:1071 | Retrying request to /chat/completions in 0.421378 seconds
+2026-01-11 03:00:54 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse', 'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-58f2c6f6-126f-4dea-b30a-925498ea81d2', 'post_parser': <function Completions.parse.<locals>.parser at 0x139c43740>, 'json_data': {'messages': [{'content': 'You are a neutral query generator.\n\nYour goal is to verify the factual correctness of a character backstory by retrieving *all relevant canonical information* about the character from the book.\n\nCHARACTER CANONICAL INFORMATION:\nNoirtier de Villefort is the father of the Procureur du Roi, Gérard de Villefort, and a former French revolutionary of significant influence. Previously a Girondin and a Senator under Napoleon, he was a zealous Bonapartist and president of a Bonapartist club in Paris. In the novel\'s present timeline, he is an old man suffering from complete paralysis; he is mute and immobile, described as a "dumb and frozen carcass" who communicates solely through the expression of his eyes, which retain his formidable intelligence and commanding will.\n\nHistorically, Noirtier was the intended recipient of the conspiratorial letter from the Island of Elba carried by Edmond Dantès, a fact his son concealed to protect his own career, leading to Dantès\' imprisonment. He was also responsible for the death of General Quesnel (Baron d\'Épinay) in a duel in 1815, a secret that drives his fierce opposition to the marriage of his granddaughter, Valentine, to Quesnel\'s son, Franz d\'Épinay. Despite his physical helplessness, Noirtier successfully prevents this union by dictating a will that disinherits Valentine if she marries Franz. Later, Noirtier becomes the target of a poisoning attempt by Madame de Villefort; he survives lethal lemonade because his medical treatment for paralysis involves the ingestion of brucine, making him immune to the poison, though the draught kills his faithful servant, Barrois.\n\nNoirtier shares a deep, protective bond with his granddaughter, Valentine de Villefort, who is his sole comfort and the only person capable of interpreting his silent communication. His relationship with his son, Villefort, is strained by their opposing political histories—Villefort being a Royalist and Noirtier a Bonapartist—and is maintained largely for the sake of reputation and safety. He holds his grandson, Edward, in disfavor. He was faithfully served by Barrois for twenty-five years until the servant\'s death.\n\nRULES:\n- DO NOT assume the backstory is true.\n- DO NOT generate queries that presuppose events (e.g., "Where was Faria re-arrested in 1815?").\n- Use the canonical character information above to understand who the character is.\n- Generate queries that retrieve:\n  • the character\'s biography\n  • their timeline (birth, arrest, imprisonment)\n  • major events involving them\n  • relationships with important characters\n  • any canonical event that might confirm OR contradict the backstory\n\nTASK:\nGenerate up to 5 diagnostic queries that help verify the backstory.\n\nBook: The Count of Monte Cristo\nCharacter: Noirtier\nBackstory: His parents were targeted in a reprisal for supporting the Revolution; his mother was killed, deepening his distrust of authority.\n\nReturn ONLY a JSON list of strings.\nExample: ["Noirtier biography timeline", "Noirtier arrest imprisonment history", "Noirtier family relationships"]\n', 'role': 'user'}], 'model': 'nvidia/nemotron-3-nano-30b-a3b:free', 'response_format': {'type': 'json_schema', 'json_schema': {'name': 'QueryListOutput', 'description': 'Structured output format for query extraction.', 'strict': False, 'schema': {'type': 'object', 'properties': {'queries': {'type': 'array', 'items': {'type': 'string'}}}, 'required': ['queries']}}}, 'stream': False}}
+2026-01-11 03:00:54 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-11 03:00:54 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:54 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:54 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-11 03:00:54 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:54 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:55 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sat, 10 Jan 2026 21:30:55 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-RAY', b'9bbf473dda5298f2-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'X-RateLimit-Limit', b'50'), (b'X-RateLimit-Remaining', b'0'), (b'X-RateLimit-Reset', b'1768089600000'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare')])
+2026-01-11 03:00:55 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-11 03:00:55 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-11 03:00:55 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:55 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:55 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:55 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "429 Too Many Requests" Headers({'date': 'Sat, 10 Jan 2026 21:30:55 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9bbf473dda5298f2-DEL', 'access-control-allow-origin': '*', 'x-ratelimit-limit': '50', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1768089600000', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare'})
+2026-01-11 03:00:55 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-11 03:00:55 | DEBUG    | openai._base_client | request:1029 | Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1027, in request
+    response.raise_for_status()
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-01-11 03:00:55 | DEBUG    | openai._base_client | _should_retry:774 | Retrying due to status code 429
+2026-01-11 03:00:55 | DEBUG    | openai._base_client | _sleep_for_retry:1066 | 1 retry left
+2026-01-11 03:00:55 | INFO     | openai._base_client | _sleep_for_retry:1071 | Retrying request to /chat/completions in 0.997592 seconds
+2026-01-11 03:00:56 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse', 'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-58f2c6f6-126f-4dea-b30a-925498ea81d2', 'post_parser': <function Completions.parse.<locals>.parser at 0x139c43740>, 'json_data': {'messages': [{'content': 'You are a neutral query generator.\n\nYour goal is to verify the factual correctness of a character backstory by retrieving *all relevant canonical information* about the character from the book.\n\nCHARACTER CANONICAL INFORMATION:\nNoirtier de Villefort is the father of the Procureur du Roi, Gérard de Villefort, and a former French revolutionary of significant influence. Previously a Girondin and a Senator under Napoleon, he was a zealous Bonapartist and president of a Bonapartist club in Paris. In the novel\'s present timeline, he is an old man suffering from complete paralysis; he is mute and immobile, described as a "dumb and frozen carcass" who communicates solely through the expression of his eyes, which retain his formidable intelligence and commanding will.\n\nHistorically, Noirtier was the intended recipient of the conspiratorial letter from the Island of Elba carried by Edmond Dantès, a fact his son concealed to protect his own career, leading to Dantès\' imprisonment. He was also responsible for the death of General Quesnel (Baron d\'Épinay) in a duel in 1815, a secret that drives his fierce opposition to the marriage of his granddaughter, Valentine, to Quesnel\'s son, Franz d\'Épinay. Despite his physical helplessness, Noirtier successfully prevents this union by dictating a will that disinherits Valentine if she marries Franz. Later, Noirtier becomes the target of a poisoning attempt by Madame de Villefort; he survives lethal lemonade because his medical treatment for paralysis involves the ingestion of brucine, making him immune to the poison, though the draught kills his faithful servant, Barrois.\n\nNoirtier shares a deep, protective bond with his granddaughter, Valentine de Villefort, who is his sole comfort and the only person capable of interpreting his silent communication. His relationship with his son, Villefort, is strained by their opposing political histories—Villefort being a Royalist and Noirtier a Bonapartist—and is maintained largely for the sake of reputation and safety. He holds his grandson, Edward, in disfavor. He was faithfully served by Barrois for twenty-five years until the servant\'s death.\n\nRULES:\n- DO NOT assume the backstory is true.\n- DO NOT generate queries that presuppose events (e.g., "Where was Faria re-arrested in 1815?").\n- Use the canonical character information above to understand who the character is.\n- Generate queries that retrieve:\n  • the character\'s biography\n  • their timeline (birth, arrest, imprisonment)\n  • major events involving them\n  • relationships with important characters\n  • any canonical event that might confirm OR contradict the backstory\n\nTASK:\nGenerate up to 5 diagnostic queries that help verify the backstory.\n\nBook: The Count of Monte Cristo\nCharacter: Noirtier\nBackstory: His parents were targeted in a reprisal for supporting the Revolution; his mother was killed, deepening his distrust of authority.\n\nReturn ONLY a JSON list of strings.\nExample: ["Noirtier biography timeline", "Noirtier arrest imprisonment history", "Noirtier family relationships"]\n', 'role': 'user'}], 'model': 'nvidia/nemotron-3-nano-30b-a3b:free', 'response_format': {'type': 'json_schema', 'json_schema': {'name': 'QueryListOutput', 'description': 'Structured output format for query extraction.', 'strict': False, 'schema': {'type': 'object', 'properties': {'queries': {'type': 'array', 'items': {'type': 'string'}}}, 'required': ['queries']}}}, 'stream': False}}
+2026-01-11 03:00:56 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sat, 10 Jan 2026 21:30:56 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-RAY', b'9bbf47461ed298f2-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'X-RateLimit-Limit', b'50'), (b'X-RateLimit-Remaining', b'0'), (b'X-RateLimit-Reset', b'1768089600000'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare')])
+2026-01-11 03:00:56 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 03:00:56 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "429 Too Many Requests" Headers({'date': 'Sat, 10 Jan 2026 21:30:56 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9bbf47461ed298f2-DEL', 'access-control-allow-origin': '*', 'x-ratelimit-limit': '50', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1768089600000', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare'})
+2026-01-11 03:00:56 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-11 03:00:56 | DEBUG    | openai._base_client | request:1029 | Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1027, in request
+    response.raise_for_status()
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-01-11 03:00:56 | DEBUG    | openai._base_client | request:1046 | Re-raising status error
+2026-01-11 03:00:56 | WARNING  | extraction_agent.main | extract:90 | Structured output failed: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1768089600000'}, 'provider_name': None}}, 'user_id': 'user_31puWUjDHkZySmuspwMp8zKBle1'}. Falling back to JSON parsing
+2026-01-11 03:00:56 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-6aceae26-705f-45f1-b16a-000503a71180', 'json_data': {'messages': [{'content': 'You are a neutral query generator.\n\nYour goal is to verify the factual correctness of a character backstory by retrieving *all relevant canonical information* about the character from the book.\n\nCHARACTER CANONICAL INFORMATION:\nNoirtier de Villefort is the father of the Procureur du Roi, Gérard de Villefort, and a former French revolutionary of significant influence. Previously a Girondin and a Senator under Napoleon, he was a zealous Bonapartist and president of a Bonapartist club in Paris. In the novel\'s present timeline, he is an old man suffering from complete paralysis; he is mute and immobile, described as a "dumb and frozen carcass" who communicates solely through the expression of his eyes, which retain his formidable intelligence and commanding will.\n\nHistorically, Noirtier was the intended recipient of the conspiratorial letter from the Island of Elba carried by Edmond Dantès, a fact his son concealed to protect his own career, leading to Dantès\' imprisonment. He was also responsible for the death of General Quesnel (Baron d\'Épinay) in a duel in 1815, a secret that drives his fierce opposition to the marriage of his granddaughter, Valentine, to Quesnel\'s son, Franz d\'Épinay. Despite his physical helplessness, Noirtier successfully prevents this union by dictating a will that disinherits Valentine if she marries Franz. Later, Noirtier becomes the target of a poisoning attempt by Madame de Villefort; he survives lethal lemonade because his medical treatment for paralysis involves the ingestion of brucine, making him immune to the poison, though the draught kills his faithful servant, Barrois.\n\nNoirtier shares a deep, protective bond with his granddaughter, Valentine de Villefort, who is his sole comfort and the only person capable of interpreting his silent communication. His relationship with his son, Villefort, is strained by their opposing political histories—Villefort being a Royalist and Noirtier a Bonapartist—and is maintained largely for the sake of reputation and safety. He holds his grandson, Edward, in disfavor. He was faithfully served by Barrois for twenty-five years until the servant\'s death.\n\nRULES:\n- DO NOT assume the backstory is true.\n- DO NOT generate queries that presuppose events (e.g., "Where was Faria re-arrested in 1815?").\n- Use the canonical character information above to understand who the character is.\n- Generate queries that retrieve:\n  • the character\'s biography\n  • their timeline (birth, arrest, imprisonment)\n  • major events involving them\n  • relationships with important characters\n  • any canonical event that might confirm OR contradict the backstory\n\nTASK:\nGenerate up to 5 diagnostic queries that help verify the backstory.\n\nBook: The Count of Monte Cristo\nCharacter: Noirtier\nBackstory: His parents were targeted in a reprisal for supporting the Revolution; his mother was killed, deepening his distrust of authority.\n\nReturn ONLY a JSON list of strings.\nExample: ["Noirtier biography timeline", "Noirtier arrest imprisonment history", "Noirtier family relationships"]\n', 'role': 'user'}], 'model': 'nvidia/nemotron-3-nano-30b-a3b:free', 'stream': False}}
+2026-01-11 03:00:56 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.failed exception=KeyboardInterrupt()
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 03:00:56 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete

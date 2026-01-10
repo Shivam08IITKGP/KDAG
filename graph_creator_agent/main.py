@@ -55,7 +55,7 @@ def create_graph(state: dict) -> dict:
     llm = create_llm()
     
     # Generate triplets
-    triplets = generate_triplets(new_evidences, llm)
+    triplets = generate_triplets(new_evidences, llm, character_name)
     
     if triplets:
         # Add triplets to graph

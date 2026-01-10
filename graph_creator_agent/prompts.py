@@ -1,6 +1,9 @@
 """Prompts for graph creator agent."""
 TRIPLET_EXTRACTION_PROMPT = """Extract structured knowledge triplets from the following list of evidence texts to build a character knowledge graph.
 
+**TARGET CHARACTER: {character_name}**
+This graph should focus EXCLUSIVELY on information about {character_name}.
+
 Evidence List:
 {evidence_text}
 
@@ -9,6 +12,8 @@ Extract meaningful facts as (subject, relation, object) triplets from ALL the pr
 Each evidence item starts with "ID: <id>" followed by the text.
 You MUST cite the correct Evidence ID for each extracted triplet.
 
+**CRITICAL: Only extract triplets where the SUBJECT is "{character_name}" or directly related entities.**
+
 ---STRICT RULES---
 
 1. **ENTITY NORMALIZATION (CRITICAL):**
@@ -16,6 +21,7 @@ You MUST cite the correct Evidence ID for each extracted triplet.
    - **FULL NAMES ONLY:** Always use the complete proper name (e.g., "Jacques Paganel" not "Paganel" or "he")
    - **CONSISTENCY:** If evidence mentions "he" or a partial name, infer the full name from context
    - **NO GENERIC REFERENCES:** Avoid "the protagonist", "the geographer" as subjects
+   - **CHARACTER FOCUS:** ALL triplets MUST have subject == "{character_name}"
 
 2. **RELATION QUALITY:**
    - Use **UPPER_SNAKE_CASE** format (e.g., "IS_MEMBER_OF", "TRAVELED_TO")
@@ -49,21 +55,26 @@ You MUST cite the correct Evidence ID for each extracted triplet.
    - Capture: motivations, conflicts, turning points, affiliations
    - Include: temporal context when available (e.g., "during the expedition")
 
+6. **ENSURE GRAPH REVOLVES AROUND TARGET CHARACTER:**
+   - All triplets MUST have subject == "{character_name}"
+   - If evidence mentions other characters, only extract if they relate to {character_name}
+   - Skip triplets about other characters unless they directly involve {character_name}
+
 ---OUTPUT FORMAT---
 Return **ONLY** valid JSON with a "triplets" key containing an array of objects.
 
 Each triplet object must have exactly these fields:
-- "subject": string (Full proper name, no pronouns)
+- "subject": string (MUST be "{character_name}" - Full proper name, no pronouns)
 - "relation": string (UPPER_SNAKE_CASE)
 - "object": string (Specific entity/concept/trait)
 - "evidence_id": string (The exact ID of the evidence where this fact was found)
 
-Example:
+Example for {character_name}:
 {{
   "triplets": [
-    {{"subject": "Jacques Paganel", "relation": "IS_SECRETARY_OF", "object": "Geographical Society of Paris", "evidence_id": "chunk_123"}},
-    {{"subject": "Jacques Paganel", "relation": "HAS_TRAIT", "object": "absent-minded", "evidence_id": "chunk_124"}},
-    {{"subject": "Jacques Paganel", "relation": "MISTAKENLY_BOARDED", "object": "Duncan", "evidence_id": "chunk_125"}}
+    {{"subject": "{character_name}", "relation": "IS_SECRETARY_OF", "object": "Geographical Society of Paris", "evidence_id": "chunk_123"}},
+    {{"subject": "{character_name}", "relation": "HAS_TRAIT", "object": "absent-minded", "evidence_id": "chunk_124"}},
+    {{"subject": "{character_name}", "relation": "MISTAKENLY_BOARDED", "object": "Duncan", "evidence_id": "chunk_125"}}
   ]
 }}
 

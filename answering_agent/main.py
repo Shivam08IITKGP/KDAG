@@ -2,6 +2,7 @@
 import logging
 from answering_agent.classifier import classify, ClassificationOutput
 from answering_agent.evidence_generator import retrieve_evidence_for_queries, EvidenceOutput
+from extraction_agent.character_summaries import get_character_summary
 from shared_config import create_llm
 from dotenv import load_dotenv
 
@@ -26,6 +27,11 @@ def answer(state: dict) -> dict:
     backstory = state["backstory"]
     graph_path = state.get("graph_path")
     
+    # Get character summary
+    character_summary = get_character_summary(book_name, character_name)
+    if not character_summary:
+        character_summary = "No canonical character information available."
+    
     # Initialize LLM with OpenRouter config
     llm = create_llm()
     
@@ -36,6 +42,7 @@ def answer(state: dict) -> dict:
         character_name=character_name,
         backstory=backstory,
         graph_path=graph_path,
+        character_summary=character_summary,
         llm=llm,
     )
     

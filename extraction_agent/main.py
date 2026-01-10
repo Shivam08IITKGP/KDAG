@@ -5,6 +5,7 @@ from typing import TypedDict
 
 from extraction_agent.config import MAX_QUERIES
 from extraction_agent.prompts import EXTRACTION_PROMPT
+from extraction_agent.character_summaries import get_character_summary
 from shared_config import create_llm
 
 from Graphrag.pathway.retriever import retrieve_topk
@@ -47,15 +48,25 @@ def extract(state: dict) -> dict:
     logger.info("Starting extraction agent")
     logger.info(f"Book: {state['book_name']}, Character: {state['character_name']}")
     
+    # Get character summary
+    character_summary = get_character_summary(state["book_name"], state["character_name"])
+    if character_summary:
+        logger.info(f"Using character summary for {state['character_name']}")
+        logger.debug(f"Summary length: {len(character_summary)} characters")
+    else:
+        logger.warning(f"No character summary found for {state['character_name']}")
+        character_summary = "No canonical character information available."
+    
     # Initialize LLM with OpenRouter config
     llm = create_llm()
     
-    # Format prompt
+    # Format prompt with character summary
     prompt = EXTRACTION_PROMPT.format(
         book_name=state["book_name"],
         character_name=state["character_name"],
         backstory=state["backstory"],
         max_queries=MAX_QUERIES,
+        character_summary=character_summary,
     )
     
     logger.debug(f"Extraction prompt: {prompt}")
