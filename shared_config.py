@@ -18,7 +18,6 @@ def create_llm():
     """
     from langchain_openai import ChatOpenAI
     
-    
     return ChatOpenAI(
         api_key=OPENROUTER_API_KEY,
         base_url=OPENROUTER_BASE_URL,

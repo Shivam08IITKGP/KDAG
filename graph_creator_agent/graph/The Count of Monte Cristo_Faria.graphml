@@ -493,6 +493,81 @@
     <node id="affirmative">
       <data key="d0">entity</data>
     </node>
+    <node id="Cardinal Spada">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Piombino">
+      <data key="d0">entity</data>
+    </node>
+    <node id="1811">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Italian government">
+      <data key="d0">entity</data>
+    </node>
+    <node id="French government">
+      <data key="d0">entity</data>
+    </node>
+    <node id="A hundred leagues">
+      <data key="d0">entity</data>
+    </node>
+    <node id="listlessness">
+      <data key="d0">entity</data>
+    </node>
+    <node id="mad">
+      <data key="d0">entity</data>
+    </node>
+    <node id="corpse_in_sack">
+      <data key="d0">entity</data>
+    </node>
+    <node id="right_arm">
+      <data key="d0">entity</data>
+    </node>
+    <node id="left_leg">
+      <data key="d0">entity</data>
+    </node>
+    <node id="fearful_resolution">
+      <data key="d0">entity</data>
+    </node>
+    <node id="finer_bread">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Fenestrelle">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Piedmont">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Napoleon's son">
+      <data key="d0">entity</data>
+    </node>
+    <node id="current French ruler">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Louis XVIII">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Providence">
+      <data key="d0">entity</data>
+    </node>
+    <node id="M. de Boville">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Château d’If">
+      <data key="d0">entity</data>
+    </node>
+    <node id="M. de Villefort">
+      <data key="d0">entity</data>
+    </node>
+    <node id="examination">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Napoleon">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Napoleon II">
+      <data key="d0">entity</data>
+    </node>
     <edge source="Debray" target="Ostia being close to Rome">
       <data key="d1">SPEAKS_ABOUT</data>
       <data key="d2">["the count of monte cristo__chunk__1090"]</data>
@@ -679,7 +754,7 @@
     </edge>
     <edge source="Abbé Faria" target="Rome">
       <data key="d1">BORN_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__1136"]</data>
+      <data key="d2">["the count of monte cristo__chunk__1136", "the count of monte cristo__chunk__311"]</data>
     </edge>
     <edge source="Abbé Faria" target="charitable">
       <data key="d1">HAS_TRAIT</data>
@@ -688,6 +763,78 @@
     <edge source="Abbé Faria" target="small apartment in Paris">
       <data key="d1">INHABITED</data>
       <data key="d2">["the count of monte cristo__chunk__559"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="Cardinal Spada">
+      <data key="d1">SECRETARY_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__311"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="Piombino">
+      <data key="d1">ARRESTED_AT</data>
+      <data key="d2">["the count of monte cristo__chunk__311"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="1811">
+      <data key="d1">ARRESTED_IN_YEAR</data>
+      <data key="d2">["the count of monte cristo__chunk__311", "the count of monte cristo__chunk__737"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="Italian government">
+      <data key="d1">DEMANDED_LIBERTY_FROM</data>
+      <data key="d2">["the count of monte cristo__chunk__311"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="French government">
+      <data key="d1">DEMANDED_LIBERTY_FROM</data>
+      <data key="d2">["the count of monte cristo__chunk__311"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="Edmond Dantès">
+      <data key="d1">PROMISED_TREASURE_PORTION_TO</data>
+      <data key="d2">["the count of monte cristo__chunk__484", "the count of monte cristo__chunk__424"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="A hundred leagues">
+      <data key="d1">STATED_TREASURE_DISTANCE</data>
+      <data key="d2">["the count of monte cristo__chunk__315"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="listlessness">
+      <data key="d1">WARNED_ABOUT_LISTLESSNESS</data>
+      <data key="d2">["the count of monte cristo__chunk__531"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="mad">
+      <data key="d1">PERCEIVED_AS_MAD</data>
+      <data key="d2">["the count of monte cristo__chunk__375"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="right_arm">
+      <data key="d1">REMAINS_PARALYZED_IN</data>
+      <data key="d2">["the count of monte cristo__chunk__495"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="left_leg">
+      <data key="d1">REMAINS_PARALYZED_IN</data>
+      <data key="d2">["the count of monte cristo__chunk__495"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="letter">
+      <data key="d1">COMPULSED_DANTÈS_TO_LEARN</data>
+      <data key="d2">["the count of monte cristo__chunk__495"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="finer_bread">
+      <data key="d1">RECEIVED_FINER_BREAD</data>
+      <data key="d2">["the count of monte cristo__chunk__424"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="Fenestrelle">
+      <data key="d1">PREVIOUSLY_IMPRISONED_AT</data>
+      <data key="d2">["the count of monte cristo__chunk__737"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="Piedmont">
+      <data key="d1">TRANSFERRED_TO</data>
+      <data key="d2">["the count of monte cristo__chunk__737"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="Napoleon's son">
+      <data key="d1">LEARNED_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__737"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="current French ruler">
+      <data key="d1">ASKED_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__737"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="Providence">
+      <data key="d1">COMMENTED_ON</data>
+      <data key="d2">["the count of monte cristo__chunk__737"]</data>
     </edge>
     <edge source="Madame Danglars" target="black dress">
       <data key="d1">WEARS</data>
@@ -941,6 +1088,26 @@
       <data key="d1">HAS_TRAIT</data>
       <data key="d2">["the count of monte cristo__chunk__84"]</data>
     </edge>
+    <edge source="Edmond Dantès" target="Abbé Faria">
+      <data key="d1">VISITED</data>
+      <data key="d2">["the count of monte cristo__chunk__447", "the count of monte cristo__chunk__515"]</data>
+    </edge>
+    <edge source="Edmond Dantès" target="corpse_in_sack">
+      <data key="d1">ESCAPED_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__734"]</data>
+    </edge>
+    <edge source="Edmond Dantès" target="letter">
+      <data key="d1">LEARNED_LETTER_BY_HEART</data>
+      <data key="d2">["the count of monte cristo__chunk__495"]</data>
+    </edge>
+    <edge source="Edmond Dantès" target="fearful_resolution">
+      <data key="d1">FORMED_RESOLUTION</data>
+      <data key="d2">["the count of monte cristo__chunk__424"]</data>
+    </edge>
+    <edge source="Edmond Dantès" target="Louis XVIII">
+      <data key="d1">REPLIED_WITH</data>
+      <data key="d2">["the count of monte cristo__chunk__737"]</data>
+    </edge>
     <edge source="The count" target="Danglars">
       <data key="d1">IS_CONDUCTED_OUT_BY</data>
       <data key="d2">["the count of monte cristo__chunk__812"]</data>
@@ -1044,6 +1211,22 @@
     <edge source="Julie" target="M. Emmanuel">
       <data key="d1">INFORM_OF</data>
       <data key="d2">["the count of monte cristo__chunk__1136"]</data>
+    </edge>
+    <edge source="M. de Boville" target="Château d’If">
+      <data key="d1">EXAMINED_DOCUMENTS</data>
+      <data key="d2">["the count of monte cristo__chunk__734"]</data>
+    </edge>
+    <edge source="M. de Villefort" target="examination">
+      <data key="d1">MADE_MARGINAL_NOTES</data>
+      <data key="d2">["the count of monte cristo__chunk__734"]</data>
+    </edge>
+    <edge source="Napoleon" target="Rome">
+      <data key="d1">CREATED_KINGDOM_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__311"]</data>
+    </edge>
+    <edge source="Napoleon" target="Napoleon II">
+      <data key="d1">HAD_SON</data>
+      <data key="d2">["the count of monte cristo__chunk__311"]</data>
     </edge>
   </graph>
 </graphml>

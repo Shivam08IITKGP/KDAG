@@ -90,18 +90,102 @@ def load_graph(book_name: str, character_name: str) -> nx.DiGraph:
     return nx.DiGraph()
 
 
-def add_triplets(graph: nx.DiGraph, triplets: list[Triplet]) -> None:
-    """Add triplets to graph as nodes and edges.
+def deduplicate_triplets(triplets: list[Triplet]) -> list[Triplet]:
+    """Deduplicate triplets by merging evidence IDs for identical relations.
+    
+    Strategy:
+    - Same (subject, relation, object): merge evidence_ids, keep first
+    - Same (subject, object) but different relation: keep both, log warning
     
     Args:
-        graph: NetworkX directed graph.
         triplets: List of Triplet TypedDicts.
+        
+    Returns:
+        Deduplicated list of triplets.
     """
+    # Use dict with (subject, relation, object) as key
+    triplet_map = {}
+    relation_conflicts = []
+    
     for triplet in triplets:
         subject = triplet["subject"]
         relation = triplet["relation"]
         obj = triplet["object"]
         evidence_id = triplet["evidence_id"]
+        
+        key = (subject, relation, obj)
+        
+        if key in triplet_map:
+            # Duplicate found - merge evidence_ids
+            existing = triplet_map[key]
+            if evidence_id not in existing.get("evidence_ids", []):
+                if "evidence_ids" not in existing:
+                    existing["evidence_ids"] = [existing["evidence_id"]]
+                existing["evidence_ids"].append(evidence_id)
+        else:
+            # Check for same (subject, object) with different relation
+            conflict_key = (subject, obj)
+            has_conflict = False
+            for existing_key in triplet_map.keys():
+                if existing_key[0] == subject and existing_key[2] == obj and existing_key[1] != relation:
+                    has_conflict = True
+                    relation_conflicts.append({
+                        "subject": subject,
+                        "object": obj,
+                        "relation1": existing_key[1],
+                        "relation2": relation,
+                    })
+                    break
+            
+            # Add new triplet (even if conflict - we keep both)
+            triplet_map[key] = triplet.copy()
+    
+    # Log conflicts
+    if relation_conflicts:
+        logger.warning(f"Found {len(relation_conflicts)} relation conflicts (same subject-object, different relations):")
+        for conflict in relation_conflicts[:5]:  # Show first 5
+            logger.warning(f"  ({conflict['subject']}, {conflict['object']}): '{conflict['relation1']}' vs '{conflict['relation2']}'")
+    
+    # Convert back to list, consolidating evidence_ids
+    deduplicated = []
+    for triplet in triplet_map.values():
+        if "evidence_ids" in triplet:
+            # Multiple evidence IDs - keep as list in evidence_id field for consistency
+            # (We'll handle this properly when adding to graph)
+            deduplicated.append(triplet)
+        else:
+            deduplicated.append(triplet)
+    
+    original_count = len(triplets)
+    dedup_count = len(deduplicated)
+    if original_count > dedup_count:
+        logger.info(f"Deduplicated {original_count} triplets to {dedup_count} (removed {original_count - dedup_count} duplicates)")
+    
+    return deduplicated
+
+
+def add_triplets(graph: nx.DiGraph, triplets: list[Triplet]) -> None:
+    """Add triplets to graph as nodes and edges.
+    
+    Triplets are deduplicated before adding to prevent duplicate edges.
+    
+    Args:
+        graph: NetworkX directed graph.
+        triplets: List of Triplet TypedDicts.
+    """
+    # Deduplicate triplets first
+    triplets = deduplicate_triplets(triplets)
+    
+    for triplet in triplets:
+        subject = triplet["subject"]
+        relation = triplet["relation"]
+        obj = triplet["object"]
+        
+        # Handle both single evidence_id and list of evidence_ids from deduplication
+        if "evidence_ids" in triplet:
+            evidence_ids = triplet["evidence_ids"]
+        else:
+            evidence_ids = [triplet["evidence_id"]]
         
         # Add nodes if they don't exist
         if subject not in graph:
@@ -109,7 +193,7 @@ def add_triplets(graph: nx.DiGraph, triplets: list[Triplet]) -> None:
         if obj not in graph:
             graph.add_node(obj, type="entity")
         
-        # Add edge with relation and evidence_ids (only use evidence_ids, not evidence_id)
+        # Add edge with relation and evidence_ids
         if graph.has_edge(subject, obj):
             # Edge exists, update evidence_ids
             edge_data = graph[subject][obj]
@@ -121,17 +205,17 @@ def add_triplets(graph: nx.DiGraph, triplets: list[Triplet]) -> None:
                 # Convert to list if it's not already
                 edge_data["evidence_ids"] = [edge_data["evidence_ids"]] if edge_data["evidence_ids"] else []
             
-            # Add evidence_id if not already present
-            if evidence_id not in edge_data["evidence_ids"]:
-                edge_data["evidence_ids"].append(evidence_id)
+            # Add new evidence_ids if not already present
+            for eid in evidence_ids:
+                if eid not in edge_data["evidence_ids"]:
+                    edge_data["evidence_ids"].append(eid)
             
             # Update relation if different (keep existing or update)
-            # Note: We keep the existing relation, but could log if different
             if edge_data.get("relation") != relation:
                 logger.debug(f"Relation mismatch for edge ({subject}, {obj}): existing='{edge_data.get('relation')}', new='{relation}'")
         else:
-            # New edge - only use evidence_ids (list)
-            graph.add_edge(subject, obj, relation=relation, evidence_ids=[evidence_id])
+            # New edge
+            graph.add_edge(subject, obj, relation=relation, evidence_ids=evidence_ids)
     
     logger.info(f"Added {len(triplets)} triplets to graph. Graph now has {graph.number_of_nodes()} nodes and {graph.number_of_edges()} edges")
 

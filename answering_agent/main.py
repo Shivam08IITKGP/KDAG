@@ -1,10 +1,10 @@
 """Answering agent main module."""
 import logging
-import os
 from answering_agent.classifier import classify, ClassificationOutput
-from answering_agent.evidence_generator import generate_evidence_ids, EvidenceOutput
+from answering_agent.evidence_generator import retrieve_evidence_for_queries, EvidenceOutput
 from shared_config import create_llm
 from dotenv import load_dotenv
+
 load_dotenv()
 logger = logging.getLogger(__name__)
 
@@ -16,7 +16,7 @@ def answer(state: dict) -> dict:
         state: PipelineState dictionary.
         
     Returns:
-        Updated state with label, reasoning, and evidence_ids.
+        Updated state with label, reasoning, evidence_queries, and evidence_chunks.
     """
     logger.info("Starting answering agent")
     logger.info(f"Book: {state['book_name']}, Character: {state['character_name']}")
@@ -25,7 +25,6 @@ def answer(state: dict) -> dict:
     character_name = state["character_name"]
     backstory = state["backstory"]
     graph_path = state.get("graph_path")
-    evidences = state.get("evidences", [])
     
     # Initialize LLM with OpenRouter config
     llm = create_llm()
@@ -42,26 +41,28 @@ def answer(state: dict) -> dict:
     
     label = classification["label"]
     reasoning = classification["reasoning"]
+    evidence_queries = classification["evidence_queries"]
     
     logger.info(f"Classification result: label={label}")
+    logger.info(f"Generated {len(evidence_queries)} evidence queries")
     
-    # Run evidence generator
-    logger.info("Running evidence generator")
-    evidence_output: EvidenceOutput = generate_evidence_ids(
-        reasoning=reasoning,
-        evidences=evidences,
-        backstory=backstory,
-        llm=llm,
+    # Retrieve evidence for queries
+    logger.info("Retrieving evidence for queries")
+    evidence_output: EvidenceOutput = retrieve_evidence_for_queries(
+        evidence_queries=evidence_queries,
+        book_name=book_name,
+        k=3,  # Retrieve 3 chunks per query
     )
     
-    evidence_ids = evidence_output["evidence_ids"]
-    logger.info(f"Generated {len(evidence_ids)} evidence IDs")
+    evidence_chunks = evidence_output["evidence_chunks"]
+    logger.info(f"Retrieved {len(evidence_chunks)} total evidence chunks")
     
     # Update state
     updated_state = state.copy()
     updated_state["label"] = label
     updated_state["reasoning"] = reasoning
-    updated_state["evidence_ids"] = evidence_ids
+    updated_state["evidence_queries"] = evidence_queries
+    updated_state["evidence_chunks"] = evidence_chunks
     
     logger.info("Answering agent completed")
     return updated_state

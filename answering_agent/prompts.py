@@ -28,24 +28,15 @@ DECISION CRITERIA:
 OUTPUT FORMAT (strict JSON):
 {{
   "label": 1 or 0,
-  "reasoning": "Step-by-step justification explicitly referencing graph facts or stating absence of contradiction."
+  "reasoning": "Step-by-step justification explicitly referencing graph facts or stating absence of contradiction.",
+  "evidence_queries": [
+    "Query 1 to find exact verbatim evidence from novel",
+    "Query 2 to find supporting passages",
+    "Query 3 to verify specific claims"
+  ]
 }}
-"""
 
-EVIDENCE_SELECTION_PROMPT = """Select evidence IDs that best support or contradict the given reasoning.
-
-Reasoning: {reasoning}
-
-Backstory: {backstory}
-
-Available Evidence:
-{evidence_list}
-
-Return a JSON object with:
-- evidence_ids: A list of evidence IDs (strings) that are most relevant to the reasoning
-
-Example:
-{{
-  "evidence_ids": ["ev_1", "ev_2", "ev_3"]
-}}
+IMPORTANT: Generate 3-5 specific queries that would retrieve exact text passages from the novel 
+that justify your reasoning. These should be precise search queries targeting specific facts, 
+events, or character descriptions mentioned in your reasoning.
 """

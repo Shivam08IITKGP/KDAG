@@ -511,6 +511,57 @@
     <node id="manoeuvres">
       <data key="d0">entity</data>
     </node>
+    <node id="Robert's horse">
+      <data key="d0">entity</data>
+    </node>
+    <node id="ramada">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Fort Independence">
+      <data key="d0">entity</data>
+    </node>
+    <node id="saturated soil">
+      <data key="d0">entity</data>
+    </node>
+    <node id="plunderers">
+      <data key="d0">entity</data>
+    </node>
+    <node id="nandou hunt">
+      <data key="d0">entity</data>
+    </node>
+    <node id="first stakes of inclosure">
+      <data key="d0">entity</data>
+    </node>
+    <node id="prairies">
+      <data key="d0">entity</data>
+    </node>
+    <node id="intrepid horse">
+      <data key="d0">entity</data>
+    </node>
+    <node id="powder-flask">
+      <data key="d0">entity</data>
+    </node>
+    <node id="firing">
+      <data key="d0">entity</data>
+    </node>
+    <node id="visit_to_top_of_tree">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Thaouka sensed enemy">
+      <data key="d0">entity</data>
+    </node>
+    <node id="fuel">
+      <data key="d0">entity</data>
+    </node>
+    <node id="child">
+      <data key="d0">entity</data>
+    </node>
+    <node id="forehead">
+      <data key="d0">entity</data>
+    </node>
+    <node id="fear">
+      <data key="d0">entity</data>
+    </node>
     <edge source="Jacques Paganel" target="French">
       <data key="d1">IS_GEOGRAPHER</data>
       <data key="d2">["ev_1"]</data>
@@ -769,7 +820,7 @@
     </edge>
     <edge source="Thalcave" target="Paganel">
       <data key="d1">RELATED_STORY_TO</data>
-      <data key="d2">["in search of the castaways__chunk__305"]</data>
+      <data key="d2">["in search of the castaways__chunk__305", "in search of the castaways__chunk__237", "in search of the castaways__chunk__415"]</data>
     </edge>
     <edge source="Thalcave" target="them">
       <data key="d1">CALLED_ATTENTION_TO</data>
@@ -777,11 +828,67 @@
     </edge>
     <edge source="Thalcave" target="carbine">
       <data key="d1">FIRED</data>
-      <data key="d2">["in search of the castaways__chunk__188", "in search of the castaways__chunk__262"]</data>
+      <data key="d2">["in search of the castaways__chunk__188", "in search of the castaways__chunk__262", "in search of the castaways__chunk__289", "in search of the castaways__chunk__279"]</data>
     </edge>
     <edge source="Thalcave" target="manoeuvres">
       <data key="d1">WATCHED</data>
       <data key="d2">["in search of the castaways__chunk__342"]</data>
+    </edge>
+    <edge source="Thalcave" target="ramada">
+      <data key="d1">FOUND</data>
+      <data key="d2">["in search of the castaways__chunk__270"]</data>
+    </edge>
+    <edge source="Thalcave" target="Fort Independence">
+      <data key="d1">INTENDED_TO_REACH</data>
+      <data key="d2">["in search of the castaways__chunk__309"]</data>
+    </edge>
+    <edge source="Thalcave" target="saturated soil">
+      <data key="d1">OBSERVED</data>
+      <data key="d2">["in search of the castaways__chunk__335"]</data>
+    </edge>
+    <edge source="Thalcave" target="plunderers">
+      <data key="d1">VIEWED_AS</data>
+      <data key="d2">["in search of the castaways__chunk__254"]</data>
+    </edge>
+    <edge source="Thalcave" target="nandou hunt">
+      <data key="d1">SHOWED</data>
+      <data key="d2">["in search of the castaways__chunk__273"]</data>
+    </edge>
+    <edge source="Thalcave" target="first stakes of inclosure">
+      <data key="d1">TOOK_POSITION_AT</data>
+      <data key="d2">["in search of the castaways__chunk__279"]</data>
+    </edge>
+    <edge source="Thalcave" target="Thaouka">
+      <data key="d1">INDICATED</data>
+      <data key="d2">["in search of the castaways__chunk__424", "in search of the castaways__chunk__357"]</data>
+    </edge>
+    <edge source="Thalcave" target="prairies">
+      <data key="d1">REFUSES_TO_LEAVE</data>
+      <data key="d2">["in search of the castaways__chunk__424"]</data>
+    </edge>
+    <edge source="Thalcave" target="intrepid horse">
+      <data key="d1">ASCRIBED_HONOR_TO</data>
+      <data key="d2">["in search of the castaways__chunk__415"]</data>
+    </edge>
+    <edge source="Thalcave" target="tired pedestrian">
+      <data key="d1">WILL_CARRY</data>
+      <data key="d2">["in search of the castaways__chunk__415"]</data>
+    </edge>
+    <edge source="Thalcave" target="powder-flask">
+      <data key="d1">SHOWED_EMPTY_POWDER_FLASK</data>
+      <data key="d2">["in search of the castaways__chunk__282"]</data>
+    </edge>
+    <edge source="Thalcave" target="firing">
+      <data key="d1">PROHIBITED_FIRING</data>
+      <data key="d2">["in search of the castaways__chunk__282"]</data>
+    </edge>
+    <edge source="Thalcave" target="Thaouka sensed enemy">
+      <data key="d1">SAID_THAT</data>
+      <data key="d2">["in search of the castaways__chunk__278"]</data>
+    </edge>
+    <edge source="Thalcave" target="fuel">
+      <data key="d1">THREW_LAST_ARM_FUEL</data>
+      <data key="d2">["in search of the castaways__chunk__287"]</data>
     </edge>
     <edge source="Major" target="hunting approach">
       <data key="d1">SUGGESTS</data>
@@ -814,6 +921,10 @@
     <edge source="Lord Glenarvan" target="course to take">
       <data key="d1">ASKED_QUESTION</data>
       <data key="d2">["in search of the castaways__chunk__261"]</data>
+    </edge>
+    <edge source="Lord Glenarvan" target="Robert's horse">
+      <data key="d1">SPRANG_UPON</data>
+      <data key="d2">["in search of the castaways__chunk__296"]</data>
     </edge>
     <edge source="Lady Helena" target="Major McNabbs">
       <data key="d1">TRAVELED_WITH</data>
@@ -1037,7 +1148,15 @@
     </edge>
     <edge source="Glenarvan" target="Thalcave">
       <data key="d1">JOINED</data>
-      <data key="d2">["in search of the castaways__chunk__334"]</data>
+      <data key="d2">["in search of the castaways__chunk__334", "in search of the castaways__chunk__424"]</data>
+    </edge>
+    <edge source="Glenarvan" target="child">
+      <data key="d1">THOUGHT_OF</data>
+      <data key="d2">["in search of the castaways__chunk__287"]</data>
+    </edge>
+    <edge source="Glenarvan" target="forehead">
+      <data key="d1">PRESSED_LIPS_TO_FOREHEAD</data>
+      <data key="d2">["in search of the castaways__chunk__287"]</data>
     </edge>
     <edge source="Paganel" target="dangers">
       <data key="d1">EXCLAIMED_ABOUT</data>
@@ -1083,6 +1202,10 @@
       <data key="d1">EXPRESSED_GRATITUDE</data>
       <data key="d2">["in search of the castaways__chunk__374", "in search of the castaways__chunk__305"]</data>
     </edge>
+    <edge source="Robert" target="fear">
+      <data key="d1">DENIED</data>
+      <data key="d2">["in search of the castaways__chunk__283"]</data>
+    </edge>
     <edge source="Mulready" target="creature">
       <data key="d1">DEFEATED</data>
       <data key="d2">["in search of the castaways__chunk__74"]</data>
@@ -1098,6 +1221,10 @@
     <edge source="Wilson" target="navigation">
       <data key="d1">HAS_SKILL</data>
       <data key="d2">["in search of the castaways__chunk__20"]</data>
+    </edge>
+    <edge source="Wilson" target="visit_to_top_of_tree">
+      <data key="d1">GAVE_ACCOUNT_OF</data>
+      <data key="d2">["in search of the castaways__chunk__357"]</data>
     </edge>
     <edge source="Mary" target="father's potential happiness">
       <data key="d1">EXPRESSES_HAPPINESS</data>

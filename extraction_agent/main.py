@@ -12,6 +12,11 @@ from Graphrag.pathway.retriever import retrieve_topk
 logger = logging.getLogger(__name__)
 
 
+class QueryListOutput(TypedDict):
+    """Structured output format for query extraction."""
+    queries: list[str]
+
+
 class ExtractionOutput(TypedDict):
     """Output from extraction agent."""
     queries: list[str]
@@ -55,36 +60,69 @@ def extract(state: dict) -> dict:
     
     logger.debug(f"Extraction prompt: {prompt}")
     
-    # Generate queries
+    # Generate queries with structured output
     logger.info("Generating queries via LLM")
-    response = llm.invoke(prompt)
-    response_text = response.content.strip()
     
-    logger.debug(f"LLM response: {response_text}")
-    
-    # Parse JSON response
+    queries = []
     try:
-        # Try to extract JSON from response (might have markdown code blocks)
-        if "```" in response_text:
-            # Extract JSON from code block
-            start = response_text.find("[")
-            end = response_text.rfind("]") + 1
-            if start != -1 and end > start:
-                response_text = response_text[start:end]
+        # Try structured output first
+        structured_llm = llm.with_structured_output(QueryListOutput)
+        response_data: QueryListOutput = structured_llm.invoke(prompt)
+        queries = response_data.get("queries", [])
         
-        queries = json.loads(response_text)
         if not isinstance(queries, list):
-            raise ValueError("Response is not a list")
+            raise ValueError("Structured output did not return a list")
         
-        # Limit to MAX_QUERIES
-        queries = queries[:MAX_QUERIES]
-        
-        logger.info(f"Generated {len(queries)} queries")
+        logger.info(f"Generated {len(queries)} queries via structured output")
         
     except Exception as e:
-        logger.error(f"Error parsing queries: {e}")
-        logger.error(f"Response text: {response_text}")
-        queries = []
+        logger.warning(f"Structured output failed: {e}. Falling back to JSON parsing")
+        
+        # Fallback: JSON parsing
+        try:
+            response = llm.invoke(prompt)
+            response_text = response.content.strip()
+            logger.debug(f"LLM response: {response_text}")
+            
+            # Try to extract JSON from response (might have markdown code blocks)
+            if "```" in response_text:
+                # Extract JSON from code block
+                start = response_text.find("[")
+                end = response_text.rfind("]") + 1
+                if start != -1 and end > start:
+                    response_text = response_text[start:end]
+                # Also check for wrapped json object
+                elif "{" in response_text:
+                    start = response_text.find("{")
+                    end = response_text.rfind("}") + 1
+                    if start != -1 and end > start:
+                        response_text = response_text[start:end]
+            
+            # Try parsing
+            parsed = json.loads(response_text)
+            
+            # Handle both list and dict with 'queries' key
+            if isinstance(parsed, list):
+                queries = parsed
+            elif isinstance(parsed, dict) and "queries" in parsed:
+                queries = parsed["queries"]
+            else:
+                raise ValueError("Response is not a list or dict with 'queries' key")
+            
+            if not isinstance(queries, list):
+                raise ValueError("Queries is not a list")
+            
+            logger.info(f"Generated {len(queries)} queries via fallback parsing")
+            
+        except Exception as fallback_error:
+            logger.error(f"Fallback parsing also failed: {fallback_error}")
+            logger.error(f"Response text: {response_text if 'response_text' in locals() else 'N/A'}")
+            queries = []
+    
+    # Limit to MAX_QUERIES
+    if len(queries) > MAX_QUERIES:
+        logger.info(f"Limiting queries from {len(queries)} to {MAX_QUERIES}")
+        queries = queries[:MAX_QUERIES]
     
     # Get evidence for each query
     all_evidences = {}

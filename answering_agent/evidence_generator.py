@@ -1,94 +1,59 @@
-"""Evidence generator module for answering agent."""
-import json
+"""Evidence retrieval module for answering agent."""
 import logging
 from typing import TypedDict
 
-from langchain_openai import ChatOpenAI
-
-from answering_agent.prompts import EVIDENCE_SELECTION_PROMPT
+from Graphrag.pathway.retriever import retrieve_topk
 
 logger = logging.getLogger(__name__)
 
+
 class EvidenceOutput(TypedDict):
-    """Output from evidence generator."""
-    evidence_ids: list[str]
+    """Output from evidence retrieval."""
+    evidence_chunks: list[dict]  # List of {id, text, score, query}
 
 
-def generate_evidence_ids(
-    reasoning: str,
-    evidences: list[dict],
-    backstory: str,
-    llm: ChatOpenAI,
+def retrieve_evidence_for_queries(
+    evidence_queries: list[str],
+    book_name: str,
+    k: int = 3,
 ) -> EvidenceOutput:
-    """Generate evidence IDs that support or contradict the reasoning.
+    """Retrieve evidence chunks for each query.
     
     Args:
-        reasoning: The reasoning from classification.
-        evidences: List of evidence dicts with 'id' and 'text' keys.
-        backstory: The backstory being checked.
-        llm: ChatOpenAI instance.
+        evidence_queries: List of queries from classifier.
+        book_name: Name of the book to search.
+        k: Number of chunks to retrieve per query.
         
     Returns:
-        EvidenceOutput TypedDict.
+        EvidenceOutput TypedDict with all retrieved chunks.
     """
-    logger.info("Starting evidence ID generation")
+    logger.info(f"Retrieving evidence for {len(evidence_queries)} queries")
     
-    # Format evidence list
-    evidence_list_parts = []
-    for ev in evidences:
-        ev_id = ev.get("id", "unknown")
-        ev_text = ev.get("text", "")
-        evidence_list_parts.append(f"ID: {ev_id}\nText: {ev_text}\n")
+    all_evidence_chunks = []
+    seen_chunk_ids = set()
     
-    evidence_list = "\n".join(evidence_list_parts)
+    for idx, query in enumerate(evidence_queries, 1):
+        logger.info(f"Query {idx}/{len(evidence_queries)}: {query}")
+        
+        try:
+            # Retrieve top-k chunks for this query
+            chunks = retrieve_topk(book_name, query, k=k)
+            
+            logger.info(f"Retrieved {len(chunks)} chunks for query {idx}")
+            
+            # Add query context and deduplicate
+            for chunk in chunks:
+                chunk_id = chunk.get("id")
+                if chunk_id not in seen_chunk_ids:
+                    chunk["query"] = query  # Track which query retrieved this
+                    all_evidence_chunks.append(chunk)
+                    seen_chunk_ids.add(chunk_id)
+                    logger.debug(f"  - {chunk_id}: score={chunk.get('score', 0):.3f}")
+        
+        except Exception as e:
+            logger.error(f"Error retrieving evidence for query '{query}': {e}")
+            continue
     
-    # Format prompt
-    prompt = EVIDENCE_SELECTION_PROMPT.format(
-        reasoning=reasoning,
-        backstory=backstory,
-        evidence_list=evidence_list,
-    )
+    logger.info(f"Total unique evidence chunks retrieved: {len(all_evidence_chunks)}")
     
-    logger.debug(f"Evidence selection prompt: {prompt[:200]}...")
-    
-    # Get LLM response
-    logger.info("Calling LLM for evidence selection")
-    response = llm.invoke(prompt)
-    response_text = response.content.strip()
-    
-    logger.debug(f"LLM response: {response_text}")
-    
-    # Parse JSON response
-    try:
-        # Try to extract JSON from response
-        if "```" in response_text:
-            start = response_text.find("{")
-            end = response_text.rfind("}") + 1
-            if start != -1 and end > start:
-                response_text = response_text[start:end]
-        
-        result = json.loads(response_text)
-        
-        # Validate and create TypedDict
-        evidence_ids = result.get("evidence_ids", [])
-        if not isinstance(evidence_ids, list):
-            logger.warning(f"evidence_ids is not a list: {evidence_ids}")
-            evidence_ids = []
-        
-        # Filter to only include IDs that exist in evidences
-        valid_evidence_ids = {ev.get("id") for ev in evidences}
-        evidence_ids = [ev_id for ev_id in evidence_ids if ev_id in valid_evidence_ids]
-        
-        output: EvidenceOutput = {
-            "evidence_ids": evidence_ids,
-        }
-        
-        logger.info(f"Generated {len(evidence_ids)} evidence IDs")
-        return output
-        
-    except Exception as e:
-        logger.error(f"Error parsing evidence selection response: {e}")
-        logger.error(f"Response text: {response_text}")
-        
-        # Return default
-        return EvidenceOutput(evidence_ids=[])
+    return EvidenceOutput(evidence_chunks=all_evidence_chunks)

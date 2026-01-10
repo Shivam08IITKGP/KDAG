@@ -16,6 +16,7 @@ class ClassificationOutput(TypedDict):
     """Output from classification."""
     label: int  # 1 or 0
     reasoning: str
+    evidence_queries: list[str]  # Queries to fetch supporting evidence
 
 
 def summarize_graph(graph: nx.DiGraph) -> str:
@@ -116,13 +117,21 @@ def classify(
             label = 0
         
         reasoning = result.get("reasoning", "No reasoning provided")
+        evidence_queries = result.get("evidence_queries", [])
+        
+        # Validate queries
+        if not isinstance(evidence_queries, list):
+            logger.warning(f"evidence_queries is not a list, defaulting to empty")
+            evidence_queries = []
         
         output: ClassificationOutput = {
             "label": label,
             "reasoning": reasoning,
+            "evidence_queries": evidence_queries,
         }
         
-        logger.info(f"Classification complete: label={label}")
+        logger.info(f"Classification complete: label={label}, queries={len(evidence_queries)}")
+        logger.debug(f"Evidence queries: {evidence_queries}")
         return output
         
     except Exception as e:
@@ -133,4 +142,5 @@ def classify(
         return ClassificationOutput(
             label=0,
             reasoning=f"Error during classification: {e}",
+            evidence_queries=[],
         )
