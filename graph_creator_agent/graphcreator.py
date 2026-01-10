@@ -30,27 +30,34 @@ def convert_graphml_attributes(graph: nx.DiGraph) -> None:
     """Convert GraphML string attributes back to proper types.
     
     GraphML stores all attributes as strings, so we need to convert
-    lists and other types back to their proper format.
+    JSON-encoded lists back to their proper format.
     
     Args:
         graph: NetworkX graph loaded from GraphML.
     """
-    # Convert edge evidence_ids from string to list
+    # Convert edge attributes from JSON strings back to lists
     for u, v, data in graph.edges(data=True):
-        if "evidence_ids" in data:
-            ev_ids = data["evidence_ids"]
-            if isinstance(ev_ids, str):
+        for key, value in list(data.items()):
+            if isinstance(value, str):
+                # Try to parse as JSON (for lists we saved as JSON strings)
                 try:
-                    # Try to parse as Python list literal
-                    data["evidence_ids"] = ast.literal_eval(ev_ids)
-                except (ValueError, SyntaxError):
-                    # If that fails, try JSON
-                    try:
-                        data["evidence_ids"] = json.loads(ev_ids)
-                    except json.JSONDecodeError:
-                        # If all else fails, create list from string
-                        logger.warning(f"Could not parse evidence_ids for edge ({u}, {v}): {ev_ids}")
-                        data["evidence_ids"] = [ev_ids] if ev_ids else []
+                    parsed = json.loads(value)
+                    if isinstance(parsed, list):
+                        data[key] = parsed
+                except (json.JSONDecodeError, ValueError):
+                    # Not a JSON string, keep as is
+                    pass
+    
+    # Also check node attributes
+    for node, data in graph.nodes(data=True):
+        for key, value in list(data.items()):
+            if isinstance(value, str):
+                try:
+                    parsed = json.loads(value)
+                    if isinstance(parsed, list):
+                        data[key] = parsed
+                except (json.JSONDecodeError, ValueError):
+                    pass
 
 
 def load_existing_graph(book_name: str, character_name: str) -> nx.DiGraph:
@@ -233,6 +240,8 @@ def add_triplets_to_graph(graph: nx.DiGraph, triplets: list[Triplet]) -> None:
 def save_graph(graph: nx.DiGraph, book_name: str, character_name: str) -> str:
     """Save graph to GraphML file.
     
+    GraphML doesn't support lists, so we convert all list attributes to JSON strings.
+    
     Args:
         graph: NetworkX directed graph.
         book_name: Name of the book.
@@ -246,6 +255,19 @@ def save_graph(graph: nx.DiGraph, book_name: str, character_name: str) -> str:
     
     graph_filename = f"{book_name}_{character_name}.graphml"
     graph_path = graph_dir / graph_filename
+    
+    # Convert all list attributes to JSON strings for GraphML compatibility
+    # GraphML only supports scalar types (str, int, float, bool)
+    for u, v, data in graph.edges(data=True):
+        for key, value in list(data.items()):
+            if isinstance(value, list):
+                data[key] = json.dumps(value)
+    
+    # Also check node attributes (though we don't use lists there currently)
+    for node, data in graph.nodes(data=True):
+        for key, value in list(data.items()):
+            if isinstance(value, list):
+                data[key] = json.dumps(value)
     
     nx.write_graphml(graph, graph_path)
     logger.info(f"Saved graph to {graph_path}")

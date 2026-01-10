@@ -1,25 +1,72 @@
 """Prompts for graph creator agent."""
-TRIPLET_EXTRACTION_PROMPT = """Extract knowledge triplets from the following evidence about the character.
+TRIPLET_EXTRACTION_PROMPT = """Extract structured knowledge triplets from the following evidence text to build a character knowledge graph.
 
 Evidence:
 {evidence_text}
 
 Evidence ID: {evidence_id}
 
-Extract triplets in the format: (subject, relation, object)
-Each triplet should represent a fact about the character.
+---GOAL---
+Extract meaningful facts as (subject, relation, object) triplets that capture character traits, relationships, actions, and context.
 
-Return a JSON object with a "triplets" key containing a list of objects, each with:
-- subject: string
-- relation: string
-- object: string
-- evidence_id: string (must be exactly: {evidence_id})
+---STRICT RULES---
 
-Example format (replace "ev_1" with the actual evidence_id):
+1. **ENTITY NORMALIZATION (CRITICAL):**
+   - **NO PRONOUNS:** Never use "He", "She", "They", "It", "The Character", or "This person"
+   - **FULL NAMES ONLY:** Always use the complete proper name (e.g., "Jacques Paganel" not "Paganel" or "he")
+   - **CONSISTENCY:** If evidence mentions "he" or a partial name, infer the full name from context
+   - **NO GENERIC REFERENCES:** Avoid "the protagonist", "the geographer" as subjects
+
+2. **RELATION QUALITY:**
+   - Use **UPPER_SNAKE_CASE** format (e.g., "IS_MEMBER_OF", "TRAVELED_TO")
+   - Be **specific and meaningful**: "MISTAKENLY_BOARDED" > "BOARDED", "SPEAKS_FLUENTLY" > "SPEAKS"
+   - Common relation types for novels:
+     * Character traits: HAS_TRAIT, KNOWN_FOR, PERSONALITY_IS
+     * Relationships: FRIEND_OF, ENEMY_OF, FAMILY_OF, WORKS_WITH, TRAVELS_WITH
+     * Actions: TRAVELED_TO, MISTAKENLY_DID, DISCOVERED, CREATED, DESTROYED
+     * Affiliations: MEMBER_OF, WORKS_FOR, BELONGS_TO, REPRESENTS
+     * Possessions: OWNS, CARRIES, WEARS
+     * Locations: LIVES_IN, BORN_IN, LOCATED_AT, DEPARTED_FROM, ARRIVED_AT
+     * Knowledge/Skills: SPEAKS, STUDIES, KNOWS_ABOUT, EXPERT_IN
+
+3. **OBJECT SPECIFICITY:**
+   - **CONCRETE ENTITIES:** Use specific names, places, or concepts
+   - **NO VAGUE PHRASES:** 
+     * ❌ "comical mistakes" → ✅ "frequent absent-mindedness"
+     * ❌ "his friends" → ✅ "Lord Glenarvan" (or skip if names unknown)
+     * ❌ "confuses languages" → ✅ Use relation "CONFUSED" object "Portuguese for Spanish"
+   - **TRAITS AS ADJECTIVES:** For character traits, use clear adjective phrases: "absent-minded", "highly intelligent", "extremely brave"
+
+4. **EXTRACTION GUIDELINES:**
+   - Extract **2-5 triplets** per evidence (quality over quantity)
+   - Only extract facts **explicitly stated or strongly implied**
+   - **Skip uncertain information** - if unsure about full name or specifics, omit that triplet
+   - Each triplet should add **unique information** to the knowledge graph
+   - Avoid redundant triplets (e.g., don't extract both "LOCATED_AT: Paris" and "LIVES_IN: Paris" from same evidence)
+
+5. **NOVEL-SPECIFIC FOCUS:**
+   - Prioritize: character relationships, personality traits, key actions, locations visited
+   - Capture: motivations, conflicts, turning points, affiliations
+   - Include: temporal context when available (e.g., "during the expedition")
+
+---OUTPUT FORMAT---
+Return **ONLY** valid JSON with a "triplets" key containing an array of objects.
+
+Each triplet object must have exactly these fields:
+- "subject": string (Full proper name, no pronouns)
+- "relation": string (UPPER_SNAKE_CASE)
+- "object": string (Specific entity/concept/trait)
+- "evidence_id": string (exactly: {evidence_id})
+
+Example:
 {{
   "triplets": [
-    {{"subject": "Character Name", "relation": "is", "object": "geographer", "evidence_id": "{evidence_id}"}},
-    {{"subject": "Character Name", "relation": "has_trait", "object": "absent-minded", "evidence_id": "{evidence_id}"}}
+    {{"subject": "Jacques Paganel", "relation": "IS_SECRETARY_OF", "object": "Geographical Society of Paris", "evidence_id": "{evidence_id}"}},
+    {{"subject": "Jacques Paganel", "relation": "HAS_TRAIT", "object": "absent-minded", "evidence_id": "{evidence_id}"}},
+    {{"subject": "Jacques Paganel", "relation": "MISTAKENLY_BOARDED", "object": "Duncan", "evidence_id": "{evidence_id}"}},
+    {{"subject": "Jacques Paganel", "relation": "INTENDED_TO_BOARD", "object": "Scotia", "evidence_id": "{evidence_id}"}}
   ]
 }}
+
+DO NOT include any markdown formatting, code blocks, or explanatory text. Return ONLY the JSON object.
 """

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d2" for="edge" attr.name="evidence_ids" attr.type="string" />
+  <key id="d1" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="Jacques Paganel">
+      <data key="d0">entity</data>
+    </node>
+    <node id="absent-minded">
+      <data key="d0">entity</data>
+    </node>
+    <node id="comical mistakes">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Paganel">
+      <data key="d0">entity</data>
+    </node>
+    <node id="secretary">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Geographical Society of Paris">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Character">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Duncan">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Scotia">
+      <data key="d0">entity</data>
+    </node>
+    <node id="multiple languages">
+      <data key="d0">entity</data>
+    </node>
+    <node id="confuses languages">
+      <data key="d0">entity</data>
+    </node>
+    <node id="He">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Lord Glenarvan">
+      <data key="d0">entity</data>
+    </node>
+    <node id="his companions">
+      <data key="d0">entity</data>
+    </node>
+    <node id="making comical mistakes">
+      <data key="d0">entity</data>
+    </node>
+    <node id="languages">
+      <data key="d0">entity</data>
+    </node>
+    <edge source="Jacques Paganel" target="absent-minded">
+      <data key="d1">has_trait</data>
+      <data key="d2">["ev_101", "ev_103", "ev_104"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="comical mistakes">
+      <data key="d1">makes</data>
+      <data key="d2">["ev_101"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="making comical mistakes">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["ev_101"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Geographical Society of Paris">
+      <data key="d1">IS_SECRETARY_OF</data>
+      <data key="d2">["ev_102"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Duncan">
+      <data key="d1">MISTAKENLY_BOARDED</data>
+      <data key="d2">["ev_103"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Scotia">
+      <data key="d1">INTENDED_TO_BOARD</data>
+      <data key="d2">["ev_103"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="multiple languages">
+      <data key="d1">SPEAKS_MULTIPLE_LANGUAGES</data>
+      <data key="d2">["ev_104"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="languages">
+      <data key="d1">CONFUSES_LANGUAGES</data>
+      <data key="d2">["ev_104"]</data>
+    </edge>
+    <edge source="Paganel" target="secretary">
+      <data key="d1">is</data>
+      <data key="d2">["ev_102"]</data>
+    </edge>
+    <edge source="Paganel" target="Geographical Society of Paris">
+      <data key="d1">works_for</data>
+      <data key="d2">["ev_102"]</data>
+    </edge>
+    <edge source="Paganel" target="multiple languages">
+      <data key="d1">speaks</data>
+      <data key="d2">["ev_104"]</data>
+    </edge>
+    <edge source="Paganel" target="confuses languages">
+      <data key="d1">has_trait</data>
+      <data key="d2">["ev_104"]</data>
+    </edge>
+    <edge source="Character" target="Duncan">
+      <data key="d1">boards_wrong_ship</data>
+      <data key="d2">["ev_103"]</data>
+    </edge>
+    <edge source="Character" target="Scotia">
+      <data key="d1">intended_ship</data>
+      <data key="d2">["ev_103"]</data>
+    </edge>
+    <edge source="He" target="Lord Glenarvan">
+      <data key="d1">becomes_friends_with</data>
+      <data key="d2">["ev_105"]</data>
+    </edge>
+    <edge source="He" target="his companions">
+      <data key="d1">becomes_friends_with</data>
+      <data key="d2">["ev_105"]</data>
+    </edge>
+    <edge source="Lord Glenarvan" target="his companions">
+      <data key="d1">FRIEND_OF</data>
+      <data key="d2">["ev_105"]</data>
+    </edge>
+    <edge source="his companions" target="Lord Glenarvan">
+      <data key="d1">FRIEND_OF</data>
+      <data key="d2">["ev_105"]</data>
+    </edge>
+  </graph>
+</graphml>
