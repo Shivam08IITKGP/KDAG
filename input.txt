@@ -1,3 +1,0 @@
-book_name=In Search of the Castaways
-character_name=Jacques Paganel
-backstory=Jacques Paganel is a French geographer who is known for his absent-mindedness and scholarly knowledge of geography.

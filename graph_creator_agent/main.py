@@ -2,13 +2,13 @@
 import logging
 
 from graph_creator_agent.cache import EVIDENCE_CACHE
-from graph_creator_agent.graphcreator import (
-    load_existing_graph,
-    filter_new_evidence,
-    generate_triplets,
-    add_triplets_to_graph,
+from graph_creator_agent.graph_store import (
+    load_graph,
+    add_triplets,
     save_graph,
 )
+from graph_creator_agent.utils import filter_new_evidence
+from graph_creator_agent.extractor import generate_triplets
 
 logger = logging.getLogger(__name__)
 
@@ -33,7 +33,7 @@ def create_graph(state: dict) -> dict:
     cache_key = f"{book_name}_{character_name}"
     
     # Load existing graph
-    graph = load_existing_graph(book_name, character_name)
+    graph = load_graph(book_name, character_name)
     
     # Filter new evidence
     new_evidences = filter_new_evidence(evidences, cache_key)
@@ -56,7 +56,7 @@ def create_graph(state: dict) -> dict:
     
     if triplets:
         # Add triplets to graph
-        add_triplets_to_graph(graph, triplets)
+        add_triplets(graph, triplets)
         
         # Save graph
         graph_path = save_graph(graph, book_name, character_name)

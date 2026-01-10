@@ -1,0 +1,13 @@
+2026-01-10 16:32:53 | INFO     | root | setup_logging:73 | Logging initialized. Log file: logs/run_20260110_163253.log
+2026-01-10 16:32:53 | INFO     | __main__ | main:170 | Starting Evidence-Grounded Backstory Consistency System
+2026-01-10 16:32:53 | INFO     | __main__ | read_train_data:87 | Reading first 2 rows from train.csv
+2026-01-10 16:32:53 | INFO     | __main__ | read_train_data:90 | Loaded 2 rows from train.csv
+2026-01-10 16:32:53 | INFO     | __main__ | main:176 | Processing 2 backstories
+2026-01-10 16:32:53 | DEBUG    | asyncio | __init__:64 | Using selector: KqueueSelector
+2026-01-10 16:32:53 | INFO     | pathway_engine.engine.dataflow | None:5322 | Preparing Pathway computation
+2026-01-10 16:32:53 | DEBUG    | pathway_engine.engine.telemetry | None:399 | Telemetry disabled
+2026-01-10 16:32:53 | INFO     | pathway_engine.connectors.monitoring | None:43 | FilesystemReader-0: 0 entries (1 minibatch(es)) have been sent to the engine
+2026-01-10 16:32:53 | INFO     | pathway_engine.connectors.monitoring | None:43 | FilesystemReader-0: 18728 entries (2 minibatch(es)) have been sent to the engine
+2026-01-10 16:32:53 | WARNING  | pathway_engine.connectors.monitoring | None:82 | FilesystemReader-0: Closing the data source
+2026-01-10 16:32:53 | DEBUG    | urllib3.connectionpool | _new_conn:1049 | Starting new HTTPS connection (1): openaipublic.blob.core.windows.net:443
+2026-01-10 16:32:55 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://openaipublic.blob.core.windows.net:443 "GET /encodings/cl100k_base.tiktoken HTTP/1.1" 200 1681126

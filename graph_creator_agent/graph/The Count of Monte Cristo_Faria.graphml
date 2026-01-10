@@ -1,0 +1,936 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d2" for="edge" attr.name="evidence_ids" attr.type="string" />
+  <key id="d1" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="Debray">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Ostia being close to Rome">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Monte Cristo">
+      <data key="d0">entity</data>
+    </node>
+    <node id="someone with a specific look">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Andrea">
+      <data key="d0">entity</data>
+    </node>
+    <node id="politics as the reason">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Beauchamp">
+      <data key="d0">entity</data>
+    </node>
+    <node id="to speak with someone">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Abbé Faria">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Rome">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Madame Danglars">
+      <data key="d0">entity</data>
+    </node>
+    <node id="black dress">
+      <data key="d0">entity</data>
+    </node>
+    <node id="joyful">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Andrea Cavalcanti">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Count Andrea Cavalcanti">
+      <data key="d0">entity</data>
+    </node>
+    <node id="The abbé">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Paris">
+      <data key="d0">entity</data>
+    </node>
+    <node id="agitated">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Captain Gaumard">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Peppino">
+      <data key="d0">entity</data>
+    </node>
+    <node id="guide">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Madame de Villefort">
+      <data key="d0">entity</data>
+    </node>
+    <node id="indescribable expression of interest and pity">
+      <data key="d0">entity</data>
+    </node>
+    <node id="contagious manner">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Dantès">
+      <data key="d0">entity</data>
+    </node>
+    <node id="to be useful">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Prince Cavalcanti">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Franz">
+      <data key="d0">entity</data>
+    </node>
+    <node id="about the situation">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Maximilian">
+      <data key="d0">entity</data>
+    </node>
+    <node id="boudoir">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Danglars">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Count of Monte Cristo">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Eugénie">
+      <data key="d0">entity</data>
+    </node>
+    <node id="masculine demeanor">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Fernand">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Hope">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Morrel &amp; Son">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Lucien">
+      <data key="d0">entity</data>
+    </node>
+    <node id="charitable">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Luigi">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Teresa">
+      <data key="d0">entity</data>
+    </node>
+    <node id="smiling">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Mademoiselle de Villefort">
+      <data key="d0">entity</data>
+    </node>
+    <node id="unnamed crime">
+      <data key="d0">entity</data>
+    </node>
+    <node id="unnamed gentleman">
+      <data key="d0">entity</data>
+    </node>
+    <node id="tenacious">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Haydée">
+      <data key="d0">entity</data>
+    </node>
+    <node id="pale">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Major">
+      <data key="d0">entity</data>
+    </node>
+    <node id="unnamed person">
+      <data key="d0">entity</data>
+    </node>
+    <node id="unspoken communication">
+      <data key="d0">entity</data>
+    </node>
+    <node id="unknown danger">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Valentine">
+      <data key="d0">entity</data>
+    </node>
+    <node id="grateful">
+      <data key="d0">entity</data>
+    </node>
+    <node id="shock">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Vampa">
+      <data key="d0">entity</data>
+    </node>
+    <node id="in response to a call">
+      <data key="d0">entity</data>
+    </node>
+    <node id="a sigh">
+      <data key="d0">entity</data>
+    </node>
+    <node id="by a statement">
+      <data key="d0">entity</data>
+    </node>
+    <node id="The captain">
+      <data key="d0">entity</data>
+    </node>
+    <node id="with someone">
+      <data key="d0">entity</data>
+    </node>
+    <node id="The door-keeper">
+      <data key="d0">entity</data>
+    </node>
+    <node id="the words 'Walk in, madame'">
+      <data key="d0">entity</data>
+    </node>
+    <node id="pessimistic">
+      <data key="d0">entity</data>
+    </node>
+    <node id="temptation by offers">
+      <data key="d0">entity</data>
+    </node>
+    <node id="carriage">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Cavalcanti">
+      <data key="d0">entity</data>
+    </node>
+    <node id="black attire">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Unknown speaker">
+      <data key="d0">entity</data>
+    </node>
+    <node id="singular smile">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Faria">
+      <data key="d0">entity</data>
+    </node>
+    <node id="avoids seeing himself grow old">
+      <data key="d0">entity</data>
+    </node>
+    <node id="reflects deeply on recent events">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Strasbourg pie">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Italy">
+      <data key="d0">entity</data>
+    </node>
+    <node id="friends' statement">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Luigi Vampa">
+      <data key="d0">entity</data>
+    </node>
+    <node id="mysterious">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Edmond Dantès">
+      <data key="d0">entity</data>
+    </node>
+    <node id="fear">
+      <data key="d0">entity</data>
+    </node>
+    <node id="monk’s dress with a cowl">
+      <data key="d0">entity</data>
+    </node>
+    <node id="paleness">
+      <data key="d0">entity</data>
+    </node>
+    <node id="The count">
+      <data key="d0">entity</data>
+    </node>
+    <node id="the young girl had been overcome">
+      <data key="d0">entity</data>
+    </node>
+    <node id="mademoiselle">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Mercédès">
+      <data key="d0">entity</data>
+    </node>
+    <node id="face to face with the vast plain">
+      <data key="d0">entity</data>
+    </node>
+    <node id="to Mademoiselle Danglars that they should take a walk">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Caderousse">
+      <data key="d0">entity</data>
+    </node>
+    <node id="impatient">
+      <data key="d0">entity</data>
+    </node>
+    <node id="shipwreck">
+      <data key="d0">entity</data>
+    </node>
+    <node id="courageous">
+      <data key="d0">entity</data>
+    </node>
+    <node id="his crucified Redeemer">
+      <data key="d0">entity</data>
+    </node>
+    <node id="deliverer">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Villefort">
+      <data key="d0">entity</data>
+    </node>
+    <node id="nervous">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Bertuccio">
+      <data key="d0">entity</data>
+    </node>
+    <node id="his father">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Asmodeus">
+      <data key="d0">entity</data>
+    </node>
+    <node id="diabolical personage">
+      <data key="d0">entity</data>
+    </node>
+    <node id="coming events">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Pharaon">
+      <data key="d0">entity</data>
+    </node>
+    <node id="secret">
+      <data key="d0">entity</data>
+    </node>
+    <node id="good fortune">
+      <data key="d0">entity</data>
+    </node>
+    <node id="beautiful horses">
+      <data key="d0">entity</data>
+    </node>
+    <node id="confused">
+      <data key="d0">entity</data>
+    </node>
+    <node id="disabled hand">
+      <data key="d0">entity</data>
+    </node>
+    <node id="to leave Paris with his wife">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Morcerf">
+      <data key="d0">entity</data>
+    </node>
+    <node id="simplicity">
+      <data key="d0">entity</data>
+    </node>
+    <node id="What are the two fish?">
+      <data key="d0">entity</data>
+    </node>
+    <node id="M. de Blacas">
+      <data key="d0">entity</data>
+    </node>
+    <node id="between the confident monarch and the assistant procureur">
+      <data key="d0">entity</data>
+    </node>
+    <node id="his daughter smiling and proud">
+      <data key="d0">entity</data>
+    </node>
+    <node id="about the chosen path">
+      <data key="d0">entity</data>
+    </node>
+    <node id="The sentinel">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Who are you?">
+      <data key="d0">entity</data>
+    </node>
+    <node id="to escape">
+      <data key="d0">entity</data>
+    </node>
+    <node id="solemn">
+      <data key="d0">entity</data>
+    </node>
+    <node id="one of three similar items">
+      <data key="d0">entity</data>
+    </node>
+    <node id="deep sigh and groan">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Ali">
+      <data key="d0">entity</data>
+    </node>
+    <node id="count's gong">
+      <data key="d0">entity</data>
+    </node>
+    <node id="The stranger">
+      <data key="d0">entity</data>
+    </node>
+    <node id="one of the largest subscribers to the Opera">
+      <data key="d0">entity</data>
+    </node>
+    <node id="triumphant">
+      <data key="d0">entity</data>
+    </node>
+    <node id="triumphant air">
+      <data key="d0">entity</data>
+    </node>
+    <node id="father">
+      <data key="d0">entity</data>
+    </node>
+    <node id="a hundred francs">
+      <data key="d0">entity</data>
+    </node>
+    <node id="a person with the same look">
+      <data key="d0">entity</data>
+    </node>
+    <node id="politics">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Albert">
+      <data key="d0">entity</data>
+    </node>
+    <node id="eagerly expected event">
+      <data key="d0">entity</data>
+    </node>
+    <node id="inhabitant of the grotto of Monte Cristo">
+      <data key="d0">entity</data>
+    </node>
+    <node id="mournful auspices">
+      <data key="d0">entity</data>
+    </node>
+    <node id="human attention">
+      <data key="d0">entity</data>
+    </node>
+    <node id="small apartment in Paris">
+      <data key="d0">entity</data>
+    </node>
+    <node id="child's potential">
+      <data key="d0">entity</data>
+    </node>
+    <node id="person with a look">
+      <data key="d0">entity</data>
+    </node>
+    <node id="politics as the cause">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Madame de Villefort's house">
+      <data key="d0">entity</data>
+    </node>
+    <node id="to a person">
+      <data key="d0">entity</data>
+    </node>
+    <node id="town">
+      <data key="d0">entity</data>
+    </node>
+    <node id="grate">
+      <data key="d0">entity</data>
+    </node>
+    <node id="exercises">
+      <data key="d0">entity</data>
+    </node>
+    <node id="showy, gilded salon">
+      <data key="d0">entity</data>
+    </node>
+    <node id="being a deliverer">
+      <data key="d0">entity</data>
+    </node>
+    <edge source="Debray" target="Ostia being close to Rome">
+      <data key="d1">SPEAKS_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__1090"]</data>
+    </edge>
+    <edge source="Debray" target="pessimistic">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__196"]</data>
+    </edge>
+    <edge source="Debray" target="a hundred francs">
+      <data key="d1">SPOKE_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__1090"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="someone with a specific look">
+      <data key="d1">EXAMINES</data>
+      <data key="d2">["the count of monte cristo__chunk__1090"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="politics as the reason">
+      <data key="d1">SUSPECTS</data>
+      <data key="d2">["the count of monte cristo__chunk__1090"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="joyful">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__1136"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="Captain Gaumard">
+      <data key="d1">INTERACTED_WITH</data>
+      <data key="d2">["the count of monte cristo__chunk__559"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="Prince Cavalcanti">
+      <data key="d1">REFERRED_TO_AS</data>
+      <data key="d2">["the count of monte cristo__chunk__110"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="boudoir">
+      <data key="d1">ENTERED</data>
+      <data key="d2">["the count of monte cristo__chunk__266"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="smiling">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__475"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="a sigh">
+      <data key="d1">HEARD</data>
+      <data key="d2">["the count of monte cristo__chunk__1316"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="temptation by offers">
+      <data key="d1">EXPRESSES_SKEPTICISM</data>
+      <data key="d2">["the count of monte cristo__chunk__196"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="friends' statement">
+      <data key="d1">RESPONDED_TO</data>
+      <data key="d2">["the count of monte cristo__chunk__1482"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="deliverer">
+      <data key="d1">IS_REFERRED_TO_AS</data>
+      <data key="d2">["the count of monte cristo__chunk__1182"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="secret">
+      <data key="d1">EXPRESSES_AGITATION</data>
+      <data key="d2">["the count of monte cristo__chunk__593"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="solemn">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__638"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="one of three similar items">
+      <data key="d1">GAVE</data>
+      <data key="d2">["the count of monte cristo__chunk__638"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="a person with the same look">
+      <data key="d1">EXAMINED</data>
+      <data key="d2">["the count of monte cristo__chunk__1090"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="politics">
+      <data key="d1">SUSPECTED</data>
+      <data key="d2">["the count of monte cristo__chunk__1090"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="Albert">
+      <data key="d1">GLANCED_AT</data>
+      <data key="d2">["the count of monte cristo__chunk__1090"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="eagerly expected event">
+      <data key="d1">EXPERIENCED_JOY</data>
+      <data key="d2">["the count of monte cristo__chunk__1136"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="inhabitant of the grotto of Monte Cristo">
+      <data key="d1">CONSIDERED</data>
+      <data key="d2">["the count of monte cristo__chunk__1136"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="mournful auspices">
+      <data key="d1">SIGhed_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__1136"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="human attention">
+      <data key="d1">NOTICED</data>
+      <data key="d2">["the count of monte cristo__chunk__1136"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="child's potential">
+      <data key="d1">SMILED_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__559"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="person with a look">
+      <data key="d1">EXAMINED</data>
+      <data key="d2">["the count of monte cristo__chunk__266"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="politics as the cause">
+      <data key="d1">STATED</data>
+      <data key="d2">["the count of monte cristo__chunk__266"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="Madame de Villefort's house">
+      <data key="d1">ARRIVED_AT</data>
+      <data key="d2">["the count of monte cristo__chunk__812", "the count of monte cristo__chunk__839"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="to a person">
+      <data key="d1">EXTENDED_HAND</data>
+      <data key="d2">["the count of monte cristo__chunk__812", "the count of monte cristo__chunk__839"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="town">
+      <data key="d1">RETURNED_TO</data>
+      <data key="d2">["the count of monte cristo__chunk__1344"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="grate">
+      <data key="d1">GLANCED_TOWARD</data>
+      <data key="d2">["the count of monte cristo__chunk__1344"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="exercises">
+      <data key="d1">EXCELLED_IN</data>
+      <data key="d2">["the count of monte cristo__chunk__1344"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="showy, gilded salon">
+      <data key="d1">ENTERED</data>
+      <data key="d2">["the count of monte cristo__chunk__1182"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="being a deliverer">
+      <data key="d1">STATED</data>
+      <data key="d2">["the count of monte cristo__chunk__1182"]</data>
+    </edge>
+    <edge source="Andrea" target="Andrea">
+      <data key="d1">IS_CALLED</data>
+      <data key="d2">["the count of monte cristo__chunk__1090"]</data>
+    </edge>
+    <edge source="Andrea" target="unnamed gentleman">
+      <data key="d1">GAVE_INSTRUCTION_TO</data>
+      <data key="d2">["the count of monte cristo__chunk__1"]</data>
+    </edge>
+    <edge source="Andrea" target="his father">
+      <data key="d1">DOUBTS_RECOGNITION_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__412"]</data>
+    </edge>
+    <edge source="Beauchamp" target="to speak with someone">
+      <data key="d1">SITS_DOWN</data>
+      <data key="d2">["the count of monte cristo__chunk__1090"]</data>
+    </edge>
+    <edge source="Beauchamp" target="tenacious">
+      <data key="d1">DESCRIBED_AS</data>
+      <data key="d2">["the count of monte cristo__chunk__1"]</data>
+    </edge>
+    <edge source="Beauchamp" target="by a statement">
+      <data key="d1">IS_FLATTERED</data>
+      <data key="d2">["the count of monte cristo__chunk__1316"]</data>
+    </edge>
+    <edge source="Beauchamp" target="Strasbourg pie">
+      <data key="d1">ASKED_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__1482"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="Rome">
+      <data key="d1">BORN_IN</data>
+      <data key="d2">["the count of monte cristo__chunk__1136"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="charitable">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__475"]</data>
+    </edge>
+    <edge source="Abbé Faria" target="small apartment in Paris">
+      <data key="d1">INHABITED</data>
+      <data key="d2">["the count of monte cristo__chunk__559"]</data>
+    </edge>
+    <edge source="Madame Danglars" target="black dress">
+      <data key="d1">WEARS</data>
+      <data key="d2">["the count of monte cristo__chunk__1136"]</data>
+    </edge>
+    <edge source="Madame Danglars" target="the young girl had been overcome">
+      <data key="d1">CONCLUDED</data>
+      <data key="d2">["the count of monte cristo__chunk__1139"]</data>
+    </edge>
+    <edge source="Madame Danglars" target="beautiful horses">
+      <data key="d1">OWNS</data>
+      <data key="d2">["the count of monte cristo__chunk__593"]</data>
+    </edge>
+    <edge source="Andrea Cavalcanti" target="Count Andrea Cavalcanti">
+      <data key="d1">IS_KNOWN_AS</data>
+      <data key="d2">["the count of monte cristo__chunk__1136"]</data>
+    </edge>
+    <edge source="The abbé" target="Paris">
+      <data key="d1">VISITED</data>
+      <data key="d2">["the count of monte cristo__chunk__559"]</data>
+    </edge>
+    <edge source="The abbé" target="agitated">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__559"]</data>
+    </edge>
+    <edge source="The abbé" target="monk’s dress with a cowl">
+      <data key="d1">WEARS</data>
+      <data key="d2">["the count of monte cristo__chunk__812"]</data>
+    </edge>
+    <edge source="Peppino" target="guide">
+      <data key="d1">ACTED_AS</data>
+      <data key="d2">["the count of monte cristo__chunk__559"]</data>
+    </edge>
+    <edge source="Peppino" target="unknown danger">
+      <data key="d1">FEARS</data>
+      <data key="d2">["the count of monte cristo__chunk__1243"]</data>
+    </edge>
+    <edge source="Madame de Villefort" target="indescribable expression of interest and pity">
+      <data key="d1">EXPRESSED</data>
+      <data key="d2">["the count of monte cristo__chunk__559"]</data>
+    </edge>
+    <edge source="Madame de Villefort" target="contagious manner">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__110"]</data>
+    </edge>
+    <edge source="Madame de Villefort" target="Lucien">
+      <data key="d1">COMMUNICATES_WITH</data>
+      <data key="d2">["the count of monte cristo__chunk__475"]</data>
+    </edge>
+    <edge source="Madame de Villefort" target="Edmond Dantès">
+      <data key="d1">IS_ACQUAINTED_WITH</data>
+      <data key="d2">["the count of monte cristo__chunk__636"]</data>
+    </edge>
+    <edge source="Dantès" target="to be useful">
+      <data key="d1">STATED_INTENTION</data>
+      <data key="d2">["the count of monte cristo__chunk__110"]</data>
+    </edge>
+    <edge source="Dantès" target="reflects deeply on recent events">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__1482"]</data>
+    </edge>
+    <edge source="Dantès" target="to escape">
+      <data key="d1">DUG_HIS_WAY</data>
+      <data key="d2">["the count of monte cristo__chunk__876"]</data>
+    </edge>
+    <edge source="Dantès" target="Faria">
+      <data key="d1">RECEIVED_PAPER_FROM</data>
+      <data key="d2">["the count of monte cristo__chunk__775"]</data>
+    </edge>
+    <edge source="Dantès" target="triumphant air">
+      <data key="d1">READ_PAPER_WITH</data>
+      <data key="d2">["the count of monte cristo__chunk__775"]</data>
+    </edge>
+    <edge source="Franz" target="about the situation">
+      <data key="d1">EXPRESSED_CONFUSION</data>
+      <data key="d2">["the count of monte cristo__chunk__110"]</data>
+    </edge>
+    <edge source="Franz" target="Peppino">
+      <data key="d1">IS_OBSERVED_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__1243"]</data>
+    </edge>
+    <edge source="Maximilian" target="Monte Cristo">
+      <data key="d1">REASSURED_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__110"]</data>
+    </edge>
+    <edge source="Maximilian" target="unspoken communication">
+      <data key="d1">UNDERSTANDS</data>
+      <data key="d2">["the count of monte cristo__chunk__1243"]</data>
+    </edge>
+    <edge source="Maximilian" target="to Mademoiselle Danglars that they should take a walk">
+      <data key="d1">PROPOSED</data>
+      <data key="d2">["the count of monte cristo__chunk__1139"]</data>
+    </edge>
+    <edge source="Danglars" target="Count of Monte Cristo">
+      <data key="d1">SPOKE_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__266"]</data>
+    </edge>
+    <edge source="Danglars" target="Morrel &amp; Son">
+      <data key="d1">MENTIONED</data>
+      <data key="d2">["the count of monte cristo__chunk__266"]</data>
+    </edge>
+    <edge source="Danglars" target="carriage">
+      <data key="d1">TRAVELED_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__196"]</data>
+    </edge>
+    <edge source="Danglars" target="Italy">
+      <data key="d1">TRAVELED_TO</data>
+      <data key="d2">["the count of monte cristo__chunk__1482"]</data>
+    </edge>
+    <edge source="Danglars" target="paleness">
+      <data key="d1">REACTS_WITH</data>
+      <data key="d2">["the count of monte cristo__chunk__812"]</data>
+    </edge>
+    <edge source="Danglars" target="coming events">
+      <data key="d1">ANTICIPATES</data>
+      <data key="d2">["the count of monte cristo__chunk__412"]</data>
+    </edge>
+    <edge source="Danglars" target="What are the two fish?">
+      <data key="d1">ASKS_QUESTION</data>
+      <data key="d2">["the count of monte cristo__chunk__84"]</data>
+    </edge>
+    <edge source="Danglars" target="his daughter smiling and proud">
+      <data key="d1">OBSERVED</data>
+      <data key="d2">["the count of monte cristo__chunk__876"]</data>
+    </edge>
+    <edge source="Eugénie" target="masculine demeanor">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__266"]</data>
+    </edge>
+    <edge source="Fernand" target="Hope">
+      <data key="d1">MURMURED</data>
+      <data key="d2">["the count of monte cristo__chunk__266"]</data>
+    </edge>
+    <edge source="Fernand" target="shock">
+      <data key="d1">EXPERIENCES</data>
+      <data key="d2">["the count of monte cristo__chunk__1243"]</data>
+    </edge>
+    <edge source="Fernand" target="to leave Paris with his wife">
+      <data key="d1">DESIRES</data>
+      <data key="d2">["the count of monte cristo__chunk__84"]</data>
+    </edge>
+    <edge source="Lucien" target="Madame Danglars">
+      <data key="d1">SPEAKS_TO</data>
+      <data key="d2">["the count of monte cristo__chunk__475"]</data>
+    </edge>
+    <edge source="Luigi" target="Teresa">
+      <data key="d1">TRAVELS_WITH</data>
+      <data key="d2">["the count of monte cristo__chunk__475"]</data>
+    </edge>
+    <edge source="Mademoiselle de Villefort" target="unnamed crime">
+      <data key="d1">IS_CULPRIT_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__1"]</data>
+    </edge>
+    <edge source="Haydée" target="pale">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__1"]</data>
+    </edge>
+    <edge source="Major" target="unnamed person">
+      <data key="d1">ENGAGED_IN_CONVERSATION_WITH</data>
+      <data key="d2">["the count of monte cristo__chunk__1"]</data>
+    </edge>
+    <edge source="Valentine" target="grateful">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__1243"]</data>
+    </edge>
+    <edge source="Valentine" target="mademoiselle">
+      <data key="d1">CRIED_OUT</data>
+      <data key="d2">["the count of monte cristo__chunk__1139"]</data>
+    </edge>
+    <edge source="Vampa" target="in response to a call">
+      <data key="d1">APPEARED_INSTANTLY</data>
+      <data key="d2">["the count of monte cristo__chunk__1316"]</data>
+    </edge>
+    <edge source="The captain" target="with someone">
+      <data key="d1">CAN_AGREE</data>
+      <data key="d2">["the count of monte cristo__chunk__1316"]</data>
+    </edge>
+    <edge source="The door-keeper" target="the words 'Walk in, madame'">
+      <data key="d1">PRONOUNCED</data>
+      <data key="d2">["the count of monte cristo__chunk__1316"]</data>
+    </edge>
+    <edge source="Cavalcanti" target="black attire">
+      <data key="d1">WEARS</data>
+      <data key="d2">["the count of monte cristo__chunk__196"]</data>
+    </edge>
+    <edge source="Unknown speaker" target="singular smile">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__196"]</data>
+    </edge>
+    <edge source="Faria" target="avoids seeing himself grow old">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__1482"]</data>
+    </edge>
+    <edge source="Faria" target="disabled hand">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__84"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès">
+      <data key="d1">OFFERED_PAPER_TO</data>
+      <data key="d2">["the count of monte cristo__chunk__775"]</data>
+    </edge>
+    <edge source="Faria" target="triumphant">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__775"]</data>
+    </edge>
+    <edge source="Faria" target="father">
+      <data key="d1">SUGGESTED_GIVING_HINT</data>
+      <data key="d2">["the count of monte cristo__chunk__775"]</data>
+    </edge>
+    <edge source="Luigi Vampa" target="mysterious">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__812"]</data>
+    </edge>
+    <edge source="Edmond Dantès" target="fear">
+      <data key="d1">EXPERIENCES</data>
+      <data key="d2">["the count of monte cristo__chunk__812"]</data>
+    </edge>
+    <edge source="Edmond Dantès" target="Caderousse">
+      <data key="d1">IS_FRIEND_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__636"]</data>
+    </edge>
+    <edge source="Edmond Dantès" target="shipwreck">
+      <data key="d1">EXPERIENCED</data>
+      <data key="d2">["the count of monte cristo__chunk__636"]</data>
+    </edge>
+    <edge source="Edmond Dantès" target="courageous">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__636", "the count of monte cristo__chunk__1182"]</data>
+    </edge>
+    <edge source="Edmond Dantès" target="his crucified Redeemer">
+      <data key="d1">SWEARS_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__1182"]</data>
+    </edge>
+    <edge source="Edmond Dantès" target="Pharaon">
+      <data key="d1">IS_MATE_ON</data>
+      <data key="d2">["the count of monte cristo__chunk__593"]</data>
+    </edge>
+    <edge source="Edmond Dantès" target="confused">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__84"]</data>
+    </edge>
+    <edge source="The count" target="Danglars">
+      <data key="d1">IS_CONDUCTED_OUT_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__812"]</data>
+    </edge>
+    <edge source="Mercédès" target="face to face with the vast plain">
+      <data key="d1">LEFT_ALONE</data>
+      <data key="d2">["the count of monte cristo__chunk__1139"]</data>
+    </edge>
+    <edge source="Mercédès" target="Edmond Dantès">
+      <data key="d1">HAS_RELATIONSHIP_WITH</data>
+      <data key="d2">["the count of monte cristo__chunk__593"]</data>
+    </edge>
+    <edge source="Caderousse" target="impatient">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__636"]</data>
+    </edge>
+    <edge source="Caderousse" target="Dantès">
+      <data key="d1">EXPRESSES_SYMPATHY_FOR</data>
+      <data key="d2">["the count of monte cristo__chunk__412"]</data>
+    </edge>
+    <edge source="Caderousse" target="good fortune">
+      <data key="d1">DESIRES_TO_PARTAKE</data>
+      <data key="d2">["the count of monte cristo__chunk__593"]</data>
+    </edge>
+    <edge source="Caderousse" target="deep sigh and groan">
+      <data key="d1">EXPERIENCED</data>
+      <data key="d2">["the count of monte cristo__chunk__638"]</data>
+    </edge>
+    <edge source="Villefort" target="nervous">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__1182"]</data>
+    </edge>
+    <edge source="Villefort" target="Caderousse">
+      <data key="d1">EXTENDS_HAND_TO</data>
+      <data key="d2">["the count of monte cristo__chunk__412"]</data>
+    </edge>
+    <edge source="Bertuccio" target="Monte Cristo">
+      <data key="d1">WORKS_FOR</data>
+      <data key="d2">["the count of monte cristo__chunk__1182"]</data>
+    </edge>
+    <edge source="Asmodeus" target="diabolical personage">
+      <data key="d1">DESCRIBED_AS</data>
+      <data key="d2">["the count of monte cristo__chunk__412"]</data>
+    </edge>
+    <edge source="Morcerf" target="simplicity">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__84"]</data>
+    </edge>
+    <edge source="Morcerf" target="about the chosen path">
+      <data key="d1">SIGHS</data>
+      <data key="d2">["the count of monte cristo__chunk__876"]</data>
+    </edge>
+    <edge source="M. de Blacas" target="between the confident monarch and the assistant procureur">
+      <data key="d1">PONDERED_DEEPLY</data>
+      <data key="d2">["the count of monte cristo__chunk__876"]</data>
+    </edge>
+    <edge source="The sentinel" target="Who are you?">
+      <data key="d1">INQUIRED</data>
+      <data key="d2">["the count of monte cristo__chunk__876"]</data>
+    </edge>
+    <edge source="Ali" target="count's gong">
+      <data key="d1">RESPONDED_TO</data>
+      <data key="d2">["the count of monte cristo__chunk__638"]</data>
+    </edge>
+    <edge source="The stranger" target="one of the largest subscribers to the Opera">
+      <data key="d1">IS</data>
+      <data key="d2">["the count of monte cristo__chunk__638"]</data>
+    </edge>
+  </graph>
+</graphml>

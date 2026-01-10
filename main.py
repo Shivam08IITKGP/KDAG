@@ -1,5 +1,6 @@
 """Main entry point for the Evidence-Grounded Backstory Consistency System."""
 import logging
+import os
 from datetime import datetime
 from pathlib import Path
 from typing import TypedDict
@@ -10,6 +11,9 @@ from langgraph.graph import StateGraph, END
 from extraction_agent.main import extract
 from graph_creator_agent.main import create_graph
 from answering_agent.main import answer
+from collections import defaultdict
+import pandas as pd
+
 
 # Load environment variables
 load_dotenv()
@@ -174,6 +178,59 @@ def main():
     except Exception as e:
         logger.error(f"Error during pipeline execution: {e}", exc_info=True)
         raise
+    
+    # Process each row
+    results = []
+
+    flag = defaultdict(int)
+    for idx, row in df.iterrows():
+        print(f"\n{'='*80}")
+        print(f"Processing Row {idx + 1}/{len(df)}")
+        print(f"Character: {row['char']}")
+        print(f"Book: {row['book_name']}")
+        print(f"{'='*80}\n")
+        # topchunks = retrieve_topk("")
+
+        book_path = ""
+        # Handle book name matching (CSV has "In Search of the Castaways" with title case)
+        book_name_lower = row['book_name'].lower()
+        if book_name_lower == "in search of the castaways":
+            book_path = "Books/In search of the castaways.txt"
+        elif row['book_name'] == "The Count of Monte Cristo":
+            book_path = "Books/The Count of Monte Cristo.txt"
+        else:
+            logger.warning(f"Book '{row['book_name']}' not found in predefined paths.")
+            print(f"❌ Book '{row['book_name']}' not found. Skipping this row.")
+            continue
+
+        if flag[row['book_name']] == 0:
+            # build_index will normalize book name to lowercase internally
+            # Pass defaults for optional parameters (will use env vars or defaults)
+            build_index(book_path, row['book_name'])
+            flag[row['book_name']] = 1
+
+        try:
+            row_data = {
+                "book_name": row["book_name"],
+                "char": row["char"],
+                "content": row["content"]
+            }
+            
+            final_state = run_pipeline_for_row(row_data)
+            results.append(final_state)
+            
+            # Print output for this row
+            print_output(final_state)
+            
+        except Exception as e:
+            logger.error(f"Error processing row {idx + 1}: {e}", exc_info=True)
+            print(f"❌ Error processing this row: {e}")
+            continue
+    
+    print(f"\n{'='*80}")
+    print(f"Completed processing {len(results)}/{len(df)} backstories")
+    print(f"{'='*80}\n")
+
 
 
 if __name__ == "__main__":

@@ -1,0 +1,313 @@
+2026-01-10 17:00:41 | INFO     | root | setup_logging:73 | Logging initialized. Log file: logs/run_20260110_170041.log
+2026-01-10 17:00:41 | INFO     | __main__ | main:170 | Starting Evidence-Grounded Backstory Consistency System
+2026-01-10 17:00:41 | INFO     | __main__ | read_train_data:87 | Reading first 2 rows from train.csv
+2026-01-10 17:00:41 | INFO     | __main__ | read_train_data:90 | Loaded 2 rows from train.csv
+2026-01-10 17:00:41 | INFO     | __main__ | main:176 | Processing 2 backstories
+2026-01-10 17:00:41 | DEBUG    | asyncio | __init__:64 | Using selector: KqueueSelector
+2026-01-10 17:00:41 | INFO     | pathway_engine.engine.dataflow | None:5322 | Preparing Pathway computation
+2026-01-10 17:00:41 | DEBUG    | pathway_engine.engine.telemetry | None:399 | Telemetry disabled
+2026-01-10 17:00:41 | INFO     | pathway_engine.connectors.monitoring | None:43 | FilesystemReader-0: 0 entries (1 minibatch(es)) have been sent to the engine
+2026-01-10 17:00:41 | INFO     | pathway_engine.connectors.monitoring | None:43 | FilesystemReader-0: 18728 entries (2 minibatch(es)) have been sent to the engine
+2026-01-10 17:00:41 | WARNING  | pathway_engine.connectors.monitoring | None:82 | FilesystemReader-0: Closing the data source
+2026-01-10 17:00:42 | INFO     | sentence_transformers.SentenceTransformer | __init__:227 | Load pretrained SentenceTransformer: avsolatorio/GIST-small-Embedding-v0
+2026-01-10 17:00:42 | DEBUG    | urllib3.connectionpool | _new_conn:1049 | Starting new HTTPS connection (1): huggingface.co:443
+2026-01-10 17:00:43 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-10 17:00:43 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/modules.json HTTP/1.1" 200 0
+2026-01-10 17:00:43 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-10 17:00:44 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-10 17:00:44 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-10 17:00:44 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-10 17:00:44 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/README.md HTTP/1.1" 307 0
+2026-01-10 17:00:44 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/README.md HTTP/1.1" 200 0
+2026-01-10 17:00:44 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-10 17:00:44 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/modules.json HTTP/1.1" 200 0
+2026-01-10 17:00:45 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/sentence_bert_config.json HTTP/1.1" 307 0
+2026-01-10 17:00:45 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/sentence_bert_config.json HTTP/1.1" 200 0
+2026-01-10 17:00:45 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2026-01-10 17:00:45 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/config.json HTTP/1.1" 307 0
+2026-01-10 17:00:45 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/config.json HTTP/1.1" 200 0
+2026-01-10 17:00:46 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2026-01-10 17:00:46 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/tokenizer_config.json HTTP/1.1" 200 0
+2026-01-10 17:00:46 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/avsolatorio/GIST-small-Embedding-v0/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2026-01-10 17:00:46 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/avsolatorio/GIST-small-Embedding-v0/tree/main?recursive=True&expand=False HTTP/1.1" 200 2759
+2026-01-10 17:00:47 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
+2026-01-10 17:00:47 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
+2026-01-10 17:00:47 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/avsolatorio/GIST-small-Embedding-v0 HTTP/1.1" 200 146259
+2026-01-10 17:01:03 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-10 17:01:03 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1325a3380>
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'GET']>
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'GET']>
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'GET']>
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-encoding', b'zstd'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-type', b'application/json'), (b'date', b'Sat, 10 Jan 2026 11:31:03 GMT')])
+2026-01-10 17:01:03 | INFO     | httpx | _send_single_request:1025 | HTTP Request: GET http://localhost:6333 "HTTP/1.1 200 OK"
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'GET']>
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 17:01:03 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-10 17:01:03 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-10 17:01:03 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-10 17:01:03 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1328dc560>
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'GET']>
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'GET']>
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'GET']>
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-type', b'application/json'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-encoding', b'zstd'), (b'date', b'Sat, 10 Jan 2026 11:31:03 GMT')])
+2026-01-10 17:01:03 | INFO     | httpx | _send_single_request:1025 | HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'GET']>
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 17:01:03 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-10 17:01:03 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-10 17:01:03 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-10 17:01:03 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1328dcb30>
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'PUT']>
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'PUT']>
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'PUT']>
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-encoding', b'zstd'), (b'content-type', b'application/json'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'date', b'Sat, 10 Jan 2026 11:31:03 GMT')])
+2026-01-10 17:01:03 | INFO     | httpx | _send_single_request:1025 | HTTP Request: PUT http://localhost:6333/collections/in%20search%20of%20the%20castaways_collection/points?wait=true "HTTP/1.1 200 OK"
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'PUT']>
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 17:01:03 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 17:01:03 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-10 17:01:03 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-10 17:01:03 | INFO     | __main__ | run_pipeline_for_row:137 | Processing: Thalcave from In Search of the Castaways
+2026-01-10 17:01:03 | INFO     | __main__ | run_pipeline_for_row:156 | Running pipeline
+2026-01-10 17:01:03 | INFO     | extraction_agent.main | extract:42 | Starting extraction agent
+2026-01-10 17:01:03 | INFO     | extraction_agent.main | extract:43 | Book: In Search of the Castaways, Character: Thalcave
+2026-01-10 17:01:04 | DEBUG    | extraction_agent.main | extract:56 | Extraction prompt: You are an extractor agent.
+Generate 5 queries to retrieve evidence about the character.
+
+Book: In Search of the Castaways
+Character: Thalcave
+Backstory: Thalcave’s people faded as colonists advanced; his father, last of the tribal guides, knew the pampas geography and animal ways, while his mother died giving birth. Boyhood was spent roaming the plains with his father, learning to track, tame horses and steer by the stars.
+
+Return only a JSON list of strings, each string being a query.
+Example: ["query 1", "query 2", "query 3"]
+
+2026-01-10 17:01:04 | INFO     | extraction_agent.main | extract:59 | Generating queries via LLM
+2026-01-10 17:01:04 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-2b397010-f2a1-4fac-a57f-8629237aa7d7', 'json_data': {'messages': [{'content': 'You are an extractor agent.\nGenerate 5 queries to retrieve evidence about the character.\n\nBook: In Search of the Castaways\nCharacter: Thalcave\nBackstory: Thalcave’s people faded as colonists advanced; his father, last of the tribal guides, knew the pampas geography and animal ways, while his mother died giving birth. Boyhood was spent roaming the plains with his father, learning to track, tame horses and steer by the stars.\n\nReturn only a JSON list of strings, each string being a query.\nExample: ["query 1", "query 2", "query 3"]\n', 'role': 'user'}], 'model': 'mistralai/devstral-2512:free', 'stream': False}}
+2026-01-10 17:01:04 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-10 17:01:04 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='openrouter.ai' port=443 local_address=None timeout=None socket_options=None
+2026-01-10 17:01:04 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x132b55850>
+2026-01-10 17:01:04 | DEBUG    | httpcore.connection | trace:47 | start_tls.started ssl_context=<ssl.SSLContext object at 0x13294e450> server_hostname='openrouter.ai' timeout=None
+2026-01-10 17:01:04 | DEBUG    | httpcore.connection | trace:47 | start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1329b4b00>
+2026-01-10 17:01:04 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 17:01:04 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 17:01:04 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 17:01:04 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 17:01:04 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 17:01:05 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 10 Jan 2026 11:31:05 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Content-Encoding', b'gzip'), (b'Access-Control-Allow-Origin', b'*'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9bbbd88fce38d854-DEL')])
+2026-01-10 17:01:05 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-10 17:01:05 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 17:01:07 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 17:01:07 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 17:01:07 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 17:01:07 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "200 OK" Headers({'date': 'Sat, 10 Jan 2026 11:31:05 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'content-encoding': 'gzip', 'access-control-allow-origin': '*', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '9bbbd88fce38d854-DEL'})
+2026-01-10 17:01:07 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-10 17:01:07 | DEBUG    | extraction_agent.main | extract:63 | LLM response: ```json
+[
+  "What is Thalcave's role in 'In Search of the Castaways' and how does his backstory influence his actions?",
+  "How does Thalcave's knowledge of the pampas geography and animal ways aid the characters in their journey?",
+  "What are the key interactions between Thalcave and the main characters in the book?",
+  "How does Thalcave's upbringing with his father shape his skills and personality?",
+  "What is the significance of Thalcave's mother's death in the context of the story?"
+]
+```
+2026-01-10 17:01:07 | INFO     | extraction_agent.main | extract:82 | Generated 5 queries
+2026-01-10 17:01:07 | INFO     | extraction_agent.main | extract:92 | Getting evidence for query: What is Thalcave's role in 'In Search of the Castaways' and how does his backstory influence his actions?
+2026-01-10 17:01:07 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-10 17:01:07 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x132b56fc0>
+2026-01-10 17:01:07 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'GET']>
+2026-01-10 17:01:07 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 17:01:07 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'GET']>
+2026-01-10 17:01:07 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 17:01:07 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'GET']>
+2026-01-10 17:01:07 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-encoding', b'zstd'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-type', b'application/json'), (b'date', b'Sat, 10 Jan 2026 11:31:07 GMT')])
+2026-01-10 17:01:07 | INFO     | httpx | _send_single_request:1025 | HTTP Request: GET http://localhost:6333 "HTTP/1.1 200 OK"
+2026-01-10 17:01:07 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'GET']>
+2026-01-10 17:01:07 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 17:01:07 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 17:01:07 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 17:01:07 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-10 17:01:07 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-10 17:01:07 | INFO     | sentence_transformers.SentenceTransformer | __init__:227 | Load pretrained SentenceTransformer: avsolatorio/GIST-small-Embedding-v0
+2026-01-10 17:01:07 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-10 17:01:07 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/modules.json HTTP/1.1" 200 0
+2026-01-10 17:01:08 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-10 17:01:08 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-10 17:01:08 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-10 17:01:08 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-10 17:01:08 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/README.md HTTP/1.1" 307 0
+2026-01-10 17:01:08 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/README.md HTTP/1.1" 200 0
+2026-01-10 17:01:08 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-10 17:01:08 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/modules.json HTTP/1.1" 200 0
+2026-01-10 17:01:09 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/sentence_bert_config.json HTTP/1.1" 307 0
+2026-01-10 17:01:09 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/sentence_bert_config.json HTTP/1.1" 200 0
+2026-01-10 17:01:09 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2026-01-10 17:01:09 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/config.json HTTP/1.1" 307 0
+2026-01-10 17:01:09 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/config.json HTTP/1.1" 200 0
+2026-01-10 17:01:10 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2026-01-10 17:01:10 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/tokenizer_config.json HTTP/1.1" 200 0
+2026-01-10 17:01:10 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/avsolatorio/GIST-small-Embedding-v0/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2026-01-10 17:01:10 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/avsolatorio/GIST-small-Embedding-v0/tree/main?recursive=True&expand=False HTTP/1.1" 200 2759
+2026-01-10 17:01:10 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
+2026-01-10 17:01:11 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
+2026-01-10 17:01:11 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/avsolatorio/GIST-small-Embedding-v0 HTTP/1.1" 200 146259
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x13304ba10>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-type', b'application/json'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-encoding', b'zstd'), (b'date', b'Sat, 10 Jan 2026 11:31:11 GMT')])
+2026-01-10 17:01:11 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST http://localhost:6333/collections/in%20search%20of%20the%20castaways_collection/points/query "HTTP/1.1 200 OK"
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-10 17:01:11 | INFO     | extraction_agent.main | extract:92 | Getting evidence for query: How does Thalcave's knowledge of the pampas geography and animal ways aid the characters in their journey?
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x133048b00>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-type', b'application/json'), (b'content-encoding', b'zstd'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'date', b'Sat, 10 Jan 2026 11:31:11 GMT')])
+2026-01-10 17:01:11 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST http://localhost:6333/collections/in%20search%20of%20the%20castaways_collection/points/query "HTTP/1.1 200 OK"
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-10 17:01:11 | INFO     | extraction_agent.main | extract:92 | Getting evidence for query: What are the key interactions between Thalcave and the main characters in the book?
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x133049c70>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-type', b'application/json'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-encoding', b'zstd'), (b'date', b'Sat, 10 Jan 2026 11:31:11 GMT')])
+2026-01-10 17:01:11 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST http://localhost:6333/collections/in%20search%20of%20the%20castaways_collection/points/query "HTTP/1.1 200 OK"
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-10 17:01:11 | INFO     | extraction_agent.main | extract:92 | Getting evidence for query: How does Thalcave's upbringing with his father shape his skills and personality?
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x133032e10>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-type', b'application/json'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-encoding', b'zstd'), (b'date', b'Sat, 10 Jan 2026 11:31:11 GMT')])
+2026-01-10 17:01:11 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST http://localhost:6333/collections/in%20search%20of%20the%20castaways_collection/points/query "HTTP/1.1 200 OK"
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-10 17:01:11 | INFO     | extraction_agent.main | extract:92 | Getting evidence for query: What is the significance of Thalcave's mother's death in the context of the story?
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x133033a10>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-type', b'application/json'), (b'content-encoding', b'zstd'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'date', b'Sat, 10 Jan 2026 11:31:11 GMT')])
+2026-01-10 17:01:11 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST http://localhost:6333/collections/in%20search%20of%20the%20castaways_collection/points/query "HTTP/1.1 200 OK"
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 17:01:11 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-10 17:01:11 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-10 17:01:11 | INFO     | extraction_agent.main | extract:99 | Retrieved 16 evidence items
+2026-01-10 17:01:11 | INFO     | extraction_agent.main | extract:112 | Extraction agent completed
+2026-01-10 17:01:11 | INFO     | graph_creator_agent.main | create_graph:25 | Starting graph creator agent
+2026-01-10 17:01:11 | INFO     | graph_creator_agent.main | create_graph:26 | Book: In Search of the Castaways, Character: Thalcave
+2026-01-10 17:01:11 | INFO     | graph_creator_agent.graph_store | load_graph:64 | Loading existing graph from graph_creator_agent/graph/In Search of the Castaways_Thalcave.graphml
+2026-01-10 17:01:11 | INFO     | graph_creator_agent.graph_store | load_graph:69 | Loaded graph with 101 nodes and 80 edges
+2026-01-10 17:01:11 | INFO     | graph_creator_agent.utils | filter_new_evidence:22 | Filtered evidence: 16 new out of 16 total
+2026-01-10 17:01:11 | INFO     | graph_creator_agent.main | create_graph:48 | Processing 16 new evidence items
+2026-01-10 17:01:11 | INFO     | graph_creator_agent.extractor | generate_triplets:39 | Generating triplets for 16 evidence items in bulk
+2026-01-10 17:01:11 | ERROR    | __main__ | main:225 | Error processing row 1: '\n  "triplets"'
+Traceback (most recent call last):
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/main.py", line 218, in main
+    final_state = run_pipeline_for_row(row_data)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/main.py", line 159, in run_pipeline_for_row
+    final_state = app.invoke(initial_state)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py", line 3068, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py", line 2643, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py", line 167, in tick
+    run_with_retry(
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/graph_creator_agent/main.py", line 55, in create_graph
+    triplets = generate_triplets(new_evidences, llm)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ramlanjekar/Documents/MyProjects/KDAG/graph_creator_agent/extractor.py", line 42, in generate_triplets
+    prompt = TRIPLET_EXTRACTION_PROMPT.format(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: '\n  "triplets"'
+During task with name 'create_graph' and id 'b7f986b0-cb82-433f-5a0d-2b985b79a5eb'
+2026-01-10 17:01:11 | DEBUG    | asyncio | __init__:64 | Using selector: KqueueSelector
+2026-01-10 17:01:11 | INFO     | pathway_engine.engine.dataflow | None:5322 | Preparing Pathway computation
+2026-01-10 17:01:11 | DEBUG    | pathway_engine.engine.telemetry | None:399 | Telemetry disabled
+2026-01-10 17:01:11 | INFO     | pathway_engine.connectors.monitoring | None:43 | FilesystemReader-0: 0 entries (1 minibatch(es)) have been sent to the engine
+2026-01-10 17:01:11 | INFO     | pathway_engine.connectors.monitoring | None:43 | FilesystemReader-0: 61676 entries (2 minibatch(es)) have been sent to the engine
+2026-01-10 17:01:11 | WARNING  | pathway_engine.connectors.monitoring | None:82 | FilesystemReader-0: Closing the data source
+2026-01-10 17:01:12 | INFO     | sentence_transformers.SentenceTransformer | __init__:227 | Load pretrained SentenceTransformer: avsolatorio/GIST-small-Embedding-v0
+2026-01-10 17:01:12 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-10 17:01:12 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/modules.json HTTP/1.1" 200 0
+2026-01-10 17:01:12 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-10 17:01:12 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-10 17:01:12 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-10 17:01:12 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-10 17:01:13 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/README.md HTTP/1.1" 307 0
+2026-01-10 17:01:13 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/README.md HTTP/1.1" 200 0
+2026-01-10 17:01:13 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-10 17:01:13 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/modules.json HTTP/1.1" 200 0
+2026-01-10 17:01:13 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/sentence_bert_config.json HTTP/1.1" 307 0
+2026-01-10 17:01:13 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/sentence_bert_config.json HTTP/1.1" 200 0
+2026-01-10 17:01:14 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2026-01-10 17:01:14 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/config.json HTTP/1.1" 307 0
+2026-01-10 17:01:14 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/config.json HTTP/1.1" 200 0
+2026-01-10 17:01:14 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2026-01-10 17:01:14 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/tokenizer_config.json HTTP/1.1" 200 0
+2026-01-10 17:01:15 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/avsolatorio/GIST-small-Embedding-v0/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2026-01-10 17:01:15 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/avsolatorio/GIST-small-Embedding-v0/tree/main?recursive=True&expand=False HTTP/1.1" 200 2759
+2026-01-10 17:01:16 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /avsolatorio/GIST-small-Embedding-v0/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
+2026-01-10 17:01:16 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/avsolatorio/GIST-small-Embedding-v0/75e62fd210b9fde790430e0b2f040b0b00a021b1/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
+2026-01-10 17:01:16 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/avsolatorio/GIST-small-Embedding-v0 HTTP/1.1" 200 146259
