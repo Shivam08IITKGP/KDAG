@@ -141,7 +141,6 @@ def build_index(novel_path: str, name: str, embedding_model: str | None = None, 
         qdrant_url = DEFAULT_QDRANT_URL
     if qdrant_api_key is None:
         qdrant_api_key = DEFAULT_QDRANT_API_KEY
-    
     print(f"Reading novel: {novel_path}")
     text = read_text_via_pathway(novel_path)
     print(f"Read {len(text)} characters.")

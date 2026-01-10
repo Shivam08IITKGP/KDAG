@@ -4,20 +4,20 @@ import os
 from datetime import datetime
 from pathlib import Path
 from typing import TypedDict
+from collections import defaultdict
 
+import pandas as pd
 from dotenv import load_dotenv
 from langgraph.graph import StateGraph, END
 
 from extraction_agent.main import extract
 from graph_creator_agent.main import create_graph
 from answering_agent.main import answer
-from collections import defaultdict
-import pandas as pd
-
+from Graphrag.pathway.build_index import build_index
+from input import get_input_data
 
 # Load environment variables
 load_dotenv()
-
 
 class PipelineState(TypedDict):
     """Global state for the LangGraph pipeline."""
@@ -73,29 +73,6 @@ def setup_logging() -> str:
     return str(log_file)
 
 
-def read_input_file(input_path: str = "input.txt") -> dict[str, str]:
-    """Read and parse input.txt file.
-    
-    Args:
-        input_path: Path to input file.
-        
-    Returns:
-        Dictionary with book_name, character_name, backstory.
-    """
-    logger = logging.getLogger(__name__)
-    logger.info(f"Reading input file: {input_path}")
-    
-    with open(input_path, "r", encoding="utf-8") as f:
-        content = f.read()
-    
-    result = {}
-    for line in content.strip().split("\n"):
-        if "=" in line:
-            key, value = line.split("=", 1)
-            result[key.strip()] = value.strip()
-    
-    logger.info(f"Parsed input: book_name={result.get('book_name')}, character_name={result.get('character_name')}")
-    return result
 
 
 def print_output(state: PipelineState):
@@ -116,28 +93,22 @@ def print_output(state: PipelineState):
         print("- No evidence IDs provided")
 
 
-def main():
-    """Main entry point."""
-    # Setup logging
-    log_file = setup_logging()
-    logger = logging.getLogger(__name__)
-    logger.info("Starting Evidence-Grounded Backstory Consistency System")
+def run_pipeline_for_row(row_data: dict) -> PipelineState:
+    """Run the pipeline for a single row of data.
     
-    # Read input file
-    try:
-        input_data = read_input_file()
-        book_name = input_data["book_name"]
-        character_name = input_data["character_name"]
-        backstory = input_data["backstory"]
-    except Exception as e:
-        logger.error(f"Error reading input file: {e}")
-        raise
+    Args:
+        row_data: Dictionary with book_name, char, and content.
+        
+    Returns:
+        Final pipeline state.
+    """
+    logger = logging.getLogger(__name__)
     
     # Initialize state
     initial_state: PipelineState = {
-        "book_name": book_name,
-        "character_name": character_name,
-        "backstory": backstory,
+        "book_name": row_data["book_name"],
+        "character_name": row_data["char"],
+        "backstory": row_data["content"],
         "queries": [],
         "evidences": [],
         "graph_path": None,
@@ -146,7 +117,7 @@ def main():
         "evidence_ids": None,
     }
     
-    logger.info("Initializing LangGraph workflow")
+    logger.info(f"Processing: {row_data['char']} from {row_data['book_name']}")
     
     # Create LangGraph workflow
     workflow = StateGraph(PipelineState)
@@ -168,15 +139,33 @@ def main():
     logger.info("Running pipeline")
     
     # Run pipeline
+    final_state = app.invoke(initial_state)
+    logger.info("Pipeline completed successfully")
+    
+    return final_state
+
+
+def main():
+    """Main entry point."""
+    # Setup logging
+    log_file = setup_logging()
+    logger = logging.getLogger(__name__)
+    logger.info("Starting Evidence-Grounded Backstory Consistency System")
+
+    # Get number of rows to process from user input
     try:
-        final_state = app.invoke(initial_state)
-        logger.info("Pipeline completed successfully")
-        
-        # Print output
-        print_output(final_state)
-        
+        num_rows = int(input("Enter number of rows to process from train.csv (default: 2): ") or "2")
+    except ValueError:
+        num_rows = 2
+        logger.info("Invalid input, using default: 2 rows")
+
+    # Read data using input.py function
+    try:
+        df = get_input_data(num_rows)
+        logger.info(f"Loaded {len(df)} rows from train.csv")
+        logger.info(f"Processing {len(df)} backstories")
     except Exception as e:
-        logger.error(f"Error during pipeline execution: {e}", exc_info=True)
+        logger.error(f"Error reading train.csv: {e}")
         raise
     
     # Process each row
@@ -230,7 +219,6 @@ def main():
     print(f"\n{'='*80}")
     print(f"Completed processing {len(results)}/{len(df)} backstories")
     print(f"{'='*80}\n")
-
 
 
 if __name__ == "__main__":

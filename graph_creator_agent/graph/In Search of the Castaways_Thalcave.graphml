@@ -343,6 +343,27 @@
     <node id="a real Indian">
       <data key="d0">entity</data>
     </node>
+    <node id="gratitude towards Robert and Mary Grant">
+      <data key="d0">entity</data>
+    </node>
+    <node id="abandonment to unforeseen circumstances">
+      <data key="d0">entity</data>
+    </node>
+    <node id="a specific interpretation">
+      <data key="d0">entity</data>
+    </node>
+    <node id="progress of the expedition">
+      <data key="d0">entity</data>
+    </node>
+    <node id="while gazing at the geographer">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Portuguese and Spanish">
+      <data key="d0">entity</data>
+    </node>
+    <node id="about the interpretation">
+      <data key="d0">entity</data>
+    </node>
     <edge source="Jacques Paganel" target="French">
       <data key="d1">IS_GEOGRAPHER</data>
       <data key="d2">["ev_1"]</data>
@@ -426,6 +447,26 @@
     <edge source="Jacques Paganel" target="the guidance of Thalcave">
       <data key="d1">IS_CONFIDENT_IN</data>
       <data key="d2">["in search of the castaways__chunk__385"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="a specific interpretation">
+      <data key="d1">INSISTS_ON</data>
+      <data key="d2">["in search of the castaways__chunk__374"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="while gazing at the geographer">
+      <data key="d1">IS_SILENT</data>
+      <data key="d2">["in search of the castaways__chunk__19", "in search of the castaways__chunk__160", "in search of the castaways__chunk__58", "in search of the castaways__chunk__274", "in search of the castaways__chunk__300"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="his knowledge of languages">
+      <data key="d1">IS_PROUD_OF</data>
+      <data key="d2">["in search of the castaways__chunk__68"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Portuguese and Spanish">
+      <data key="d1">SPEAKS</data>
+      <data key="d2">["in search of the castaways__chunk__68"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="about the interpretation">
+      <data key="d1">IS_RIGHT</data>
+      <data key="d2">["in search of the castaways__chunk__305"]</data>
     </edge>
     <edge source="Thalcave" target="unusual circumstances">
       <data key="d1">IS_AMAZED_BY</data>
@@ -518,6 +559,18 @@
     <edge source="Thalcave" target="a real Indian">
       <data key="d1">IS_DESCRIBED_AS</data>
       <data key="d2">["in search of the castaways__chunk__20"]</data>
+    </edge>
+    <edge source="Thalcave" target="abandonment to unforeseen circumstances">
+      <data key="d1">ATTRIBUTES</data>
+      <data key="d2">["in search of the castaways__chunk__374"]</data>
+    </edge>
+    <edge source="Thalcave" target="progress of the expedition">
+      <data key="d1">AWAITS</data>
+      <data key="d2">["in search of the castaways__chunk__19"]</data>
+    </edge>
+    <edge source="Thalcave" target="while gazing at the geographer">
+      <data key="d1">IS_SILENT</data>
+      <data key="d2">["in search of the castaways__chunk__19", "in search of the castaways__chunk__160", "in search of the castaways__chunk__58", "in search of the castaways__chunk__274", "in search of the castaways__chunk__300"]</data>
     </edge>
     <edge source="Major" target="hunting approach">
       <data key="d1">SUGGESTS</data>
@@ -654,6 +707,10 @@
     <edge source="Glenarvan" target="Lusiad of Camoëns">
       <data key="d1">REFERENCED</data>
       <data key="d2">["in search of the castaways__chunk__334"]</data>
+    </edge>
+    <edge source="Glenarvan" target="gratitude towards Robert and Mary Grant">
+      <data key="d1">EXPRESSES</data>
+      <data key="d2">["in search of the castaways__chunk__314"]</data>
     </edge>
     <edge source="Paganel" target="dangers">
       <data key="d1">EXCLAIMED_ABOUT</data>

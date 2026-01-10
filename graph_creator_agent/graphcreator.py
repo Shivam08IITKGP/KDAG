@@ -9,7 +9,7 @@ from typing import TypedDict
 import networkx as nx
 from langchain_openai import ChatOpenAI
 
-from graph_creator_agent.prompts import TRIPLET_EXTRACTION_BATCH_PROMPT
+from graph_creator_agent.prompts import TRIPLET_EXTRACTION_PROMPT
 
 logger = logging.getLogger(__name__)
 
@@ -129,18 +129,19 @@ def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI) -> list[Triple
     
     logger.info(f"Generating triplets for all {len(evidence_list)} evidence items at once")
     
-    # Format evidence items for batch processing
-    evidence_items_text = ""
-    for idx, evidence in enumerate(evidence_list, 1):
-        evidence_items_text += f"\n--- Evidence {idx} (ID: {evidence['id']}) ---\n"
-        evidence_items_text += f"{evidence['text']}\n"
+    # Format all evidence items for batch processing
+    formatted_evidence = []
+    for ev in evidence_list:
+        formatted_evidence.append(f"ID: {ev['id']}\nText: {ev['text']}\n")
+    
+    combined_evidence_text = "\n---\n".join(formatted_evidence)
     
     # Configure LLM for structured output
     structured_llm = llm.with_structured_output(TripletList)
     
-    # Format batch prompt
-    prompt = TRIPLET_EXTRACTION_BATCH_PROMPT.format(
-        evidence_items=evidence_items_text,
+    # Format prompt with all evidence at once
+    prompt = TRIPLET_EXTRACTION_PROMPT.format(
+        evidence_text=combined_evidence_text
     )
     
     try:
@@ -180,6 +181,7 @@ def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI) -> list[Triple
     except Exception as e:
         logger.error(f"Error generating triplets in batch: {e}")
         # Fallback: try without structured output
+        all_triplets = []
         try:
             logger.warning("Falling back to JSON parsing")
             response = llm.invoke(prompt)
@@ -192,45 +194,52 @@ def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI) -> list[Triple
                 end = response_text.rfind("}") + 1
                 if start != -1 and end > start:
                     response_text = response_text[start:end]
+                # Check for wrapped json block specifically 
+                elif "```json" in response_text:
+                     start = response_text.find("{")
+                     end = response_text.rfind("}") + 1
+                     response_text = response_text[start:end]
+
+            # Try parsing as object with 'triplets' key first
+            try:
+                data = json.loads(response_text)
+                if isinstance(data, dict) and "triplets" in data:
+                    triplets = data["triplets"]
+                elif isinstance(data, list):
+                    triplets = data
+                else:
+                    raise ValueError("Response is not a list or dict with 'triplets' key")
+            except json.JSONDecodeError:
+                # If simple parse fails, try to find the list or dict again
+                 start_list = response_text.find("[")
+                 start_dict = response_text.find("{")
+                 
+                 if start_list != -1 and (start_dict == -1 or start_list < start_dict):
+                      end = response_text.rfind("]") + 1
+                      triplets = json.loads(response_text[start_list:end])
+                 elif start_dict != -1:
+                      end = response_text.rfind("}") + 1
+                      data = json.loads(response_text[start_dict:end])
+                      triplets = data.get("triplets", [])
+                 else:
+                      raise
             
-            # Parse JSON
-            parsed = json.loads(response_text)
-            if isinstance(parsed, dict) and "triplets" in parsed:
-                triplets = parsed["triplets"]
-            elif isinstance(parsed, list):
-                triplets = parsed
-            else:
-                raise ValueError("Response is not in expected format")
-            
-            if not isinstance(triplets, list):
-                raise ValueError("Triplets is not a list")
-            
-            all_triplets = []
             evidence_ids = {ev["id"] for ev in evidence_list}
-            
             for triplet in triplets:
-                if not all(key in triplet for key in ["subject", "relation", "object", "evidence_id"]):
-                    logger.warning(f"Triplet missing required fields, skipping: {triplet}")
-                    continue
-                
-                evidence_id = triplet["evidence_id"]
-                if evidence_id not in evidence_ids:
-                    logger.warning(f"Triplet has invalid evidence_id '{evidence_id}', skipping: {triplet}")
-                    continue
-                
-                all_triplets.append(Triplet(
-                    subject=triplet["subject"],
-                    relation=triplet["relation"],
-                    object=triplet["object"],
-                    evidence_id=evidence_id,
-                ))
-            
-            logger.info(f"Fallback: Generated {len(all_triplets)} triplets from {len(evidence_list)} evidence items")
-            return all_triplets
-            
+                if all(key in triplet for key in ["subject", "relation", "object", "evidence_id"]):
+                    evidence_id = triplet["evidence_id"]
+                    if evidence_id in evidence_ids:
+                        all_triplets.append(Triplet(
+                            subject=triplet["subject"],
+                            relation=triplet["relation"],
+                            object=triplet["object"],
+                            evidence_id=evidence_id,
+                        ))
+            logger.info(f"Fallback: Generated {len(all_triplets)} triplets")
         except Exception as fallback_error:
             logger.error(f"Fallback parsing also failed: {fallback_error}")
-            return []
+    
+    return all_triplets
 
 
 def add_triplets_to_graph(graph: nx.DiGraph, triplets: list[Triplet]) -> None:
@@ -312,6 +321,4 @@ def save_graph(graph: nx.DiGraph, book_name: str, character_name: str) -> str:
                 data[key] = json.dumps(value)
     
     nx.write_graphml(graph, graph_path)
-    logger.info(f"Saved graph to {graph_path}")
-    
     return str(graph_path)
