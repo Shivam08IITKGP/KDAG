@@ -2,13 +2,14 @@
 import ast
 import json
 import logging
+from collections import Counter
 from pathlib import Path
 from typing import TypedDict
 
 import networkx as nx
 from langchain_openai import ChatOpenAI
 
-from graph_creator_agent.prompts import TRIPLET_EXTRACTION_PROMPT
+from graph_creator_agent.prompts import TRIPLET_EXTRACTION_BATCH_PROMPT
 
 logger = logging.getLogger(__name__)
 
@@ -111,7 +112,9 @@ def filter_new_evidence(evidences: list[dict], cache_key: str) -> list[dict]:
 
 
 def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI) -> list[Triplet]:
-    """Generate triplets from evidence using LLM with structured output.
+    """Generate triplets from all evidence at once using LLM with structured output.
+    
+    Processes all evidence items in a single batch call instead of one-by-one.
     
     Args:
         evidence_list: List of evidence dicts with 'id' and 'text' keys.
@@ -120,75 +123,114 @@ def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI) -> list[Triple
     Returns:
         List of Triplet TypedDicts.
     """
-    all_triplets = []
+    if not evidence_list:
+        logger.info("No evidence to process")
+        return []
+    
+    logger.info(f"Generating triplets for all {len(evidence_list)} evidence items at once")
+    
+    # Format evidence items for batch processing
+    evidence_items_text = ""
+    for idx, evidence in enumerate(evidence_list, 1):
+        evidence_items_text += f"\n--- Evidence {idx} (ID: {evidence['id']}) ---\n"
+        evidence_items_text += f"{evidence['text']}\n"
     
     # Configure LLM for structured output
     structured_llm = llm.with_structured_output(TripletList)
     
-    for evidence in evidence_list:
-        evidence_id = evidence["id"]
-        evidence_text = evidence["text"]
+    # Format batch prompt
+    prompt = TRIPLET_EXTRACTION_BATCH_PROMPT.format(
+        evidence_items=evidence_items_text,
+    )
+    
+    try:
+        logger.info("Making single LLM call to extract triplets from all evidence")
+        # Get structured LLM response for all evidence at once
+        response: TripletList = structured_llm.invoke(prompt)
         
-        logger.info(f"Generating triplets for evidence {evidence_id}")
+        # Extract triplets from response
+        triplets = response.get("triplets", [])
         
-        # Format prompt
-        prompt = TRIPLET_EXTRACTION_PROMPT.format(
-            evidence_text=evidence_text,
-            evidence_id=evidence_id,
-        )
+        # Validate and ensure evidence_id is set correctly
+        all_triplets = []
+        evidence_ids = {ev["id"] for ev in evidence_list}
         
+        for triplet in triplets:
+            # Validate evidence_id exists in our evidence list
+            evidence_id = triplet.get("evidence_id", "")
+            if evidence_id not in evidence_ids:
+                logger.warning(f"Triplet has invalid evidence_id '{evidence_id}', skipping: {triplet}")
+                continue
+            
+            all_triplets.append(Triplet(
+                subject=triplet["subject"],
+                relation=triplet["relation"],
+                object=triplet["object"],
+                evidence_id=evidence_id,
+            ))
+        
+        logger.info(f"Generated {len(all_triplets)} triplets from {len(evidence_list)} evidence items in a single batch")
+        
+        # Log triplet count per evidence_id
+        evidence_id_counts = Counter(t["evidence_id"] for t in all_triplets)
+        logger.info(f"Triplet distribution: {dict(evidence_id_counts)}")
+        
+        return all_triplets
+        
+    except Exception as e:
+        logger.error(f"Error generating triplets in batch: {e}")
+        # Fallback: try without structured output
         try:
-            # Get structured LLM response
-            response: TripletList = structured_llm.invoke(prompt)
+            logger.warning("Falling back to JSON parsing")
+            response = llm.invoke(prompt)
+            response_text = response.content.strip()
             
-            # Extract triplets from response
-            triplets = response.get("triplets", [])
+            # Try to extract JSON from response
+            if "```" in response_text:
+                # Find JSON block
+                start = response_text.find("{")
+                end = response_text.rfind("}") + 1
+                if start != -1 and end > start:
+                    response_text = response_text[start:end]
             
-            # Validate and ensure evidence_id is set correctly
+            # Parse JSON
+            parsed = json.loads(response_text)
+            if isinstance(parsed, dict) and "triplets" in parsed:
+                triplets = parsed["triplets"]
+            elif isinstance(parsed, list):
+                triplets = parsed
+            else:
+                raise ValueError("Response is not in expected format")
+            
+            if not isinstance(triplets, list):
+                raise ValueError("Triplets is not a list")
+            
+            all_triplets = []
+            evidence_ids = {ev["id"] for ev in evidence_list}
+            
             for triplet in triplets:
-                # Ensure evidence_id matches
-                triplet["evidence_id"] = evidence_id
+                if not all(key in triplet for key in ["subject", "relation", "object", "evidence_id"]):
+                    logger.warning(f"Triplet missing required fields, skipping: {triplet}")
+                    continue
+                
+                evidence_id = triplet["evidence_id"]
+                if evidence_id not in evidence_ids:
+                    logger.warning(f"Triplet has invalid evidence_id '{evidence_id}', skipping: {triplet}")
+                    continue
+                
                 all_triplets.append(Triplet(
                     subject=triplet["subject"],
                     relation=triplet["relation"],
                     object=triplet["object"],
-                    evidence_id=triplet["evidence_id"],
+                    evidence_id=evidence_id,
                 ))
             
-            logger.info(f"Generated {len(triplets)} triplets from evidence {evidence_id}")
+            logger.info(f"Fallback: Generated {len(all_triplets)} triplets from {len(evidence_list)} evidence items")
+            return all_triplets
             
-        except Exception as e:
-            logger.error(f"Error generating triplets for evidence {evidence_id}: {e}")
-            # Fallback: try without structured output
-            try:
-                logger.warning("Falling back to JSON parsing")
-                response = llm.invoke(prompt)
-                response_text = response.content.strip()
-                
-                # Try to extract JSON from response
-                if "```" in response_text:
-                    start = response_text.find("[")
-                    end = response_text.rfind("]") + 1
-                    if start != -1 and end > start:
-                        response_text = response_text[start:end]
-                
-                triplets = json.loads(response_text)
-                if not isinstance(triplets, list):
-                    raise ValueError("Response is not a list")
-                
-                for triplet in triplets:
-                    if all(key in triplet for key in ["subject", "relation", "object"]):
-                        all_triplets.append(Triplet(
-                            subject=triplet["subject"],
-                            relation=triplet["relation"],
-                            object=triplet["object"],
-                            evidence_id=evidence_id,
-                        ))
-                logger.info(f"Fallback: Generated {len(triplets)} triplets from evidence {evidence_id}")
-            except Exception as fallback_error:
-                logger.error(f"Fallback parsing also failed: {fallback_error}")
-    
-    return all_triplets
+        except Exception as fallback_error:
+            logger.error(f"Fallback parsing also failed: {fallback_error}")
+            return []
 
 
 def add_triplets_to_graph(graph: nx.DiGraph, triplets: list[Triplet]) -> None:

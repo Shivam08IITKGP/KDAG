@@ -52,6 +52,12 @@
     <node id="languages">
       <data key="d0">entity</data>
     </node>
+    <node id="frequent comical mistakes">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Lord Glenarvan's companions">
+      <data key="d0">entity</data>
+    </node>
     <edge source="Jacques Paganel" target="absent-minded">
       <data key="d1">has_trait</data>
       <data key="d2">["ev_101", "ev_103", "ev_104"]</data>
@@ -83,6 +89,18 @@
     <edge source="Jacques Paganel" target="languages">
       <data key="d1">CONFUSES_LANGUAGES</data>
       <data key="d2">["ev_104"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="frequent comical mistakes">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["ev_101"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Lord Glenarvan">
+      <data key="d1">FRIEND_OF</data>
+      <data key="d2">["ev_105"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Lord Glenarvan's companions">
+      <data key="d1">TRAVELS_WITH</data>
+      <data key="d2">["ev_105"]</data>
     </edge>
     <edge source="Paganel" target="secretary">
       <data key="d1">is</data>
