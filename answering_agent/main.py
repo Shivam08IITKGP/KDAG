@@ -1,10 +1,11 @@
 """Answering agent main module."""
 import logging
-
+import os
 from answering_agent.classifier import classify, ClassificationOutput
 from answering_agent.evidence_generator import generate_evidence_ids, EvidenceOutput
 from shared_config import create_llm
-
+from dotenv import load_dotenv
+load_dotenv()
 logger = logging.getLogger(__name__)
 
 

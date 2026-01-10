@@ -21,6 +21,5 @@ def create_llm():
     return ChatOpenAI(
         api_key=OPENROUTER_API_KEY,
         base_url=OPENROUTER_BASE_URL,
-        model=ASSISTANT_MODEL,
-        temperature=0,
+        model=ASSISTANT_MODEL
     )
