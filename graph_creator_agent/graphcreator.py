@@ -1,4 +1,5 @@
 """Graph creation utilities."""
+import ast
 import json
 import logging
 from pathlib import Path
@@ -18,6 +19,38 @@ class Triplet(TypedDict):
     relation: str
     object: str
     evidence_id: str
+
+
+class TripletList(TypedDict):
+    """Wrapper for list of triplets for structured output."""
+    triplets: list[Triplet]
+
+
+def convert_graphml_attributes(graph: nx.DiGraph) -> None:
+    """Convert GraphML string attributes back to proper types.
+    
+    GraphML stores all attributes as strings, so we need to convert
+    lists and other types back to their proper format.
+    
+    Args:
+        graph: NetworkX graph loaded from GraphML.
+    """
+    # Convert edge evidence_ids from string to list
+    for u, v, data in graph.edges(data=True):
+        if "evidence_ids" in data:
+            ev_ids = data["evidence_ids"]
+            if isinstance(ev_ids, str):
+                try:
+                    # Try to parse as Python list literal
+                    data["evidence_ids"] = ast.literal_eval(ev_ids)
+                except (ValueError, SyntaxError):
+                    # If that fails, try JSON
+                    try:
+                        data["evidence_ids"] = json.loads(ev_ids)
+                    except json.JSONDecodeError:
+                        # If all else fails, create list from string
+                        logger.warning(f"Could not parse evidence_ids for edge ({u}, {v}): {ev_ids}")
+                        data["evidence_ids"] = [ev_ids] if ev_ids else []
 
 
 def load_existing_graph(book_name: str, character_name: str) -> nx.DiGraph:
@@ -40,6 +73,8 @@ def load_existing_graph(book_name: str, character_name: str) -> nx.DiGraph:
         logger.info(f"Loading existing graph from {graph_path}")
         try:
             graph = nx.read_graphml(graph_path)
+            # Convert string attributes back to proper types
+            convert_graphml_attributes(graph)
             logger.info(f"Loaded graph with {graph.number_of_nodes()} nodes and {graph.number_of_edges()} edges")
             return graph
         except Exception as e:
@@ -69,16 +104,19 @@ def filter_new_evidence(evidences: list[dict], cache_key: str) -> list[dict]:
 
 
 def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI) -> list[Triplet]:
-    """Generate triplets from evidence using LLM.
+    """Generate triplets from evidence using LLM with structured output.
     
     Args:
         evidence_list: List of evidence dicts with 'id' and 'text' keys.
-        llm: ChatOpenAI instance.
+        llm: ChatOpenAI instance configured with structured output.
         
     Returns:
         List of Triplet TypedDicts.
     """
     all_triplets = []
+    
+    # Configure LLM for structured output
+    structured_llm = llm.with_structured_output(TripletList)
     
     for evidence in evidence_list:
         evidence_id = evidence["id"]
@@ -92,40 +130,56 @@ def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI) -> list[Triple
             evidence_id=evidence_id,
         )
         
-        # Get LLM response
-        response = llm.invoke(prompt)
-        response_text = response.content.strip()
-        
-        logger.debug(f"LLM response for {evidence_id}: {response_text}")
-        
-        # Parse JSON response
         try:
-            # Try to extract JSON from response
-            if "```" in response_text:
-                start = response_text.find("[")
-                end = response_text.rfind("]") + 1
-                if start != -1 and end > start:
-                    response_text = response_text[start:end]
+            # Get structured LLM response
+            response: TripletList = structured_llm.invoke(prompt)
             
-            triplets = json.loads(response_text)
-            if not isinstance(triplets, list):
-                raise ValueError("Response is not a list")
+            # Extract triplets from response
+            triplets = response.get("triplets", [])
             
-            # Validate and convert to Triplet TypedDict
+            # Validate and ensure evidence_id is set correctly
             for triplet in triplets:
-                if all(key in triplet for key in ["subject", "relation", "object", "evidence_id"]):
-                    all_triplets.append(Triplet(
-                        subject=triplet["subject"],
-                        relation=triplet["relation"],
-                        object=triplet["object"],
-                        evidence_id=triplet["evidence_id"],
-                    ))
+                # Ensure evidence_id matches
+                triplet["evidence_id"] = evidence_id
+                all_triplets.append(Triplet(
+                    subject=triplet["subject"],
+                    relation=triplet["relation"],
+                    object=triplet["object"],
+                    evidence_id=triplet["evidence_id"],
+                ))
             
             logger.info(f"Generated {len(triplets)} triplets from evidence {evidence_id}")
             
         except Exception as e:
-            logger.error(f"Error parsing triplets for evidence {evidence_id}: {e}")
-            logger.error(f"Response text: {response_text}")
+            logger.error(f"Error generating triplets for evidence {evidence_id}: {e}")
+            # Fallback: try without structured output
+            try:
+                logger.warning("Falling back to JSON parsing")
+                response = llm.invoke(prompt)
+                response_text = response.content.strip()
+                
+                # Try to extract JSON from response
+                if "```" in response_text:
+                    start = response_text.find("[")
+                    end = response_text.rfind("]") + 1
+                    if start != -1 and end > start:
+                        response_text = response_text[start:end]
+                
+                triplets = json.loads(response_text)
+                if not isinstance(triplets, list):
+                    raise ValueError("Response is not a list")
+                
+                for triplet in triplets:
+                    if all(key in triplet for key in ["subject", "relation", "object"]):
+                        all_triplets.append(Triplet(
+                            subject=triplet["subject"],
+                            relation=triplet["relation"],
+                            object=triplet["object"],
+                            evidence_id=evidence_id,
+                        ))
+                logger.info(f"Fallback: Generated {len(triplets)} triplets from evidence {evidence_id}")
+            except Exception as fallback_error:
+                logger.error(f"Fallback parsing also failed: {fallback_error}")
     
     return all_triplets
 
@@ -149,16 +203,29 @@ def add_triplets_to_graph(graph: nx.DiGraph, triplets: list[Triplet]) -> None:
         if obj not in graph:
             graph.add_node(obj, type="entity")
         
-        # Add edge with relation and evidence_id
+        # Add edge with relation and evidence_ids (only use evidence_ids, not evidence_id)
         if graph.has_edge(subject, obj):
             # Edge exists, update evidence_ids
-            if "evidence_ids" not in graph[subject][obj]:
-                graph[subject][obj]["evidence_ids"] = []
-            if evidence_id not in graph[subject][obj]["evidence_ids"]:
-                graph[subject][obj]["evidence_ids"].append(evidence_id)
+            edge_data = graph[subject][obj]
+            
+            # Ensure evidence_ids is a list
+            if "evidence_ids" not in edge_data:
+                edge_data["evidence_ids"] = []
+            elif not isinstance(edge_data["evidence_ids"], list):
+                # Convert to list if it's not already
+                edge_data["evidence_ids"] = [edge_data["evidence_ids"]] if edge_data["evidence_ids"] else []
+            
+            # Add evidence_id if not already present
+            if evidence_id not in edge_data["evidence_ids"]:
+                edge_data["evidence_ids"].append(evidence_id)
+            
+            # Update relation if different (keep existing or update)
+            # Note: We keep the existing relation, but could log if different
+            if edge_data.get("relation") != relation:
+                logger.debug(f"Relation mismatch for edge ({subject}, {obj}): existing='{edge_data.get('relation')}', new='{relation}'")
         else:
-            # New edge
-            graph.add_edge(subject, obj, relation=relation, evidence_id=evidence_id, evidence_ids=[evidence_id])
+            # New edge - only use evidence_ids (list)
+            graph.add_edge(subject, obj, relation=relation, evidence_ids=[evidence_id])
     
     logger.info(f"Added {len(triplets)} triplets to graph. Graph now has {graph.number_of_nodes()} nodes and {graph.number_of_edges()} edges")
 

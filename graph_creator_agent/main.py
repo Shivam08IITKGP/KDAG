@@ -1,8 +1,6 @@
 """Graph creator agent main module."""
 import logging
 
-from langchain_openai import ChatOpenAI
-
 from graph_creator_agent.cache import EVIDENCE_CACHE
 from graph_creator_agent.graphcreator import (
     load_existing_graph,
@@ -49,8 +47,9 @@ def create_graph(state: dict) -> dict:
     
     logger.info(f"Processing {len(new_evidences)} new evidence items")
     
-    # Initialize LLM
-    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+    # Initialize LLM with OpenRouter config
+    from shared_config import create_llm
+    llm = create_llm()
     
     # Generate triplets
     triplets = generate_triplets(new_evidences, llm)

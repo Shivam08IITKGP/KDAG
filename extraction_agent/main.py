@@ -3,10 +3,9 @@ import json
 import logging
 from typing import TypedDict
 
-from langchain_openai import ChatOpenAI
-
 from extraction_agent.config import MAX_QUERIES
 from extraction_agent.prompts import EXTRACTION_PROMPT
+from shared_config import create_llm
 
 logger = logging.getLogger(__name__)
 
@@ -47,8 +46,8 @@ def extract(state: dict) -> dict:
     logger.info("Starting extraction agent")
     logger.info(f"Book: {state['book_name']}, Character: {state['character_name']}")
     
-    # Initialize LLM
-    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+    # Initialize LLM with OpenRouter config
+    llm = create_llm()
     
     # Format prompt
     prompt = EXTRACTION_PROMPT.format(

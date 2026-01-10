@@ -1,10 +1,9 @@
 """Answering agent main module."""
 import logging
 
-from langchain_openai import ChatOpenAI
-
 from answering_agent.classifier import classify, ClassificationOutput
 from answering_agent.evidence_generator import generate_evidence_ids, EvidenceOutput
+from shared_config import create_llm
 
 logger = logging.getLogger(__name__)
 
@@ -27,8 +26,8 @@ def answer(state: dict) -> dict:
     graph_path = state.get("graph_path")
     evidences = state.get("evidences", [])
     
-    # Initialize LLM
-    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+    # Initialize LLM with OpenRouter config
+    llm = create_llm()
     
     # Run classifier
     logger.info("Running classifier")

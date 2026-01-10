@@ -9,15 +9,17 @@ Evidence ID: {evidence_id}
 Extract triplets in the format: (subject, relation, object)
 Each triplet should represent a fact about the character.
 
-Return a JSON list of objects, each with:
+Return a JSON object with a "triplets" key containing a list of objects, each with:
 - subject: string
 - relation: string
 - object: string
-- evidence_id: string (use the provided evidence_id)
+- evidence_id: string (must be exactly: {evidence_id})
 
-Example:
-[
-  {{"subject": "Character Name", "relation": "is", "object": "geographer", "evidence_id": "ev_1"}},
-  {{"subject": "Character Name", "relation": "has_trait", "object": "absent-minded", "evidence_id": "ev_1"}}
-]
+Example format (replace "ev_1" with the actual evidence_id):
+{{
+  "triplets": [
+    {{"subject": "Character Name", "relation": "is", "object": "geographer", "evidence_id": "{evidence_id}"}},
+    {{"subject": "Character Name", "relation": "has_trait", "object": "absent-minded", "evidence_id": "{evidence_id}"}}
+  ]
+}}
 """
