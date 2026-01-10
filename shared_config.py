@@ -7,7 +7,7 @@ load_dotenv()
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-ASSISTANT_MODEL = "mistralai/devstral-2512:free"
+ASSISTANT_MODEL = "nvidia/nemotron-3-nano-30b-a3b:free"
 
 
 def create_llm():

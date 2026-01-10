@@ -1,7 +1,7 @@
 """Graph creator agent main module."""
 import logging
 
-from graph_creator_agent.cache import EVIDENCE_CACHE
+from graph_creator_agent.cache import EVIDENCE_CACHE, save_cache
 from graph_creator_agent.graph_store import (
     load_graph,
     add_triplets,
@@ -67,6 +67,7 @@ def create_graph(state: dict) -> dict:
         
         new_evidence_ids = {ev["id"] for ev in new_evidences}
         EVIDENCE_CACHE[cache_key].update(new_evidence_ids)
+        save_cache()
         
         logger.info(f"Updated cache with {len(new_evidence_ids)} new evidence IDs")
     else:

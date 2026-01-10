@@ -170,6 +170,10 @@ def main():
     
     # Process each row
     results = []
+    output_file = "output.csv"
+    # Initialize output file with headers
+    pd.DataFrame(columns=["book_name", "character_name", "predictions", "reasoning"]).to_csv(output_file, index=False)
+    logger.info(f"Initialized {output_file}")
 
     flag = defaultdict(int)
     for idx, row in df.iterrows():
@@ -210,6 +214,18 @@ def main():
             
             # Print output for this row
             print_output(final_state)
+
+            # SAVE INCREMENTALLY
+            label_str = "CONSISTENT" if final_state.get("label") == 1 else "CONTRADICTING"
+            reasoning = final_state.get("reasoning", "")
+            current_row_df = pd.DataFrame([{
+                "book_name": final_state.get("book_name"),
+                "character_name": final_state.get("character_name"),
+                "predictions": label_str,
+                "reasoning": reasoning
+            }])
+            current_row_df.to_csv(output_file, mode='a', header=False, index=False)
+            logger.info(f"Appended result for {row['char']} to {output_file}")
             
         except Exception as e:
             logger.error(f"Error processing row {idx + 1}: {e}", exc_info=True)
@@ -219,6 +235,28 @@ def main():
     print(f"\n{'='*80}")
     print(f"Completed processing {len(results)}/{len(df)} backstories")
     print(f"{'='*80}\n")
+
+    # Save output to CSV
+    if results:
+        output_rows = []
+        for state in results:
+            label_str = "CONSISTENT" if state.get("label") == 1 else "CONTRADICTING"
+            reasoning = state.get("reasoning", "")
+            output_rows.append({
+                "book_name": state.get("book_name"),
+                "character_name": state.get("character_name"),
+                "predictions": label_str,
+                "reasoning": reasoning
+            })
+        
+        output_df = pd.DataFrame(output_rows)
+        output_file = "output.csv"
+        output_df.to_csv(output_file, index=False)
+        logger.info(f"Saved results to {output_file}")
+        print(f"✅ Results saved to {output_file}")
+    else:
+        logger.warning("No results to save.")
+
 
 
 if __name__ == "__main__":

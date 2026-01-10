@@ -141,6 +141,25 @@ def build_index(novel_path: str, name: str, embedding_model: str | None = None, 
         qdrant_url = DEFAULT_QDRANT_URL
     if qdrant_api_key is None:
         qdrant_api_key = DEFAULT_QDRANT_API_KEY
+
+    # Check if index already exists to avoid redundant chunking/embedding
+    try:
+        host = qdrant_url
+        api_key = qdrant_api_key if qdrant_api_key else None
+        client = QdrantClient(url=host, api_key=api_key)
+        collection_name = f"{name}_collection"
+        
+        existing_collections = client.get_collections().collections
+        if any(c.name == collection_name for c in existing_collections):
+             info = client.get_collection(collection_name)
+             # If collection exists and has points, we assume it's done. 
+             # (Could check if points_count matches expected, but simpler to just skip if populated)
+             if info.points_count and info.points_count > 0:
+                 print(f"✅ Index '{collection_name}' already exists with {info.points_count} points. Skipping rebuild.")
+                 return
+    except Exception as e:
+        print(f"Warning: Could not check existing collections: {e}")
+
     print(f"Reading novel: {novel_path}")
     text = read_text_via_pathway(novel_path)
     print(f"Read {len(text)} characters.")

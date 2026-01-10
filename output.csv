@@ -1,0 +1,35 @@
+book_name,character_name,predictions,reasoning
+In Search of the Castaways,Thalcave,CONSISTENT,"The backstory describes events and traits of Thalcave that are not mentioned in the knowledge graph. Since the graph only contains facts about Jacques Pagandel (geographer, absent‑minded, etc.) and provides no explicit statements about Thalcave, none of the backstory claims directly contradict any graph fact. Therefore, there is no factual inconsistency, and the backstory is compatible with the provided knowledge graph."
+The Count of Monte Cristo,Faria,CONSISTENT,"The knowledge graph summary contains no facts about Faria, the year 1815, suspicion, re-arrest, or transportation to the Château d’If. Since the backstory does not assert any proposition that directly contradicts an existing graph node or edge, there is no factual inconsistency. Temporal and causal elements (e.g., being arrested in 1815) are not ruled out by any graph statements, and the absence of relevant graph information does not constitute a contradiction. Therefore, the backstory is fully compatible with the provided graph."
+In Search of the Castaways,Kai-Koumou,CONSISTENT,"The knowledge graph contains facts about Jacques Paganel (e.g., occupation, traits, friendship with Kai‑Koumou) and Thalcave (e.g., threw fuel). It does not include any information about Kai‑Koumou’s mother, a shark‑tooth necklace, crack‑pattern divination, moonlight study, or related rituals. Therefore, the backstory does not assert anything that directly contradicts any graph fact; it merely introduces details that are absent from the graph. Missing information is not a contradiction, so the statement is consistent with the graph."
+The Count of Monte Cristo,Noirtier,CONSISTENT,"The provided knowledge graph contains the following relevant facts about Villefort: (1) Villefort SAID_TO Morrel, (2) Villefort HAS_MARGINAL_NOTES marginal notes, and (3) various other characters have stated relationships (e.g., Benedetto IS_OLD_FRIEND_OF Madame de Villefort, Danglars THREATENS_DEPRIVATION_OF three millions). None of these graph facts state anything about Villefort's political alignment, his disappointment with his son's drift toward the royalists, or that father and son argued politics at every family gathering. Consequently, there is no explicit or implicit contradiction between the backstory and any of the asserted graph relationships. Missing information about political arguments or emotions is not a contradiction, only a lack of evidence. Therefore, the backstory is factually consistent with the knowledge graph."
+The Count of Monte Cristo,Noirtier,CONSISTENT,"The knowledge graph contains no facts that mention Noirtier, his parents, his mother, any revolutionary reprisal, or a death of his mother. Consequently, the backstory claim does not directly contradict any stated relationship (e.g., Villefort --[SAID_TO]--> Morrel, Monte Cristo --[NEVER_JOKES_WITH]--> bankers, Benedetto --[IS_OLD_FRIEND_OF]--> Madame de Villefort, etc.). Since there is no explicit negation or conflicting detail, the claim is not contradicted. Missing information about his family background is permissible under the rules; lack of explicit support does not constitute inconsistency. Therefore, the backstory is consistent with the provided graph facts."
+In Search of the Castaways,Jacques Paganel,CONSISTENT,"1. The backstory claims that Jacques Paganel discovered bribery entries in his father's ledgers, reported them, witnessed his father's colleague being dismissed, and became wary of the upper nobility due to temporary gossip.
+2. The provided knowledge graph only contains facts about CAPTAIN_MANGLES and JACQUES_PAGANEL (e.g., traits, opinions, interactions such as HAS_HIGH_OPINION_OF, HAS_TRAIT, etc.). None of these facts mention bribery, ledgers, a father, a colleague, dismissal, gossip, or attitudes toward the upper nobility.
+3. Because there is no graph statement that directly conflicts with any of the backstory's assertions, and missing information is not considered a contradiction, the backstory is compatible with the graph.
+4. Therefore, the backstory does not violate any factual, temporal, or narrative constraints expressed in the knowledge graph."
+In Search of the Castaways,Kai-Koumou,CONSISTENT,"Step 1: Identify any explicit facts in the graph that pertain to Kai‑Koumou. The graph only contains statements about Jacques Paganel (e.g., his occupation, traits, relationship to Kai‑Koumou, etc.) and no factual statements about Kai‑Koumou’s birth‑mark, clan migration, age‑specific events, battle‑axe creation, or any related attributes.
+Step 2: Check for contradictions. Since the graph provides no information that directly conflicts with any element of the backstory, none of the backstory’s claims are contradicted by the graph.
+Step 3: Check for temporal or causal inconsistencies. The graph does not specify ages, timelines, or cause‑effect relationships involving Kai‑Koumou, so the ages (10, 14) and actions described are not ruled out.
+Step 4: Assess narrative constraints. The only narrative link in the graph is that Jacques Paganel is a friend of Kai‑Koumou; this does not impose any restriction on Kai‑Koumou’s personal history.
+Conclusion: All claims in the backstory are either unsupported by the graph (which is allowed) or not contradicted. Therefore, the backstory is consistent with the provided knowledge graph.
+"
+In Search of the Castaways,Jacques Paganel,CONSISTENT,"Step 1: Identify claims in the backstory.
+- Claim 1: Jacques Paganel accidentally slipped a farewell letter to his French sweetheart into an academic report.
+- Claim 2: The romance ended.
+- Claim 3: The Academy of Sciences praised the document.
+
+Step 2: Match each claim to nodes/edges in the provided graph.
+- The graph contains the node ""JACQUES_PAGANEL"" and defines traits and actions but provides no information about a letter, a sweetheart, or an academic report.
+- The graph includes an edge ""CAPTAIN_MANGLES --[HAS_HIGH_OPINION_OF]--> Jacques Paganel"", indicating that CAPTAIN_MANGLES holds a high opinion of Jacques Paganel.
+- No edge in the graph mentions an academic report, a letter, or a romantic farewell. There is also no explicit statement that the romance ended or that the Academy of Sciences praised a document.
+
+Step 3: Check for contradictions.
+- Because the backstory does not assert anything that is negated by the graph (e.g., no claim that Jacques Paganel never wrote a report, no claim that the Academy never praised anything), there is no direct conflict.
+- Missing details (letter, sweetheart, Academy) are not represented in the graph, so the absence of such information does not constitute a contradiction.
+
+Step 4: Apply decision criteria.
+- All claims are either unsupported by the graph or compatible with it; none are contradicted.
+- Therefore, the backstory is factually consistent with the knowledge graph.
+
+Conclusion: The backstory is fully supported (or at least not contradicted) by the graph facts, so the label is 1."

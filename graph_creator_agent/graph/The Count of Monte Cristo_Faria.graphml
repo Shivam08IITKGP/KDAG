@@ -448,6 +448,51 @@
     <node id="being a deliverer">
       <data key="d0">entity</data>
     </node>
+    <node id="drawing-room">
+      <data key="d0">entity</data>
+    </node>
+    <node id="room">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Noirtier">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Beauchamp's door">
+      <data key="d0">entity</data>
+    </node>
+    <node id="bitter">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Morrel">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Baron Danglars">
+      <data key="d0">entity</data>
+    </node>
+    <node id="police">
+      <data key="d0">entity</data>
+    </node>
+    <node id="banker">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Julie">
+      <data key="d0">entity</data>
+    </node>
+    <node id="M. Emmanuel">
+      <data key="d0">entity</data>
+    </node>
+    <node id="letter">
+      <data key="d0">entity</data>
+    </node>
+    <node id="impossible">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Do not entertain the prejudices of">
+      <data key="d0">entity</data>
+    </node>
+    <node id="affirmative">
+      <data key="d0">entity</data>
+    </node>
     <edge source="Debray" target="Ostia being close to Rome">
       <data key="d1">SPEAKS_ABOUT</data>
       <data key="d2">["the count of monte cristo__chunk__1090"]</data>
@@ -486,7 +531,7 @@
     </edge>
     <edge source="Monte Cristo" target="smiling">
       <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__475"]</data>
+      <data key="d2">["the count of monte cristo__chunk__475", "the count of monte cristo__chunk__1648"]</data>
     </edge>
     <edge source="Monte Cristo" target="a sigh">
       <data key="d1">HEARD</data>
@@ -584,6 +629,22 @@
       <data key="d1">STATED</data>
       <data key="d2">["the count of monte cristo__chunk__1182"]</data>
     </edge>
+    <edge source="Monte Cristo" target="Morrel">
+      <data key="d1">WILL_HEAR_NARRATIVE_FROM</data>
+      <data key="d2">["the count of monte cristo__chunk__244"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="police">
+      <data key="d1">SPOKE_TO</data>
+      <data key="d2">["the count of monte cristo__chunk__909"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="impossible">
+      <data key="d1">SAID</data>
+      <data key="d2">["the count of monte cristo__chunk__1258"]</data>
+    </edge>
+    <edge source="Monte Cristo" target="Do not entertain the prejudices of">
+      <data key="d1">SAID</data>
+      <data key="d2">["the count of monte cristo__chunk__183"]</data>
+    </edge>
     <edge source="Andrea" target="Andrea">
       <data key="d1">IS_CALLED</data>
       <data key="d2">["the count of monte cristo__chunk__1090"]</data>
@@ -595,6 +656,10 @@
     <edge source="Andrea" target="his father">
       <data key="d1">DOUBTS_RECOGNITION_BY</data>
       <data key="d2">["the count of monte cristo__chunk__412"]</data>
+    </edge>
+    <edge source="Andrea" target="letter">
+      <data key="d1">EXAMINED</data>
+      <data key="d2">["the count of monte cristo__chunk__596"]</data>
     </edge>
     <edge source="Beauchamp" target="to speak with someone">
       <data key="d1">SITS_DOWN</data>
@@ -635,6 +700,10 @@
     <edge source="Madame Danglars" target="beautiful horses">
       <data key="d1">OWNS</data>
       <data key="d2">["the count of monte cristo__chunk__593"]</data>
+    </edge>
+    <edge source="Madame Danglars" target="Baron Danglars">
+      <data key="d1">LOOKED_AT</data>
+      <data key="d2">["the count of monte cristo__chunk__141"]</data>
     </edge>
     <edge source="Andrea Cavalcanti" target="Count Andrea Cavalcanti">
       <data key="d1">IS_KNOWN_AS</data>
@@ -748,6 +817,10 @@
       <data key="d1">OBSERVED</data>
       <data key="d2">["the count of monte cristo__chunk__876"]</data>
     </edge>
+    <edge source="Danglars" target="banker">
+      <data key="d1">OCCUPATION</data>
+      <data key="d2">["the count of monte cristo__chunk__1"]</data>
+    </edge>
     <edge source="Eugénie" target="masculine demeanor">
       <data key="d1">HAS_TRAIT</data>
       <data key="d2">["the count of monte cristo__chunk__266"]</data>
@@ -807,6 +880,10 @@
     <edge source="Cavalcanti" target="black attire">
       <data key="d1">WEARS</data>
       <data key="d2">["the count of monte cristo__chunk__196"]</data>
+    </edge>
+    <edge source="Cavalcanti" target="drawing-room">
+      <data key="d1">LOCATED_AT</data>
+      <data key="d2">["the count of monte cristo__chunk__503"]</data>
     </edge>
     <edge source="Unknown speaker" target="singular smile">
       <data key="d1">HAS_TRAIT</data>
@@ -892,6 +969,14 @@
       <data key="d1">EXPERIENCED</data>
       <data key="d2">["the count of monte cristo__chunk__638"]</data>
     </edge>
+    <edge source="Caderousse" target="smiling">
+      <data key="d1">DISPLAYED_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__1243"]</data>
+    </edge>
+    <edge source="Caderousse" target="affirmative">
+      <data key="d1">SAID</data>
+      <data key="d2">["the count of monte cristo__chunk__331"]</data>
+    </edge>
     <edge source="Villefort" target="nervous">
       <data key="d1">HAS_TRAIT</data>
       <data key="d2">["the count of monte cristo__chunk__1182"]</data>
@@ -899,6 +984,22 @@
     <edge source="Villefort" target="Caderousse">
       <data key="d1">EXTENDS_HAND_TO</data>
       <data key="d2">["the count of monte cristo__chunk__412"]</data>
+    </edge>
+    <edge source="Villefort" target="room">
+      <data key="d1">RUSHED_FROM</data>
+      <data key="d2">["the count of monte cristo__chunk__159"]</data>
+    </edge>
+    <edge source="Villefort" target="bitter">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__1316"]</data>
+    </edge>
+    <edge source="Villefort" target="Valentine">
+      <data key="d1">FATHER_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__328"]</data>
+    </edge>
+    <edge source="Villefort" target="Haydée">
+      <data key="d1">SPOKE_TO</data>
+      <data key="d2">["the count of monte cristo__chunk__506"]</data>
     </edge>
     <edge source="Bertuccio" target="Monte Cristo">
       <data key="d1">WORKS_FOR</data>
@@ -931,6 +1032,18 @@
     <edge source="The stranger" target="one of the largest subscribers to the Opera">
       <data key="d1">IS</data>
       <data key="d2">["the count of monte cristo__chunk__638"]</data>
+    </edge>
+    <edge source="Albert" target="Beauchamp's door">
+      <data key="d1">ARRIVED_AT</data>
+      <data key="d2">["the count of monte cristo__chunk__707", "the count of monte cristo__chunk__1649"]</data>
+    </edge>
+    <edge source="Noirtier" target="Valentine">
+      <data key="d1">FIXATED_ON</data>
+      <data key="d2">["the count of monte cristo__chunk__1529"]</data>
+    </edge>
+    <edge source="Julie" target="M. Emmanuel">
+      <data key="d1">INFORM_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__1136"]</data>
     </edge>
   </graph>
 </graphml>

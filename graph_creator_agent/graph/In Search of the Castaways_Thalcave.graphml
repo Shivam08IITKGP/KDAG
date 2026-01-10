@@ -364,6 +364,153 @@
     <node id="about the interpretation">
       <data key="d0">entity</data>
     </node>
+    <node id="thankfulness">
+      <data key="d0">entity</data>
+    </node>
+    <node id="opinion">
+      <data key="d0">entity</data>
+    </node>
+    <node id="circumstance">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Argentine_statistics">
+      <data key="d0">entity</data>
+    </node>
+    <node id="two_good_horses">
+      <data key="d0">entity</data>
+    </node>
+    <node id="whip">
+      <data key="d0">entity</data>
+    </node>
+    <node id="gratitude">
+      <data key="d0">entity</data>
+    </node>
+    <node id="first_discovery_by_Abel_Tasman">
+      <data key="d0">entity</data>
+    </node>
+    <node id="last_time">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Abel_Tasman">
+      <data key="d0">entity</data>
+    </node>
+    <node id="thirty_seventh_parallel">
+      <data key="d0">entity</data>
+    </node>
+    <node id="raft">
+      <data key="d0">entity</data>
+    </node>
+    <node id="difficulty">
+      <data key="d0">entity</data>
+    </node>
+    <node id="young">
+      <data key="d0">entity</data>
+    </node>
+    <node id="geographer">
+      <data key="d0">entity</data>
+    </node>
+    <node id="moment">
+      <data key="d0">entity</data>
+    </node>
+    <node id="two_hundred_miles_from_Melbourne">
+      <data key="d0">entity</data>
+    </node>
+    <node id="prisoner_of_Indians">
+      <data key="d0">entity</data>
+    </node>
+    <node id="prisoner_of_Indians_must">
+      <data key="d0">entity</data>
+    </node>
+    <node id="like_young">
+      <data key="d0">entity</data>
+    </node>
+    <node id="silence">
+      <data key="d0">entity</data>
+    </node>
+    <node id="story">
+      <data key="d0">entity</data>
+    </node>
+    <node id="exclamation_Ah_I_have_them">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Portuguese">
+      <data key="d0">entity</data>
+    </node>
+    <node id="railroad">
+      <data key="d0">entity</data>
+    </node>
+    <node id="pale_and_disconsolate">
+      <data key="d0">entity</data>
+    </node>
+    <node id="astonishment">
+      <data key="d0">entity</data>
+    </node>
+    <node id="carry_you_my_boy">
+      <data key="d0">entity</data>
+    </node>
+    <node id="both">
+      <data key="d0">entity</data>
+    </node>
+    <node id="demeanor">
+      <data key="d0">entity</data>
+    </node>
+    <node id="sorrowful_glance">
+      <data key="d0">entity</data>
+    </node>
+    <node id="He_lives">
+      <data key="d0">entity</data>
+    </node>
+    <node id="upon my word">
+      <data key="d0">entity</data>
+    </node>
+    <node id="tribes_of_the_Waikato">
+      <data key="d0">entity</data>
+    </node>
+    <node id="to_adhere">
+      <data key="d0">entity</data>
+    </node>
+    <node id="the_thirty_seventh_parallel">
+      <data key="d0">entity</data>
+    </node>
+    <node id="liveliest_expressions_of_gratitude">
+      <data key="d0">entity</data>
+    </node>
+    <node id="yes">
+      <data key="d0">entity</data>
+    </node>
+    <node id="knowledge">
+      <data key="d0">entity</data>
+    </node>
+    <node id="them">
+      <data key="d0">entity</data>
+    </node>
+    <node id="MacNabb">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Noah was right">
+      <data key="d0">entity</data>
+    </node>
+    <node id="leaving">
+      <data key="d0">entity</data>
+    </node>
+    <node id="house">
+      <data key="d0">entity</data>
+    </node>
+    <node id="report">
+      <data key="d0">entity</data>
+    </node>
+    <node id="carbine">
+      <data key="d0">entity</data>
+    </node>
+    <node id="they_will_return">
+      <data key="d0">entity</data>
+    </node>
+    <node id="yacht_could_not_put_to_sea">
+      <data key="d0">entity</data>
+    </node>
+    <node id="manoeuvres">
+      <data key="d0">entity</data>
+    </node>
     <edge source="Jacques Paganel" target="French">
       <data key="d1">IS_GEOGRAPHER</data>
       <data key="d2">["ev_1"]</data>
@@ -572,6 +719,70 @@
       <data key="d1">IS_SILENT</data>
       <data key="d2">["in search of the castaways__chunk__19", "in search of the castaways__chunk__160", "in search of the castaways__chunk__58", "in search of the castaways__chunk__274", "in search of the castaways__chunk__300"]</data>
     </edge>
+    <edge source="Thalcave" target="thankfulness">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__206"]</data>
+    </edge>
+    <edge source="Thalcave" target="opinion">
+      <data key="d1">IS_SUBJECT_OF</data>
+      <data key="d2">["in search of the castaways__chunk__206"]</data>
+    </edge>
+    <edge source="Thalcave" target="circumstance">
+      <data key="d1">IS_ASTONISHED_BY</data>
+      <data key="d2">["in search of the castaways__chunk__374"]</data>
+    </edge>
+    <edge source="Thalcave" target="first_discovery_by_Abel_Tasman">
+      <data key="d1">TOLD_STORY_TO</data>
+      <data key="d2">["in search of the castaways__chunk__314", "in search of the castaways__chunk__300"]</data>
+    </edge>
+    <edge source="Thalcave" target="Abel_Tasman">
+      <data key="d1">MENTIONS</data>
+      <data key="d2">["in search of the castaways__chunk__314"]</data>
+    </edge>
+    <edge source="Thalcave" target="difficulty">
+      <data key="d1">SOLVED</data>
+      <data key="d2">["in search of the castaways__chunk__19", "in search of the castaways__chunk__20"]</data>
+    </edge>
+    <edge source="Thalcave" target="geographer">
+      <data key="d1">GAZED_AT</data>
+      <data key="d2">["in search of the castaways__chunk__19", "in search of the castaways__chunk__20"]</data>
+    </edge>
+    <edge source="Thalcave" target="silence">
+      <data key="d1">IS_SILENT</data>
+      <data key="d2">["in search of the castaways__chunk__20", "in search of the castaways__chunk__19"]</data>
+    </edge>
+    <edge source="Thalcave" target="story">
+      <data key="d1">TOLD_STORY_TO</data>
+      <data key="d2">["in search of the castaways__chunk__262"]</data>
+    </edge>
+    <edge source="Thalcave" target="astonishment">
+      <data key="d1">IS_ASTONISHED</data>
+      <data key="d2">["in search of the castaways__chunk__165"]</data>
+    </edge>
+    <edge source="Thalcave" target="demeanor">
+      <data key="d1">SPEAKS_calmly</data>
+      <data key="d2">["in search of the castaways__chunk__371"]</data>
+    </edge>
+    <edge source="Thalcave" target="the_thirty_seventh_parallel">
+      <data key="d1">POINTED_OUT</data>
+      <data key="d2">["in search of the castaways__chunk__471"]</data>
+    </edge>
+    <edge source="Thalcave" target="Paganel">
+      <data key="d1">RELATED_STORY_TO</data>
+      <data key="d2">["in search of the castaways__chunk__305"]</data>
+    </edge>
+    <edge source="Thalcave" target="them">
+      <data key="d1">CALLED_ATTENTION_TO</data>
+      <data key="d2">["in search of the castaways__chunk__374"]</data>
+    </edge>
+    <edge source="Thalcave" target="carbine">
+      <data key="d1">FIRED</data>
+      <data key="d2">["in search of the castaways__chunk__188", "in search of the castaways__chunk__262"]</data>
+    </edge>
+    <edge source="Thalcave" target="manoeuvres">
+      <data key="d1">WATCHED</data>
+      <data key="d2">["in search of the castaways__chunk__342"]</data>
+    </edge>
     <edge source="Major" target="hunting approach">
       <data key="d1">SUGGESTS</data>
       <data key="d2">["in search of the castaways__chunk__206"]</data>
@@ -628,6 +839,26 @@
       <data key="d1">EXPRESSES_PRIDE_IN</data>
       <data key="d2">["in search of the castaways__chunk__19"]</data>
     </edge>
+    <edge source="Lady Helena" target="last_time">
+      <data key="d1">CRIED</data>
+      <data key="d2">["in search of the castaways__chunk__314"]</data>
+    </edge>
+    <edge source="Lady Helena" target="moment">
+      <data key="d1">STOPPED</data>
+      <data key="d2">["in search of the castaways__chunk__300", "in search of the castaways__chunk__371"]</data>
+    </edge>
+    <edge source="Lady Helena" target="upon my word">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__19"]</data>
+    </edge>
+    <edge source="Lady Helena" target="house">
+      <data key="d1">ENTERED</data>
+      <data key="d2">["in search of the castaways__chunk__54"]</data>
+    </edge>
+    <edge source="Lady Helena" target="yes">
+      <data key="d1">REAPPEARED</data>
+      <data key="d2">["in search of the castaways__chunk__334"]</data>
+    </edge>
     <edge source="Ayrton" target="poor">
       <data key="d1">HAS_TRAIT</data>
       <data key="d2">["in search of the castaways__chunk__314"]</data>
@@ -652,6 +883,18 @@
       <data key="d1">RECEIVED_JUSTICE</data>
       <data key="d2">["in search of the castaways__chunk__261"]</data>
     </edge>
+    <edge source="Ayrton" target="whip">
+      <data key="d1">CARRIES</data>
+      <data key="d2">["in search of the castaways__chunk__374"]</data>
+    </edge>
+    <edge source="Ayrton" target="to_adhere">
+      <data key="d1">WAS_ASKED</data>
+      <data key="d2">["in search of the castaways__chunk__68"]</data>
+    </edge>
+    <edge source="Ayrton" target="knowledge">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__206"]</data>
+    </edge>
     <edge source="Tom Austin" target="from the group">
       <data key="d1">IS_ABSENT</data>
       <data key="d2">["in search of the castaways__chunk__374"]</data>
@@ -663,6 +906,14 @@
     <edge source="Mary Grant" target="towards Thalcave">
       <data key="d1">EXPRESSES_GRATITUDE</data>
       <data key="d2">["in search of the castaways__chunk__374"]</data>
+    </edge>
+    <edge source="Mary Grant" target="liveliest_expressions_of_gratitude">
+      <data key="d1">UTTERED</data>
+      <data key="d2">["in search of the castaways__chunk__305"]</data>
+    </edge>
+    <edge source="Mary Grant" target="house">
+      <data key="d1">ENTERED</data>
+      <data key="d2">["in search of the castaways__chunk__54"]</data>
     </edge>
     <edge source="Harry Grant" target="unknown party">
       <data key="d1">IS_POTENTIAL_WITNESS_AGAINST</data>
@@ -696,6 +947,34 @@
       <data key="d1">HAS_TRAIT</data>
       <data key="d2">["in search of the castaways__chunk__20"]</data>
     </edge>
+    <edge source="Captain Mangles" target="raft">
+      <data key="d1">PROPOSED_CONSTRUCT</data>
+      <data key="d2">["in search of the castaways__chunk__471"]</data>
+    </edge>
+    <edge source="Captain Mangles" target="young">
+      <data key="d1">BLUSHED</data>
+      <data key="d2">["in search of the castaways__chunk__19"]</data>
+    </edge>
+    <edge source="Captain Mangles" target="like_young">
+      <data key="d1">BLUSHED</data>
+      <data key="d2">["in search of the castaways__chunk__20"]</data>
+    </edge>
+    <edge source="Captain Mangles" target="Portuguese">
+      <data key="d1">STUDIED</data>
+      <data key="d2">["in search of the castaways__chunk__68"]</data>
+    </edge>
+    <edge source="Captain Mangles" target="pale_and_disconsolate">
+      <data key="d1">SAW</data>
+      <data key="d2">["in search of the castaways__chunk__165"]</data>
+    </edge>
+    <edge source="Captain Mangles" target="leaving">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__451"]</data>
+    </edge>
+    <edge source="Captain Mangles" target="yacht_could_not_put_to_sea">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__450"]</data>
+    </edge>
     <edge source="Mr. Olbinett" target="supper">
       <data key="d1">PREPARED</data>
       <data key="d2">["in search of the castaways__chunk__160"]</data>
@@ -712,6 +991,54 @@
       <data key="d1">EXPRESSES</data>
       <data key="d2">["in search of the castaways__chunk__314"]</data>
     </edge>
+    <edge source="Glenarvan" target="two_good_horses">
+      <data key="d1">FOUND</data>
+      <data key="d2">["in search of the castaways__chunk__374"]</data>
+    </edge>
+    <edge source="Glenarvan" target="thirty_seventh_parallel">
+      <data key="d1">ADVISES_FIND</data>
+      <data key="d2">["in search of the castaways__chunk__471"]</data>
+    </edge>
+    <edge source="Glenarvan" target="prisoner_of_Indians">
+      <data key="d1">BELIEVES</data>
+      <data key="d2">["in search of the castaways__chunk__300"]</data>
+    </edge>
+    <edge source="Glenarvan" target="prisoner_of_Indians_must">
+      <data key="d1">THOUGHT_THAT</data>
+      <data key="d2">["in search of the castaways__chunk__300", "in search of the castaways__chunk__132"]</data>
+    </edge>
+    <edge source="Glenarvan" target="railroad">
+      <data key="d1">TOLD_about</data>
+      <data key="d2">["in search of the castaways__chunk__165"]</data>
+    </edge>
+    <edge source="Glenarvan" target="sorrowful_glance">
+      <data key="d1">CAST_about</data>
+      <data key="d2">["in search of the castaways__chunk__132"]</data>
+    </edge>
+    <edge source="Glenarvan" target="He_lives">
+      <data key="d1">EXCITEDLY_SHOUTED</data>
+      <data key="d2">["in search of the castaways__chunk__132"]</data>
+    </edge>
+    <edge source="Glenarvan" target="tribes_of_the_Waikato">
+      <data key="d1">INTERVIEWED</data>
+      <data key="d2">["in search of the castaways__chunk__68"]</data>
+    </edge>
+    <edge source="Glenarvan" target="yes">
+      <data key="d1">REPLIED</data>
+      <data key="d2">["in search of the castaways__chunk__206", "in search of the castaways__chunk__314"]</data>
+    </edge>
+    <edge source="Glenarvan" target="report">
+      <data key="d1">PRODUCED</data>
+      <data key="d2">["in search of the castaways__chunk__188"]</data>
+    </edge>
+    <edge source="Glenarvan" target="they_will_return">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__381"]</data>
+    </edge>
+    <edge source="Glenarvan" target="Thalcave">
+      <data key="d1">JOINED</data>
+      <data key="d2">["in search of the castaways__chunk__334"]</data>
+    </edge>
     <edge source="Paganel" target="dangers">
       <data key="d1">EXCLAIMED_ABOUT</data>
       <data key="d2">["in search of the castaways__chunk__68"]</data>
@@ -720,9 +1047,41 @@
       <data key="d1">CONFIRMED</data>
       <data key="d2">["in search of the castaways__chunk__382"]</data>
     </edge>
+    <edge source="Paganel" target="Argentine_statistics">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__374"]</data>
+    </edge>
+    <edge source="Paganel" target="Glenarvan">
+      <data key="d1">FOUND_EXCITED</data>
+      <data key="d2">["in search of the castaways__chunk__314"]</data>
+    </edge>
+    <edge source="Paganel" target="two_hundred_miles_from_Melbourne">
+      <data key="d1">THOUGHT_THAT</data>
+      <data key="d2">["in search of the castaways__chunk__300"]</data>
+    </edge>
+    <edge source="Paganel" target="exclamation_Ah_I_have_them">
+      <data key="d1">EXCLAIMS</data>
+      <data key="d2">["in search of the castaways__chunk__262"]</data>
+    </edge>
+    <edge source="Paganel" target="carry_you_my_boy">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__371"]</data>
+    </edge>
+    <edge source="Paganel" target="both">
+      <data key="d1">GESTICULATED_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__371"]</data>
+    </edge>
+    <edge source="Paganel" target="yes">
+      <data key="d1">WAS_RIGHT</data>
+      <data key="d2">["in search of the castaways__chunk__374"]</data>
+    </edge>
     <edge source="Robert" target="one of the brilliant creatures">
       <data key="d1">CAPTURED</data>
       <data key="d2">["in search of the castaways__chunk__382"]</data>
+    </edge>
+    <edge source="Robert" target="gratitude">
+      <data key="d1">EXPRESSED_GRATITUDE</data>
+      <data key="d2">["in search of the castaways__chunk__374", "in search of the castaways__chunk__305"]</data>
     </edge>
     <edge source="Mulready" target="creature">
       <data key="d1">DEFEATED</data>
@@ -771,6 +1130,10 @@
     <edge source="Ben Joyce" target="in prisoners">
       <data key="d1">CAUSED_FEAR</data>
       <data key="d2">["in search of the castaways__chunk__261"]</data>
+    </edge>
+    <edge source="MacNabb" target="Noah was right">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__241", "in search of the castaways__chunk__182"]</data>
     </edge>
   </graph>
 </graphml>
