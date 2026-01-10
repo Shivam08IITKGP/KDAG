@@ -44,6 +44,19 @@ def _convert_graphml_attributes(graph: nx.DiGraph) -> None:
                     pass
 
 
+def sanitize_filename(name: str) -> str:
+    """Sanitize filename by replacing invalid characters.
+    
+    Args:
+        name: Original filename/component.
+        
+    Returns:
+        Sanitized string safe for filenames.
+    """
+    # Replace slashes and other potentially problematic chars
+    return name.replace("/", "_").replace("\\", "_").replace(":", "-")
+
+
 def load_graph(book_name: str, character_name: str) -> nx.DiGraph:
     """Load existing graph or create new one.
     
@@ -57,7 +70,9 @@ def load_graph(book_name: str, character_name: str) -> nx.DiGraph:
     graph_dir = Path("graph_creator_agent/graph")
     graph_dir.mkdir(exist_ok=True)
     
-    graph_filename = f"{book_name}_{character_name}.graphml"
+    safe_book = sanitize_filename(book_name)
+    safe_char = sanitize_filename(character_name)
+    graph_filename = f"{safe_book}_{safe_char}.graphml"
     graph_path = graph_dir / graph_filename
     
     if graph_path.exists():
@@ -137,7 +152,9 @@ def save_graph(graph: nx.DiGraph, book_name: str, character_name: str) -> str:
     graph_dir = Path("graph_creator_agent/graph")
     graph_dir.mkdir(exist_ok=True)
     
-    graph_filename = f"{book_name}_{character_name}.graphml"
+    safe_book = sanitize_filename(book_name)
+    safe_char = sanitize_filename(character_name)
+    graph_filename = f"{safe_book}_{safe_char}.graphml"
     graph_path = graph_dir / graph_filename
     
     # Convert all list attributes to JSON strings for GraphML compatibility

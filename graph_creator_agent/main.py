@@ -6,6 +6,7 @@ from graph_creator_agent.graph_store import (
     load_graph,
     add_triplets,
     save_graph,
+    sanitize_filename,
 )
 from graph_creator_agent.utils import filter_new_evidence
 from graph_creator_agent.extractor import generate_triplets
@@ -40,7 +41,9 @@ def create_graph(state: dict) -> dict:
     
     if not new_evidences:
         logger.info("No new evidence to process")
-        graph_path = f"graph_creator_agent/graph/{book_name}_{character_name}.graphml"
+        safe_book = sanitize_filename(book_name)
+        safe_char = sanitize_filename(character_name)
+        graph_path = f"graph_creator_agent/graph/{safe_book}_{safe_char}.graphml"
         updated_state = state.copy()
         updated_state["graph_path"] = graph_path
         return updated_state
@@ -72,7 +75,9 @@ def create_graph(state: dict) -> dict:
         logger.info(f"Updated cache with {len(new_evidence_ids)} new evidence IDs")
     else:
         logger.warning("No triplets generated from new evidence")
-        graph_path = f"graph_creator_agent/graph/{book_name}_{character_name}.graphml"
+        safe_book = sanitize_filename(book_name)
+        safe_char = sanitize_filename(character_name)
+        graph_path = f"graph_creator_agent/graph/{safe_book}_{safe_char}.graphml"
     
     # Update state
     updated_state = state.copy()
