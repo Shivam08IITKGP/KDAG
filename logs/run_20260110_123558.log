@@ -1,0 +1,377 @@
+2026-01-10 12:35:58 | INFO     | root | setup_logging:69 | Logging initialized. Log file: logs/run_20260110_123558.log
+2026-01-10 12:35:58 | INFO     | __main__ | main:166 | Starting Evidence-Grounded Backstory Consistency System
+2026-01-10 12:35:58 | INFO     | __main__ | read_train_data:83 | Reading first 2 rows from train.csv
+2026-01-10 12:35:58 | INFO     | __main__ | read_train_data:86 | Loaded 2 rows from train.csv
+2026-01-10 12:35:58 | INFO     | __main__ | main:171 | Processing 2 backstories
+2026-01-10 12:35:58 | INFO     | __main__ | run_pipeline_for_row:133 | Processing: Thalcave from In Search of the Castaways
+2026-01-10 12:35:58 | INFO     | __main__ | run_pipeline_for_row:152 | Running pipeline
+2026-01-10 12:35:58 | INFO     | extraction_agent.main | extract:52 | Starting extraction agent
+2026-01-10 12:35:58 | INFO     | extraction_agent.main | extract:53 | Book: In Search of the Castaways, Character: Thalcave
+2026-01-10 12:36:02 | DEBUG    | extraction_agent.main | extract:66 | Extraction prompt: You are an extractor agent.
+Generate 5 queries to retrieve evidence about the character.
+
+Book: In Search of the Castaways
+Character: Thalcave
+Backstory: Thalcave’s people faded as colonists advanced; his father, last of the tribal guides, knew the pampas geography and animal ways, while his mother died giving birth. Boyhood was spent roaming the plains with his father, learning to track, tame horses and steer by the stars.
+
+Return only a JSON list of strings, each string being a query.
+Example: ["query 1", "query 2", "query 3"]
+
+2026-01-10 12:36:02 | INFO     | extraction_agent.main | extract:69 | Generating queries via LLM
+2026-01-10 12:36:02 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-105f95e6-66f5-42e0-b649-19996b6d1d7f', 'json_data': {'messages': [{'content': 'You are an extractor agent.\nGenerate 5 queries to retrieve evidence about the character.\n\nBook: In Search of the Castaways\nCharacter: Thalcave\nBackstory: Thalcave’s people faded as colonists advanced; his father, last of the tribal guides, knew the pampas geography and animal ways, while his mother died giving birth. Boyhood was spent roaming the plains with his father, learning to track, tame horses and steer by the stars.\n\nReturn only a JSON list of strings, each string being a query.\nExample: ["query 1", "query 2", "query 3"]\n', 'role': 'user'}], 'model': 'mistralai/devstral-2512:free', 'stream': False}}
+2026-01-10 12:36:02 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-10 12:36:02 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='openrouter.ai' port=443 local_address=None timeout=None socket_options=None
+2026-01-10 12:36:03 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7e8b1680cbf0>
+2026-01-10 12:36:03 | DEBUG    | httpcore.connection | trace:47 | start_tls.started ssl_context=<ssl.SSLContext object at 0x7e8b16f5b650> server_hostname='openrouter.ai' timeout=None
+2026-01-10 12:36:03 | DEBUG    | httpcore.connection | trace:47 | start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7e8b16afc530>
+2026-01-10 12:36:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 12:36:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 12:36:03 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 12:36:03 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:03 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 10 Jan 2026 07:06:04 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Content-Encoding', b'gzip'), (b'Access-Control-Allow-Origin', b'*'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9bba5459ef9b9cd7-DEL')])
+2026-01-10 12:36:03 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-10 12:36:03 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 12:36:06 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 12:36:06 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 12:36:06 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 12:36:06 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "200 OK" Headers({'date': 'Sat, 10 Jan 2026 07:06:04 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'content-encoding': 'gzip', 'access-control-allow-origin': '*', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '9bba5459ef9b9cd7-DEL'})
+2026-01-10 12:36:06 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-10 12:36:06 | DEBUG    | extraction_agent.main | extract:73 | LLM response: ```json
+[
+  "What is Thalcave's role in 'In Search of the Castaways' and how does his backstory influence his actions?",
+  "How does Thalcave's knowledge of the pampas geography and animal ways contribute to the plot of the book?",
+  "What is the significance of Thalcave's father being the last of the tribal guides in the story?",
+  "How does Thalcave's upbringing, including learning to track and tame horses, impact his character development?",
+  "What is the emotional impact of Thalcave's mother dying during childbirth on his character and relationships?"
+]
+```
+2026-01-10 12:36:06 | INFO     | extraction_agent.main | extract:92 | Generated 5 queries
+2026-01-10 12:36:06 | INFO     | extraction_agent.main | extract:102 | Getting evidence for query: What is Thalcave's role in 'In Search of the Castaways' and how does his backstory influence his actions?
+2026-01-10 12:36:06 | WARNING  | extraction_agent.main | get_evidence:33 | get_evidence() called with query='What is Thalcave's role in 'In Search of the Castaways' and how does his backstory influence his actions?', book_name='In Search of the Castaways' - using stub
+2026-01-10 12:36:06 | INFO     | extraction_agent.main | extract:102 | Getting evidence for query: How does Thalcave's knowledge of the pampas geography and animal ways contribute to the plot of the book?
+2026-01-10 12:36:06 | WARNING  | extraction_agent.main | get_evidence:33 | get_evidence() called with query='How does Thalcave's knowledge of the pampas geography and animal ways contribute to the plot of the book?', book_name='In Search of the Castaways' - using stub
+2026-01-10 12:36:06 | INFO     | extraction_agent.main | extract:102 | Getting evidence for query: What is the significance of Thalcave's father being the last of the tribal guides in the story?
+2026-01-10 12:36:06 | WARNING  | extraction_agent.main | get_evidence:33 | get_evidence() called with query='What is the significance of Thalcave's father being the last of the tribal guides in the story?', book_name='In Search of the Castaways' - using stub
+2026-01-10 12:36:06 | INFO     | extraction_agent.main | extract:102 | Getting evidence for query: How does Thalcave's upbringing, including learning to track and tame horses, impact his character development?
+2026-01-10 12:36:06 | WARNING  | extraction_agent.main | get_evidence:33 | get_evidence() called with query='How does Thalcave's upbringing, including learning to track and tame horses, impact his character development?', book_name='In Search of the Castaways' - using stub
+2026-01-10 12:36:06 | INFO     | extraction_agent.main | extract:102 | Getting evidence for query: What is the emotional impact of Thalcave's mother dying during childbirth on his character and relationships?
+2026-01-10 12:36:06 | WARNING  | extraction_agent.main | get_evidence:33 | get_evidence() called with query='What is the emotional impact of Thalcave's mother dying during childbirth on his character and relationships?', book_name='In Search of the Castaways' - using stub
+2026-01-10 12:36:06 | INFO     | extraction_agent.main | extract:109 | Retrieved 4 evidence items
+2026-01-10 12:36:06 | INFO     | extraction_agent.main | extract:122 | Extraction agent completed
+2026-01-10 12:36:06 | INFO     | graph_creator_agent.main | create_graph:25 | Starting graph creator agent
+2026-01-10 12:36:06 | INFO     | graph_creator_agent.main | create_graph:26 | Book: In Search of the Castaways, Character: Thalcave
+2026-01-10 12:36:06 | INFO     | graph_creator_agent.graphcreator | load_existing_graph:83 | Creating new graph
+2026-01-10 12:36:06 | INFO     | graph_creator_agent.graphcreator | filter_new_evidence:102 | Filtered evidence: 4 new out of 4 total
+2026-01-10 12:36:06 | INFO     | graph_creator_agent.main | create_graph:48 | Processing 4 new evidence items
+2026-01-10 12:36:06 | INFO     | graph_creator_agent.graphcreator | generate_triplets:125 | Generating triplets for evidence ev_1
+2026-01-10 12:36:06 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse', 'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-1627f99c-bc13-4866-b06a-77864e80e5dc', 'post_parser': <function Completions.parse.<locals>.parser at 0x7e8b167f91c0>, 'json_data': {'messages': [{'content': 'Extract knowledge triplets from the following evidence about the character.\n\nEvidence:\nJacques Paganel is a French geographer known for his absent-mindedness.\n\nEvidence ID: ev_1\n\nExtract triplets in the format: (subject, relation, object)\nEach triplet should represent a fact about the character.\n\nReturn a JSON object with a "triplets" key containing a list of objects, each with:\n- subject: string\n- relation: string\n- object: string\n- evidence_id: string (must be exactly: ev_1)\n\nExample format (replace "ev_1" with the actual evidence_id):\n{\n  "triplets": [\n    {"subject": "Character Name", "relation": "is", "object": "geographer", "evidence_id": "ev_1"},\n    {"subject": "Character Name", "relation": "has_trait", "object": "absent-minded", "evidence_id": "ev_1"}\n  ]\n}\n', 'role': 'user'}], 'model': 'mistralai/devstral-2512:free', 'response_format': {'type': 'json_schema', 'json_schema': {'name': 'TripletList', 'description': 'Wrapper for list of triplets for structured output.', 'strict': False, 'schema': {'type': 'object', 'properties': {'triplets': {'type': 'array', 'items': {'description': 'Knowledge triplet structure.', 'type': 'object', 'properties': {'subject': {'type': 'string'}, 'relation': {'type': 'string'}, 'object': {'type': 'string'}, 'evidence_id': {'type': 'string'}}, 'required': ['subject', 'relation', 'object', 'evidence_id']}}}, 'required': ['triplets']}}}, 'stream': False}}
+2026-01-10 12:36:06 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-10 12:36:06 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:06 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 12:36:06 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 12:36:06 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 12:36:06 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:06 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 10 Jan 2026 07:06:07 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Content-Encoding', b'gzip'), (b'Access-Control-Allow-Origin', b'*'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9bba546e2f819cd7-DEL')])
+2026-01-10 12:36:06 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-10 12:36:06 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 12:36:07 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 12:36:07 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 12:36:07 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 12:36:07 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "200 OK" Headers({'date': 'Sat, 10 Jan 2026 07:06:07 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'content-encoding': 'gzip', 'access-control-allow-origin': '*', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '9bba546e2f819cd7-DEL'})
+2026-01-10 12:36:07 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-10 12:36:07 | INFO     | graph_creator_agent.graphcreator | generate_triplets:151 | Generated 2 triplets from evidence ev_1
+2026-01-10 12:36:07 | INFO     | graph_creator_agent.graphcreator | generate_triplets:125 | Generating triplets for evidence ev_2
+2026-01-10 12:36:07 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse', 'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-f49be257-db43-44c3-b5db-60dd6310bd0a', 'post_parser': <function Completions.parse.<locals>.parser at 0x7e8b191f72e0>, 'json_data': {'messages': [{'content': 'Extract knowledge triplets from the following evidence about the character.\n\nEvidence:\nPaganel has extensive knowledge of geography and travels the world.\n\nEvidence ID: ev_2\n\nExtract triplets in the format: (subject, relation, object)\nEach triplet should represent a fact about the character.\n\nReturn a JSON object with a "triplets" key containing a list of objects, each with:\n- subject: string\n- relation: string\n- object: string\n- evidence_id: string (must be exactly: ev_2)\n\nExample format (replace "ev_1" with the actual evidence_id):\n{\n  "triplets": [\n    {"subject": "Character Name", "relation": "is", "object": "geographer", "evidence_id": "ev_2"},\n    {"subject": "Character Name", "relation": "has_trait", "object": "absent-minded", "evidence_id": "ev_2"}\n  ]\n}\n', 'role': 'user'}], 'model': 'mistralai/devstral-2512:free', 'response_format': {'type': 'json_schema', 'json_schema': {'name': 'TripletList', 'description': 'Wrapper for list of triplets for structured output.', 'strict': False, 'schema': {'type': 'object', 'properties': {'triplets': {'type': 'array', 'items': {'description': 'Knowledge triplet structure.', 'type': 'object', 'properties': {'subject': {'type': 'string'}, 'relation': {'type': 'string'}, 'object': {'type': 'string'}, 'evidence_id': {'type': 'string'}}, 'required': ['subject', 'relation', 'object', 'evidence_id']}}}, 'required': ['triplets']}}}, 'stream': False}}
+2026-01-10 12:36:07 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-10 12:36:07 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:07 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 12:36:07 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 12:36:07 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 12:36:07 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:08 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 10 Jan 2026 07:06:08 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Content-Encoding', b'gzip'), (b'Access-Control-Allow-Origin', b'*'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9bba54768ac49cd7-DEL')])
+2026-01-10 12:36:08 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-10 12:36:08 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 12:36:09 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 12:36:09 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 12:36:09 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 12:36:09 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "200 OK" Headers({'date': 'Sat, 10 Jan 2026 07:06:08 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'content-encoding': 'gzip', 'access-control-allow-origin': '*', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '9bba54768ac49cd7-DEL'})
+2026-01-10 12:36:09 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-10 12:36:09 | INFO     | graph_creator_agent.graphcreator | generate_triplets:151 | Generated 2 triplets from evidence ev_2
+2026-01-10 12:36:09 | INFO     | graph_creator_agent.graphcreator | generate_triplets:125 | Generating triplets for evidence ev_3
+2026-01-10 12:36:09 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse', 'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-ab8e28da-37ba-4d49-8cc1-36d5511e8928', 'post_parser': <function Completions.parse.<locals>.parser at 0x7e8b191f72e0>, 'json_data': {'messages': [{'content': 'Extract knowledge triplets from the following evidence about the character.\n\nEvidence:\nHe often forgets things and makes mistakes due to his absent-minded nature.\n\nEvidence ID: ev_3\n\nExtract triplets in the format: (subject, relation, object)\nEach triplet should represent a fact about the character.\n\nReturn a JSON object with a "triplets" key containing a list of objects, each with:\n- subject: string\n- relation: string\n- object: string\n- evidence_id: string (must be exactly: ev_3)\n\nExample format (replace "ev_1" with the actual evidence_id):\n{\n  "triplets": [\n    {"subject": "Character Name", "relation": "is", "object": "geographer", "evidence_id": "ev_3"},\n    {"subject": "Character Name", "relation": "has_trait", "object": "absent-minded", "evidence_id": "ev_3"}\n  ]\n}\n', 'role': 'user'}], 'model': 'mistralai/devstral-2512:free', 'response_format': {'type': 'json_schema', 'json_schema': {'name': 'TripletList', 'description': 'Wrapper for list of triplets for structured output.', 'strict': False, 'schema': {'type': 'object', 'properties': {'triplets': {'type': 'array', 'items': {'description': 'Knowledge triplet structure.', 'type': 'object', 'properties': {'subject': {'type': 'string'}, 'relation': {'type': 'string'}, 'object': {'type': 'string'}, 'evidence_id': {'type': 'string'}}, 'required': ['subject', 'relation', 'object', 'evidence_id']}}}, 'required': ['triplets']}}}, 'stream': False}}
+2026-01-10 12:36:09 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-10 12:36:09 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:09 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 12:36:09 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 12:36:09 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 12:36:09 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:09 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 10 Jan 2026 07:06:10 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Content-Encoding', b'gzip'), (b'Access-Control-Allow-Origin', b'*'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9bba54807a469cd7-DEL')])
+2026-01-10 12:36:09 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-10 12:36:09 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 12:36:10 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 12:36:10 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 12:36:10 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 12:36:10 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "200 OK" Headers({'date': 'Sat, 10 Jan 2026 07:06:10 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'content-encoding': 'gzip', 'access-control-allow-origin': '*', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '9bba54807a469cd7-DEL'})
+2026-01-10 12:36:10 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-10 12:36:10 | INFO     | graph_creator_agent.graphcreator | generate_triplets:151 | Generated 3 triplets from evidence ev_3
+2026-01-10 12:36:10 | INFO     | graph_creator_agent.graphcreator | generate_triplets:125 | Generating triplets for evidence ev_4
+2026-01-10 12:36:10 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse', 'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-bfa5a905-1635-49d4-9746-4955506c27ea', 'post_parser': <function Completions.parse.<locals>.parser at 0x7e8b191f72e0>, 'json_data': {'messages': [{'content': 'Extract knowledge triplets from the following evidence about the character.\n\nEvidence:\nPaganel is a member of the Geographical Society and writes scholarly papers.\n\nEvidence ID: ev_4\n\nExtract triplets in the format: (subject, relation, object)\nEach triplet should represent a fact about the character.\n\nReturn a JSON object with a "triplets" key containing a list of objects, each with:\n- subject: string\n- relation: string\n- object: string\n- evidence_id: string (must be exactly: ev_4)\n\nExample format (replace "ev_1" with the actual evidence_id):\n{\n  "triplets": [\n    {"subject": "Character Name", "relation": "is", "object": "geographer", "evidence_id": "ev_4"},\n    {"subject": "Character Name", "relation": "has_trait", "object": "absent-minded", "evidence_id": "ev_4"}\n  ]\n}\n', 'role': 'user'}], 'model': 'mistralai/devstral-2512:free', 'response_format': {'type': 'json_schema', 'json_schema': {'name': 'TripletList', 'description': 'Wrapper for list of triplets for structured output.', 'strict': False, 'schema': {'type': 'object', 'properties': {'triplets': {'type': 'array', 'items': {'description': 'Knowledge triplet structure.', 'type': 'object', 'properties': {'subject': {'type': 'string'}, 'relation': {'type': 'string'}, 'object': {'type': 'string'}, 'evidence_id': {'type': 'string'}}, 'required': ['subject', 'relation', 'object', 'evidence_id']}}}, 'required': ['triplets']}}}, 'stream': False}}
+2026-01-10 12:36:10 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-10 12:36:10 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:10 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 12:36:10 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 12:36:10 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 12:36:10 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:13 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 10 Jan 2026 07:06:13 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Content-Encoding', b'gzip'), (b'Access-Control-Allow-Origin', b'*'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9bba548af97c9cd7-DEL')])
+2026-01-10 12:36:13 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-10 12:36:13 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 12:36:14 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 12:36:14 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 12:36:14 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 12:36:14 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "200 OK" Headers({'date': 'Sat, 10 Jan 2026 07:06:13 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'content-encoding': 'gzip', 'access-control-allow-origin': '*', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '9bba548af97c9cd7-DEL'})
+2026-01-10 12:36:14 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-10 12:36:14 | INFO     | graph_creator_agent.graphcreator | generate_triplets:151 | Generated 2 triplets from evidence ev_4
+2026-01-10 12:36:14 | INFO     | graph_creator_agent.graphcreator | add_triplets_to_graph:230 | Added 9 triplets to graph. Graph now has 12 nodes and 9 edges
+2026-01-10 12:36:14 | ERROR    | __main__ | main:199 | Error processing row 1: GraphML writer does not support <class 'list'> as data values.
+Traceback (most recent call last):
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/networkx/readwrite/graphml.py", line 165, in write_graphml_lxml
+    import lxml.etree as lxmletree
+ModuleNotFoundError: No module named 'lxml'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/main.py", line 192, in main
+    final_state = run_pipeline_for_row(row_data)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/main.py", line 155, in run_pipeline_for_row
+    final_state = app.invoke(initial_state)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py", line 3068, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py", line 2643, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py", line 167, in tick
+    run_with_retry(
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/graph_creator_agent/main.py", line 62, in create_graph
+    graph_path = save_graph(graph, book_name, character_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/graph_creator_agent/graphcreator.py", line 250, in save_graph
+    nx.write_graphml(graph, graph_path)
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/networkx/utils/decorators.py", line 784, in func
+    return argmap._lazy_compile(__wrapper)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<class 'networkx.utils.decorators.argmap'> compilation 9", line 5, in argmap_write_graphml_lxml_5
+    import itertools
+             ^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/networkx/readwrite/graphml.py", line 167, in write_graphml_lxml
+    return write_graphml_xml(
+           ^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/networkx/utils/decorators.py", line 784, in func
+    return argmap._lazy_compile(__wrapper)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<class 'networkx.utils.decorators.argmap'> compilation 14", line 5, in argmap_write_graphml_xml_10
+    import itertools
+             ^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/networkx/readwrite/graphml.py", line 113, in write_graphml_xml
+    writer.add_graph_element(G)
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/networkx/readwrite/graphml.py", line 651, in add_graph_element
+    self.add_data(
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/networkx/readwrite/graphml.py", line 563, in add_data
+    raise nx.NetworkXError(
+networkx.exception.NetworkXError: GraphML writer does not support <class 'list'> as data values.
+During task with name 'create_graph' and id '4a3d81a6-e02d-4eac-1cad-307d1bf407e6'
+2026-01-10 12:36:14 | INFO     | __main__ | run_pipeline_for_row:133 | Processing: Faria from The Count of Monte Cristo
+2026-01-10 12:36:14 | INFO     | __main__ | run_pipeline_for_row:152 | Running pipeline
+2026-01-10 12:36:14 | INFO     | extraction_agent.main | extract:52 | Starting extraction agent
+2026-01-10 12:36:14 | INFO     | extraction_agent.main | extract:53 | Book: The Count of Monte Cristo, Character: Faria
+2026-01-10 12:36:14 | DEBUG    | extraction_agent.main | extract:66 | Extraction prompt: You are an extractor agent.
+Generate 5 queries to retrieve evidence about the character.
+
+Book: The Count of Monte Cristo
+Character: Faria
+Backstory: Suspected again in 1815, he was re-arrested and shipped to the Château d’If, this time for life.
+
+Return only a JSON list of strings, each string being a query.
+Example: ["query 1", "query 2", "query 3"]
+
+2026-01-10 12:36:14 | INFO     | extraction_agent.main | extract:69 | Generating queries via LLM
+2026-01-10 12:36:14 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-f8898ecd-76b6-41d0-8fc5-d66556bc30b2', 'json_data': {'messages': [{'content': 'You are an extractor agent.\nGenerate 5 queries to retrieve evidence about the character.\n\nBook: The Count of Monte Cristo\nCharacter: Faria\nBackstory: Suspected again in 1815, he was re-arrested and shipped to the Château d’If, this time for life.\n\nReturn only a JSON list of strings, each string being a query.\nExample: ["query 1", "query 2", "query 3"]\n', 'role': 'user'}], 'model': 'mistralai/devstral-2512:free', 'stream': False}}
+2026-01-10 12:36:14 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-10 12:36:14 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:14 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 12:36:14 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 12:36:14 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 12:36:14 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:20 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 10 Jan 2026 07:06:20 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Content-Encoding', b'gzip'), (b'Access-Control-Allow-Origin', b'*'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9bba54a32b739cd7-DEL')])
+2026-01-10 12:36:20 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-10 12:36:20 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 12:36:21 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 12:36:21 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 12:36:21 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 12:36:21 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "200 OK" Headers({'date': 'Sat, 10 Jan 2026 07:06:20 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'content-encoding': 'gzip', 'access-control-allow-origin': '*', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '9bba54a32b739cd7-DEL'})
+2026-01-10 12:36:21 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-10 12:36:21 | DEBUG    | extraction_agent.main | extract:73 | LLM response: ```json
+[
+  "What is the backstory of Abbe Faria in The Count of Monte Cristo?",
+  "Why was Abbe Faria imprisoned in the Château d’If?",
+  "What role does Abbe Faria play in Edmond Dantès' life?",
+  "How does Abbe Faria contribute to Edmond Dantès' escape plan?",
+  "What is the significance of Abbe Faria's knowledge and teachings in the novel?"
+]
+```
+2026-01-10 12:36:21 | INFO     | extraction_agent.main | extract:92 | Generated 5 queries
+2026-01-10 12:36:21 | INFO     | extraction_agent.main | extract:102 | Getting evidence for query: What is the backstory of Abbe Faria in The Count of Monte Cristo?
+2026-01-10 12:36:21 | WARNING  | extraction_agent.main | get_evidence:33 | get_evidence() called with query='What is the backstory of Abbe Faria in The Count of Monte Cristo?', book_name='The Count of Monte Cristo' - using stub
+2026-01-10 12:36:21 | INFO     | extraction_agent.main | extract:102 | Getting evidence for query: Why was Abbe Faria imprisoned in the Château d’If?
+2026-01-10 12:36:21 | WARNING  | extraction_agent.main | get_evidence:33 | get_evidence() called with query='Why was Abbe Faria imprisoned in the Château d’If?', book_name='The Count of Monte Cristo' - using stub
+2026-01-10 12:36:21 | INFO     | extraction_agent.main | extract:102 | Getting evidence for query: What role does Abbe Faria play in Edmond Dantès' life?
+2026-01-10 12:36:21 | WARNING  | extraction_agent.main | get_evidence:33 | get_evidence() called with query='What role does Abbe Faria play in Edmond Dantès' life?', book_name='The Count of Monte Cristo' - using stub
+2026-01-10 12:36:21 | INFO     | extraction_agent.main | extract:102 | Getting evidence for query: How does Abbe Faria contribute to Edmond Dantès' escape plan?
+2026-01-10 12:36:21 | WARNING  | extraction_agent.main | get_evidence:33 | get_evidence() called with query='How does Abbe Faria contribute to Edmond Dantès' escape plan?', book_name='The Count of Monte Cristo' - using stub
+2026-01-10 12:36:21 | INFO     | extraction_agent.main | extract:102 | Getting evidence for query: What is the significance of Abbe Faria's knowledge and teachings in the novel?
+2026-01-10 12:36:21 | WARNING  | extraction_agent.main | get_evidence:33 | get_evidence() called with query='What is the significance of Abbe Faria's knowledge and teachings in the novel?', book_name='The Count of Monte Cristo' - using stub
+2026-01-10 12:36:21 | INFO     | extraction_agent.main | extract:109 | Retrieved 4 evidence items
+2026-01-10 12:36:21 | INFO     | extraction_agent.main | extract:122 | Extraction agent completed
+2026-01-10 12:36:21 | INFO     | graph_creator_agent.main | create_graph:25 | Starting graph creator agent
+2026-01-10 12:36:21 | INFO     | graph_creator_agent.main | create_graph:26 | Book: The Count of Monte Cristo, Character: Faria
+2026-01-10 12:36:21 | INFO     | graph_creator_agent.graphcreator | load_existing_graph:83 | Creating new graph
+2026-01-10 12:36:21 | INFO     | graph_creator_agent.graphcreator | filter_new_evidence:102 | Filtered evidence: 4 new out of 4 total
+2026-01-10 12:36:21 | INFO     | graph_creator_agent.main | create_graph:48 | Processing 4 new evidence items
+2026-01-10 12:36:21 | INFO     | graph_creator_agent.graphcreator | generate_triplets:125 | Generating triplets for evidence ev_1
+2026-01-10 12:36:22 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse', 'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-20aae892-e1b5-4e48-8309-d5fd63ee759b', 'post_parser': <function Completions.parse.<locals>.parser at 0x7e8b167fbe20>, 'json_data': {'messages': [{'content': 'Extract knowledge triplets from the following evidence about the character.\n\nEvidence:\nJacques Paganel is a French geographer known for his absent-mindedness.\n\nEvidence ID: ev_1\n\nExtract triplets in the format: (subject, relation, object)\nEach triplet should represent a fact about the character.\n\nReturn a JSON object with a "triplets" key containing a list of objects, each with:\n- subject: string\n- relation: string\n- object: string\n- evidence_id: string (must be exactly: ev_1)\n\nExample format (replace "ev_1" with the actual evidence_id):\n{\n  "triplets": [\n    {"subject": "Character Name", "relation": "is", "object": "geographer", "evidence_id": "ev_1"},\n    {"subject": "Character Name", "relation": "has_trait", "object": "absent-minded", "evidence_id": "ev_1"}\n  ]\n}\n', 'role': 'user'}], 'model': 'mistralai/devstral-2512:free', 'response_format': {'type': 'json_schema', 'json_schema': {'name': 'TripletList', 'description': 'Wrapper for list of triplets for structured output.', 'strict': False, 'schema': {'type': 'object', 'properties': {'triplets': {'type': 'array', 'items': {'description': 'Knowledge triplet structure.', 'type': 'object', 'properties': {'subject': {'type': 'string'}, 'relation': {'type': 'string'}, 'object': {'type': 'string'}, 'evidence_id': {'type': 'string'}}, 'required': ['subject', 'relation', 'object', 'evidence_id']}}}, 'required': ['triplets']}}}, 'stream': False}}
+2026-01-10 12:36:22 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-10 12:36:22 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:22 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 12:36:22 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 12:36:22 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 12:36:22 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:22 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 10 Jan 2026 07:06:22 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Content-Encoding', b'gzip'), (b'Access-Control-Allow-Origin', b'*'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9bba54d04e9a9cd7-DEL')])
+2026-01-10 12:36:22 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-10 12:36:22 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 12:36:23 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 12:36:23 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 12:36:23 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 12:36:23 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "200 OK" Headers({'date': 'Sat, 10 Jan 2026 07:06:22 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'content-encoding': 'gzip', 'access-control-allow-origin': '*', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '9bba54d04e9a9cd7-DEL'})
+2026-01-10 12:36:23 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-10 12:36:23 | INFO     | graph_creator_agent.graphcreator | generate_triplets:151 | Generated 2 triplets from evidence ev_1
+2026-01-10 12:36:23 | INFO     | graph_creator_agent.graphcreator | generate_triplets:125 | Generating triplets for evidence ev_2
+2026-01-10 12:36:23 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse', 'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-2932ac5f-6e36-4b2f-8b1c-3a28d70bf8fe', 'post_parser': <function Completions.parse.<locals>.parser at 0x7e8b167fbc40>, 'json_data': {'messages': [{'content': 'Extract knowledge triplets from the following evidence about the character.\n\nEvidence:\nPaganel has extensive knowledge of geography and travels the world.\n\nEvidence ID: ev_2\n\nExtract triplets in the format: (subject, relation, object)\nEach triplet should represent a fact about the character.\n\nReturn a JSON object with a "triplets" key containing a list of objects, each with:\n- subject: string\n- relation: string\n- object: string\n- evidence_id: string (must be exactly: ev_2)\n\nExample format (replace "ev_1" with the actual evidence_id):\n{\n  "triplets": [\n    {"subject": "Character Name", "relation": "is", "object": "geographer", "evidence_id": "ev_2"},\n    {"subject": "Character Name", "relation": "has_trait", "object": "absent-minded", "evidence_id": "ev_2"}\n  ]\n}\n', 'role': 'user'}], 'model': 'mistralai/devstral-2512:free', 'response_format': {'type': 'json_schema', 'json_schema': {'name': 'TripletList', 'description': 'Wrapper for list of triplets for structured output.', 'strict': False, 'schema': {'type': 'object', 'properties': {'triplets': {'type': 'array', 'items': {'description': 'Knowledge triplet structure.', 'type': 'object', 'properties': {'subject': {'type': 'string'}, 'relation': {'type': 'string'}, 'object': {'type': 'string'}, 'evidence_id': {'type': 'string'}}, 'required': ['subject', 'relation', 'object', 'evidence_id']}}}, 'required': ['triplets']}}}, 'stream': False}}
+2026-01-10 12:36:23 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-10 12:36:23 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:23 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 12:36:23 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 12:36:23 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 12:36:23 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:24 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 10 Jan 2026 07:06:24 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Content-Encoding', b'gzip'), (b'Access-Control-Allow-Origin', b'*'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9bba54d91aa79cd7-DEL')])
+2026-01-10 12:36:24 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-10 12:36:24 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 12:36:24 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 12:36:24 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 12:36:24 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 12:36:24 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "200 OK" Headers({'date': 'Sat, 10 Jan 2026 07:06:24 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'content-encoding': 'gzip', 'access-control-allow-origin': '*', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '9bba54d91aa79cd7-DEL'})
+2026-01-10 12:36:24 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-10 12:36:24 | INFO     | graph_creator_agent.graphcreator | generate_triplets:151 | Generated 2 triplets from evidence ev_2
+2026-01-10 12:36:24 | INFO     | graph_creator_agent.graphcreator | generate_triplets:125 | Generating triplets for evidence ev_3
+2026-01-10 12:36:24 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse', 'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-c8048829-6ac5-49ed-ba7f-9ac1d4c466e3', 'post_parser': <function Completions.parse.<locals>.parser at 0x7e8b167fbe20>, 'json_data': {'messages': [{'content': 'Extract knowledge triplets from the following evidence about the character.\n\nEvidence:\nHe often forgets things and makes mistakes due to his absent-minded nature.\n\nEvidence ID: ev_3\n\nExtract triplets in the format: (subject, relation, object)\nEach triplet should represent a fact about the character.\n\nReturn a JSON object with a "triplets" key containing a list of objects, each with:\n- subject: string\n- relation: string\n- object: string\n- evidence_id: string (must be exactly: ev_3)\n\nExample format (replace "ev_1" with the actual evidence_id):\n{\n  "triplets": [\n    {"subject": "Character Name", "relation": "is", "object": "geographer", "evidence_id": "ev_3"},\n    {"subject": "Character Name", "relation": "has_trait", "object": "absent-minded", "evidence_id": "ev_3"}\n  ]\n}\n', 'role': 'user'}], 'model': 'mistralai/devstral-2512:free', 'response_format': {'type': 'json_schema', 'json_schema': {'name': 'TripletList', 'description': 'Wrapper for list of triplets for structured output.', 'strict': False, 'schema': {'type': 'object', 'properties': {'triplets': {'type': 'array', 'items': {'description': 'Knowledge triplet structure.', 'type': 'object', 'properties': {'subject': {'type': 'string'}, 'relation': {'type': 'string'}, 'object': {'type': 'string'}, 'evidence_id': {'type': 'string'}}, 'required': ['subject', 'relation', 'object', 'evidence_id']}}}, 'required': ['triplets']}}}, 'stream': False}}
+2026-01-10 12:36:24 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-10 12:36:24 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:24 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 12:36:24 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 12:36:24 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 12:36:24 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:25 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 10 Jan 2026 07:06:25 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Content-Encoding', b'gzip'), (b'Access-Control-Allow-Origin', b'*'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9bba54e28f2d9cd7-DEL')])
+2026-01-10 12:36:25 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-10 12:36:25 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 12:36:26 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 12:36:26 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 12:36:26 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 12:36:26 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "200 OK" Headers({'date': 'Sat, 10 Jan 2026 07:06:25 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'content-encoding': 'gzip', 'access-control-allow-origin': '*', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '9bba54e28f2d9cd7-DEL'})
+2026-01-10 12:36:26 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-10 12:36:26 | INFO     | graph_creator_agent.graphcreator | generate_triplets:151 | Generated 3 triplets from evidence ev_3
+2026-01-10 12:36:26 | INFO     | graph_creator_agent.graphcreator | generate_triplets:125 | Generating triplets for evidence ev_4
+2026-01-10 12:36:26 | DEBUG    | openai._base_client | _build_request:482 | Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse', 'X-Stainless-Raw-Response': 'true'}, 'files': None, 'idempotency_key': 'stainless-python-retry-20f6c54e-6a3a-42b3-bab8-66e24de7cf39', 'post_parser': <function Completions.parse.<locals>.parser at 0x7e8b167fbc40>, 'json_data': {'messages': [{'content': 'Extract knowledge triplets from the following evidence about the character.\n\nEvidence:\nPaganel is a member of the Geographical Society and writes scholarly papers.\n\nEvidence ID: ev_4\n\nExtract triplets in the format: (subject, relation, object)\nEach triplet should represent a fact about the character.\n\nReturn a JSON object with a "triplets" key containing a list of objects, each with:\n- subject: string\n- relation: string\n- object: string\n- evidence_id: string (must be exactly: ev_4)\n\nExample format (replace "ev_1" with the actual evidence_id):\n{\n  "triplets": [\n    {"subject": "Character Name", "relation": "is", "object": "geographer", "evidence_id": "ev_4"},\n    {"subject": "Character Name", "relation": "has_trait", "object": "absent-minded", "evidence_id": "ev_4"}\n  ]\n}\n', 'role': 'user'}], 'model': 'mistralai/devstral-2512:free', 'response_format': {'type': 'json_schema', 'json_schema': {'name': 'TripletList', 'description': 'Wrapper for list of triplets for structured output.', 'strict': False, 'schema': {'type': 'object', 'properties': {'triplets': {'type': 'array', 'items': {'description': 'Knowledge triplet structure.', 'type': 'object', 'properties': {'subject': {'type': 'string'}, 'relation': {'type': 'string'}, 'object': {'type': 'string'}, 'evidence_id': {'type': 'string'}}, 'required': ['subject', 'relation', 'object', 'evidence_id']}}}, 'required': ['triplets']}}}, 'stream': False}}
+2026-01-10 12:36:26 | DEBUG    | openai._base_client | request:978 | Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-01-10 12:36:26 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:26 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-10 12:36:26 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'POST']>
+2026-01-10 12:36:26 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-10 12:36:26 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'POST']>
+2026-01-10 12:36:27 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 10 Jan 2026 07:06:27 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Content-Encoding', b'gzip'), (b'Access-Control-Allow-Origin', b'*'), (b'Vary', b'Accept-Encoding'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9bba54ed9f589cd7-DEL')])
+2026-01-10 12:36:27 | INFO     | httpx | _send_single_request:1025 | HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-10 12:36:27 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'POST']>
+2026-01-10 12:36:28 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-10 12:36:28 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-10 12:36:28 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-10 12:36:28 | DEBUG    | openai._base_client | request:1016 | HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "200 OK" Headers({'date': 'Sat, 10 Jan 2026 07:06:27 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'content-encoding': 'gzip', 'access-control-allow-origin': '*', 'vary': 'Accept-Encoding', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '9bba54ed9f589cd7-DEL'})
+2026-01-10 12:36:28 | DEBUG    | openai._base_client | request:1024 | request_id: None
+2026-01-10 12:36:28 | INFO     | graph_creator_agent.graphcreator | generate_triplets:151 | Generated 2 triplets from evidence ev_4
+2026-01-10 12:36:28 | INFO     | graph_creator_agent.graphcreator | add_triplets_to_graph:230 | Added 9 triplets to graph. Graph now has 12 nodes and 9 edges
+2026-01-10 12:36:28 | ERROR    | __main__ | main:199 | Error processing row 2: GraphML writer does not support <class 'list'> as data values.
+Traceback (most recent call last):
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/networkx/readwrite/graphml.py", line 165, in write_graphml_lxml
+    import lxml.etree as lxmletree
+ModuleNotFoundError: No module named 'lxml'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/main.py", line 192, in main
+    final_state = run_pipeline_for_row(row_data)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/main.py", line 155, in run_pipeline_for_row
+    final_state = app.invoke(initial_state)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py", line 3068, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py", line 2643, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py", line 167, in tick
+    run_with_retry(
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/graph_creator_agent/main.py", line 62, in create_graph
+    graph_path = save_graph(graph, book_name, character_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/graph_creator_agent/graphcreator.py", line 250, in save_graph
+    nx.write_graphml(graph, graph_path)
+  File "<class 'networkx.utils.decorators.argmap'> compilation 9", line 5, in argmap_write_graphml_lxml_5
+    import itertools
+             ^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/networkx/readwrite/graphml.py", line 167, in write_graphml_lxml
+    return write_graphml_xml(
+           ^^^^^^^^^^^^^^^^^^
+  File "<class 'networkx.utils.decorators.argmap'> compilation 14", line 5, in argmap_write_graphml_xml_10
+    import itertools
+             ^^^^^^^^
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/networkx/readwrite/graphml.py", line 113, in write_graphml_xml
+    writer.add_graph_element(G)
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/networkx/readwrite/graphml.py", line 651, in add_graph_element
+    self.add_data(
+  File "/mnt/c/Users/Shivam/Desktop/8th Sem/KDAG/Ram Branch/KDAG/.venv/lib/python3.12/site-packages/networkx/readwrite/graphml.py", line 563, in add_data
+    raise nx.NetworkXError(
+networkx.exception.NetworkXError: GraphML writer does not support <class 'list'> as data values.
+During task with name 'create_graph' and id '632180ed-bffd-b950-e9e2-e6ec2dc97ff2'
+2026-01-10 12:36:28 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-10 12:36:28 | DEBUG    | httpcore.connection | trace:47 | close.complete

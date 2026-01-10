@@ -9,7 +9,6 @@ from answering_agent.prompts import EVIDENCE_SELECTION_PROMPT
 
 logger = logging.getLogger(__name__)
 
-
 class EvidenceOutput(TypedDict):
     """Output from evidence generator."""
     evidence_ids: list[str]

@@ -231,23 +231,14 @@ def add_triplets_to_graph(graph: nx.DiGraph, triplets: list[Triplet]) -> None:
 
 
 def save_graph(graph: nx.DiGraph, book_name: str, character_name: str) -> str:
-    """Save graph to GraphML file.
-    
-    Args:
-        graph: NetworkX directed graph.
-        book_name: Name of the book.
-        character_name: Name of the character.
-        
-    Returns:
-        Path to saved graph file.
-    """
     graph_dir = Path("graph_creator_agent/graph")
     graph_dir.mkdir(exist_ok=True)
-    
-    graph_filename = f"{book_name}_{character_name}.graphml"
-    graph_path = graph_dir / graph_filename
-    
+    graph_path = graph_dir / f"{book_name}_{character_name}.graphml"
+
+    # Convert list attrs -> string for GraphML
+    for u, v, data in graph.edges(data=True):
+        if isinstance(data.get("evidence_ids"), list):
+            data["evidence_ids"] = json.dumps(data["evidence_ids"])
+
     nx.write_graphml(graph, graph_path)
-    logger.info(f"Saved graph to {graph_path}")
-    
     return str(graph_path)
