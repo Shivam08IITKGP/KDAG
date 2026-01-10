@@ -7,6 +7,8 @@ from extraction_agent.config import MAX_QUERIES
 from extraction_agent.prompts import EXTRACTION_PROMPT
 from shared_config import create_llm
 
+from Graphrag.pathway.retriever import retrieve_topk
+
 logger = logging.getLogger(__name__)
 
 
@@ -18,12 +20,14 @@ class ExtractionOutput(TypedDict):
 
 def get_evidence(query: str, book_name: str) -> dict[str, str]:
     # Stub implementation
-    fake_evidences = [
-        {"id": "ev_1", "text": "Jacques Paganel is a French geographer known for his absent-mindedness."},
-        {"id": "ev_2", "text": "Paganel has extensive knowledge of geography and travels the world."},
-        {"id": "ev_3", "text": "He often forgets things and makes mistakes due to his absent-minded nature."},
-        {"id": "ev_4", "text": "Paganel is a member of the Geographical Society and writes scholarly papers."},
-    ]
+    # fake_evidences = [
+    #     {"id": "ev_1", "text": "Jacques Paganel is a French geographer known for his absent-mindedness."},
+    #     {"id": "ev_2", "text": "Paganel has extensive knowledge of geography and travels the world."},
+    #     {"id": "ev_3", "text": "He often forgets things and makes mistakes due to his absent-minded nature."},
+    #     {"id": "ev_4", "text": "Paganel is a member of the Geographical Society and writes scholarly papers."},
+    # ]
+    fake_evidences = retrieve_topk(book_name, query, k=5)
+
     return {ev["id"]: ev["text"] for ev in fake_evidences}
 
 def extract(state: dict) -> dict:

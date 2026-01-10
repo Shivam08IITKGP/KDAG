@@ -12,9 +12,12 @@ from extraction_agent.main import extract
 from graph_creator_agent.main import create_graph
 from answering_agent.main import answer
 
+# from Graphrag.pathway.retriever import retrieve_topk
+from Graphrag.pathway.build_index import build_index
+from collections import defaultdict
+
 # Load environment variables
 load_dotenv()
-
 
 class PipelineState(TypedDict):
     """Global state for the LangGraph pipeline."""
@@ -164,7 +167,8 @@ def main():
     log_file = setup_logging()
     logger = logging.getLogger(__name__)
     logger.info("Starting Evidence-Grounded Backstory Consistency System")
-    
+
+
     # Read first 2 rows from train.csv
     try:
         df = read_train_data(num_rows=2)
@@ -175,13 +179,30 @@ def main():
     
     # Process each row
     results = []
+
+    flag = defaultdict(int)
     for idx, row in df.iterrows():
         print(f"\n{'='*80}")
         print(f"Processing Row {idx + 1}/{len(df)}")
         print(f"Character: {row['char']}")
         print(f"Book: {row['book_name']}")
         print(f"{'='*80}\n")
-        
+        # topchunks = retrieve_topk("")
+
+        book_path = ""
+        if row['book_name'] == "In search of the castaways":
+            book_path = "Books/In search of the castaways.txt"
+        elif row['book_name'] == "The Count of Monte Cristo":
+            book_path = "Books/The Count of Monte Cristo.txt"
+        else:
+            logger.warning(f"Book '{row['book_name']}' not found in predefined paths.")
+            print(f"❌ Book '{row['book_name']}' not found. Skipping this row.")
+            continue
+
+        if flag[row['book_name']] == 0:
+            build_index(book_path, row['book_name'])
+            flag[row['book_name']] = 1
+
         try:
             row_data = {
                 "book_name": row["book_name"],
