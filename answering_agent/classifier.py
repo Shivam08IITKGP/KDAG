@@ -51,7 +51,7 @@ def classify(
     book_name: str,
     character_name: str,
     backstory: str,
-    graph_path: str | None,
+    graph_summary: str,
     character_summary: str,
     llm: ChatOpenAI,
 ) -> ClassificationOutput:
@@ -61,7 +61,7 @@ def classify(
         book_name: Name of the book.
         character_name: Name of the character.
         backstory: The backstory to check.
-        graph_path: Path to the graph file.
+        graph_summary: Text summary of the knowledge graph.
         character_summary: Canonical summary of the character.
         llm: ChatOpenAI instance.
         
@@ -70,19 +70,6 @@ def classify(
     """
     logger.info("Starting classification")
     
-    # Load graph if path exists
-    graph_summary = "No graph available."
-    if graph_path:
-        graph_file = Path(graph_path)
-        if graph_file.exists():
-            try:
-                graph = nx.read_graphml(graph_path)
-                graph_summary = summarize_graph(graph)
-                logger.info(f"Loaded graph from {graph_path}")
-            except Exception as e:
-                logger.warning(f"Error loading graph: {e}")
-        else:
-            logger.warning(f"Graph file not found: {graph_path}")
     
     # Format prompt
     prompt = CLASSIFICATION_PROMPT.format(

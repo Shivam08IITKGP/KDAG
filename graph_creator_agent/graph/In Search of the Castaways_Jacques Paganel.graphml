@@ -10,118 +10,28 @@
     <node id="Geographical Society of Paris">
       <data key="d0">entity</data>
     </node>
-    <node id="Geographical Society of Berlin">
+    <node id="societies of Berlin">
       <data key="d0">entity</data>
     </node>
-    <node id="Geographical Society of Bombay">
+    <node id="societies of Bombay">
       <data key="d0">entity</data>
     </node>
-    <node id="India">
+    <node id="societies of Darmstadt">
       <data key="d0">entity</data>
     </node>
-    <node id="the Duncan">
+    <node id="societies of Leipsic">
       <data key="d0">entity</data>
     </node>
-    <node id="Lord Glenarvan">
+    <node id="societies of London">
       <data key="d0">entity</data>
     </node>
-    <node id="British power on the island">
+    <node id="societies of St. Petersburg">
       <data key="d0">entity</data>
     </node>
-    <node id="Jacob Louper">
+    <node id="societies of Vienna">
       <data key="d0">entity</data>
     </node>
-    <node id="Maoris">
-      <data key="d0">entity</data>
-    </node>
-    <node id="heraldic kiwi with outstretched wings biting his heart">
-      <data key="d0">entity</data>
-    </node>
-    <node id="three days">
-      <data key="d0">entity</data>
-    </node>
-    <node id="average children per family in Argentina exceeds nine">
-      <data key="d0">entity</data>
-    </node>
-    <node id="little soldiers practicing French tactics">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Chief Hihy">
-      <data key="d0">entity</data>
-    </node>
-    <node id="death of Captain Marion in 1772">
-      <data key="d0">entity</data>
-    </node>
-    <node id="flamingoes">
-      <data key="d0">entity</data>
-    </node>
-    <node id="document's interpretation about Captain Grant's location">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Ayrton">
-      <data key="d0">entity</data>
-    </node>
-    <node id="ingenuity">
-      <data key="d0">entity</data>
-    </node>
-    <node id="illustration">
-      <data key="d0">entity</data>
-    </node>
-    <node id="New Zealand">
-      <data key="d0">entity</data>
-    </node>
-    <node id="MacNabb">
-      <data key="d0">entity</data>
-    </node>
-    <node id="madness">
-      <data key="d0">entity</data>
-    </node>
-    <node id="hair">
-      <data key="d0">entity</data>
-    </node>
-    <node id="agitation">
-      <data key="d0">entity</data>
-    </node>
-    <node id="joy">
-      <data key="d0">entity</data>
-    </node>
-    <node id="despair">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Captain Mangles">
-      <data key="d0">entity</data>
-    </node>
-    <node id="question">
-      <data key="d0">entity</data>
-    </node>
-    <node id="usual">
-      <data key="d0">entity</data>
-    </node>
-    <node id="brain">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Harry Grant">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Captain">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Geographical Society of Darmstadt">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Geographical Society of Leipsic">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Geographical Society of London">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Geographical Society of St. Petersburg">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Geographical Society of Vienna">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Geographical Society of New York">
+    <node id="societies of New York">
       <data key="d0">entity</data>
     </node>
     <node id="Royal Geographical and Ethnographical Institute of the East Indies">
@@ -130,561 +40,1421 @@
     <node id="geography">
       <data key="d0">entity</data>
     </node>
-    <node id="Scotia">
+    <node id="agreeable">
       <data key="d0">entity</data>
     </node>
-    <node id="Duncan">
+    <node id="geographical labors">
       <data key="d0">entity</data>
     </node>
-    <node id="cabin number six">
+    <node id="reports on modern discoveries">
       <data key="d0">entity</data>
     </node>
-    <node id="slept for thirty-six hours">
+    <node id="correspondence with the entire world">
       <data key="d0">entity</data>
     </node>
-    <node id="modern discoveries">
+    <node id="vessel">
       <data key="d0">entity</data>
     </node>
-    <node id="absent-minded">
+    <node id="imperturbable gravity">
       <data key="d0">entity</data>
     </node>
-    <node id="Chili">
+    <node id="search for Captain Grant">
       <data key="d0">entity</data>
     </node>
-    <node id="learn Spanish">
+    <node id="coolness">
       <data key="d0">entity</data>
     </node>
-    <node id="Cervantes' works">
+    <node id="accustomed manners">
       <data key="d0">entity</data>
     </node>
-    <node id="philology">
+    <node id="uneasy state of mind">
       <data key="d0">entity</data>
     </node>
-    <node id="Concepcion">
+    <node id="nervous">
       <data key="d0">entity</data>
     </node>
-    <node id="Talcahuana">
+    <node id="joyful">
       <data key="d0">entity</data>
     </node>
-    <node id="Patagonia">
+    <node id="despairing">
       <data key="d0">entity</data>
     </node>
-    <node id="Cape Pilares">
+    <node id="rise of the British power upon the island">
       <data key="d0">entity</data>
     </node>
-    <node id="Desolation Island">
+    <node id="extension of the British power upon the island">
       <data key="d0">entity</data>
     </node>
-    <node id="shores of the Atlantic">
+    <node id="consolidation of the British power upon the island">
       <data key="d0">entity</data>
     </node>
-    <node id="Pampas">
+    <node id="beginnings of the strife which for years decimated the aborigines">
       <data key="d0">entity</data>
     </node>
-    <node id="America">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Malcolm Castle">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Scotland">
-      <data key="d0">entity</data>
-    </node>
-    <node id="eccentric">
+    <node id="causes of the strife which for years decimated the aborigines">
       <data key="d0">entity</data>
     </node>
     <node id="heroic exploits">
       <data key="d0">entity</data>
     </node>
-    <node id="rescue of Harry Grant">
+    <node id="eccentricities">
       <data key="d0">entity</data>
     </node>
-    <node id="marriage of John Mangles and Mary Grant">
+    <node id="abilities">
       <data key="d0">entity</data>
     </node>
-    <node id="voyage on the Duncan">
+    <node id="loquacious">
       <data key="d0">entity</data>
     </node>
-    <node id="Cape Clear">
+    <node id="history">
       <data key="d0">entity</data>
     </node>
-    <node id="St. George's Channel">
+    <node id="statistics">
       <data key="d0">entity</data>
     </node>
-    <node id="Irish Sea">
+    <node id="native races">
       <data key="d0">entity</data>
     </node>
-    <node id="Frith of Clyde">
+    <node id="Spanish">
       <data key="d0">entity</data>
     </node>
-    <node id="Dumbarton">
+    <node id="French">
       <data key="d0">entity</data>
     </node>
-    <node id="Seymour">
-      <data key="d0">entity</data>
-    </node>
-    <node id="excitable">
+    <node id="&quot;Nothing! nothing!&quot;">
       <data key="d0">entity</data>
     </node>
     <node id="&quot;Aland! aland! aland!&quot;">
       <data key="d0">entity</data>
     </node>
-    <node id="&quot;Tom Austin, Mate of the Yacht Duncan, Melbourne.&quot;">
+    <node id="inexplicable agitation">
+      <data key="d0">entity</data>
+    </node>
+    <node id="nervous excitation">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;When you wish, my lord, I am at your disposal.&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;Australia? Ah, yes, Australia!&quot;">
       <data key="d0">entity</data>
     </node>
     <node id="&quot;Aland! aland! Zealand!&quot;">
       <data key="d0">entity</data>
     </node>
-    <node id="Major MacNabb">
+    <node id="amiable">
       <data key="d0">entity</data>
     </node>
-    <node id="expedition to Strait of Magellan">
+    <node id="gay">
       <data key="d0">entity</data>
     </node>
-    <node id="document">
+    <node id="every one">
+      <data key="d0">entity</data>
+    </node>
+    <node id="famous document">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Mary Grant and her brother with liveliest interest">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Mary Grant and her brother good hopes">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Miss Arabella">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;Oh, major, she is charming!&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;a thousand times too charming for me&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;would please me better if she were less so. I should like to find a defect.&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="voyage to India">
+      <data key="d0">entity</data>
+    </node>
+    <node id="negative">
+      <data key="d0">entity</data>
+    </node>
+    <node id="story of Captain Grant">
+      <data key="d0">entity</data>
+    </node>
+    <node id="providential discovery of the documents">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Lady Helena's generous proposal">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;Madam, permit me to admire your conduct in all this, and to admire it without reserve.&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;May your yacht continue on her course; I would reproach myself for delaying her a single day.&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="to fulfill his mission">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;And now, dear companions, one last clasp of the hand to last us till we reach the shores of the Atlantic.&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Atlantic shores">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Malcolm Castle">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Duncan">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Scotia">
+      <data key="d0">entity</data>
+    </node>
+    <node id="cabin number six at Paris">
+      <data key="d0">entity</data>
+    </node>
+    <node id="thirty hours">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;So, Monsieur Paganel, you have chosen Calcutta as your centre of action?&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;How Tabor Island? It is Maria Theresa.&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Tabor Island">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Maria Theresa Island">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;Port Famine!&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;that port so celebrated in geographical fasts!&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;And do you, indeed, wish me, my good friends?&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;Well, you desire me to stay very much?&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="about his destination">
       <data key="d0">entity</data>
     </node>
     <node id="Geographical Society">
       <data key="d0">entity</data>
     </node>
+    <node id="interpreting documents">
+      <data key="d0">entity</data>
+    </node>
+    <node id="search for the Britannia's shipwreck">
+      <data key="d0">entity</data>
+    </node>
+    <node id="furious against himself">
+      <data key="d0">entity</data>
+    </node>
+    <node id="the wreck of the Britannia">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Glenarvan">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Captain Grant's rescue">
+      <data key="d0">entity</data>
+    </node>
+    <node id="seamen of the Britannia have perished">
+      <data key="d0">entity</data>
+    </node>
+    <node id="absent-minded">
+      <data key="d0">entity</data>
+    </node>
+    <node id="search upon the American coast">
+      <data key="d0">entity</data>
+    </node>
+    <node id="board the Duncan instead of the Scotia">
+      <data key="d0">entity</data>
+    </node>
+    <node id="blunders">
+      <data key="d0">entity</data>
+    </node>
+    <node id="rushing to his cabin">
+      <data key="d0">entity</data>
+    </node>
+    <node id="seeing India">
+      <data key="d0">entity</data>
+    </node>
+    <node id="schools of Frézier, Molina, Humboldt, and Miers">
+      <data key="d0">entity</data>
+    </node>
+    <node id="New Zealanders">
+      <data key="d0">entity</data>
+    </node>
+    <node id="exposing the Geographical Society to ridicule">
+      <data key="d0">entity</data>
+    </node>
     <node id="new interpretation of the document">
       <data key="d0">entity</data>
     </node>
-    <node id="sagacity">
+    <node id="wept like a child">
       <data key="d0">entity</data>
     </node>
-    <node id="emotional">
+    <node id="Lady Helena">
       <data key="d0">entity</data>
     </node>
-    <node id="imperturbable">
+    <node id="marvelous instinct as a traveler">
       <data key="d0">entity</data>
     </node>
-    <node id="travel">
+    <node id="tales of sad incidents between Europeans and Maori">
       <data key="d0">entity</data>
     </node>
-    <node id="dexterity">
+    <node id="gave himself up to unreasonable theories">
       <data key="d0">entity</data>
     </node>
-    <node id="commercial intercourse between the European and the Maori">
+    <node id="grounds of Hottam Station">
       <data key="d0">entity</data>
     </node>
-    <node id="courageous">
+    <node id="to visit Carlsbrook">
       <data key="d0">entity</data>
     </node>
-    <node id="eager for something new">
+    <node id="Robert">
       <data key="d0">entity</data>
     </node>
     <node id="increasingly annoyed">
       <data key="d0">entity</data>
     </node>
-    <node id="Argentine statistics">
-      <data key="d0">entity</data>
-    </node>
-    <node id="fear of exposing the Geographical Society">
-      <data key="d0">entity</data>
-    </node>
-    <node id="jests and railleries of the caricaturists">
-      <data key="d0">entity</data>
-    </node>
-    <node id="superstition of the natives">
+    <node id="convincing Kai-Koumou they have met a terrible death">
       <data key="d0">entity</data>
     </node>
     <node id="discovery and colonization of New Zealand">
       <data key="d0">entity</data>
     </node>
-    <node id="uneasy">
+    <node id="Campbell's North British Hotel">
       <data key="d0">entity</data>
     </node>
-    <node id="nervous">
+    <node id="geographer">
+      <data key="d0">entity</data>
+    </node>
+    <node id="indiscreet">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Captain Mangles">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Captain Cook's voyages">
+      <data key="d0">entity</data>
+    </node>
+    <node id="cannibalism">
+      <data key="d0">entity</data>
+    </node>
+    <node id="hieroglyphic document">
+      <data key="d0">entity</data>
+    </node>
+    <node id="comical">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Portuguese">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Araucanian">
+      <data key="d0">entity</data>
+    </node>
+    <node id="telescope">
+      <data key="d0">entity</data>
+    </node>
+    <node id="examine the watery expanse">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Lord Glenarvan">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Major MacNabb">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Ayrton">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Mulready">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Ayrton is an intelligent man">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Mary Grant">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Wilson">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Olbinett">
+      <data key="d0">entity</data>
+    </node>
+    <node id="write a letter for Glenarvan">
+      <data key="d0">entity</data>
+    </node>
+    <node id="absorbed">
+      <data key="d0">entity</data>
+    </node>
+    <node id="oblivious">
+      <data key="d0">entity</data>
+    </node>
+    <node id="map of New Zealand">
+      <data key="d0">entity</data>
+    </node>
+    <node id="arguments substantiated by Ayrton">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Pacific Ocean">
+      <data key="d0">entity</data>
+    </node>
+    <node id="they shall help themselves">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Chili">
+      <data key="d0">entity</data>
+    </node>
+    <node id="flitted hither and thither">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Pampas">
+      <data key="d0">entity</data>
+    </node>
+    <node id="expedition to ascertain the situation of Captain Grant">
+      <data key="d0">entity</data>
+    </node>
+    <node id="studied Spanish instead of Portuguese">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Thalcave">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Thalcave's manoeuvres">
+      <data key="d0">entity</data>
+    </node>
+    <node id="conviction">
+      <data key="d0">entity</data>
+    </node>
+    <node id="smiling">
+      <data key="d0">entity</data>
+    </node>
+    <node id="discussion about shipwrecked sailors">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Major">
+      <data key="d0">entity</data>
+    </node>
+    <node id="visit to the Macquarie">
+      <data key="d0">entity</data>
+    </node>
+    <node id="English">
+      <data key="d0">entity</data>
+    </node>
+    <node id="pah">
+      <data key="d0">entity</data>
+    </node>
+    <node id="encampment of Maoris">
+      <data key="d0">entity</data>
+    </node>
+    <node id="to go to Auckland">
+      <data key="d0">entity</data>
+    </node>
+    <node id="means of transportation to Sydney or Melbourne">
+      <data key="d0">entity</data>
+    </node>
+    <node id="demonstrating facts">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Robert Grant">
+      <data key="d0">entity</data>
+    </node>
+    <node id="word of consolation or hope">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;I am sorry&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="embarrassed">
+      <data key="d0">entity</data>
+    </node>
+    <node id="learning another language instead of Spanish">
+      <data key="d0">entity</data>
+    </node>
+    <node id="geographical observations">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Spanish language">
+      <data key="d0">entity</data>
+    </node>
+    <node id="the major">
+      <data key="d0">entity</data>
+    </node>
+    <node id="rivers of the Pampas">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Australian rivers">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Murray River">
+      <data key="d0">entity</data>
+    </node>
+    <node id="lively imagination">
+      <data key="d0">entity</data>
+    </node>
+    <node id="astronomical">
+      <data key="d0">entity</data>
+    </node>
+    <node id="firmament">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Concepcion">
+      <data key="d0">entity</data>
+    </node>
+    <node id="river Colorado">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Lake Taupo">
+      <data key="d0">entity</data>
+    </node>
+    <node id="hopefulness">
+      <data key="d0">entity</data>
+    </node>
+    <node id="course of the Waikato">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Australian kindness">
+      <data key="d0">entity</data>
+    </node>
+    <node id="diggings">
+      <data key="d0">entity</data>
+    </node>
+    <node id="auriferous deposits of Australia">
+      <data key="d0">entity</data>
+    </node>
+    <node id="ingress into Melbourne in 1852">
+      <data key="d0">entity</data>
+    </node>
+    <node id="exodus from Melbourne to the diggings in 1852">
+      <data key="d0">entity</data>
+    </node>
+    <node id="system of land registration in Australia">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Australia">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Lady Helena and Miss Grant accompany them">
+      <data key="d0">entity</data>
+    </node>
+    <node id="mistake in document interpretation">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Australian history">
+      <data key="d0">entity</data>
+    </node>
+    <node id="maps">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Tom Austin">
+      <data key="d0">entity</data>
+    </node>
+    <node id="two sailors">
+      <data key="d0">entity</data>
+    </node>
+    <node id="map of South America">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;Travels of a Geographer on the Argentine Pampas&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Patagonia">
+      <data key="d0">entity</data>
+    </node>
+    <node id="tower">
+      <data key="d0">entity</data>
+    </node>
+    <node id="eternal distractions">
+      <data key="d0">entity</data>
+    </node>
+    <node id="emotional">
+      <data key="d0">entity</data>
+    </node>
+    <node id="mistake in search for Captain Grant">
+      <data key="d0">entity</data>
+    </node>
+    <node id="thirty-seventh parallel">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Tristan d'Acunha Island">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Cape of Good Hope">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Indian Ocean">
+      <data key="d0">entity</data>
+    </node>
+    <node id="St. Paul's Island">
+      <data key="d0">entity</data>
+    </node>
+    <node id="province of Victoria">
+      <data key="d0">entity</data>
+    </node>
+    <node id="the party">
+      <data key="d0">entity</data>
+    </node>
+    <node id="New Zealand kiwi">
+      <data key="d0">entity</data>
+    </node>
+    <node id="contributing a kiwi specimen to the Jardin of his city">
+      <data key="d0">entity</data>
+    </node>
+    <node id="banks of the Waipa">
+      <data key="d0">entity</data>
+    </node>
+    <node id="flamingo hunt">
+      <data key="d0">entity</data>
+    </node>
+    <node id="ordered Duncan to Cochin-China">
+      <data key="d0">entity</data>
+    </node>
+    <node id="letter signed by Glenarvan">
+      <data key="d0">entity</data>
+    </node>
+    <node id="ordered Duncan to New Zealand">
+      <data key="d0">entity</data>
+    </node>
+    <node id="New Zealand">
       <data key="d0">entity</data>
     </node>
     <edge source="Jacques Paganel" target="Geographical Society of Paris">
       <data key="d1">IS_SECRETARY_OF</data>
       <data key="d2">["in search of the castaways__chunk__97"]</data>
     </edge>
-    <edge source="Jacques Paganel" target="Geographical Society of Berlin">
-      <data key="d1">CORRESPONDING_MEMBER_OF</data>
-      <data key="d2">["in search of the castaways__chunk__97"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Geographical Society of Bombay">
-      <data key="d1">CORRESPONDING_MEMBER_OF</data>
-      <data key="d2">["in search of the castaways__chunk__97"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="India">
-      <data key="d1">INTENDS_TO_GO_TO</data>
-      <data key="d2">["in search of the castaways__chunk__97"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="the Duncan">
-      <data key="d1">ARRIVED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__98"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Lord Glenarvan">
-      <data key="d1">ASKED_A_QUESTION_BY</data>
-      <data key="d2">["in search of the castaways__chunk__98"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="British power on the island">
-      <data key="d1">SPOKE_OF</data>
-      <data key="d2">["in search of the castaways__chunk__812"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Jacob Louper">
-      <data key="d1">MENTIONED</data>
-      <data key="d2">["in search of the castaways__chunk__812"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Maoris">
-      <data key="d1">CAPTURED_BY</data>
-      <data key="d2">["in search of the castaways__chunk__1044"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="heraldic kiwi with outstretched wings biting his heart">
-      <data key="d1">HAS_TATTOO</data>
-      <data key="d2">["in search of the castaways__chunk__1044"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="three days">
-      <data key="d1">CAPTIVITY_LENGTH</data>
-      <data key="d2">["in search of the castaways__chunk__1044"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="average children per family in Argentina exceeds nine">
-      <data key="d1">REMEMBERS</data>
-      <data key="d2">["in search of the castaways__chunk__314"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="little soldiers practicing French tactics">
-      <data key="d1">OBSERVED</data>
-      <data key="d2">["in search of the castaways__chunk__314"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Chief Hihy">
-      <data key="d1">PRISONER_OF</data>
-      <data key="d2">["in search of the castaways__chunk__907"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="death of Captain Marion in 1772">
-      <data key="d1">SPOKE_OF</data>
-      <data key="d2">["in search of the castaways__chunk__757"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="flamingoes">
-      <data key="d1">FIRED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__303"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="document's interpretation about Captain Grant's location">
-      <data key="d1">DISPUTED</data>
-      <data key="d2">["in search of the castaways__chunk__327"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Ayrton">
-      <data key="d1">SPOKE_TO</data>
-      <data key="d2">["in search of the castaways__chunk__509"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="ingenuity">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__509"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="illustration">
-      <data key="d1">DEPICTED_IN</data>
-      <data key="d2">["in search of the castaways__chunk__365"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="New Zealand">
-      <data key="d1">EXCLAIMED</data>
-      <data key="d2">["in search of the castaways__chunk__961"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="MacNabb">
-      <data key="d1">ADDRESSED_BY</data>
-      <data key="d2">["in search of the castaways__chunk__961"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="madness">
-      <data key="d1">BECAME_FRENZIED</data>
-      <data key="d2">["in search of the castaways__chunk__961"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="hair">
-      <data key="d1">TORN_HAIR</data>
-      <data key="d2">["in search of the castaways__chunk__961"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="agitation">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__750"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="joy">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__750"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="despair">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__750"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Captain Mangles">
-      <data key="d1">ASKED_BY</data>
-      <data key="d2">["in search of the castaways__chunk__750"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="question">
-      <data key="d1">REPLIED_EVASIVELY</data>
-      <data key="d2">["in search of the castaways__chunk__750"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="usual">
-      <data key="d1">IS_NERVOUS</data>
-      <data key="d2">["in search of the castaways__chunk__750"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="brain">
-      <data key="d1">REVOLVED_WORDS_IN</data>
-      <data key="d2">["in search of the castaways__chunk__1032"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Harry Grant">
-      <data key="d1">SEIZED_HAND_OF</data>
-      <data key="d2">["in search of the castaways__chunk__1032"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Captain">
-      <data key="d1">ASKED</data>
-      <data key="d2">["in search of the castaways__chunk__1032"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Geographical Society of Darmstadt">
+    <edge source="Jacques Paganel" target="societies of Berlin">
       <data key="d1">MEMBER_OF</data>
       <data key="d2">["in search of the castaways__chunk__97"]</data>
     </edge>
-    <edge source="Jacques Paganel" target="Geographical Society of Leipsic">
+    <edge source="Jacques Paganel" target="societies of Bombay">
       <data key="d1">MEMBER_OF</data>
       <data key="d2">["in search of the castaways__chunk__97"]</data>
     </edge>
-    <edge source="Jacques Paganel" target="Geographical Society of London">
+    <edge source="Jacques Paganel" target="societies of Darmstadt">
       <data key="d1">MEMBER_OF</data>
       <data key="d2">["in search of the castaways__chunk__97"]</data>
     </edge>
-    <edge source="Jacques Paganel" target="Geographical Society of St. Petersburg">
+    <edge source="Jacques Paganel" target="societies of Leipsic">
       <data key="d1">MEMBER_OF</data>
       <data key="d2">["in search of the castaways__chunk__97"]</data>
     </edge>
-    <edge source="Jacques Paganel" target="Geographical Society of Vienna">
+    <edge source="Jacques Paganel" target="societies of London">
       <data key="d1">MEMBER_OF</data>
       <data key="d2">["in search of the castaways__chunk__97"]</data>
     </edge>
-    <edge source="Jacques Paganel" target="Geographical Society of New York">
+    <edge source="Jacques Paganel" target="societies of St. Petersburg">
+      <data key="d1">MEMBER_OF</data>
+      <data key="d2">["in search of the castaways__chunk__97"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="societies of Vienna">
+      <data key="d1">MEMBER_OF</data>
+      <data key="d2">["in search of the castaways__chunk__97"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="societies of New York">
       <data key="d1">MEMBER_OF</data>
       <data key="d2">["in search of the castaways__chunk__97"]</data>
     </edge>
     <edge source="Jacques Paganel" target="Royal Geographical and Ethnographical Institute of the East Indies">
-      <data key="d1">MEMBER_OF</data>
+      <data key="d1">HONORARY_MEMBER_OF</data>
       <data key="d2">["in search of the castaways__chunk__97"]</data>
     </edge>
     <edge source="Jacques Paganel" target="geography">
       <data key="d1">STUDIED</data>
-      <data key="d2">["in search of the castaways__chunk__97", "in search of the castaways__chunk__98", "in search of the castaways__chunk__120", "in search of the castaways__chunk__576"]</data>
+      <data key="d2">["in search of the castaways__chunk__97", "in search of the castaways__chunk__120", "in search of the castaways__chunk__684", "in search of the castaways__chunk__103", "in search of the castaways__chunk__140", "in search of the castaways__chunk__146", "in search of the castaways__chunk__576", "in search of the castaways__chunk__755", "in search of the castaways__chunk__451", "in search of the castaways__chunk__477", "in search of the castaways__chunk__123", "in search of the castaways__chunk__369"]</data>
     </edge>
-    <edge source="Jacques Paganel" target="Scotia">
-      <data key="d1">ARRIVED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__99"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Duncan">
-      <data key="d1">MISTAKENLY_BOARDED</data>
-      <data key="d2">["in search of the castaways__chunk__99"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="cabin number six">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__99"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="slept for thirty-six hours">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["in search of the castaways__chunk__99"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="modern discoveries">
-      <data key="d1">KNOWS_ABOUT</data>
+    <edge source="Jacques Paganel" target="agreeable">
+      <data key="d1">HAS_TRAIT</data>
       <data key="d2">["in search of the castaways__chunk__98"]</data>
     </edge>
-    <edge source="Jacques Paganel" target="absent-minded">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__103"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Chili">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__103"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="learn Spanish">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["in search of the castaways__chunk__124"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Cervantes' works">
-      <data key="d1">STUDIED</data>
-      <data key="d2">["in search of the castaways__chunk__124"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="philology">
-      <data key="d1">FLUENT_IN</data>
-      <data key="d2">["in search of the castaways__chunk__124"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Concepcion">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__124"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Talcahuana">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__137"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Patagonia">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__137"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Cape Pilares">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__132"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Desolation Island">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__132"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="shores of the Atlantic">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__150"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Pampas">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__327"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="America">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__327"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Malcolm Castle">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__1040"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Scotland">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__1041"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="eccentric">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__1041"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="heroic exploits">
+    <edge source="Jacques Paganel" target="geographical labors">
       <data key="d1">KNOWN_FOR</data>
-      <data key="d2">["in search of the castaways__chunk__1041"]</data>
+      <data key="d2">["in search of the castaways__chunk__98"]</data>
     </edge>
-    <edge source="Jacques Paganel" target="rescue of Harry Grant">
+    <edge source="Jacques Paganel" target="reports on modern discoveries">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__98"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="correspondence with the entire world">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__98"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="vessel">
+      <data key="d1">ARRIVED_ON</data>
+      <data key="d2">["in search of the castaways__chunk__98"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="imperturbable gravity">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__1044"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="search for Captain Grant">
       <data key="d1">PARTICIPATED_IN</data>
-      <data key="d2">["in search of the castaways__chunk__1041"]</data>
+      <data key="d2">["in search of the castaways__chunk__365"]</data>
     </edge>
-    <edge source="Jacques Paganel" target="marriage of John Mangles and Mary Grant">
-      <data key="d1">PARTICIPATED_IN</data>
-      <data key="d2">["in search of the castaways__chunk__1041"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="voyage on the Duncan">
-      <data key="d1">PARTICIPATED_IN</data>
-      <data key="d2">["in search of the castaways__chunk__1040"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Cape Clear">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__1040"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="St. George's Channel">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__1040"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Irish Sea">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__1040"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Frith of Clyde">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__1040"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Dumbarton">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__1040"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Seymour">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__597"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="excitable">
+    <edge source="Jacques Paganel" target="coolness">
       <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__694"]</data>
+      <data key="d2">["in search of the castaways__chunk__696"]</data>
     </edge>
-    <edge source="Jacques Paganel" target="&quot;Aland! aland! aland!&quot;">
-      <data key="d1">SAID</data>
-      <data key="d2">["in search of the castaways__chunk__694"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="&quot;Tom Austin, Mate of the Yacht Duncan, Melbourne.&quot;">
-      <data key="d1">WROTE</data>
-      <data key="d2">["in search of the castaways__chunk__695"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="&quot;Aland! aland! Zealand!&quot;">
-      <data key="d1">SAID</data>
-      <data key="d2">["in search of the castaways__chunk__695"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Major MacNabb">
-      <data key="d1">FRIEND_OF</data>
-      <data key="d2">["in search of the castaways__chunk__1042"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="expedition to Strait of Magellan">
-      <data key="d1">PARTICIPATED_IN</data>
-      <data key="d2">["in search of the castaways__chunk__120"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="document">
-      <data key="d1">STUDIED</data>
-      <data key="d2">["in search of the castaways__chunk__377"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Geographical Society">
-      <data key="d1">IS_SECRETARY_OF</data>
-      <data key="d2">["in search of the castaways__chunk__123"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="new interpretation of the document">
-      <data key="d1">KNOWS_ABOUT</data>
-      <data key="d2">["in search of the castaways__chunk__430"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="sagacity">
+    <edge source="Jacques Paganel" target="accustomed manners">
       <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__430"]</data>
+      <data key="d2">["in search of the castaways__chunk__696"]</data>
     </edge>
-    <edge source="Jacques Paganel" target="emotional">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__1020"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="imperturbable">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__1020"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="travel">
-      <data key="d1">EXPERT_IN</data>
-      <data key="d2">["in search of the castaways__chunk__941"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="dexterity">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__941"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="commercial intercourse between the European and the Maori">
-      <data key="d1">KNOWS_ABOUT</data>
-      <data key="d2">["in search of the castaways__chunk__757"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="courageous">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__468"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="eager for something new">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__560"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="increasingly annoyed">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__852"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="Argentine statistics">
-      <data key="d1">KNOWS_ABOUT</data>
-      <data key="d2">["in search of the castaways__chunk__314"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="fear of exposing the Geographical Society">
-      <data key="d1">MOTIVATED_BY</data>
-      <data key="d2">["in search of the castaways__chunk__1045"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="jests and railleries of the caricaturists">
-      <data key="d1">FEARED</data>
-      <data key="d2">["in search of the castaways__chunk__1045"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="superstition of the natives">
-      <data key="d1">KNOWS_ABOUT</data>
-      <data key="d2">["in search of the castaways__chunk__924"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="discovery and colonization of New Zealand">
-      <data key="d1">KNOWS_ABOUT</data>
-      <data key="d2">["in search of the castaways__chunk__753"]</data>
-    </edge>
-    <edge source="Jacques Paganel" target="uneasy">
+    <edge source="Jacques Paganel" target="uneasy state of mind">
       <data key="d1">HAS_TRAIT</data>
       <data key="d2">["in search of the castaways__chunk__696"]</data>
     </edge>
     <edge source="Jacques Paganel" target="nervous">
       <data key="d1">HAS_TRAIT</data>
       <data key="d2">["in search of the castaways__chunk__750"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="joyful">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__750"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="despairing">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__750"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="rise of the British power upon the island">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__812"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="extension of the British power upon the island">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__812"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="consolidation of the British power upon the island">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__812"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="beginnings of the strife which for years decimated the aborigines">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__812"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="causes of the strife which for years decimated the aborigines">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__812"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="heroic exploits">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__1041"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="eccentricities">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__1041"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="abilities">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__1041"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="loquacious">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__581"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="history">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__581"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="statistics">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__607"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="native races">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__607"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Spanish">
+      <data key="d1">STUDIED</data>
+      <data key="d2">["in search of the castaways__chunk__124", "in search of the castaways__chunk__239", "in search of the castaways__chunk__221", "in search of the castaways__chunk__134", "in search of the castaways__chunk__434", "in search of the castaways__chunk__226"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="French">
+      <data key="d1">FLUENT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__314", "in search of the castaways__chunk__582", "in search of the castaways__chunk__315"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;Nothing! nothing!&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__694"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;Aland! aland! aland!&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__694"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="inexplicable agitation">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__694"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="nervous excitation">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__694"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;When you wish, my lord, I am at your disposal.&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__694"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;Australia? Ah, yes, Australia!&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__694", "in search of the castaways__chunk__695"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;Aland! aland! Zealand!&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__695"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="amiable">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__109"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="gay">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__109"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="every one">
+      <data key="d1">FRIEND_OF</data>
+      <data key="d2">["in search of the castaways__chunk__109"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="famous document">
+      <data key="d1">STUDIED</data>
+      <data key="d2">["in search of the castaways__chunk__109"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Mary Grant and her brother with liveliest interest">
+      <data key="d1">INSPIRED</data>
+      <data key="d2">["in search of the castaways__chunk__109"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Mary Grant and her brother good hopes">
+      <data key="d1">GAVE</data>
+      <data key="d2">["in search of the castaways__chunk__109"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Miss Arabella">
+      <data key="d1">FRIEND_OF</data>
+      <data key="d2">["in search of the castaways__chunk__1042"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;Oh, major, she is charming!&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__1042"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;a thousand times too charming for me&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__1042"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;would please me better if she were less so. I should like to find a defect.&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__1042"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="voyage to India">
+      <data key="d1">PROPOSED</data>
+      <data key="d2">["in search of the castaways__chunk__106"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="negative">
+      <data key="d1">RECEPTION_WAS</data>
+      <data key="d2">["in search of the castaways__chunk__106", "in search of the castaways__chunk__107"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="story of Captain Grant">
+      <data key="d1">LEARNED</data>
+      <data key="d2">["in search of the castaways__chunk__107"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="providential discovery of the documents">
+      <data key="d1">LEARNED</data>
+      <data key="d2">["in search of the castaways__chunk__107"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Lady Helena's generous proposal">
+      <data key="d1">LEARNED</data>
+      <data key="d2">["in search of the castaways__chunk__107"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;Madam, permit me to admire your conduct in all this, and to admire it without reserve.&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__107"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;May your yacht continue on her course; I would reproach myself for delaying her a single day.&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__107"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="to fulfill his mission">
+      <data key="d1">MISSION_IS</data>
+      <data key="d2">["in search of the castaways__chunk__107"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;And now, dear companions, one last clasp of the hand to last us till we reach the shores of the Atlantic.&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__150"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Atlantic shores">
+      <data key="d1">TRAVELED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__150"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Malcolm Castle">
+      <data key="d1">NEXT_LOCATED_AT</data>
+      <data key="d2">["in search of the castaways__chunk__1040"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Duncan">
+      <data key="d1">ARRIVED_ON</data>
+      <data key="d2">["in search of the castaways__chunk__99"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Scotia">
+      <data key="d1">INTENDED_TO_BOARD</data>
+      <data key="d2">["in search of the castaways__chunk__99"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="cabin number six at Paris">
+      <data key="d1">ENGAGED</data>
+      <data key="d2">["in search of the castaways__chunk__99"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="thirty hours">
+      <data key="d1">TRAVELED_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__99"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;So, Monsieur Paganel, you have chosen Calcutta as your centre of action?&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__99"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;How Tabor Island? It is Maria Theresa.&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__1034"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Tabor Island">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__1034"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Maria Theresa Island">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__1034"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;Port Famine!&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__120"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;that port so celebrated in geographical fasts!&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__120"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;And do you, indeed, wish me, my good friends?&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__120"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;Well, you desire me to stay very much?&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__120"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="about his destination">
+      <data key="d1">IS_UNDECEIVED</data>
+      <data key="d2">["in search of the castaways__chunk__2"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Geographical Society">
+      <data key="d1">MEMBER_OF</data>
+      <data key="d2">["in search of the castaways__chunk__374", "in search of the castaways__chunk__526"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="interpreting documents">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__502", "in search of the castaways__chunk__999", "in search of the castaways__chunk__373"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="search for the Britannia's shipwreck">
+      <data key="d1">PARTICIPATED_IN</data>
+      <data key="d2">["in search of the castaways__chunk__684"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="furious against himself">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__684"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="the wreck of the Britannia">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__999"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Glenarvan">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__1000", "in search of the castaways__chunk__121", "in search of the castaways__chunk__394", "in search of the castaways__chunk__335", "in search of the castaways__chunk__309", "in search of the castaways__chunk__741", "in search of the castaways__chunk__134", "in search of the castaways__chunk__835"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Captain Grant's rescue">
+      <data key="d1">HOPED_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__1000"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="seamen of the Britannia have perished">
+      <data key="d1">BELIEVES</data>
+      <data key="d2">["in search of the castaways__chunk__1000"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="absent-minded">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__440", "in search of the castaways__chunk__103", "in search of the castaways__chunk__433"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="search upon the American coast">
+      <data key="d1">SANCTIONED</data>
+      <data key="d2">["in search of the castaways__chunk__440"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="board the Duncan instead of the Scotia">
+      <data key="d1">MISTAKENLY_DID</data>
+      <data key="d2">["in search of the castaways__chunk__103"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="blunders">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__103"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="rushing to his cabin">
+      <data key="d1">NEXT_ACTION_IS</data>
+      <data key="d2">["in search of the castaways__chunk__103"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="seeing India">
+      <data key="d1">GIVES_UP</data>
+      <data key="d2">["in search of the castaways__chunk__102"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="schools of Frézier, Molina, Humboldt, and Miers">
+      <data key="d1">STUDIED</data>
+      <data key="d2">["in search of the castaways__chunk__146"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="New Zealanders">
+      <data key="d1">COULD_NOT_PARDON</data>
+      <data key="d2">["in search of the castaways__chunk__1045"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="exposing the Geographical Society to ridicule">
+      <data key="d1">FEARED</data>
+      <data key="d2">["in search of the castaways__chunk__1045"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="new interpretation of the document">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__430"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="wept like a child">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__1020"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Lady Helena">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__576", "in search of the castaways__chunk__967", "in search of the castaways__chunk__431", "in search of the castaways__chunk__835"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="marvelous instinct as a traveler">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__941"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="tales of sad incidents between Europeans and Maori">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__757"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="gave himself up to unreasonable theories">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__468"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="grounds of Hottam Station">
+      <data key="d1">NEXT_LOCATED_AT</data>
+      <data key="d2">["in search of the castaways__chunk__616"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="to visit Carlsbrook">
+      <data key="d1">DESIRED</data>
+      <data key="d2">["in search of the castaways__chunk__560"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Robert">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__560", "in search of the castaways__chunk__597", "in search of the castaways__chunk__121", "in search of the castaways__chunk__394", "in search of the castaways__chunk__582", "in search of the castaways__chunk__492", "in search of the castaways__chunk__741", "in search of the castaways__chunk__426", "in search of the castaways__chunk__819", "in search of the castaways__chunk__303"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="increasingly annoyed">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__852"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="convincing Kai-Koumou they have met a terrible death">
+      <data key="d1">NEXT_ACTION_IS</data>
+      <data key="d2">["in search of the castaways__chunk__924"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="discovery and colonization of New Zealand">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__753"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Campbell's North British Hotel">
+      <data key="d1">NEXT_LOCATED_AT</data>
+      <data key="d2">["in search of the castaways__chunk__597"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="geographer">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__121"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="indiscreet">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__121"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Captain Mangles">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__121", "in search of the castaways__chunk__967", "in search of the castaways__chunk__492", "in search of the castaways__chunk__741", "in search of the castaways__chunk__112"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Captain Cook's voyages">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__755"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="cannibalism">
+      <data key="d1">FEARED</data>
+      <data key="d2">["in search of the castaways__chunk__755"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="hieroglyphic document">
+      <data key="d1">STUDIED</data>
+      <data key="d2">["in search of the castaways__chunk__1032"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="comical">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__221"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Portuguese">
+      <data key="d1">SPEAKS_LANGUAGE</data>
+      <data key="d2">["in search of the castaways__chunk__221", "in search of the castaways__chunk__434"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Araucanian">
+      <data key="d1">SPEAKS_LANGUAGE</data>
+      <data key="d2">["in search of the castaways__chunk__221"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="telescope">
+      <data key="d1">USES</data>
+      <data key="d2">["in search of the castaways__chunk__364"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="examine the watery expanse">
+      <data key="d1">NEXT_ACTION_IS</data>
+      <data key="d2">["in search of the castaways__chunk__394"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Lord Glenarvan">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__981", "in search of the castaways__chunk__147", "in search of the castaways__chunk__491", "in search of the castaways__chunk__226"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Major MacNabb">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__981", "in search of the castaways__chunk__303", "in search of the castaways__chunk__961"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Ayrton">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__582", "in search of the castaways__chunk__497"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Mulready">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__582"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Ayrton is an intelligent man">
+      <data key="d1">SAID_TO</data>
+      <data key="d2">["in search of the castaways__chunk__525"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Mary Grant">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__967", "in search of the castaways__chunk__431", "in search of the castaways__chunk__491", "in search of the castaways__chunk__835"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Wilson">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__967"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Olbinett">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__967"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="write a letter for Glenarvan">
+      <data key="d1">REQUESTED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__692"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="absorbed">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__692"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="oblivious">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__692"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="map of New Zealand">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__745"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="arguments substantiated by Ayrton">
+      <data key="d1">SAID_TO</data>
+      <data key="d2">["in search of the castaways__chunk__509"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Pacific Ocean">
+      <data key="d1">TRAVELED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__132"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="they shall help themselves">
+      <data key="d1">SAID_TO</data>
+      <data key="d2">["in search of the castaways__chunk__151"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Chili">
+      <data key="d1">TRAVELED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__151", "in search of the castaways__chunk__112"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="flitted hither and thither">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__431"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Pampas">
+      <data key="d1">TRAVELED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__320"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="expedition to ascertain the situation of Captain Grant">
+      <data key="d1">PARTICIPATED_IN</data>
+      <data key="d2">["in search of the castaways__chunk__147"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="studied Spanish instead of Portuguese">
+      <data key="d1">MISTAKENLY_DID</data>
+      <data key="d2">["in search of the castaways__chunk__433"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Thalcave">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__335", "in search of the castaways__chunk__309", "in search of the castaways__chunk__226"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Thalcave's manoeuvres">
+      <data key="d1">ANNOYED_BY</data>
+      <data key="d2">["in search of the castaways__chunk__335"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="conviction">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__373"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="smiling">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__139"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="discussion about shipwrecked sailors">
+      <data key="d1">PARTICIPATED_IN</data>
+      <data key="d2">["in search of the castaways__chunk__139"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Major">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__741"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="visit to the Macquarie">
+      <data key="d1">PARTICIPATED_IN</data>
+      <data key="d2">["in search of the castaways__chunk__741"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="English">
+      <data key="d1">SPEAKS_LANGUAGE</data>
+      <data key="d2">["in search of the castaways__chunk__906", "in search of the castaways__chunk__242"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="pah">
+      <data key="d1">ESCAPED_FROM</data>
+      <data key="d2">["in search of the castaways__chunk__906"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="encampment of Maoris">
+      <data key="d1">TRAVELED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__906"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="to go to Auckland">
+      <data key="d1">PROPOSED</data>
+      <data key="d2">["in search of the castaways__chunk__740"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="means of transportation to Sydney or Melbourne">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__740"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="demonstrating facts">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__480"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Robert Grant">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__491"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="word of consolation or hope">
+      <data key="d1">COULD_NOT_FIND</data>
+      <data key="d2">["in search of the castaways__chunk__491"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;I am sorry&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__805"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="embarrassed">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__908"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="learning another language instead of Spanish">
+      <data key="d1">MISTAKENLY_DID</data>
+      <data key="d2">["in search of the castaways__chunk__218"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="geographical observations">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__166"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Spanish language">
+      <data key="d1">STUDIED</data>
+      <data key="d2">["in search of the castaways__chunk__219"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="the major">
+      <data key="d1">FRIEND_OF</data>
+      <data key="d2">["in search of the castaways__chunk__315", "in search of the castaways__chunk__426"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="rivers of the Pampas">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__477"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Australian rivers">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__477"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Murray River">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__477"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="lively imagination">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__536"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="astronomical">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__613"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="firmament">
+      <data key="d1">STUDIED</data>
+      <data key="d2">["in search of the castaways__chunk__613"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Concepcion">
+      <data key="d1">TRAVELED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__135"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="river Colorado">
+      <data key="d1">TRAVELED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__246"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Lake Taupo">
+      <data key="d1">NEXT_LOCATED_AT</data>
+      <data key="d2">["in search of the castaways__chunk__845"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="hopefulness">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__835"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="course of the Waikato">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__835"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Australian kindness">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__628"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="diggings">
+      <data key="d1">TRAVELED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__583"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="auriferous deposits of Australia">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__583"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="ingress into Melbourne in 1852">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__583"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="exodus from Melbourne to the diggings in 1852">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__583"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="system of land registration in Australia">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__583"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Australia">
+      <data key="d1">TRAVELED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__555"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Lady Helena and Miss Grant accompany them">
+      <data key="d1">PROPOSED</data>
+      <data key="d2">["in search of the castaways__chunk__511"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="mistake in document interpretation">
+      <data key="d1">DISCOVERED</data>
+      <data key="d2">["in search of the castaways__chunk__438"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Australian history">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__453"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="maps">
+      <data key="d1">STUDIED</data>
+      <data key="d2">["in search of the castaways__chunk__123", "in search of the castaways__chunk__1002"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Tom Austin">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__426"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="two sailors">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__426"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="map of South America">
+      <data key="d1">OWNS</data>
+      <data key="d2">["in search of the castaways__chunk__426"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="&quot;Travels of a Geographer on the Argentine Pampas&quot;">
+      <data key="d1">AUTHORED</data>
+      <data key="d2">["in search of the castaways__chunk__444"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Patagonia">
+      <data key="d1">TRAVELED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__125"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="tower">
+      <data key="d1">LIVES_IN</data>
+      <data key="d2">["in search of the castaways__chunk__369"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="eternal distractions">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__372"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="emotional">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__372"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="mistake in search for Captain Grant">
+      <data key="d1">DISCOVERED</data>
+      <data key="d2">["in search of the castaways__chunk__372"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="thirty-seventh parallel">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__370"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Tristan d'Acunha Island">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__370"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Cape of Good Hope">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__370"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="Indian Ocean">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__370"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="St. Paul's Island">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__370"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="province of Victoria">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__370"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="the party">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__819"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="New Zealand kiwi">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__819"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="contributing a kiwi specimen to the Jardin of his city">
+      <data key="d1">HOPED_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__819"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="banks of the Waipa">
+      <data key="d1">NEXT_LOCATED_AT</data>
+      <data key="d2">["in search of the castaways__chunk__819"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="flamingo hunt">
+      <data key="d1">PARTICIPATED_IN</data>
+      <data key="d2">["in search of the castaways__chunk__303"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="ordered Duncan to Cochin-China">
+      <data key="d1">MISTAKENLY_DID</data>
+      <data key="d2">["in search of the castaways__chunk__961"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="letter signed by Glenarvan">
+      <data key="d1">AUTHORED</data>
+      <data key="d2">["in search of the castaways__chunk__960"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="ordered Duncan to New Zealand">
+      <data key="d1">MISTAKENLY_DID</data>
+      <data key="d2">["in search of the castaways__chunk__960"]</data>
+    </edge>
+    <edge source="Jacques Paganel" target="New Zealand">
+      <data key="d1">TRAVELED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__960"]</data>
     </edge>
   </graph>
 </graphml>

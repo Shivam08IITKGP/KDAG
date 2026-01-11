@@ -1,0 +1,4 @@
+2026-01-11 19:24:58 | INFO     | root | setup_logging:81 | Logging initialized. Log file: logs/run_20260111_192458.log
+2026-01-11 19:24:58 | INFO     | __main__ | main:192 | Starting Evidence-Grounded Backstory Consistency System
+2026-01-11 19:25:20 | INFO     | __main__ | main:208 | Using range: rows 0 to 80
+2026-01-11 19:25:20 | ERROR    | __main__ | main:228 | Error reading train.csv: positional indexers are out-of-bounds

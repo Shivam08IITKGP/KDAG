@@ -18,22 +18,29 @@ class NLIScores(TypedDict):
 def _get_model():
     global _NLI_MODEL
     if _NLI_MODEL is None:
-        logger.info(f"Loading NLI model: {MODEL_NAME}")
-        _NLI_MODEL = CrossEncoder(MODEL_NAME)
+        logger.info(f"Loading NLI model: {MODEL_NAME} with max_length=2048")
+        # The cleanest way to set max length for CrossEncoder is via the constructor
+        _NLI_MODEL = CrossEncoder(MODEL_NAME, max_length=2048)
+        
+        # Verification log
+        if hasattr(_NLI_MODEL, 'tokenizer'):
+             actual_max = getattr(_NLI_MODEL.tokenizer, 'model_max_length', 'unknown')
+             logger.info(f"✅ Model loaded. Tokenizer model_max_length: {actual_max}")
+
     return _NLI_MODEL
 
-def check_nli(backstory: str, evidences: list[str]) -> NLIScores:
+def check_nli(backstory: str, graph_summary: str) -> NLIScores:
     """
-    Calculate NLI metrics for backstory against evidences.
+    Calculate NLI metrics for backstory against the graph summary.
     
     Args:
         backstory: The backstory text to verify.
-        evidences: List of evidence text strings.
+        graph_summary: Text summary of the knowledge graph (facts + timeline).
         
     Returns:
-        NLIScores dictionary with max and average scores.
+        NLIScores dictionary with entailment/contradiction probabilities.
     """
-    if not evidences:
+    if not graph_summary or graph_summary == "No graph data available.":
         return {
             "entailment_avg": 0.0,
             "contradiction_max": 0.0,
@@ -42,43 +49,46 @@ def check_nli(backstory: str, evidences: list[str]) -> NLIScores:
         }
 
     model = _get_model()
-    pairs = [(evidence, backstory) for evidence in evidences]
     
-    logger.info(f"Running NLI on {len(pairs)} pairs")
+    # Create a single pair: (Graph Summary, Backstory)
+    # The CrossEncoder typically expects (Premise, Hypothesis)
+    # Premise = Graph Summary (Ground Truth)
+    # Hypothesis = Backstory (Claim)
+    pairs = [(graph_summary, backstory)]
+    
+    logger.info(f"Running NLI on single pair: Graph Summary ({len(graph_summary)} chars) vs Backstory ({len(backstory)} chars)")
     
     scores = model.predict(pairs)
     
     import numpy as np
     
     def softmax(x):
+        # Handle 1D array output for single pair
+        if x.ndim == 1:
+            x = x.reshape(1, -1)
         e_x = np.exp(x - np.max(x, axis=1, keepdims=True))
         return e_x / e_x.sum(axis=1, keepdims=True)
 
     probs = softmax(scores)
     
     # Mapping for Deberta v3 base NLI: 0: contradiction, 1: entailment, 2: neutral
-    contradiction_probs = probs[:, 0]
-    entailment_probs = probs[:, 1]
-    neutral_probs = probs[:, 2]
+    contradiction_prob = float(probs[0][0])
+    entailment_prob = float(probs[0][1])
+    neutral_prob = float(probs[0][2])
 
-    entailment_avg = np.mean(entailment_probs)
-    contradiction_max = np.max(contradiction_probs)
-    contradiction_avg = np.mean(contradiction_probs)
+    logger.info(f"NLI Result: Entailment={entailment_prob:.4f}, Contradiction={contradiction_prob:.4f}")
     
-    details = []
-    for i, evidence in enumerate(evidences):
-        details.append({
-            "evidence_prefix": evidence[:50] + "...",
-            "contradiction": float(probs[i][0]),
-            "entailment": float(probs[i][1]),
-            "neutral": float(probs[i][2])
-        })
-        
-    logger.info(f"NLI Metrics: E_Avg={entailment_avg:.4f}, C_Max={contradiction_max:.4f}, C_Avg={contradiction_avg:.4f}")
+    details = [{
+        "evidence_prefix": "Graph Summary",
+        "contradiction": contradiction_prob,
+        "entailment": entailment_prob,
+        "neutral": neutral_prob
+    }]
     
+    # Since we have only one pair, Max = Avg
     return {
-        "entailment_avg": float(entailment_avg),
-        "contradiction_max": float(contradiction_max),
-        "contradiction_avg": float(contradiction_avg),
+        "entailment_avg": entailment_prob,
+        "contradiction_max": contradiction_prob,
+        "contradiction_avg": contradiction_prob,
         "details": details
     }

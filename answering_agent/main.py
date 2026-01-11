@@ -1,6 +1,9 @@
 """Answering agent main module."""
 import logging
-from answering_agent.classifier import classify, ClassificationOutput
+from pathlib import Path
+import networkx as nx
+
+from answering_agent.classifier import classify, ClassificationOutput, summarize_graph
 from answering_agent.evidence_generator import retrieve_evidence_for_queries, EvidenceOutput
 from extraction_agent.character_summaries import get_character_summary
 from shared_config import create_llm
@@ -35,13 +38,27 @@ def answer(state: dict) -> dict:
     # Initialize LLM with OpenRouter config
     llm = create_llm()
     
+    # Load and summarize graph
+    graph_summary = "No graph available."
+    if graph_path:
+        graph_file = Path(graph_path)
+        if graph_file.exists():
+            try:
+                graph = nx.read_graphml(graph_path)
+                graph_summary = summarize_graph(graph)
+                logger.info(f"Loaded and summarized graph from {graph_path}")
+            except Exception as e:
+                logger.warning(f"Error loading graph: {e}")
+        else:
+            logger.warning(f"Graph file not found: {graph_path}")
+
     # Run classifier
     logger.info("Running classifier")
     classification: ClassificationOutput = classify(
         book_name=book_name,
         character_name=character_name,
         backstory=backstory,
-        graph_path=graph_path,
+        graph_summary=graph_summary,
         character_summary=character_summary,
         llm=llm,
     )
@@ -64,26 +81,13 @@ def answer(state: dict) -> dict:
     evidence_chunks = evidence_output["evidence_chunks"]
     logger.info(f"Retrieved {len(evidence_chunks)} total evidence chunks")
     
-    # Run NLI Checker
-    logger.info("Running NLI Checker")
+    # Run NLI Checker with Graph Summary
+    logger.info("Running NLI Checker with Graph Summary")
     from answering_agent.nli_checker import check_nli
     
-    # Collect all unique evidence texts
-    all_evidence_texts = set()
-    
-    # From extraction phase
-    if state.get("evidences"):
-        for ev in state["evidences"]:
-            if "text" in ev:
-                all_evidence_texts.add(ev["text"])
-                
-    # From answering phase
-    if evidence_chunks:
-        for ev in evidence_chunks:
-            if "text" in ev:
-                all_evidence_texts.add(ev["text"])
-                
-    nli_metrics = check_nli(backstory, list(all_evidence_texts))
+    # We now pass the graph summary as the premise, instead of individual evidence chunks
+    # This aligns with the strategy of using the Graph as the comprehensive Source of Truth
+    nli_metrics = check_nli(backstory, graph_summary)
     
     # Update state
     updated_state = state.copy()

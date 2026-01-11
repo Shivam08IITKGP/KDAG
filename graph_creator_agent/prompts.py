@@ -10,7 +10,7 @@ TRIPLET_EXTRACTION_PROMPT = """You are extracting structured knowledge triplets 
 {evidence_text}
 
 ---MISSION---
-Build a knowledge graph that captures ALL facts about {character_name} that could confirm or contradict the backstory.
+Build a knowledge graph that captures ALL facts and builds a story about {character_name} that could confirm or contradict the backstory.
 Focus on: origins, family, formative experiences, relationships, skills, beliefs, key events, timeline markers.
 
 ---CRITICAL EXTRACTION RULES---

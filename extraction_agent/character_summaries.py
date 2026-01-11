@@ -23,6 +23,12 @@ Ayrton's primary objective in the novel is to seize Lord Glenarvan's yacht, the 
 
 In the final arc of the story, Ayrton negotiates a deal with Lord Glenarvan to avoid being turned over to British authorities. He provides a full confession of his past crimes and offers information that Captain Grant might be found in New Zealand, which ultimately facilitates the captain's rescue. As part of his agreement, Ayrton is not imprisoned but is instead exiled on the deserted Tabor Island (Maria Theresa Island). He is left there to live in solitude as penance for his crimes, occupying the same habitation where Captain Grant and his companions were eventually found.""",
     
+    "in_search_of_the_castaways_tom_ayrton/ben_joyce": """Tom Ayrton, initially presenting himself as the former quartermaster of the *Britannia*, is an intelligent and stern individual who serves as a primary antagonist. He is first encountered in Australia under the employment of a colonist named Mr. O'Moore, where he claims to have been washed overboard just before the *Britannia* was wrecked on the Australian coast. He joins Lord Glenarvan's expedition as a guide, but he is eventually revealed to be Ben Joyce, a notorious leader of escaped convicts from a Perth penitentiary. His history with Captain Harry Grant is characterized by betrayal; he had been forcibly put ashore on the Australian coast by Grant for instigating a mutiny and attempting to turn the *Britannia* into a pirate vessel.
+
+Ayrton's primary objective in the novel is to seize Lord Glenarvan's yacht, the *Duncan*, to use for his own piratical purposes. He leads the travelers into the treacherous marshes of the Snowy River, sabotaging their animals and wounding the sailor Mulready during a confrontation. He successfully obtains a letter intended for the *Duncan's* crew, which he intends to use to take command of the vessel. However, a transcription error by the geographer Jacques Paganel causes the yacht to sail to New Zealand rather than the Australian coast where Ayrton's gang waited. After the travelers are captured by Maori tribes in New Zealand and subsequently escape to the *Duncan*, they find Ayrton has already been taken prisoner by the crew.
+
+In the final arc of the story, Ayrton negotiates a deal with Lord Glenarvan to avoid being turned over to British authorities. He provides a full confession of his past crimes and offers information that Captain Grant might be found in New Zealand, which ultimately facilitates the captain's rescue. As part of his agreement, Ayrton is not imprisoned but is instead exiled on the deserted Tabor Island (Maria Theresa Island). He is left there to live in solitude as penance for his crimes, occupying the same habitation where Captain Grant and his companions were eventually found.""",
+
     "in_search_of_the_castaways_ben_joyce": """Tom Ayrton, initially presenting himself as the former quartermaster of the *Britannia*, is an intelligent and stern individual who serves as a primary antagonist. He is first encountered in Australia under the employment of a colonist named Mr. O'Moore, where he claims to have been washed overboard just before the *Britannia* was wrecked on the Australian coast. He joins Lord Glenarvan's expedition as a guide, but he is eventually revealed to be Ben Joyce, a notorious leader of escaped convicts from a Perth penitentiary. His history with Captain Harry Grant is characterized by betrayal; he had been forcibly put ashore on the Australian coast by Grant for instigating a mutiny and attempting to turn the *Britannia* into a pirate vessel.
 
 Ayrton's primary objective in the novel is to seize Lord Glenarvan's yacht, the *Duncan*, to use for his own piratical purposes. He leads the travelers into the treacherous marshes of the Snowy River, sabotaging their animals and wounding the sailor Mulready during a confrontation. He successfully obtains a letter intended for the *Duncan's* crew, which he intends to use to take command of the vessel. However, a transcription error by the geographer Jacques Paganel causes the yacht to sail to New Zealand rather than the Australian coast where Ayrton's gang waited. After the travelers are captured by Maori tribes in New Zealand and subsequently escape to the *Duncan*, they find Ayrton has already been taken prisoner by the crew.
@@ -68,13 +74,23 @@ def get_character_summary(book_name: str, character_name: str) -> str:
     char_key = character_name.lower().replace(" ", "_").replace("-", "_")
     key = f"{book_key}_{char_key}"
     
+    # Debug print
+    print(f"DEBUG: Looking for character summary with key: {key}")
+    
     summary = CHARACTER_SUMMARIES.get(key, "")
     
-    if not summary:
+    if summary:
+        print(f"DEBUG: Found character summary for {character_name}:\n{summary[:200]}...")
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.info(f"✅ Found character summary for {character_name} (Length: {len(summary)})")
+        logger.info(f"Summary Start: {summary[:100]}...")
+    else:
         # Log available keys for debugging
         import logging
         logger = logging.getLogger(__name__)
         logger.warning(f"No character summary found for key: {key}")
         logger.debug(f"Available keys: {list(CHARACTER_SUMMARIES.keys())}")
+        print(f"WARNING: No character summary found for key: {key}")
     
     return summary

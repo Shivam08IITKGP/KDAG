@@ -17,6 +17,7 @@ from Graphrag.pathway.build_index import build_index
 from Graphrag.pathway.retriever import retrieve_topk
 from input import get_input_data
 from shared_config import ROW_DELAY_SECONDS
+from ML_answering_final.features import extract_features
 import time
 
 # Load environment variables
@@ -191,15 +192,29 @@ def main():
     logger.info("Starting Evidence-Grounded Backstory Consistency System")
 
     # Get row indices to process from user input
+    print("\nHow do you want to select rows?")
+    print("  1. Enter specific row indices (e.g., '0 5 7')")
+    print("  2. Enter start and end range (e.g., 0 to 10)")
+    choice = input("Enter choice (1 or 2): ").strip()
+    
     try:
-        input_str = input("Enter space-separated row indices (0-indexed, e.g., '0 5 7'): ")
-        if not input_str.strip():
-            # Default to 0 if empty
-            row_indices = [0]
-            logger.info("No input provided, defaulting to row 0")
+        if choice == "2":
+            # Range-based input
+            start_row = int(input("Enter start row index (0-indexed): ") or "0")
+            end_row = int(input(f"Enter end row index (0-indexed, inclusive): ") or str(start_row))
+            if start_row > end_row:
+                start_row, end_row = end_row, start_row
+            row_indices = list(range(start_row, end_row + 1))
+            logger.info(f"Using range: rows {start_row} to {end_row}")
         else:
-            row_indices = [int(x) for x in input_str.split()]
-            
+            # List-based input (default)
+            input_str = input("Enter space-separated row indices (0-indexed, e.g., '0 5 7'): ")
+            if not input_str.strip():
+                row_indices = [0]
+                logger.info("No input provided, defaulting to row 0")
+            else:
+                row_indices = [int(x) for x in input_str.split()]
+                
     except ValueError:
         row_indices = [0]
         logger.info("Invalid input, using default: row 0")
@@ -215,10 +230,14 @@ def main():
     
     # Process each row
     results = []
-    output_file = "output.csv"
-    # Initialize output file with headers
-    pd.DataFrame(columns=["book_name", "character_name", "predictions", "reasoning"]).to_csv(output_file, index=False)
-    logger.info(f"Initialized {output_file}")
+    output_file = "features_output.csv"
+    # Initialize output file with headers (includes ML features)
+    header_cols = ["row_index", "book_name", "character_name", "predictions", "reasoning",
+                   "llm_prediction", "contradiction_max", "consistency_avg", "contradiction_avg"]
+    header_cols += [f"emb_{i}" for i in range(384)]
+    pd.DataFrame(columns=header_cols).to_csv(output_file, index=False)
+    logger.info(f"Initialized {output_file} with {len(header_cols)} columns")
+
 
     flag = defaultdict(int)
     for i, (idx, row) in enumerate(df.iterrows()):
@@ -263,12 +282,21 @@ def main():
             # SAVE INCREMENTALLY
             label_str = "CONSISTENT" if final_state.get("label") == 1 else "CONTRADICTING"
             reasoning = final_state.get("reasoning", "")
-            current_row_df = pd.DataFrame([{
+            
+            # Extract ML features
+            ml_features = extract_features(final_state)
+            
+            # Build row with basic info + features
+            row_dict = {
+                "row_index": idx,
                 "book_name": final_state.get("book_name"),
                 "character_name": final_state.get("character_name"),
                 "predictions": label_str,
-                "reasoning": reasoning
-            }])
+                "reasoning": reasoning,
+            }
+            row_dict.update(ml_features)
+            
+            current_row_df = pd.DataFrame([row_dict])
             current_row_df.to_csv(output_file, mode='a', header=False, index=False)
             logger.info(f"Appended result for {row['char']} to {output_file}")
             
