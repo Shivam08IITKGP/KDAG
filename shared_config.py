@@ -7,20 +7,33 @@ load_dotenv()
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-ASSISTANT_MODEL = "nvidia/nemotron-3-nano-30b-a3b:free"
+OPENROUTER_MODEL = "nvidia/nemotron-3-nano-30b-a3b:free"
+
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GEMINI_MODEL = "gemini-2.0-flash"
+
 ROW_DELAY_SECONDS = 7
 
 
 def create_llm():
-    """Create ChatOpenAI instance with OpenRouter configuration.
+    """Create LLM instance. Defaults to Gemini.
     
     Returns:
-        ChatOpenAI instance configured for OpenRouter.
+        LLM instance (ChatGoogleGenerativeAI).
     """
-    from langchain_openai import ChatOpenAI
+    # Primary: Gemini
+    from langchain_google_genai import ChatGoogleGenerativeAI
     
-    return ChatOpenAI(
-        api_key=OPENROUTER_API_KEY,
-        base_url=OPENROUTER_BASE_URL,
-        model=ASSISTANT_MODEL
+    return ChatGoogleGenerativeAI(
+        model=GEMINI_MODEL,
+        google_api_key=GEMINI_API_KEY,
+        temperature=0
     )
+
+    # Optional: OpenRouter (Commented out)
+    # from langchain_openai import ChatOpenAI
+    # return ChatOpenAI(
+    #     api_key=OPENROUTER_API_KEY,
+    #     base_url=OPENROUTER_BASE_URL,
+    #     model=OPENROUTER_MODEL
+    # )

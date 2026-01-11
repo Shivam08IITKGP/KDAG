@@ -145,6 +145,168 @@
     <node id="heaven">
       <data key="d0">entity</data>
     </node>
+    <node id="despairing">
+      <data key="d0">entity</data>
+    </node>
+    <node id="mute">
+      <data key="d0">entity</data>
+    </node>
+    <node id="unresponsive">
+      <data key="d0">entity</data>
+    </node>
+    <node id="invalid">
+      <data key="d0">entity</data>
+    </node>
+    <node id="General de Quesnel's death in a duel">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Bonapartist Club report">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Bonapartist Club meeting on February 5th, 1815">
+      <data key="d0">entity</data>
+    </node>
+    <node id="letter from Island of Elba">
+      <data key="d0">entity</data>
+    </node>
+    <node id="notary">
+      <data key="d0">entity</data>
+    </node>
+    <node id="first will">
+      <data key="d0">entity</data>
+    </node>
+    <node id="second will">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Valentine should never be separated from him">
+      <data key="d0">entity</data>
+    </node>
+    <node id="paralyzed frame">
+      <data key="d0">entity</data>
+    </node>
+    <node id="emotions are hard to discern">
+      <data key="d0">entity</data>
+    </node>
+    <node id="the emperor">
+      <data key="d0">entity</data>
+    </node>
+    <node id="depreciating talk of the emperor">
+      <data key="d0">entity</data>
+    </node>
+    <node id="celebrated throughout Europe">
+      <data key="d0">entity</data>
+    </node>
+    <node id="statesman of high standing">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Bonapartist conspiracies">
+      <data key="d0">entity</data>
+    </node>
+    <node id="restoration of the Bourbons">
+      <data key="d0">entity</data>
+    </node>
+    <node id="voice">
+      <data key="d0">entity</data>
+    </node>
+    <node id="motion">
+      <data key="d0">entity</data>
+    </node>
+    <node id="closing eyes for 'yes'">
+      <data key="d0">entity</data>
+    </node>
+    <node id="winking for 'no'">
+      <data key="d0">entity</data>
+    </node>
+    <node id="tenderness to Valentine">
+      <data key="d0">entity</data>
+    </node>
+    <node id="gratitude to Valentine">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Valentine's statement">
+      <data key="d0">entity</data>
+    </node>
+    <node id="his communication method">
+      <data key="d0">entity</data>
+    </node>
+    <node id="M. de Villefort">
+      <data key="d0">entity</data>
+    </node>
+    <node id="assassin">
+      <data key="d0">entity</data>
+    </node>
+    <node id="poisoning attempt">
+      <data key="d0">entity</data>
+    </node>
+    <node id="brucine">
+      <data key="d0">entity</data>
+    </node>
+    <node id="paralytic">
+      <data key="d0">entity</data>
+    </node>
+    <node id="filial enthusiasm">
+      <data key="d0">entity</data>
+    </node>
+    <node id="dignified">
+      <data key="d0">entity</data>
+    </node>
+    <node id="commanding">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Mademoiselle de Villefort">
+      <data key="d0">entity</data>
+    </node>
+    <node id="father of Franz d’Épinay">
+      <data key="d0">entity</data>
+    </node>
+    <node id="imperial cause">
+      <data key="d0">entity</data>
+    </node>
+    <node id="services to the imperial cause">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Napoleon">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Girondins">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Bonapartist club in the Rue Saint-Jacques">
+      <data key="d0">entity</data>
+    </node>
+    <node id="proscription by the mountaineers">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Paris in a hay-cart">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Robespierre’s bloodhounds">
+      <data key="d0">entity</data>
+    </node>
+    <node id="M. Noirtier">
+      <data key="d0">entity</data>
+    </node>
+    <node id="expression">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Madame de Villefort’s words">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Madame de Villefort’s manner">
+      <data key="d0">entity</data>
+    </node>
+    <node id="motives which she supposed him to entertain">
+      <data key="d0">entity</data>
+    </node>
+    <node id="deepest tenderness">
+      <data key="d0">entity</data>
+    </node>
+    <node id="eye">
+      <data key="d0">entity</data>
+    </node>
+    <node id="dissent">
+      <data key="d0">entity</data>
+    </node>
     <edge source="Noirtier" target="Franz">
       <data key="d1">REACTED_TO_NAME</data>
       <data key="d2">["the count of monte cristo__chunk__1861"]</data>
@@ -175,7 +337,7 @@
     </edge>
     <edge source="Noirtier" target="Valentine">
       <data key="d1">GRANDFATHER_OF</data>
-      <data key="d2">["the count of monte cristo__chunk__1913", "2415", "the count of monte cristo__chunk__2815"]</data>
+      <data key="d2">["the count of monte cristo__chunk__1913", "2415", "the count of monte cristo__chunk__2815", "the count of monte cristo__chunk__2415", "the count of monte cristo__chunk__1880"]</data>
     </edge>
     <edge source="Noirtier" target="Edward">
       <data key="d1">GRANDFATHER_OF</data>
@@ -187,7 +349,7 @@
     </edge>
     <edge source="Noirtier" target="Bonapartist">
       <data key="d1">POLITICAL_AFFILIATION</data>
-      <data key="d2">["the count of monte cristo__chunk__138"]</data>
+      <data key="d2">["the count of monte cristo__chunk__138", "the count of monte cristo__chunk__2291"]</data>
     </edge>
     <edge source="Noirtier" target="Noirtier_de_Villefort">
       <data key="d1">KNOWN_AS</data>
@@ -203,7 +365,7 @@
     </edge>
     <edge source="Noirtier" target="Villefort">
       <data key="d1">LOOKED_AT</data>
-      <data key="d2">["the count of monte cristo__chunk__3153", "the count of monte cristo__chunk__263", "the count of monte cristo__chunk__2406", "the count of monte cristo__chunk__421", "the count of monte cristo__chunk__2307", "the count of monte cristo__chunk__1863"]</data>
+      <data key="d2">["the count of monte cristo__chunk__3153", "the count of monte cristo__chunk__263", "the count of monte cristo__chunk__2406", "the count of monte cristo__chunk__421", "the count of monte cristo__chunk__2307", "the count of monte cristo__chunk__1863", "the count of monte cristo__chunk__151", "the count of monte cristo__chunk__3147", "the count of monte cristo__chunk__1907"]</data>
     </edge>
     <edge source="Noirtier" target="black">
       <data key="d1">DRESSED_IN</data>
@@ -328,6 +490,222 @@
     <edge source="Noirtier" target="heaven">
       <data key="d1">RAISED_EYES_TO</data>
       <data key="d2">["the count of monte cristo__chunk__3153"]</data>
+    </edge>
+    <edge source="Noirtier" target="despairing">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__3026"]</data>
+    </edge>
+    <edge source="Noirtier" target="mute">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__3026"]</data>
+    </edge>
+    <edge source="Noirtier" target="unresponsive">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__1859"]</data>
+    </edge>
+    <edge source="Noirtier" target="invalid">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__1859"]</data>
+    </edge>
+    <edge source="Noirtier" target="General de Quesnel's death in a duel">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__2406"]</data>
+    </edge>
+    <edge source="Noirtier" target="Bonapartist Club report">
+      <data key="d1">DIRECTED_READING_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__2290"]</data>
+    </edge>
+    <edge source="Noirtier" target="Bonapartist Club meeting on February 5th, 1815">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__2290"]</data>
+    </edge>
+    <edge source="Noirtier" target="letter from Island of Elba">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__2291"]</data>
+    </edge>
+    <edge source="Noirtier" target="notary">
+      <data key="d1">SENT_FOR</data>
+      <data key="d2">["the count of monte cristo__chunk__2415"]</data>
+    </edge>
+    <edge source="Noirtier" target="first will">
+      <data key="d1">TOWNS_UP</data>
+      <data key="d2">["the count of monte cristo__chunk__2415"]</data>
+    </edge>
+    <edge source="Noirtier" target="second will">
+      <data key="d1">MADE</data>
+      <data key="d2">["the count of monte cristo__chunk__2415"]</data>
+    </edge>
+    <edge source="Noirtier" target="Valentine should never be separated from him">
+      <data key="d1">HAS_CONDITION_FOR_INHERITANCE</data>
+      <data key="d2">["the count of monte cristo__chunk__2415"]</data>
+    </edge>
+    <edge source="Noirtier" target="paralyzed frame">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__1638"]</data>
+    </edge>
+    <edge source="Noirtier" target="emotions are hard to discern">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__1638"]</data>
+    </edge>
+    <edge source="Noirtier" target="the emperor">
+      <data key="d1">LOVED</data>
+      <data key="d2">["the count of monte cristo__chunk__1638"]</data>
+    </edge>
+    <edge source="Noirtier" target="depreciating talk of the emperor">
+      <data key="d1">WAS_PAINED_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__1638"]</data>
+    </edge>
+    <edge source="Noirtier" target="celebrated throughout Europe">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["the count of monte cristo__chunk__1638"]</data>
+    </edge>
+    <edge source="Noirtier" target="statesman of high standing">
+      <data key="d1">WAS_A</data>
+      <data key="d2">["the count of monte cristo__chunk__1638"]</data>
+    </edge>
+    <edge source="Noirtier" target="Bonapartist conspiracies">
+      <data key="d1">PARTICIPATED_IN</data>
+      <data key="d2">["the count of monte cristo__chunk__1638"]</data>
+    </edge>
+    <edge source="Noirtier" target="restoration of the Bourbons">
+      <data key="d1">OCCURRED_DURING</data>
+      <data key="d2">["the count of monte cristo__chunk__1638"]</data>
+    </edge>
+    <edge source="Noirtier" target="voice">
+      <data key="d1">DEPRIVED_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__1880"]</data>
+    </edge>
+    <edge source="Noirtier" target="motion">
+      <data key="d1">DEPRIVED_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__1880"]</data>
+    </edge>
+    <edge source="Noirtier" target="closing eyes for 'yes'">
+      <data key="d1">COMMUNICATES_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__1880"]</data>
+    </edge>
+    <edge source="Noirtier" target="winking for 'no'">
+      <data key="d1">COMMUNICATES_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__1880"]</data>
+    </edge>
+    <edge source="Noirtier" target="tenderness to Valentine">
+      <data key="d1">SHOWED</data>
+      <data key="d2">["the count of monte cristo__chunk__1880"]</data>
+    </edge>
+    <edge source="Noirtier" target="gratitude to Valentine">
+      <data key="d1">SHOWED</data>
+      <data key="d2">["the count of monte cristo__chunk__1880"]</data>
+    </edge>
+    <edge source="Noirtier" target="Valentine's statement">
+      <data key="d1">APPROVED</data>
+      <data key="d2">["the count of monte cristo__chunk__1880"]</data>
+    </edge>
+    <edge source="Noirtier" target="his communication method">
+      <data key="d1">CONFIRMED</data>
+      <data key="d2">["the count of monte cristo__chunk__1880"]</data>
+    </edge>
+    <edge source="Noirtier" target="M. de Villefort">
+      <data key="d1">FATHER_IS</data>
+      <data key="d2">["the count of monte cristo__chunk__1642"]</data>
+    </edge>
+    <edge source="Noirtier" target="assassin">
+      <data key="d1">MURDERED_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__2484"]</data>
+    </edge>
+    <edge source="Noirtier" target="poisoning attempt">
+      <data key="d1">SURVIVED</data>
+      <data key="d2">["the count of monte cristo__chunk__2484"]</data>
+    </edge>
+    <edge source="Noirtier" target="brucine">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__2484"]</data>
+    </edge>
+    <edge source="Noirtier" target="paralytic">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__2484"]</data>
+    </edge>
+    <edge source="Noirtier" target="filial enthusiasm">
+      <data key="d1">MOTIVATED_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__2300"]</data>
+    </edge>
+    <edge source="Noirtier" target="dignified">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__2300"]</data>
+    </edge>
+    <edge source="Noirtier" target="commanding">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__2300"]</data>
+    </edge>
+    <edge source="Noirtier" target="Mademoiselle de Villefort">
+      <data key="d1">DISINHERITED</data>
+      <data key="d2">["the count of monte cristo__chunk__1912", "the count of monte cristo__chunk__1907"]</data>
+    </edge>
+    <edge source="Noirtier" target="father of Franz d’Épinay">
+      <data key="d1">ENEMY_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__1912"]</data>
+    </edge>
+    <edge source="Noirtier" target="imperial cause">
+      <data key="d1">PARTICIPATED_IN</data>
+      <data key="d2">["the count of monte cristo__chunk__738"]</data>
+    </edge>
+    <edge source="Noirtier" target="services to the imperial cause">
+      <data key="d1">MOTIVATED_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__738"]</data>
+    </edge>
+    <edge source="Noirtier" target="Napoleon">
+      <data key="d1">ALLY_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__282"]</data>
+    </edge>
+    <edge source="Noirtier" target="Girondins">
+      <data key="d1">MEMBER_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__282"]</data>
+    </edge>
+    <edge source="Noirtier" target="Bonapartist club in the Rue Saint-Jacques">
+      <data key="d1">MEMBER_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__264"]</data>
+    </edge>
+    <edge source="Noirtier" target="proscription by the mountaineers">
+      <data key="d1">SURVIVED</data>
+      <data key="d2">["the count of monte cristo__chunk__264"]</data>
+    </edge>
+    <edge source="Noirtier" target="Paris in a hay-cart">
+      <data key="d1">ESCAPED_FROM</data>
+      <data key="d2">["the count of monte cristo__chunk__264"]</data>
+    </edge>
+    <edge source="Noirtier" target="Robespierre’s bloodhounds">
+      <data key="d1">ESCAPED_FROM</data>
+      <data key="d2">["the count of monte cristo__chunk__264"]</data>
+    </edge>
+    <edge source="Noirtier" target="M. Noirtier">
+      <data key="d1">FATHER_IS</data>
+      <data key="d2">["the count of monte cristo__chunk__264"]</data>
+    </edge>
+    <edge source="Noirtier" target="expression">
+      <data key="d1">SHOWED</data>
+      <data key="d2">["the count of monte cristo__chunk__1891"]</data>
+    </edge>
+    <edge source="Noirtier" target="Madame de Villefort’s words">
+      <data key="d1">NOT_DECEIVED_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__1891"]</data>
+    </edge>
+    <edge source="Noirtier" target="Madame de Villefort’s manner">
+      <data key="d1">NOT_DECEIVED_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__1891"]</data>
+    </edge>
+    <edge source="Noirtier" target="motives which she supposed him to entertain">
+      <data key="d1">MOTIVATED_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__1891"]</data>
+    </edge>
+    <edge source="Noirtier" target="deepest tenderness">
+      <data key="d1">SHOWED</data>
+      <data key="d2">["the count of monte cristo__chunk__1891"]</data>
+    </edge>
+    <edge source="Noirtier" target="eye">
+      <data key="d1">WINKED</data>
+      <data key="d2">["the count of monte cristo__chunk__1891"]</data>
+    </edge>
+    <edge source="Noirtier" target="dissent">
+      <data key="d1">SHOWED</data>
+      <data key="d2">["the count of monte cristo__chunk__1891"]</data>
     </edge>
   </graph>
 </graphml>

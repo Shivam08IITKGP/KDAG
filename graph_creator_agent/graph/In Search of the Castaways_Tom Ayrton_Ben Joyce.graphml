@@ -127,6 +127,153 @@
     <node id="Irishman_farm">
       <data key="d0">entity</data>
     </node>
+    <node id="Glasgow on March 12, 1861">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Captain Grant">
+      <data key="d0">entity</data>
+    </node>
+    <node id="mutiny on Britannia">
+      <data key="d0">entity</data>
+    </node>
+    <node id="gain possession of Britannia">
+      <data key="d0">entity</data>
+    </node>
+    <node id="west coast of Australia on April 8, 1862">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Ben Joyce">
+      <data key="d0">entity</data>
+    </node>
+    <node id="scene of conflict">
+      <data key="d0">entity</data>
+    </node>
+    <node id="cessation of reports">
+      <data key="d0">entity</data>
+    </node>
+    <node id="long-contrived treachery">
+      <data key="d0">entity</data>
+    </node>
+    <node id="cabin in the forecastle">
+      <data key="d0">entity</data>
+    </node>
+    <node id="force change of Duncan's course">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Tom Austin">
+      <data key="d0">entity</data>
+    </node>
+    <node id="crew to mutiny on Duncan">
+      <data key="d0">entity</data>
+    </node>
+    <node id="dangerous">
+      <data key="d0">entity</data>
+    </node>
+    <node id="treason">
+      <data key="d0">entity</data>
+    </node>
+    <node id="confident bearing">
+      <data key="d0">entity</data>
+    </node>
+    <node id="sullen eyes">
+      <data key="d0">entity</data>
+    </node>
+    <node id="calm under questioning">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Ben Joyce's accomplices">
+      <data key="d0">entity</data>
+    </node>
+    <node id="appropriate the Duncan">
+      <data key="d0">entity</data>
+    </node>
+    <node id="party about shipwreck location">
+      <data key="d0">entity</data>
+    </node>
+    <node id="band of convicts">
+      <data key="d0">entity</data>
+    </node>
+    <node id="party across Victoria">
+      <data key="d0">entity</data>
+    </node>
+    <node id="mastery of the ocean">
+      <data key="d0">entity</data>
+    </node>
+    <node id="story of his experiences">
+      <data key="d0">entity</data>
+    </node>
+    <node id="sympathy for his story">
+      <data key="d0">entity</data>
+    </node>
+    <node id="information about Captain Grant">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Captain Grant's situation">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Britannia's track">
+      <data key="d0">entity</data>
+    </node>
+    <node id="to be left on an island">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Duncan's destination">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Duncan">
+      <data key="d0">entity</data>
+    </node>
+    <node id="being washed overboard">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Australia">
+      <data key="d0">entity</data>
+    </node>
+    <node id="existence of document">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Captain Grant was lost">
+      <data key="d0">entity</data>
+    </node>
+    <node id="about forty-five">
+      <data key="d0">entity</data>
+    </node>
+    <node id="broad-shouldered">
+      <data key="d0">entity</data>
+    </node>
+    <node id="a native tribe">
+      <data key="d0">entity</data>
+    </node>
+    <node id="shipwreck">
+      <data key="d0">entity</data>
+    </node>
+    <node id="interior regions watered by the Darling">
+      <data key="d0">entity</data>
+    </node>
+    <node id="painful slavery">
+      <data key="d0">entity</data>
+    </node>
+    <node id="depths of extensive forests">
+      <data key="d0">entity</data>
+    </node>
+    <node id="marshes, rivers, mountains">
+      <data key="d0">entity</data>
+    </node>
+    <node id="invented shipwreck">
+      <data key="d0">entity</data>
+    </node>
+    <node id="cunning">
+      <data key="d0">entity</data>
+    </node>
+    <node id="devilish">
+      <data key="d0">entity</data>
+    </node>
+    <node id="quartermaster of the Britannia">
+      <data key="d0">entity</data>
+    </node>
+    <node id="letter to Tom Austin">
+      <data key="d0">entity</data>
+    </node>
     <edge source="Tom Ayrton/Ben Joyce" target="ESCAPE_OF_CONVICTS_FROM_PERTH">
       <data key="d1">INFORMED_LADY_HELENA_OF_CONVICT_ESCAPE_FROM_PERTH</data>
       <data key="d2">["chunk_677"]</data>
@@ -153,11 +300,11 @@
     </edge>
     <edge source="Tom Ayrton/Ben Joyce" target="Ayrton">
       <data key="d1">REAL_NAME_IS</data>
-      <data key="d2">["chunk_672", "chunk_967", "in search of the castaways__chunk__672", "in search of the castaways__chunk__680"]</data>
+      <data key="d2">["chunk_672", "chunk_967", "in search of the castaways__chunk__672", "in search of the castaways__chunk__680", "in search of the castaways__chunk__958"]</data>
     </edge>
     <edge source="Tom Ayrton/Ben Joyce" target="Britannia">
       <data key="d1">WAS_QUARTERMASTER_OF</data>
-      <data key="d2">["chunk_969", "chunk_680", "in search of the castaways__chunk__506", "in search of the castaways__chunk__969"]</data>
+      <data key="d2">["chunk_969", "chunk_680", "in search of the castaways__chunk__506", "in search of the castaways__chunk__969", "in search of the castaways__chunk__987"]</data>
     </edge>
     <edge source="Tom Ayrton/Ben Joyce" target="Harry_Grant">
       <data key="d1">KNOWS</data>
@@ -201,7 +348,7 @@
     </edge>
     <edge source="Tom Ayrton/Ben Joyce" target="quartermaster">
       <data key="d1">WORKS_AS</data>
-      <data key="d2">["in search of the castaways__chunk__507"]</data>
+      <data key="d2">["in search of the castaways__chunk__507", "in search of the castaways__chunk__990", "in search of the castaways__chunk__503"]</data>
     </edge>
     <edge source="Tom Ayrton/Ben Joyce" target="owners_of_the_Britannia_and_Captain_Grant">
       <data key="d1">EMPLOYED_BY</data>
@@ -286,6 +433,202 @@
     <edge source="Tom Ayrton/Ben Joyce" target="Irishman_farm">
       <data key="d1">APPEARED_AT</data>
       <data key="d2">["in search of the castaways__chunk__989"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="Glasgow on March 12, 1861">
+      <data key="d1">DEPARTED_FROM</data>
+      <data key="d2">["in search of the castaways__chunk__987"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="Captain Grant">
+      <data key="d1">HAS_DISPUTES_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__987", "in search of the castaways__chunk__990", "in search of the castaways__chunk__494"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="mutiny on Britannia">
+      <data key="d1">PARTICIPATED_IN</data>
+      <data key="d2">["in search of the castaways__chunk__987"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="gain possession of Britannia">
+      <data key="d1">ATTEMPTED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__987"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="west coast of Australia on April 8, 1862">
+      <data key="d1">MAROONED_AT</data>
+      <data key="d2">["in search of the castaways__chunk__987"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="Ben Joyce">
+      <data key="d1">KNOWN_AS</data>
+      <data key="d2">["in search of the castaways__chunk__673", "in search of the castaways__chunk__958"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="scene of conflict">
+      <data key="d1">ARRIVED_AT</data>
+      <data key="d2">["in search of the castaways__chunk__673"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="cessation of reports">
+      <data key="d1">CAUSED</data>
+      <data key="d2">["in search of the castaways__chunk__673"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="long-contrived treachery">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__965"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="cabin in the forecastle">
+      <data key="d1">IMPRISONED_IN</data>
+      <data key="d2">["in search of the castaways__chunk__965"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="force change of Duncan's course">
+      <data key="d1">ATTEMPTED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__965"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="Tom Austin">
+      <data key="d1">THREATENED</data>
+      <data key="d2">["in search of the castaways__chunk__965"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="crew to mutiny on Duncan">
+      <data key="d1">URGED</data>
+      <data key="d2">["in search of the castaways__chunk__965"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="dangerous">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__965"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="treason">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__967"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="confident bearing">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__967"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="sullen eyes">
+      <data key="d1">PHYSICAL_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__967"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="calm under questioning">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__967"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="Ben Joyce's accomplices">
+      <data key="d1">HAS_ACCOMPLICES</data>
+      <data key="d2">["in search of the castaways__chunk__967"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="appropriate the Duncan">
+      <data key="d1">INTENDED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__990"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="party about shipwreck location">
+      <data key="d1">MISLED</data>
+      <data key="d2">["in search of the castaways__chunk__990"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="band of convicts">
+      <data key="d1">LEADER_OF</data>
+      <data key="d2">["in search of the castaways__chunk__990"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="party across Victoria">
+      <data key="d1">CONDUCTED</data>
+      <data key="d2">["in search of the castaways__chunk__990"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="mastery of the ocean">
+      <data key="d1">HOPED_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__990"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="story of his experiences">
+      <data key="d1">TOLD_STORY</data>
+      <data key="d2">["in search of the castaways__chunk__503"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="sympathy for his story">
+      <data key="d1">RECEIVED</data>
+      <data key="d2">["in search of the castaways__chunk__503"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="information about Captain Grant">
+      <data key="d1">DISCLOSED</data>
+      <data key="d2">["in search of the castaways__chunk__1001"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="Captain Grant's situation">
+      <data key="d1">LACKED_KNOWLEDGE_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__1001"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="Britannia's track">
+      <data key="d1">LACKED_KNOWLEDGE_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__1001"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="to be left on an island">
+      <data key="d1">FATE_WAS</data>
+      <data key="d2">["in search of the castaways__chunk__1001"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="Duncan's destination">
+      <data key="d1">LEARNED</data>
+      <data key="d2">["in search of the castaways__chunk__964"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="Duncan">
+      <data key="d1">WAS_ON_BOARD</data>
+      <data key="d2">["in search of the castaways__chunk__964"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="being washed overboard">
+      <data key="d1">SURVIVED</data>
+      <data key="d2">["in search of the castaways__chunk__494"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="Australia">
+      <data key="d1">CAST_ASHORE_AT</data>
+      <data key="d2">["in search of the castaways__chunk__494"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="existence of document">
+      <data key="d1">LACKED_KNOWLEDGE_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__494"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="Captain Grant was lost">
+      <data key="d1">BELIEVED</data>
+      <data key="d2">["in search of the castaways__chunk__494"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="about forty-five">
+      <data key="d1">AGED</data>
+      <data key="d2">["in search of the castaways__chunk__494"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="broad-shouldered">
+      <data key="d1">PHYSICAL_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__494"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="a native tribe">
+      <data key="d1">WAS_PRISONER_OF</data>
+      <data key="d2">["in search of the castaways__chunk__504"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="shipwreck">
+      <data key="d1">SURVIVED</data>
+      <data key="d2">["in search of the castaways__chunk__504"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="interior regions watered by the Darling">
+      <data key="d1">LIVED_IN</data>
+      <data key="d2">["in search of the castaways__chunk__504"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="painful slavery">
+      <data key="d1">ENDURED</data>
+      <data key="d2">["in search of the castaways__chunk__504"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="depths of extensive forests">
+      <data key="d1">HID_IN</data>
+      <data key="d2">["in search of the castaways__chunk__504"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="marshes, rivers, mountains">
+      <data key="d1">TRAVELED_TO</data>
+      <data key="d2">["in search of the castaways__chunk__504"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="invented shipwreck">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__679"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="cunning">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__679"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="devilish">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__679"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="quartermaster of the Britannia">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__958"]</data>
+    </edge>
+    <edge source="Tom Ayrton/Ben Joyce" target="letter to Tom Austin">
+      <data key="d1">SENT</data>
+      <data key="d2">["in search of the castaways__chunk__958"]</data>
     </edge>
   </graph>
 </graphml>

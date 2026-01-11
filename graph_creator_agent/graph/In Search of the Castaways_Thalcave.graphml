@@ -73,13 +73,67 @@
     <node id="road to Carmen">
       <data key="d0">entity</data>
     </node>
+    <node id="anxious">
+      <data key="d0">entity</data>
+    </node>
+    <node id="expedition">
+      <data key="d0">entity</data>
+    </node>
+    <node id="British Geographical Society">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Paganel">
+      <data key="d0">entity</data>
+    </node>
+    <node id="astonished">
+      <data key="d0">entity</data>
+    </node>
+    <node id="travelers">
+      <data key="d0">entity</data>
+    </node>
+    <node id="confident">
+      <data key="d0">entity</data>
+    </node>
+    <node id="serious">
+      <data key="d0">entity</data>
+    </node>
+    <node id="ammunition">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Robert">
+      <data key="d0">entity</data>
+    </node>
+    <node id="maté">
+      <data key="d0">entity</data>
+    </node>
+    <node id="humbled">
+      <data key="d0">entity</data>
+    </node>
+    <node id="long legs">
+      <data key="d0">entity</data>
+    </node>
+    <node id="banks of the river">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;You are searching for a prisoner?&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;Who knows?&quot;">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Tom Austin">
+      <data key="d0">entity</data>
+    </node>
+    <node id="sailors">
+      <data key="d0">entity</data>
+    </node>
     <edge source="Thalcave" target="enemy">
       <data key="d1">KILLED</data>
       <data key="d2">["chunk__289"]</data>
     </edge>
     <edge source="Thalcave" target="carbine">
       <data key="d1">HAD_EXHAUSTED_AMMUNITION</data>
-      <data key="d2">["chunk__289"]</data>
+      <data key="d2">["chunk__289", "in search of the castaways__chunk__289"]</data>
     </edge>
     <edge source="Thalcave" target="ramada">
       <data key="d1">FOUND</data>
@@ -119,7 +173,7 @@
     </edge>
     <edge source="Thalcave" target="Glenarvan">
       <data key="d1">TRAVELED_WITH</data>
-      <data key="d2">["in search of the castaways__chunk__223"]</data>
+      <data key="d2">["in search of the castaways__chunk__223", "in search of the castaways__chunk__335", "in search of the castaways__chunk__415", "in search of the castaways__chunk__238", "in search of the castaways__chunk__282", "in search of the castaways__chunk__294", "in search of the castaways__chunk__249", "in search of the castaways__chunk__325", "in search of the castaways__chunk__266", "in search of the castaways__chunk__227", "in search of the castaways__chunk__270", "in search of the castaways__chunk__289", "in search of the castaways__chunk__350", "in search of the castaways__chunk__240", "in search of the castaways__chunk__304", "in search of the castaways__chunk__426"]</data>
     </edge>
     <edge source="Thalcave" target="Spanish">
       <data key="d1">SPEAKS_LANGUAGE</data>
@@ -131,7 +185,7 @@
     </edge>
     <edge source="Thalcave" target="Thaouka">
       <data key="d1">POSSESSES</data>
-      <data key="d2">["in search of the castaways__chunk__228"]</data>
+      <data key="d2">["in search of the castaways__chunk__228", "in search of the castaways__chunk__294", "in search of the castaways__chunk__266"]</data>
     </edge>
     <edge source="Thalcave" target="bolas">
       <data key="d1">EXPERT_IN</data>
@@ -160,6 +214,78 @@
     <edge source="Thalcave" target="road to Carmen">
       <data key="d1">KNOWN_FOR</data>
       <data key="d2">["in search of the castaways__chunk__237"]</data>
+    </edge>
+    <edge source="Thalcave" target="anxious">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__335"]</data>
+    </edge>
+    <edge source="Thalcave" target="expedition">
+      <data key="d1">WORKS_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__335"]</data>
+    </edge>
+    <edge source="Thalcave" target="British Geographical Society">
+      <data key="d1">EMPLOYED_BY</data>
+      <data key="d2">["in search of the castaways__chunk__335"]</data>
+    </edge>
+    <edge source="Thalcave" target="Paganel">
+      <data key="d1">WORKS_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__335", "in search of the castaways__chunk__415", "in search of the castaways__chunk__238", "in search of the castaways__chunk__249", "in search of the castaways__chunk__325", "in search of the castaways__chunk__350", "in search of the castaways__chunk__240", "in search of the castaways__chunk__304", "in search of the castaways__chunk__426"]</data>
+    </edge>
+    <edge source="Thalcave" target="astonished">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__335"]</data>
+    </edge>
+    <edge source="Thalcave" target="travelers">
+      <data key="d1">EMPLOYED_BY</data>
+      <data key="d2">["in search of the castaways__chunk__415"]</data>
+    </edge>
+    <edge source="Thalcave" target="confident">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__415"]</data>
+    </edge>
+    <edge source="Thalcave" target="serious">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__238"]</data>
+    </edge>
+    <edge source="Thalcave" target="ammunition">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["in search of the castaways__chunk__282"]</data>
+    </edge>
+    <edge source="Thalcave" target="Robert">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__282", "in search of the castaways__chunk__294", "in search of the castaways__chunk__325", "in search of the castaways__chunk__270", "in search of the castaways__chunk__289", "in search of the castaways__chunk__350", "in search of the castaways__chunk__426"]</data>
+    </edge>
+    <edge source="Thalcave" target="maté">
+      <data key="d1">PREPARED</data>
+      <data key="d2">["in search of the castaways__chunk__249"]</data>
+    </edge>
+    <edge source="Thalcave" target="humbled">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__325"]</data>
+    </edge>
+    <edge source="Thalcave" target="long legs">
+      <data key="d1">PHYSICAL_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__227"]</data>
+    </edge>
+    <edge source="Thalcave" target="banks of the river">
+      <data key="d1">LOCATED_AT</data>
+      <data key="d2">["in search of the castaways__chunk__270"]</data>
+    </edge>
+    <edge source="Thalcave" target="&quot;You are searching for a prisoner?&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__240"]</data>
+    </edge>
+    <edge source="Thalcave" target="&quot;Who knows?&quot;">
+      <data key="d1">SAID</data>
+      <data key="d2">["in search of the castaways__chunk__428"]</data>
+    </edge>
+    <edge source="Thalcave" target="Tom Austin">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__426"]</data>
+    </edge>
+    <edge source="Thalcave" target="sailors">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__426"]</data>
     </edge>
   </graph>
 </graphml>

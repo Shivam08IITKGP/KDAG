@@ -1,0 +1,151 @@
+2026-01-11 15:24:41 | INFO     | root | setup_logging:80 | Logging initialized. Log file: logs/run_20260111_152441.log
+2026-01-11 15:24:41 | INFO     | __main__ | main:191 | Starting Evidence-Grounded Backstory Consistency System
+2026-01-11 15:25:24 | INFO     | __main__ | main:205 | Invalid input, using default: row 0
+2026-01-11 15:25:24 | INFO     | __main__ | main:210 | Loaded 1 rows from train.csv: [0]
+2026-01-11 15:25:24 | INFO     | __main__ | main:211 | Processing 1 backstories
+2026-01-11 15:25:24 | INFO     | __main__ | main:221 | Initialized output.csv
+2026-01-11 15:25:24 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 15:25:24 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x119d01970>
+2026-01-11 15:25:24 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'GET']>
+2026-01-11 15:25:24 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 15:25:24 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'GET']>
+2026-01-11 15:25:24 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 15:25:24 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'GET']>
+2026-01-11 15:25:24 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-type', b'application/json'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-encoding', b'zstd'), (b'date', b'Sun, 11 Jan 2026 09:55:23 GMT')])
+2026-01-11 15:25:24 | INFO     | httpx | _send_single_request:1025 | HTTP Request: GET http://localhost:6333 "HTTP/1.1 200 OK"
+2026-01-11 15:25:24 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'GET']>
+2026-01-11 15:25:24 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 15:25:24 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 15:25:24 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 15:25:24 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 15:25:24 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 15:25:24 | INFO     | sentence_transformers.SentenceTransformer | __init__:219 | Use pytorch device_name: mps
+2026-01-11 15:25:24 | INFO     | sentence_transformers.SentenceTransformer | __init__:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-11 15:25:24 | DEBUG    | urllib3.connectionpool | _new_conn:1049 | Starting new HTTPS connection (1): huggingface.co:443
+2026-01-11 15:25:24 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-11 15:25:24 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2026-01-11 15:25:24 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-11 15:25:25 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-11 15:25:25 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-11 15:25:25 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-11 15:25:25 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 307 0
+2026-01-11 15:25:25 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md HTTP/1.1" 200 0
+2026-01-11 15:25:25 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-11 15:25:26 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2026-01-11 15:25:26 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 307 0
+2026-01-11 15:25:26 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json HTTP/1.1" 200 0
+2026-01-11 15:25:26 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2026-01-11 15:25:26 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 307 0
+2026-01-11 15:25:27 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json HTTP/1.1" 200 0
+2026-01-11 15:25:27 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2026-01-11 15:25:27 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json HTTP/1.1" 200 0
+2026-01-11 15:25:27 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2026-01-11 15:25:28 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=True&expand=False HTTP/1.1" 200 6465
+2026-01-11 15:25:28 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
+2026-01-11 15:25:28 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
+2026-01-11 15:25:28 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6908
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x119ef4bf0>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'GET']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'GET']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'GET']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-type', b'application/json'), (b'content-encoding', b'zstd'), (b'date', b'Sun, 11 Jan 2026 09:55:33 GMT')])
+2026-01-11 15:25:34 | INFO     | httpx | _send_single_request:1025 | HTTP Request: GET http://localhost:6333 "HTTP/1.1 200 OK"
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'GET']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x119d3e180>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'GET']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'GET']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'GET']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-type', b'application/json'), (b'content-encoding', b'zstd'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'date', b'Sun, 11 Jan 2026 09:55:33 GMT')])
+2026-01-11 15:25:34 | INFO     | httpx | _send_single_request:1025 | HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'GET']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x119d3e6c0>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'PUT']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'PUT']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'PUT']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-type', b'application/json'), (b'content-encoding', b'zstd'), (b'date', b'Sun, 11 Jan 2026 09:55:33 GMT')])
+2026-01-11 15:25:34 | INFO     | httpx | _send_single_request:1025 | HTTP Request: PUT http://localhost:6333/collections/in%20search%20of%20the%20castaways_collection/points?wait=true "HTTP/1.1 200 OK"
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'PUT']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x119d3e420>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'PUT']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'PUT']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'PUT']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'content-type', b'application/json'), (b'content-encoding', b'zstd'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'date', b'Sun, 11 Jan 2026 09:55:34 GMT')])
+2026-01-11 15:25:34 | INFO     | httpx | _send_single_request:1025 | HTTP Request: PUT http://localhost:6333/collections/in%20search%20of%20the%20castaways_collection/points?wait=true "HTTP/1.1 200 OK"
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'PUT']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x119ef4f50>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'PUT']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'PUT']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'PUT']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-encoding', b'zstd'), (b'content-type', b'application/json'), (b'date', b'Sun, 11 Jan 2026 09:55:34 GMT')])
+2026-01-11 15:25:34 | INFO     | httpx | _send_single_request:1025 | HTTP Request: PUT http://localhost:6333/collections/in%20search%20of%20the%20castaways_collection/points?wait=true "HTTP/1.1 200 OK"
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'PUT']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x119ef59a0>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.started request=<Request [b'GET']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_headers.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.started request=<Request [b'GET']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | send_request_body.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.started request=<Request [b'GET']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'transfer-encoding', b'chunked'), (b'vary', b'accept-encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'), (b'content-encoding', b'zstd'), (b'content-type', b'application/json'), (b'date', b'Sun, 11 Jan 2026 09:55:34 GMT')])
+2026-01-11 15:25:34 | INFO     | httpx | _send_single_request:1025 | HTTP Request: GET http://localhost:6333 "HTTP/1.1 200 OK"
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.started request=<Request [b'GET']>
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | receive_response_body.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | response_closed.started
+2026-01-11 15:25:34 | DEBUG    | httpcore.http11 | trace:47 | response_closed.complete
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | close.started
+2026-01-11 15:25:34 | DEBUG    | httpcore.connection | trace:47 | close.complete
+2026-01-11 15:25:34 | INFO     | sentence_transformers.SentenceTransformer | __init__:219 | Use pytorch device_name: mps
+2026-01-11 15:25:34 | INFO     | sentence_transformers.SentenceTransformer | __init__:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-11 15:25:34 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-11 15:25:34 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2026-01-11 15:25:35 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-11 15:25:35 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-11 15:25:35 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-11 15:25:35 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-11 15:25:35 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 307 0
+2026-01-11 15:25:35 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md HTTP/1.1" 200 0
+2026-01-11 15:25:36 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-11 15:25:36 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2026-01-11 15:25:36 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 307 0
+2026-01-11 15:25:36 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json HTTP/1.1" 200 0
+2026-01-11 15:25:36 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/1.1" 404 0

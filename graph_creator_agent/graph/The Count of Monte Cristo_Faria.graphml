@@ -112,6 +112,66 @@
     <node id="vengeful">
       <data key="d0">entity</data>
     </node>
+    <node id="prison cell">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Rome">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Cardinal Spada">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Piombino">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Château d'If">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Italian politics">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Machiavelli's political ideas">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Cæsar Borgia">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Alexander VI">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Clement VII">
+      <data key="d0">entity</data>
+    </node>
+    <node id="unifying Italy">
+      <data key="d0">entity</data>
+    </node>
+    <node id="work on the monarchy of Italy">
+      <data key="d0">entity</data>
+    </node>
+    <node id="treasure location">
+      <data key="d0">entity</data>
+    </node>
+    <node id="rational">
+      <data key="d0">entity</data>
+    </node>
+    <node id="intractable about treasure">
+      <data key="d0">entity</data>
+    </node>
+    <node id="paralysis in right arm and left leg">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Edmond Dantès">
+      <data key="d0">entity</data>
+    </node>
+    <node id="patient and sublime duty of a prisoner">
+      <data key="d0">entity</data>
+    </node>
+    <node id="manuscript on the kingdoms of Italy">
+      <data key="d0">entity</data>
+    </node>
+    <node id="learned">
+      <data key="d0">entity</data>
+    </node>
     <edge source="Faria" target="clearness_of_understanding">
       <data key="d1">HAS_REGAINED_CLEARNESS_OF_UNDERSTANDING</data>
       <data key="d2">["the count of monte cristo__chunk__495"]</data>
@@ -251,6 +311,86 @@
     <edge source="Faria" target="vengeful">
       <data key="d1">HAS_TRAIT</data>
       <data key="d2">["chunk_2702"]</data>
+    </edge>
+    <edge source="Faria" target="prison cell">
+      <data key="d1">LIVES_IN</data>
+      <data key="d2">["the count of monte cristo__chunk__318"]</data>
+    </edge>
+    <edge source="Faria" target="Rome">
+      <data key="d1">BORN_IN</data>
+      <data key="d2">["the count of monte cristo__chunk__311"]</data>
+    </edge>
+    <edge source="Faria" target="Cardinal Spada">
+      <data key="d1">SECRETARY_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__311"]</data>
+    </edge>
+    <edge source="Faria" target="Piombino">
+      <data key="d1">IMPRISONED_IN</data>
+      <data key="d2">["the count of monte cristo__chunk__311"]</data>
+    </edge>
+    <edge source="Faria" target="Château d'If">
+      <data key="d1">IMPRISONED_IN</data>
+      <data key="d2">["the count of monte cristo__chunk__318"]</data>
+    </edge>
+    <edge source="Faria" target="Italian politics">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["the count of monte cristo__chunk__374"]</data>
+    </edge>
+    <edge source="Faria" target="Machiavelli's political ideas">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__374"]</data>
+    </edge>
+    <edge source="Faria" target="Cæsar Borgia">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__374"]</data>
+    </edge>
+    <edge source="Faria" target="Alexander VI">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__374"]</data>
+    </edge>
+    <edge source="Faria" target="Clement VII">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__374"]</data>
+    </edge>
+    <edge source="Faria" target="unifying Italy">
+      <data key="d1">MOTIVATED_BY</data>
+      <data key="d2">["the count of monte cristo__chunk__374"]</data>
+    </edge>
+    <edge source="Faria" target="work on the monarchy of Italy">
+      <data key="d1">AUTHORED</data>
+      <data key="d2">["the count of monte cristo__chunk__398"]</data>
+    </edge>
+    <edge source="Faria" target="treasure location">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["the count of monte cristo__chunk__454"]</data>
+    </edge>
+    <edge source="Faria" target="rational">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__512"]</data>
+    </edge>
+    <edge source="Faria" target="intractable about treasure">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__512"]</data>
+    </edge>
+    <edge source="Faria" target="paralysis in right arm and left leg">
+      <data key="d1">NEXT_ACTION_IS</data>
+      <data key="d2">["the count of monte cristo__chunk__493"]</data>
+    </edge>
+    <edge source="Faria" target="Edmond Dantès">
+      <data key="d1">MENTOR_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__495"]</data>
+    </edge>
+    <edge source="Faria" target="patient and sublime duty of a prisoner">
+      <data key="d1">TRAINED_IN</data>
+      <data key="d2">["the count of monte cristo__chunk__495"]</data>
+    </edge>
+    <edge source="Faria" target="manuscript on the kingdoms of Italy">
+      <data key="d1">AUTHORED</data>
+      <data key="d2">["the count of monte cristo__chunk__3282"]</data>
+    </edge>
+    <edge source="Faria" target="learned">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__512"]</data>
     </edge>
   </graph>
 </graphml>

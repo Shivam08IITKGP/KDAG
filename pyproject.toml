@@ -30,6 +30,7 @@ dependencies = [
     "numpy",
     "tiktoken",
     "httpx",
+    "langchain-google-genai",
 ]
 
 [project.optional-dependencies]
