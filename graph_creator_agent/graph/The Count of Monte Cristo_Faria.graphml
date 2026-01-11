@@ -274,6 +274,15 @@
     <node id="catalepsy">
       <data key="d0">entity</data>
     </node>
+    <node id="secretive">
+      <data key="d0">entity</data>
+    </node>
+    <node id="treasure on Monte Cristo">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Abbé Faria">
+      <data key="d0">entity</data>
+    </node>
     <edge source="Faria" target="Château d'If">
       <data key="d1">IMPRISONED_IN</data>
       <data key="d2">["the count of monte cristo__chunk__372", "the count of monte cristo__chunk__375", "the count of monte cristo__chunk__390", "the count of monte cristo__chunk__515", "the count of monte cristo__chunk__313", "the count of monte cristo__chunk__3268"]</data>
@@ -312,11 +321,11 @@
     </edge>
     <edge source="Faria" target="Dantès">
       <data key="d1">MENTOR_OF</data>
-      <data key="d2">["the count of monte cristo__chunk__531", "the count of monte cristo__chunk__488", "the count of monte cristo__chunk__491", "the count of monte cristo__chunk__431", "the count of monte cristo__chunk__641", "the count of monte cristo__chunk__451", "the count of monte cristo__chunk__452", "the count of monte cristo__chunk__425", "the count of monte cristo__chunk__507"]</data>
+      <data key="d2">["the count of monte cristo__chunk__531", "the count of monte cristo__chunk__488", "the count of monte cristo__chunk__491", "the count of monte cristo__chunk__431", "the count of monte cristo__chunk__641", "the count of monte cristo__chunk__451", "the count of monte cristo__chunk__452", "the count of monte cristo__chunk__425", "the count of monte cristo__chunk__507", "the count of monte cristo__chunk__486"]</data>
     </edge>
     <edge source="Faria" target="languages">
       <data key="d1">EXPERT_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__398", "the count of monte cristo__chunk__437", "the count of monte cristo__chunk__491"]</data>
+      <data key="d2">["the count of monte cristo__chunk__398", "the count of monte cristo__chunk__437", "the count of monte cristo__chunk__491", "the count of monte cristo__chunk__554"]</data>
     </edge>
     <edge source="Faria" target="chemistry">
       <data key="d1">EXPERT_IN</data>
@@ -629,6 +638,18 @@
     <edge source="Faria" target="catalepsy">
       <data key="d1">KNOWS_ABOUT</data>
       <data key="d2">["the count of monte cristo__chunk__443"]</data>
+    </edge>
+    <edge source="Faria" target="secretive">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["the count of monte cristo__chunk__486"]</data>
+    </edge>
+    <edge source="Faria" target="treasure on Monte Cristo">
+      <data key="d1">KNOWS_ABOUT</data>
+      <data key="d2">["the count of monte cristo__chunk__486"]</data>
+    </edge>
+    <edge source="Faria" target="Abbé Faria">
+      <data key="d1">STUDENT_OF</data>
+      <data key="d2">["the count of monte cristo__chunk__554"]</data>
     </edge>
   </graph>
 </graphml>

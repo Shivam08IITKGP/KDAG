@@ -107,6 +107,12 @@ def classify(
             label = 0
         
         reasoning = result.get("reasoning", "No reasoning provided")
+        
+        # Strictly enforce 1-2 lines by taking the first two sentences or lines
+        reasoning_parts = reasoning.split('\n')
+        if len(reasoning_parts) > 2:
+            reasoning = " ".join(reasoning_parts[:2]).strip()
+        
         evidence_queries = result.get("evidence_queries", [])
         
         # Validate queries

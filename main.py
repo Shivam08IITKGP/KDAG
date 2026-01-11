@@ -232,7 +232,7 @@ def main():
     results = []
     output_file = "features_output.csv"
     # Initialize output file with headers (includes ML features)
-    header_cols = ["row_index", "book_name", "character_name", "predictions", "reasoning",
+    header_cols = ["row_index", "book_name", "character_name", "predictions", "reasoning", "evidence_used",
                    "llm_prediction", "contradiction_max", "consistency_avg", "contradiction_avg"]
     header_cols += [f"emb_{i}" for i in range(384)]
     pd.DataFrame(columns=header_cols).to_csv(output_file, index=False)
@@ -293,6 +293,7 @@ def main():
                 "character_name": final_state.get("character_name"),
                 "predictions": label_str,
                 "reasoning": reasoning,
+                "evidence_used": str([c.get('text', '') for c in final_state.get("evidence_chunks", [])])
             }
             row_dict.update(ml_features)
             
@@ -325,7 +326,8 @@ def main():
                 "book_name": state.get("book_name"),
                 "character_name": state.get("character_name"),
                 "predictions": label_str,
-                "reasoning": reasoning
+                "reasoning": reasoning,
+                "evidence_used": str([c.get('text', '') for c in state.get("evidence_chunks", [])])
             })
         
         output_df = pd.DataFrame(output_rows)

@@ -144,7 +144,7 @@ Reasoning: "Canon never describes Noirtier's parents. This backstory provides a 
 
 {{
   "label": 1 or 0,
-  "reasoning": "Step-by-step analysis through Lens 1 → Lens 2 → Lens 3, citing specific canonical facts or narrative constraints violated/respected. Reference the worked examples' reasoning style.",
+  "reasoning": "A strictly 1 to 2 line concise analysis of the decision, citing the most critical canonical fact or narrative constraint.",
   "evidence_queries": [
     "Query 1: [Specific canonical fact to verify, e.g., 'Verify Napoleon's fate at Waterloo 1815']",
     "Query 2: [Timeline check, e.g., 'When was Noirtier paralyzed vs. when did Monte Cristo appear']",
@@ -153,6 +153,7 @@ Reasoning: "Canon never describes Noirtier's parents. This backstory provides a 
 }}
 
 **REMEMBER**: 
+- The 'reasoning' MUST be strictly 1 to 2 lines only.
 - Default to CONTRADICTORY (0) when in doubt about major claims
 - Default to CONSISTENT (1) only for minor elaborations on confirmed canon
 - ALWAYS cite specific canonical facts in your reasoning

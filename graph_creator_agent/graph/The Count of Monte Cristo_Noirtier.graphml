@@ -481,6 +481,15 @@
     <node id="paternal tenderness">
       <data key="d0">entity</data>
     </node>
+    <node id="&quot;Yes&quot; with his eyes">
+      <data key="d0">entity</data>
+    </node>
+    <node id="d’Avrigny">
+      <data key="d0">entity</data>
+    </node>
+    <node id="&quot;Yes&quot;">
+      <data key="d0">entity</data>
+    </node>
     <edge source="Noirtier" target="Girondin">
       <data key="d1">CHILD_OF</data>
       <data key="d2">["the count of monte cristo__chunk__151", "the count of monte cristo__chunk__137", "the count of monte cristo__chunk__421"]</data>
@@ -527,7 +536,7 @@
     </edge>
     <edge source="Noirtier" target="Villefort">
       <data key="d1">PROTECTED</data>
-      <data key="d2">["the count of monte cristo__chunk__282", "the count of monte cristo__chunk__421", "the count of monte cristo__chunk__3032", "the count of monte cristo__chunk__3024", "the count of monte cristo__chunk__2280", "the count of monte cristo__chunk__2285", "the count of monte cristo__chunk__1859", "the count of monte cristo__chunk__1555", "the count of monte cristo__chunk__2962"]</data>
+      <data key="d2">["the count of monte cristo__chunk__282", "the count of monte cristo__chunk__421", "the count of monte cristo__chunk__3032", "the count of monte cristo__chunk__3024", "the count of monte cristo__chunk__2280", "the count of monte cristo__chunk__2285", "the count of monte cristo__chunk__1859", "the count of monte cristo__chunk__1555", "the count of monte cristo__chunk__2962", "the count of monte cristo__chunk__3017"]</data>
     </edge>
     <edge source="Noirtier" target="all powerful at court">
       <data key="d1">HAS_TRAIT</data>
@@ -1112,6 +1121,18 @@
     <edge source="Noirtier" target="paternal tenderness">
       <data key="d1">HAS_TRAIT</data>
       <data key="d2">["the count of monte cristo__chunk__2962"]</data>
+    </edge>
+    <edge source="Noirtier" target="&quot;Yes&quot; with his eyes">
+      <data key="d1">SAID</data>
+      <data key="d2">["the count of monte cristo__chunk__3017"]</data>
+    </edge>
+    <edge source="Noirtier" target="d’Avrigny">
+      <data key="d1">GLANCED_AT</data>
+      <data key="d2">["the count of monte cristo__chunk__3017"]</data>
+    </edge>
+    <edge source="Noirtier" target="&quot;Yes&quot;">
+      <data key="d1">INDICATED</data>
+      <data key="d2">["the count of monte cristo__chunk__3017"]</data>
     </edge>
   </graph>
 </graphml>
