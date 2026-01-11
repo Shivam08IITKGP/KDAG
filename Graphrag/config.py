@@ -7,7 +7,7 @@ load_dotenv(override=True)
 # ============================================================================
 # Retrieval Parameters
 # ============================================================================
-RETRIEVAL_TOP_K = 10  # Final number of chunks to return
+RETRIEVAL_TOP_K = 8  # Final number of chunks to return
 RETRIEVAL_INITIAL_K = 50  # Initial candidates for reranking
 
 # ============================================================================

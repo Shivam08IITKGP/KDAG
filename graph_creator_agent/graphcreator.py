@@ -111,7 +111,7 @@ def filter_new_evidence(evidences: list[dict], cache_key: str) -> list[dict]:
     return new_evidences
 
 
-def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI) -> list[Triplet]:
+def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI, character_name: str = "", backstory: str = "") -> list[Triplet]:
     """Generate triplets from all evidence at once using LLM with structured output.
     
     Processes all evidence items in a single batch call instead of one-by-one.
@@ -141,7 +141,9 @@ def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI) -> list[Triple
     
     # Format prompt with all evidence at once
     prompt = TRIPLET_EXTRACTION_PROMPT.format(
-        evidence_text=combined_evidence_text
+        evidence_text=combined_evidence_text,
+        character_name=character_name,
+        backstory=backstory
     )
     
     try:

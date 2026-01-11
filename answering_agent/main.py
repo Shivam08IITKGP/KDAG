@@ -64,12 +64,36 @@ def answer(state: dict) -> dict:
     evidence_chunks = evidence_output["evidence_chunks"]
     logger.info(f"Retrieved {len(evidence_chunks)} total evidence chunks")
     
+    # Run NLI Checker
+    logger.info("Running NLI Checker")
+    from answering_agent.nli_checker import check_nli
+    
+    # Collect all unique evidence texts
+    all_evidence_texts = set()
+    
+    # From extraction phase
+    if state.get("evidences"):
+        for ev in state["evidences"]:
+            if "text" in ev:
+                all_evidence_texts.add(ev["text"])
+                
+    # From answering phase
+    if evidence_chunks:
+        for ev in evidence_chunks:
+            if "text" in ev:
+                all_evidence_texts.add(ev["text"])
+                
+    nli_metrics = check_nli(backstory, list(all_evidence_texts))
+    
     # Update state
     updated_state = state.copy()
     updated_state["label"] = label
     updated_state["reasoning"] = reasoning
     updated_state["evidence_queries"] = evidence_queries
     updated_state["evidence_chunks"] = evidence_chunks
+    updated_state["nli_avg_entailment"] = nli_metrics["entailment_avg"]
+    updated_state["nli_max_contradiction"] = nli_metrics["contradiction_max"]
+    updated_state["nli_avg_contradiction"] = nli_metrics["contradiction_avg"]
     
     logger.info("Answering agent completed")
     return updated_state

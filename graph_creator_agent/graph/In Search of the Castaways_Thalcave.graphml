@@ -31,6 +31,48 @@
     <node id="he was astonished to see the plain so soaked with moisture">
       <data key="d0">entity</data>
     </node>
+    <node id="baqueano">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Patagonian frontiers">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Patagonia">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Glenarvan">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Spanish">
+      <data key="d0">entity</data>
+    </node>
+    <node id="journey to Fort Independence">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Thaouka">
+      <data key="d0">entity</data>
+    </node>
+    <node id="bolas">
+      <data key="d0">entity</data>
+    </node>
+    <node id="lasso">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Robert Grant">
+      <data key="d0">entity</data>
+    </node>
+    <node id="prisoner of the Poyuches Indians">
+      <data key="d0">entity</data>
+    </node>
+    <node id="intelligent">
+      <data key="d0">entity</data>
+    </node>
+    <node id="calm">
+      <data key="d0">entity</data>
+    </node>
+    <node id="road to Carmen">
+      <data key="d0">entity</data>
+    </node>
     <edge source="Thalcave" target="enemy">
       <data key="d1">KILLED</data>
       <data key="d2">["chunk__289"]</data>
@@ -62,6 +104,62 @@
     <edge source="Thalcave" target="he was astonished to see the plain so soaked with moisture">
       <data key="d1">REPLIED</data>
       <data key="d2">["chunk__291"]</data>
+    </edge>
+    <edge source="Thalcave" target="baqueano">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__223"]</data>
+    </edge>
+    <edge source="Thalcave" target="Patagonian frontiers">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__223"]</data>
+    </edge>
+    <edge source="Thalcave" target="Patagonia">
+      <data key="d1">RESIDES_AT</data>
+      <data key="d2">["in search of the castaways__chunk__223"]</data>
+    </edge>
+    <edge source="Thalcave" target="Glenarvan">
+      <data key="d1">TRAVELED_WITH</data>
+      <data key="d2">["in search of the castaways__chunk__223"]</data>
+    </edge>
+    <edge source="Thalcave" target="Spanish">
+      <data key="d1">SPEAKS_LANGUAGE</data>
+      <data key="d2">["in search of the castaways__chunk__237"]</data>
+    </edge>
+    <edge source="Thalcave" target="journey to Fort Independence">
+      <data key="d1">PARTICIPATED_IN</data>
+      <data key="d2">["in search of the castaways__chunk__309"]</data>
+    </edge>
+    <edge source="Thalcave" target="Thaouka">
+      <data key="d1">POSSESSES</data>
+      <data key="d2">["in search of the castaways__chunk__228"]</data>
+    </edge>
+    <edge source="Thalcave" target="bolas">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__229"]</data>
+    </edge>
+    <edge source="Thalcave" target="lasso">
+      <data key="d1">EXPERT_IN</data>
+      <data key="d2">["in search of the castaways__chunk__229"]</data>
+    </edge>
+    <edge source="Thalcave" target="Robert Grant">
+      <data key="d1">MENTOR_OF</data>
+      <data key="d2">["in search of the castaways__chunk__414"]</data>
+    </edge>
+    <edge source="Thalcave" target="prisoner of the Poyuches Indians">
+      <data key="d1">FATHER_IS</data>
+      <data key="d2">["in search of the castaways__chunk__242"]</data>
+    </edge>
+    <edge source="Thalcave" target="intelligent">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__223"]</data>
+    </edge>
+    <edge source="Thalcave" target="calm">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["in search of the castaways__chunk__344"]</data>
+    </edge>
+    <edge source="Thalcave" target="road to Carmen">
+      <data key="d1">KNOWN_FOR</data>
+      <data key="d2">["in search of the castaways__chunk__237"]</data>
     </edge>
   </graph>
 </graphml>

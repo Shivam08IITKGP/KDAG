@@ -11,13 +11,14 @@ from graph_creator_agent.types import Triplet, TripletList
 logger = logging.getLogger(__name__)
 
 
-def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI, character_name: str = "") -> list[Triplet]:
+def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI, character_name: str = "", backstory: str = "") -> list[Triplet]:
     """Generate triplets from evidence using LLM with structured output.
     
     Args:
         evidence_list: List of evidence dicts with 'id' and 'text' keys.
         llm: ChatOpenAI instance configured with structured output.
         character_name: Name of the target character for focused extraction.
+        backstory: The backstory text to validate (used for context).
         
     Returns:
         List of Triplet TypedDicts.
@@ -42,7 +43,8 @@ def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI, character_name
     # Format prompt
     prompt = TRIPLET_EXTRACTION_PROMPT.format(
         evidence_text=combined_evidence_text,
-        character_name=character_name
+        character_name=character_name,
+        backstory=backstory
     )
     
     try:

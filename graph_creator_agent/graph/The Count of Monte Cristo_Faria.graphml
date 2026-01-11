@@ -103,6 +103,15 @@
     <node id="five million">
       <data key="d0">entity</data>
     </node>
+    <node id="Château d’If">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Cell">
+      <data key="d0">entity</data>
+    </node>
+    <node id="vengeful">
+      <data key="d0">entity</data>
+    </node>
     <edge source="Faria" target="clearness_of_understanding">
       <data key="d1">HAS_REGAINED_CLEARNESS_OF_UNDERSTANDING</data>
       <data key="d2">["the count of monte cristo__chunk__495"]</data>
@@ -149,7 +158,7 @@
     </edge>
     <edge source="Faria" target="Dantès">
       <data key="d1">GAVE_INSTRUCTIONS_TO</data>
-      <data key="d2">["the count of monte cristo__chunk__493", "the count of monte cristo__chunk__315", "the count of monte cristo__chunk__601", "the count of monte cristo__chunk__454", "the count of monte cristo__chunk__447"]</data>
+      <data key="d2">["the count of monte cristo__chunk__493", "the count of monte cristo__chunk__315", "the count of monte cristo__chunk__601", "the count of monte cristo__chunk__454", "the count of monte cristo__chunk__447", "chunk_531"]</data>
     </edge>
     <edge source="Faria" target="dungeon">
       <data key="d1">CAUSED_BREACH_IN_DUNGEON</data>
@@ -189,7 +198,7 @@
     </edge>
     <edge source="Faria" target="mad">
       <data key="d1">SAID_I_AM_NOT_MAD</data>
-      <data key="d2">["the count of monte cristo__chunk__315"]</data>
+      <data key="d2">["the count of monte cristo__chunk__315", "chunk_375"]</data>
     </edge>
     <edge source="Faria" target="true">
       <data key="d1">CLAIMED_TREASURE_EXISTS</data>
@@ -201,7 +210,7 @@
     </edge>
     <edge source="Faria" target="Abbé">
       <data key="d1">HAS_TITLE</data>
-      <data key="d2">["the count of monte cristo__chunk__318"]</data>
+      <data key="d2">["the count of monte cristo__chunk__318", "chunk_372"]</data>
     </edge>
     <edge source="Faria" target="madness">
       <data key="d1">HAS_TRAIT</data>
@@ -230,6 +239,18 @@
     <edge source="Faria" target="five million">
       <data key="d1">MENTIONED</data>
       <data key="d2">["the count of monte cristo__chunk__313"]</data>
+    </edge>
+    <edge source="Faria" target="Château d’If">
+      <data key="d1">IMPRISONED_IN</data>
+      <data key="d2">["chunk_372", "chunk_2702"]</data>
+    </edge>
+    <edge source="Faria" target="Cell">
+      <data key="d1">DIED_IN</data>
+      <data key="d2">["chunk_515"]</data>
+    </edge>
+    <edge source="Faria" target="vengeful">
+      <data key="d1">HAS_TRAIT</data>
+      <data key="d2">["chunk_2702"]</data>
     </edge>
   </graph>
 </graphml>

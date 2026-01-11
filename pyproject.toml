@@ -1,0 +1,63 @@
+[project]
+name = "kdag-backstory-consistency"
+version = "0.1.0"
+description = "Evidence-Grounded Backstory Consistency System using LangGraph and GraphRAG"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "KDAG Team", email = "kdag@example.com" }
+]
+keywords = ["rag", "langgraph", "consistency-checking", "nlp", "knowledge-graph"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "pandas",
+    "python-dotenv",
+    "langgraph",
+    "langchain",
+    "langchain-community",
+    "langchain-openai",
+    "langchain-text-splitters",
+    "networkx",
+    "qdrant-client",
+    "sentence-transformers",
+    "numpy",
+    "tiktoken",
+    "httpx",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "ruff",
+    "mypy",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+    "extraction_agent*",
+    "graph_creator_agent*",
+    "answering_agent*",
+    "Graphrag*",
+]
+namespaces = false
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.black]
+line-length = 120
+target-version = ['py310']

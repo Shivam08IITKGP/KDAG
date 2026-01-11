@@ -1,0 +1,38 @@
+2026-01-11 14:45:46 | INFO     | root | setup_logging:80 | Logging initialized. Log file: logs/run_20260111_144546.log
+2026-01-11 14:45:46 | INFO     | __main__ | main:191 | Starting Evidence-Grounded Backstory Consistency System
+2026-01-11 14:46:14 | INFO     | __main__ | main:208 | Loaded rows 0 to 5 (6 total) from train.csv
+2026-01-11 14:46:14 | INFO     | __main__ | main:209 | Processing 6 backstories
+2026-01-11 14:46:14 | INFO     | __main__ | main:219 | Initialized output.csv
+2026-01-11 14:46:14 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 14:46:14 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.failed exception=ConnectError(ConnectionRefusedError(61, 'Connection refused'))
+2026-01-11 14:46:14 | DEBUG    | root | __init__:246 | Unable to get server version: [Errno 61] Connection refused, server version defaults to None
+2026-01-11 14:46:14 | INFO     | sentence_transformers.SentenceTransformer | __init__:219 | Use pytorch device_name: mps
+2026-01-11 14:46:14 | INFO     | sentence_transformers.SentenceTransformer | __init__:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-11 14:46:14 | DEBUG    | urllib3.connectionpool | _new_conn:1049 | Starting new HTTPS connection (1): huggingface.co:443
+2026-01-11 14:46:15 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-11 14:46:15 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2026-01-11 14:46:15 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-11 14:46:15 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-11 14:46:15 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2026-01-11 14:46:15 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2026-01-11 14:46:16 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 307 0
+2026-01-11 14:46:16 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md HTTP/1.1" 200 0
+2026-01-11 14:46:16 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2026-01-11 14:46:16 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2026-01-11 14:46:16 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 307 0
+2026-01-11 14:46:16 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json HTTP/1.1" 200 0
+2026-01-11 14:46:17 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2026-01-11 14:46:17 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 307 0
+2026-01-11 14:46:17 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json HTTP/1.1" 200 0
+2026-01-11 14:46:18 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2026-01-11 14:46:18 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json HTTP/1.1" 200 0
+2026-01-11 14:46:18 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2026-01-11 14:46:18 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=True&expand=False HTTP/1.1" 200 6465
+2026-01-11 14:46:19 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
+2026-01-11 14:46:19 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
+2026-01-11 14:46:19 | DEBUG    | urllib3.connectionpool | _make_request:544 | https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6908
+2026-01-11 14:46:24 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 14:46:24 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.failed exception=ConnectError(ConnectionRefusedError(61, 'Connection refused'))
+2026-01-11 14:46:24 | DEBUG    | root | __init__:246 | Unable to get server version: [Errno 61] Connection refused, server version defaults to None
+2026-01-11 14:46:24 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.started host='localhost' port=6333 local_address=None timeout=5.0 socket_options=None
+2026-01-11 14:46:24 | DEBUG    | httpcore.connection | trace:47 | connect_tcp.failed exception=ConnectError(ConnectionRefusedError(61, 'Connection refused'))
