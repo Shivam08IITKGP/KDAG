@@ -19,7 +19,7 @@ def load_model(model_path: str):
         return pickle.load(f)
 
 
-def generate_features_for_row(row_idx: int, csv_path: str = "train.csv") -> dict:
+def generate_features_for_row(row_idx: int, csv_path: str = "utils/train.csv") -> dict:
     """Generate features for a single row.
     
     Note: This requires running the pipeline first to get LLM and NLI scores.
@@ -75,7 +75,7 @@ def main():
     parser = argparse.ArgumentParser(description="Run inference on a single row")
     parser.add_argument("row_index", type=int, help="Row index from train.csv")
     parser.add_argument("--model", "-m", default="ML_answering_final/model.pkl", help="Model path")
-    parser.add_argument("--csv", "-c", default="train.csv", help="CSV file path")
+    parser.add_argument("--csv", "-c", default="utils/train.csv", help="CSV file path")
     parser.add_argument("--features-csv", "-f", default=None, help="Features CSV (if available)")
     args = parser.parse_args()
     

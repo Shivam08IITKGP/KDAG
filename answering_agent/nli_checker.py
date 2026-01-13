@@ -18,9 +18,9 @@ class NLIScores(TypedDict):
 def _get_model():
     global _NLI_MODEL
     if _NLI_MODEL is None:
-        logger.info(f"Loading NLI model: {MODEL_NAME} with max_length=2048")
+        logger.info(f"Loading NLI model: {MODEL_NAME} with max_length=1024")
         # The cleanest way to set max length for CrossEncoder is via the constructor
-        _NLI_MODEL = CrossEncoder(MODEL_NAME, max_length=2048)
+        _NLI_MODEL = CrossEncoder(MODEL_NAME, max_length=1024)
         
         # Verification log
         if hasattr(_NLI_MODEL, 'tokenizer'):

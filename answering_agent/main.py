@@ -3,7 +3,7 @@ import logging
 from pathlib import Path
 import networkx as nx
 
-from answering_agent.classifier import classify, ClassificationOutput, summarize_graph
+from answering_agent.classifier import classify, ClassificationOutput, get_graph_data
 from answering_agent.evidence_generator import retrieve_evidence_for_queries, EvidenceOutput
 from extraction_agent.character_summaries import get_character_summary
 from shared_config import create_llm
@@ -38,15 +38,17 @@ def answer(state: dict) -> dict:
     # Initialize LLM with OpenRouter config
     llm = create_llm()
     
-    # Load and summarize graph
-    graph_summary = "No graph available."
+    # Load and extract graph data
+    narrative_summary = "No narrative summary available."
+    full_graph_text = "No graph data available."
     if graph_path:
         graph_file = Path(graph_path)
         if graph_file.exists():
             try:
                 graph = nx.read_graphml(graph_path)
-                graph_summary = summarize_graph(graph)
-                logger.info(f"Loaded and summarized graph from {graph_path}")
+                # Load narrative summary and full triplet text
+                narrative_summary, full_graph_text = get_graph_data(graph)
+                logger.info(f"Loaded and extracted graph data from {graph_path}")
             except Exception as e:
                 logger.warning(f"Error loading graph: {e}")
         else:
@@ -58,7 +60,7 @@ def answer(state: dict) -> dict:
         book_name=book_name,
         character_name=character_name,
         backstory=backstory,
-        graph_summary=graph_summary,
+        graph_summary=full_graph_text, # Give entire graph to LLM
         character_summary=character_summary,
         llm=llm,
     )
@@ -85,9 +87,8 @@ def answer(state: dict) -> dict:
     logger.info("Running NLI Checker with Graph Summary")
     from answering_agent.nli_checker import check_nli
     
-    # We now pass the graph summary as the premise, instead of individual evidence chunks
-    # This aligns with the strategy of using the Graph as the comprehensive Source of Truth
-    nli_metrics = check_nli(backstory, graph_summary)
+    # We pass the narrative summary as the premise for NLI
+    nli_metrics = check_nli(backstory, narrative_summary)
     
     # Update state
     updated_state = state.copy()

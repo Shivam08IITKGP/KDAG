@@ -1,531 +1,1161 @@
 <?xml version='1.0' encoding='utf-8'?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
-  <key id="d2" for="edge" attr.name="evidence_ids" attr.type="string" />
-  <key id="d1" for="edge" attr.name="relation" attr.type="string" />
-  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <key id="d3" for="edge" attr.name="evidence_ids" attr.type="string" />
+  <key id="d2" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d1" for="node" attr.name="type" attr.type="string" />
+  <key id="d0" for="graph" attr.name="graph_summary" attr.type="string" />
   <graph edgedefault="directed">
     <node id="Kai-Koumou">
-      <data key="d0">entity</data>
+      <data key="d1">entity</data>
     </node>
-    <node id="eating the limbs of his enemy">
-      <data key="d0">entity</data>
+    <node id="Maori chief of high rank">
+      <data key="d1">entity</data>
     </node>
-    <node id="brave">
-      <data key="d0">entity</data>
+    <node id="delicate and compact tattooing on face and body">
+      <data key="d1">entity</data>
     </node>
-    <node id="bold">
-      <data key="d0">entity</data>
+    <node id="two black spirals starting from nostrils, circling tawny eyes, meeting on forehead">
+      <data key="d1">entity</data>
     </node>
-    <node id="cruel">
-      <data key="d0">entity</data>
+    <node id="mouth and chin hidden beneath a network of varied colors">
+      <data key="d1">entity</data>
     </node>
-    <node id="rousing the river tribes">
-      <data key="d0">entity</data>
+    <node id="graceful lines winding down to his sinewy breast">
+      <data key="d1">entity</data>
     </node>
-    <node id="warriors returning to the upper Waikato">
-      <data key="d0">entity</data>
+    <node id="face furrowed five times by sharp albatross bone tattoos">
+      <data key="d1">entity</data>
     </node>
-    <node id="foot of the mountains">
-      <data key="d0">entity</data>
+    <node id="fifth promotion">
+      <data key="d1">entity</data>
     </node>
-    <node id="Maoris">
-      <data key="d0">entity</data>
+    <node id="haughty bearing">
+      <data key="d1">entity</data>
     </node>
-    <node id="Kara-Tété">
-      <data key="d0">entity</data>
+    <node id="large flaxen mat ornamented with dog-skins">
+      <data key="d1">entity</data>
     </node>
-    <node id="fierce">
-      <data key="d0">entity</data>
+    <node id="girdle bloody with recent conflicts">
+      <data key="d1">entity</data>
     </node>
-    <node id="joined the rank of priest to that of chief">
-      <data key="d0">entity</data>
+    <node id="ear-rings of green jade">
+      <data key="d1">entity</data>
     </node>
-    <node id="arikis">
-      <data key="d0">entity</data>
-    </node>
-    <node id="friends and partisans">
-      <data key="d0">entity</data>
-    </node>
-    <node id="came out of his house">
-      <data key="d0">entity</data>
-    </node>
-    <node id="took his place on a mound">
-      <data key="d0">entity</data>
-    </node>
-    <node id="invoking upon the mountain a more rigorous taboo">
-      <data key="d0">entity</data>
-    </node>
-    <node id="throng rushing upon the Europeans">
-      <data key="d0">entity</data>
-    </node>
-    <node id="person who had fired">
-      <data key="d0">entity</data>
-    </node>
-    <node id="speaking">
-      <data key="d0">entity</data>
+    <node id="necklaces of pounamous (sacred stones)">
+      <data key="d1">entity</data>
     </node>
     <node id="gun of English manufacture">
-      <data key="d0">entity</data>
+      <data key="d1">entity</data>
     </node>
-    <node id="&quot;patou-patou&quot;">
-      <data key="d0">entity</data>
+    <node id="patou-patou (double-edged hatchet)">
+      <data key="d1">entity</data>
     </node>
-    <node id="tattooing">
-      <data key="d0">entity</data>
+    <node id="prisoners">
+      <data key="d1">entity</data>
     </node>
-    <node id="ten natives">
-      <data key="d0">entity</data>
+    <node id="exchange his captives">
+      <data key="d1">entity</data>
     </node>
-    <node id="funeral ceremonies">
-      <data key="d0">entity</data>
+    <node id="foot of the mountains">
+      <data key="d1">entity</data>
     </node>
-    <node id="Kara-Tété's wife">
-      <data key="d0">entity</data>
+    <node id="chief equal in rank">
+      <data key="d1">entity</data>
     </node>
-    <node id="méré">
-      <data key="d0">entity</data>
+    <node id="Waikato waters">
+      <data key="d1">entity</data>
     </node>
-    <node id="tribe">
-      <data key="d0">entity</data>
+    <node id="little creek serving as river outlet">
+      <data key="d1">entity</data>
     </node>
-    <node id="English language">
-      <data key="d0">entity</data>
+    <node id="sharp promontory">
+      <data key="d1">entity</data>
     </node>
-    <node id="gazed coldly">
-      <data key="d0">entity</data>
+    <node id="eastern border of Lake Taupo">
+      <data key="d1">entity</data>
     </node>
-    <node id="Ayrton">
-      <data key="d0">entity</data>
+    <node id="base of Mount Manga">
+      <data key="d1">entity</data>
     </node>
-    <node id="Irishman's farm">
-      <data key="d0">entity</data>
+    <node id="prisoners to a pah (Maori fortification)">
+      <data key="d1">entity</data>
     </node>
-    <node id="Ben Joyce">
-      <data key="d0">entity</data>
+    <node id="pah">
+      <data key="d1">entity</data>
     </node>
-    <node id="penitentiary of Perth">
-      <data key="d0">entity</data>
+    <node id="hut at the rear of the pah">
+      <data key="d1">entity</data>
     </node>
-    <node id="Australia">
-      <data key="d0">entity</data>
+    <node id="heads of his enemies">
+      <data key="d1">entity</data>
     </node>
-    <node id="band of convicts">
-      <data key="d0">entity</data>
+    <node id="English skull">
+      <data key="d1">entity</data>
     </node>
-    <node id="formidable bandit">
-      <data key="d0">entity</data>
+    <node id="Maori chief">
+      <data key="d1">entity</data>
     </node>
-    <node id="railway disaster">
-      <data key="d0">entity</data>
+    <node id="noisy horde with a gesture">
+      <data key="d1">entity</data>
     </node>
-    <node id="accomplices">
-      <data key="d0">entity</data>
+    <node id="captives to a sacred place">
+      <data key="d1">entity</data>
     </node>
-    <node id="gain possession of a vessel">
-      <data key="d0">entity</data>
+    <node id="insurrection of the fanatics of his tribe">
+      <data key="d1">entity</data>
     </node>
-    <node id="mutiny">
-      <data key="d0">entity</data>
+    <node id="temple where priests instruct New Zealanders">
+      <data key="d1">entity</data>
     </node>
-    <node id="cabin in the forecastle">
-      <data key="d0">entity</data>
+    <node id="personal interest in protecting prisoners">
+      <data key="d1">entity</data>
     </node>
-    <node id="rage to fall on Glenarvan">
-      <data key="d0">entity</data>
+    <node id="exchange prisoners for chiefs of his tribe">
+      <data key="d1">entity</data>
     </node>
-    <node id="murder of a chief">
-      <data key="d0">entity</data>
+    <node id="warriors from the canoe">
+      <data key="d1">entity</data>
     </node>
-    <node id="exchange of prisoners">
-      <data key="d0">entity</data>
+    <node id="trembled with rage">
+      <data key="d1">entity</data>
     </node>
-    <node id="abandoning idea of exchange">
-      <data key="d0">entity</data>
+    <node id="countenance flushed with fierce exultation">
+      <data key="d1">entity</data>
     </node>
-    <node id="Maori">
-      <data key="d0">entity</data>
+    <node id="if English would exchange Tohonga for prisoners">
+      <data key="d1">entity</data>
     </node>
-    <node id="duty of vengeance">
-      <data key="d0">entity</data>
+    <node id="Glenarvan's reply">
+      <data key="d1">entity</data>
     </node>
-    <node id="funeral dance">
-      <data key="d0">entity</data>
+    <node id="Maori custom 'it is one for one'">
+      <data key="d1">entity</data>
     </node>
-    <node id="preserved his reason">
-      <data key="d0">entity</data>
+    <node id="glanced coldly at his prisoner">
+      <data key="d1">entity</data>
     </node>
-    <node id="bloody orgy">
-      <data key="d0">entity</data>
+    <node id="malicious smile">
+      <data key="d1">entity</data>
     </node>
-    <node id="last act of the funeral">
-      <data key="d0">entity</data>
+    <node id="Lady Helena is Glenarvan's wife">
+      <data key="d1">entity</data>
     </node>
-    <node id="Lake Taupo">
-      <data key="d0">entity</data>
+    <node id="Lady Helena's shoulder">
+      <data key="d1">entity</data>
     </node>
-    <node id="Mount Taubara">
-      <data key="d0">entity</data>
-    </node>
-    <node id="canoes">
-      <data key="d0">entity</data>
-    </node>
-    <node id="New Zealanders">
-      <data key="d0">entity</data>
-    </node>
-    <node id="cruelty">
-      <data key="d0">entity</data>
-    </node>
-    <node id="superstitious">
-      <data key="d0">entity</data>
+    <node id="strange look at Glenarvan">
+      <data key="d1">entity</data>
     </node>
     <node id="Glenarvan">
-      <data key="d0">entity</data>
+      <data key="d1">entity</data>
     </node>
-    <node id="volcanic effervescence">
-      <data key="d0">entity</data>
+    <node id="throng rushing upon the Europeans">
+      <data key="d1">entity</data>
     </node>
-    <node id="torrents of lava">
-      <data key="d0">entity</data>
+    <node id="Taboo! taboo!">
+      <data key="d1">entity</data>
     </node>
-    <node id="thick, yellowish vapors mingled with the flames">
-      <data key="d0">entity</data>
+    <node id="Glenarvan and companions temporarily preserved by supernatural power">
+      <data key="d1">entity</data>
     </node>
-    <node id="the camp of the Maoris">
-      <data key="d0">entity</data>
+    <node id="prisoners led back to temple">
+      <data key="d1">entity</data>
     </node>
-    <node id="Tangariro">
-      <data key="d0">entity</data>
+    <node id="rank of priest to that of chief">
+      <data key="d1">entity</data>
     </node>
-    <node id="outlets for volcanic expansion">
-      <data key="d0">entity</data>
+    <node id="superstitious protection of the taboo">
+      <data key="d1">entity</data>
+    </node>
+    <node id="captives from the fury of the tribe">
+      <data key="d1">entity</data>
+    </node>
+    <node id="some natives">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Kara-Tété's wife">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Kara-Tété's wife lifeless">
+      <data key="d1">entity</data>
+    </node>
+    <node id="méré (formidable club)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="funeral ceremony">
+      <data key="d1">entity</data>
+    </node>
+    <node id="midst of his warriors">
+      <data key="d1">entity</data>
+    </node>
+    <node id="base of the peak">
+      <data key="d1">entity</data>
+    </node>
+    <node id="grimaces like a sorcerer exorcising">
+      <data key="d1">entity</data>
+    </node>
+    <node id="more rigorous taboo upon the mountain">
+      <data key="d1">entity</data>
+    </node>
+    <node id="his tribe">
+      <data key="d1">entity</data>
+    </node>
+    <node id="principal warriors of his tribe">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Kara-Tété">
+      <data key="d1">entity</data>
+    </node>
+    <node id="some respect (Kara-Tété)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="rivalry with Kara-Tété">
+      <data key="d1">entity</data>
+    </node>
+    <node id="powerful tribes of the Waikato">
+      <data key="d1">entity</data>
+    </node>
+    <node id="deep hostility (towards Kara-Tété)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Glenarvan's nationality">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Glenarvan's companions">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Glenarvan's scheme">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Glenarvan would die tomorrow at sunrise">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Tohonga's life more precious than Glenarvan's">
+      <data key="d1">entity</data>
+    </node>
+    <node id="fierce regret">
+      <data key="d1">entity</data>
+    </node>
+    <node id="English">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Tohonga's death">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Glenarvan and companions to death at daybreak">
+      <data key="d1">entity</data>
+    </node>
+    <node id="a tribe">
+      <data key="d1">entity</data>
+    </node>
+    <node id="British troops">
+      <data key="d1">entity</data>
+    </node>
+    <node id="regions of the upper Waikato">
+      <data key="d1">entity</data>
+    </node>
+    <node id="principal warriors">
+      <data key="d1">entity</data>
+    </node>
+    <node id="rouse river tribes again">
+      <data key="d1">entity</data>
+    </node>
+    <node id="he who eats the limbs of his enemy">
+      <data key="d1">entity</data>
+    </node>
+    <node id="brave">
+      <data key="d1">entity</data>
+    </node>
+    <node id="bold">
+      <data key="d1">entity</data>
+    </node>
+    <node id="cruel">
+      <data key="d1">entity</data>
+    </node>
+    <node id="pity">
+      <data key="d1">entity</data>
+    </node>
+    <node id="English soldiers">
+      <data key="d1">entity</data>
+    </node>
+    <node id="by governor of New Zealand">
+      <data key="d1">entity</data>
+    </node>
+    <node id="another canoe with ten natives">
+      <data key="d1">entity</data>
+    </node>
+    <node id="came out of his house">
+      <data key="d1">entity</data>
+    </node>
+    <node id="center of the fortification on a mound">
+      <data key="d1">entity</data>
+    </node>
+    <node id="a warrior to advance towards the temple">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Maori custom of unburied corpse for three days">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Glenarvan about his companions">
+      <data key="d1">entity</data>
+    </node>
+    <node id="every Englishman is enemy">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Tohonga is prisoner of Pakekas (Europeans)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Nouï-Atoua">
+      <data key="d1">entity</data>
+    </node>
+    <node id="ransom life of Tohonga">
+      <data key="d1">entity</data>
+    </node>
+    <node id="tear out Glenarvan's heart">
+      <data key="d1">entity</data>
+    </node>
+    <node id="hang companions' heads to stakes">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Nouï-Atoua's spoken word">
+      <data key="d1">entity</data>
+    </node>
+    <node id="death of Kara-Tété">
+      <data key="d1">entity</data>
+    </node>
+    <node id="idea of exchange">
+      <data key="d1">entity</data>
+    </node>
+    <node id="obliged to Glenarvan (by the major)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="chief">
+      <data key="d1">entity</data>
+    </node>
+    <node id="gazed coldly">
+      <data key="d1">entity</data>
+    </node>
+    <node id="spoke in a stern voice">
+      <data key="d1">entity</data>
+    </node>
+    <node id="exchange prisoners for ransom">
+      <data key="d1">entity</data>
+    </node>
+    <node id="kill prisoners if ransom refused">
+      <data key="d1">entity</data>
     </node>
     <node id="Maori tribe">
-      <data key="d0">entity</data>
+      <data key="d1">entity</data>
     </node>
-    <node id="ransom">
-      <data key="d0">entity</data>
+    <node id="rage">
+      <data key="d1">entity</data>
     </node>
-    <node id="exchange prisoners">
-      <data key="d0">entity</data>
+    <node id="hut">
+      <data key="d1">entity</data>
     </node>
-    <node id="kill prisoners">
-      <data key="d0">entity</data>
+    <node id="savages' attention">
+      <data key="d1">entity</data>
     </node>
-    <node id="cold">
-      <data key="d0">entity</data>
-    </node>
-    <node id="stern">
-      <data key="d0">entity</data>
+    <node id="Maoris">
+      <data key="d1">entity</data>
     </node>
     <node id="New Zealand">
-      <data key="d0">entity</data>
+      <data key="d1">entity</data>
     </node>
-    <node id="travelers">
-      <data key="d0">entity</data>
+    <node id="funeral dance">
+      <data key="d1">entity</data>
     </node>
-    <node id="Lake Taupo region">
-      <data key="d0">entity</data>
+    <node id="general intoxication">
+      <data key="d1">entity</data>
     </node>
-    <node id="English government">
-      <data key="d0">entity</data>
+    <node id="preserved his reason">
+      <data key="d1">entity</data>
     </node>
-    <node id="leaves of the Bible for wads in guns">
-      <data key="d0">entity</data>
+    <node id="bloody orgy">
+      <data key="d1">entity</data>
     </node>
-    <node id="pursuit of prisoners">
-      <data key="d0">entity</data>
+    <node id="bloody orgy for an hour">
+      <data key="d1">entity</data>
     </node>
-    <edge source="Kai-Koumou" target="eating the limbs of his enemy">
-      <data key="d1">KNOWN_FOR</data>
-      <data key="d2">["in search of the castaways__chunk__831"]</data>
+    <node id="last act of the funeral was played with the usual rites">
+      <data key="d1">entity</data>
+    </node>
+    <node id="captives">
+      <data key="d1">entity</data>
+    </node>
+    <node id="captives to Lake Taupo">
+      <data key="d1">entity</data>
+    </node>
+    <node id="canoe">
+      <data key="d1">entity</data>
+    </node>
+    <node id="a pah">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Glenarvan and his companions">
+      <data key="d1">entity</data>
+    </node>
+    <node id="natives">
+      <data key="d1">entity</data>
+    </node>
+    <node id="taciturn">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Glenarvan and companions">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Waikato">
+      <data key="d1">entity</data>
+    </node>
+    <node id="cold demeanor">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Glenarvan's question">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Maori">
+      <data key="d1">entity</data>
+    </node>
+    <node id="charm">
+      <data key="d1">entity</data>
+    </node>
+    <node id="invisible power">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Glenarvan's captivity in a wild country">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Glenarvan to hide his thoughts about Lady Helena">
+      <data key="d1">entity</data>
+    </node>
+    <node id="a hundred miles above the junction of two streams">
+      <data key="d1">entity</data>
+    </node>
+    <node id="ascending two rapids">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Lake Taupo">
+      <data key="d1">entity</data>
+    </node>
+    <node id="farrier">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Ayrton">
+      <data key="d1">entity</data>
+    </node>
+    <node id="tall build">
+      <data key="d1">entity</data>
+    </node>
+    <node id="stout build">
+      <data key="d1">entity</data>
+    </node>
+    <node id="low appearance">
+      <data key="d1">entity</data>
+    </node>
+    <node id="brutish appearance">
+      <data key="d1">entity</data>
+    </node>
+    <node id="not prone to idle words">
+      <data key="d1">entity</data>
+    </node>
+    <node id="farrier trade">
+      <data key="d1">entity</data>
+    </node>
+    <node id="repaired wheels of the cart">
+      <data key="d1">entity</data>
+    </node>
+    <node id="uncommon energy in labor">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Black Point Station">
+      <data key="d1">entity</data>
+    </node>
+    <node id="examining tracks on the ground with two other men">
+      <data key="d1">entity</data>
+    </node>
+    <node id="the major">
+      <data key="d1">entity</data>
+    </node>
+    <node id="in any provided text">
+      <data key="d1">entity</data>
+    </node>
+    <node id="ordering troops to burn an empty village during a war">
+      <data key="d1">entity</data>
+    </node>
+    <node id="luring troops into a swamp">
+      <data key="d1">entity</data>
+    </node>
+    <node id="using captured European cannon in battle">
+      <data key="d1">entity</data>
+    </node>
+    <node id="battering troops with captured European cannon">
+      <data key="d1">entity</data>
+    </node>
+    <node id="being known by the name 'Bone-Eater'">
+      <data key="d1">entity</data>
+    </node>
+    <node id="suffering a crippled left leg from shrapnel">
+      <data key="d1">entity</data>
+    </node>
+    <node id="possessing a peach-wood staff carved with sea-monster totems">
+      <data key="d1">entity</data>
+    </node>
+    <edge source="Kai-Koumou" target="Maori chief of high rank">
+      <data key="d2">IS_A</data>
+      <data key="d3">["in search of the castaways__chunk__827"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="brave">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__831"]</data>
+    <edge source="Kai-Koumou" target="delicate and compact tattooing on face and body">
+      <data key="d2">PHYSICAL_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__827"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="bold">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__831"]</data>
+    <edge source="Kai-Koumou" target="two black spirals starting from nostrils, circling tawny eyes, meeting on forehead">
+      <data key="d2">PHYSICAL_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__827"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="cruel">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__831", "in search of the castaways__chunk__857"]</data>
+    <edge source="Kai-Koumou" target="mouth and chin hidden beneath a network of varied colors">
+      <data key="d2">PHYSICAL_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__827"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="rousing the river tribes">
-      <data key="d1">MOTIVATED_BY</data>
-      <data key="d2">["in search of the castaways__chunk__831"]</data>
+    <edge source="Kai-Koumou" target="graceful lines winding down to his sinewy breast">
+      <data key="d2">PHYSICAL_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__827"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="warriors returning to the upper Waikato">
-      <data key="d1">LEADER_OF</data>
-      <data key="d2">["in search of the castaways__chunk__831"]</data>
+    <edge source="Kai-Koumou" target="face furrowed five times by sharp albatross bone tattoos">
+      <data key="d2">PHYSICAL_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__828"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="foot of the mountains">
-      <data key="d1">NEXT_LOCATED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__841"]</data>
+    <edge source="Kai-Koumou" target="fifth promotion">
+      <data key="d2">REACHED</data>
+      <data key="d3">["in search of the castaways__chunk__828"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="Maoris">
-      <data key="d1">MEMBER_OF</data>
-      <data key="d2">["in search of the castaways__chunk__859", "in search of the castaways__chunk__916", "in search of the castaways__chunk__935"]</data>
+    <edge source="Kai-Koumou" target="haughty bearing">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__828"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="Kara-Tété">
-      <data key="d1">ALLIED_WITH</data>
-      <data key="d2">["in search of the castaways__chunk__857"]</data>
+    <edge source="Kai-Koumou" target="large flaxen mat ornamented with dog-skins">
+      <data key="d2">WEARS</data>
+      <data key="d3">["in search of the castaways__chunk__828"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="fierce">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__857"]</data>
+    <edge source="Kai-Koumou" target="girdle bloody with recent conflicts">
+      <data key="d2">WEARS</data>
+      <data key="d3">["in search of the castaways__chunk__828"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="joined the rank of priest to that of chief">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["in search of the castaways__chunk__862"]</data>
+    <edge source="Kai-Koumou" target="ear-rings of green jade">
+      <data key="d2">WEARS</data>
+      <data key="d3">["in search of the castaways__chunk__828"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="arikis">
-      <data key="d1">MEMBER_OF</data>
-      <data key="d2">["in search of the castaways__chunk__853"]</data>
-    </edge>
-    <edge source="Kai-Koumou" target="friends and partisans">
-      <data key="d1">ALLIED_WITH</data>
-      <data key="d2">["in search of the castaways__chunk__862"]</data>
-    </edge>
-    <edge source="Kai-Koumou" target="came out of his house">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["in search of the castaways__chunk__866"]</data>
-    </edge>
-    <edge source="Kai-Koumou" target="took his place on a mound">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["in search of the castaways__chunk__866"]</data>
-    </edge>
-    <edge source="Kai-Koumou" target="invoking upon the mountain a more rigorous taboo">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["in search of the castaways__chunk__934"]</data>
-    </edge>
-    <edge source="Kai-Koumou" target="throng rushing upon the Europeans">
-      <data key="d1">CONTROLS</data>
-      <data key="d2">["in search of the castaways__chunk__861"]</data>
-    </edge>
-    <edge source="Kai-Koumou" target="person who had fired">
-      <data key="d1">GUARDED</data>
-      <data key="d2">["in search of the castaways__chunk__861"]</data>
-    </edge>
-    <edge source="Kai-Koumou" target="speaking">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["in search of the castaways__chunk__854"]</data>
+    <edge source="Kai-Koumou" target="necklaces of pounamous (sacred stones)">
+      <data key="d2">WEARS</data>
+      <data key="d3">["in search of the castaways__chunk__828"]</data>
     </edge>
     <edge source="Kai-Koumou" target="gun of English manufacture">
-      <data key="d1">OWNS</data>
-      <data key="d2">["in search of the castaways__chunk__828"]</data>
+      <data key="d2">OWNS</data>
+      <data key="d3">["in search of the castaways__chunk__828"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="&quot;patou-patou&quot;">
-      <data key="d1">OWNS</data>
-      <data key="d2">["in search of the castaways__chunk__828"]</data>
+    <edge source="Kai-Koumou" target="patou-patou (double-edged hatchet)">
+      <data key="d2">OWNS</data>
+      <data key="d3">["in search of the castaways__chunk__828"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="tattooing">
-      <data key="d1">KNOWN_FOR</data>
-      <data key="d2">["in search of the castaways__chunk__827"]</data>
+    <edge source="Kai-Koumou" target="prisoners">
+      <data key="d2">LANDED</data>
+      <data key="d3">["in search of the castaways__chunk__838"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="ten natives">
-      <data key="d1">TRAVELED_WITH</data>
-      <data key="d2">["in search of the castaways__chunk__840"]</data>
+    <edge source="Kai-Koumou" target="exchange his captives">
+      <data key="d2">INTENDED_TO</data>
+      <data key="d3">["in search of the castaways__chunk__838"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="funeral ceremonies">
-      <data key="d1">PARTICIPATED_IN</data>
-      <data key="d2">["in search of the castaways__chunk__871"]</data>
+    <edge source="Kai-Koumou" target="foot of the mountains">
+      <data key="d2">LANDED_AT</data>
+      <data key="d3">["in search of the castaways__chunk__841"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="Kara-Tété's wife">
-      <data key="d1">KILLED</data>
-      <data key="d2">["in search of the castaways__chunk__871"]</data>
+    <edge source="Kai-Koumou" target="chief equal in rank">
+      <data key="d2">MET</data>
+      <data key="d3">["in search of the castaways__chunk__841"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="méré">
-      <data key="d1">OWNS</data>
-      <data key="d2">["in search of the castaways__chunk__871"]</data>
+    <edge source="Kai-Koumou" target="Waikato waters">
+      <data key="d2">DEPARTED_FROM</data>
+      <data key="d3">["in search of the castaways__chunk__848"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="tribe">
-      <data key="d1">LEADER_OF</data>
-      <data key="d2">["in search of the castaways__chunk__875", "in search of the castaways__chunk__899"]</data>
+    <edge source="Kai-Koumou" target="little creek serving as river outlet">
+      <data key="d2">PASSED_THROUGH</data>
+      <data key="d3">["in search of the castaways__chunk__848"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="English language">
-      <data key="d1">SPEAKS_LANGUAGE</data>
-      <data key="d2">["in search of the castaways__chunk__833"]</data>
+    <edge source="Kai-Koumou" target="sharp promontory">
+      <data key="d2">DOUBLED</data>
+      <data key="d3">["in search of the castaways__chunk__848"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="gazed coldly">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["in search of the castaways__chunk__833"]</data>
+    <edge source="Kai-Koumou" target="eastern border of Lake Taupo">
+      <data key="d2">LANDED_AT</data>
+      <data key="d3">["in search of the castaways__chunk__848"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="rage to fall on Glenarvan">
-      <data key="d1">EXPECTED</data>
-      <data key="d2">["in search of the castaways__chunk__863"]</data>
+    <edge source="Kai-Koumou" target="base of Mount Manga">
+      <data key="d2">LANDED_AT</data>
+      <data key="d3">["in search of the castaways__chunk__848"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="murder of a chief">
-      <data key="d1">MOTIVATED_BY</data>
-      <data key="d2">["in search of the castaways__chunk__863"]</data>
+    <edge source="Kai-Koumou" target="prisoners to a pah (Maori fortification)">
+      <data key="d2">LED</data>
+      <data key="d3">["in search of the castaways__chunk__848"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="exchange of prisoners">
-      <data key="d1">CONSIDERED</data>
-      <data key="d2">["in search of the castaways__chunk__865"]</data>
+    <edge source="Kai-Koumou" target="pah">
+      <data key="d2">OWNS</data>
+      <data key="d3">["in search of the castaways__chunk__850", "in search of the castaways__chunk__854"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="abandoning idea of exchange">
-      <data key="d1">PARTICIPATED_IN</data>
-      <data key="d2">["in search of the castaways__chunk__865"]</data>
+    <edge source="Kai-Koumou" target="hut at the rear of the pah">
+      <data key="d2">OWNS</data>
+      <data key="d3">["in search of the castaways__chunk__850"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="Maori">
-      <data key="d1">NATIONALITY_IS</data>
-      <data key="d2">["in search of the castaways__chunk__814"]</data>
+    <edge source="Kai-Koumou" target="heads of his enemies">
+      <data key="d2">HAS_COLLECTION</data>
+      <data key="d3">["in search of the castaways__chunk__850"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="duty of vengeance">
-      <data key="d1">MOTIVATED_BY</data>
-      <data key="d2">["in search of the castaways__chunk__757"]</data>
+    <edge source="Kai-Koumou" target="English skull">
+      <data key="d2">HAS_COLLECTION</data>
+      <data key="d3">["in search of the castaways__chunk__850"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="funeral dance">
-      <data key="d1">PARTICIPATED_IN</data>
-      <data key="d2">["in search of the castaways__chunk__874"]</data>
+    <edge source="Kai-Koumou" target="Maori chief">
+      <data key="d2">IS_A</data>
+      <data key="d3">["in search of the castaways__chunk__853"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="preserved his reason">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__874"]</data>
+    <edge source="Kai-Koumou" target="noisy horde with a gesture">
+      <data key="d2">SILENCED</data>
+      <data key="d3">["in search of the castaways__chunk__853"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="bloody orgy">
-      <data key="d1">ALLOWED</data>
-      <data key="d2">["in search of the castaways__chunk__874"]</data>
+    <edge source="Kai-Koumou" target="captives to a sacred place">
+      <data key="d2">LED</data>
+      <data key="d3">["in search of the castaways__chunk__853"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="last act of the funeral">
-      <data key="d1">PARTICIPATED_IN</data>
-      <data key="d2">["in search of the castaways__chunk__874"]</data>
+    <edge source="Kai-Koumou" target="insurrection of the fanatics of his tribe">
+      <data key="d2">FEARED</data>
+      <data key="d3">["in search of the castaways__chunk__853"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="Lake Taupo">
-      <data key="d1">TRAVELED_TO</data>
-      <data key="d2">["in search of the castaways__chunk__845"]</data>
+    <edge source="Kai-Koumou" target="temple where priests instruct New Zealanders">
+      <data key="d2">LED_TO</data>
+      <data key="d3">["in search of the castaways__chunk__853"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="Mount Taubara">
-      <data key="d1">TRAVELED_TO</data>
-      <data key="d2">["in search of the castaways__chunk__845"]</data>
+    <edge source="Kai-Koumou" target="personal interest in protecting prisoners">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__855"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="canoes">
-      <data key="d1">LED</data>
-      <data key="d2">["in search of the castaways__chunk__845"]</data>
+    <edge source="Kai-Koumou" target="exchange prisoners for chiefs of his tribe">
+      <data key="d2">INTENDED_TO</data>
+      <data key="d3">["in search of the castaways__chunk__855"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="Maori tribe">
-      <data key="d1">LEADER_OF</data>
-      <data key="d2">["in search of the castaways__chunk__834"]</data>
+    <edge source="Kai-Koumou" target="warriors from the canoe">
+      <data key="d2">REMAINED_ALONE_WITH</data>
+      <data key="d3">["in search of the castaways__chunk__855"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="ransom">
-      <data key="d1">MOTIVATED_BY</data>
-      <data key="d2">["in search of the castaways__chunk__834"]</data>
+    <edge source="Kai-Koumou" target="trembled with rage">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__859"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="exchange prisoners">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["in search of the castaways__chunk__834"]</data>
+    <edge source="Kai-Koumou" target="countenance flushed with fierce exultation">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__859"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="kill prisoners">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["in search of the castaways__chunk__834"]</data>
+    <edge source="Kai-Koumou" target="if English would exchange Tohonga for prisoners">
+      <data key="d2">ASKED</data>
+      <data key="d3">["in search of the castaways__chunk__859"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="cold">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__834"]</data>
+    <edge source="Kai-Koumou" target="Glenarvan's reply">
+      <data key="d2">WAS_SURPRISED_BY</data>
+      <data key="d3">["in search of the castaways__chunk__859"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="stern">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__834"]</data>
+    <edge source="Kai-Koumou" target="Maori custom 'it is one for one'">
+      <data key="d2">STATED</data>
+      <data key="d3">["in search of the castaways__chunk__860"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="glanced coldly at his prisoner">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__860"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="malicious smile">
+      <data key="d2">DISPLAYED</data>
+      <data key="d3">["in search of the castaways__chunk__860"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Lady Helena is Glenarvan's wife">
+      <data key="d2">INFERRED</data>
+      <data key="d3">["in search of the castaways__chunk__860"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Lady Helena's shoulder">
+      <data key="d2">LAID_HAND_ON</data>
+      <data key="d3">["in search of the castaways__chunk__860"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="strange look at Glenarvan">
+      <data key="d2">CAST</data>
+      <data key="d3">["in search of the castaways__chunk__861"]</data>
     </edge>
     <edge source="Kai-Koumou" target="Glenarvan">
-      <data key="d1">OUTWITTED_BY</data>
-      <data key="d2">["in search of the castaways__chunk__935"]</data>
+      <data key="d2">GUARDED</data>
+      <data key="d3">["in search of the castaways__chunk__861", "in search of the castaways__chunk__857", "in search of the castaways__chunk__837"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="throng rushing upon the Europeans">
+      <data key="d2">CONTROLLED</data>
+      <data key="d3">["in search of the castaways__chunk__861"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Taboo! taboo!">
+      <data key="d2">CRIED</data>
+      <data key="d3">["in search of the castaways__chunk__861"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Glenarvan and companions temporarily preserved by supernatural power">
+      <data key="d2">COMMAND_RESULTED_IN</data>
+      <data key="d3">["in search of the castaways__chunk__861"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="prisoners led back to temple">
+      <data key="d2">COMMAND_RESULTED_IN</data>
+      <data key="d3">["in search of the castaways__chunk__861"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="rank of priest to that of chief">
+      <data key="d2">JOINED</data>
+      <data key="d3">["in search of the castaways__chunk__862"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="superstitious protection of the taboo">
+      <data key="d2">COULD_EXTEND</data>
+      <data key="d3">["in search of the castaways__chunk__862"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="captives from the fury of the tribe">
+      <data key="d2">COMMAND_PROTECTED</data>
+      <data key="d3">["in search of the castaways__chunk__862"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="some natives">
+      <data key="d2">FRIEND_OF</data>
+      <data key="d3">["in search of the castaways__chunk__862"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Kara-Tété's wife">
+      <data key="d2">APPROACHED</data>
+      <data key="d3">["in search of the castaways__chunk__871"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Kara-Tété's wife lifeless">
+      <data key="d2">STRUCK</data>
+      <data key="d3">["in search of the castaways__chunk__871"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="méré (formidable club)">
+      <data key="d2">USED</data>
+      <data key="d3">["in search of the castaways__chunk__871"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="funeral ceremony">
+      <data key="d2">PARTICIPATED_IN</data>
+      <data key="d3">["in search of the castaways__chunk__871"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="midst of his warriors">
+      <data key="d2">CAME_INTO</data>
+      <data key="d3">["in search of the castaways__chunk__934"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="base of the peak">
+      <data key="d2">ADVANCED_TO</data>
+      <data key="d3">["in search of the castaways__chunk__934"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="grimaces like a sorcerer exorcising">
+      <data key="d2">MADE</data>
+      <data key="d3">["in search of the castaways__chunk__934"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="more rigorous taboo upon the mountain">
+      <data key="d2">INVOKING</data>
+      <data key="d3">["in search of the castaways__chunk__934"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="his tribe">
+      <data key="d2">LEADER_OF</data>
+      <data key="d3">["in search of the castaways__chunk__857"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="principal warriors of his tribe">
+      <data key="d2">ASSEMBLED</data>
+      <data key="d3">["in search of the castaways__chunk__857", "in search of the castaways__chunk__866"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Kara-Tété">
+      <data key="d2">JOINED_BY</data>
+      <data key="d3">["in search of the castaways__chunk__857"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="some respect (Kara-Tété)">
+      <data key="d2">TREATED_WITH</data>
+      <data key="d3">["in search of the castaways__chunk__857"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="rivalry with Kara-Tété">
+      <data key="d2">HAS_RELATIONSHIP</data>
+      <data key="d3">["in search of the castaways__chunk__857"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="powerful tribes of the Waikato">
+      <data key="d2">RULED</data>
+      <data key="d3">["in search of the castaways__chunk__857"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="deep hostility (towards Kara-Tété)">
+      <data key="d2">EXHIBITED_EMOTION</data>
+      <data key="d3">["in search of the castaways__chunk__857"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Glenarvan's nationality">
+      <data key="d2">ASKED_ABOUT</data>
+      <data key="d3">["in search of the castaways__chunk__857"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Glenarvan's companions">
+      <data key="d2">ASKED_ABOUT</data>
+      <data key="d3">["in search of the castaways__chunk__857"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Glenarvan's scheme">
+      <data key="d2">WAS_OUTWITTED_BY</data>
+      <data key="d3">["in search of the castaways__chunk__935"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Glenarvan would die tomorrow at sunrise">
+      <data key="d2">DECLARED</data>
+      <data key="d3">["in search of the castaways__chunk__868"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Tohonga's life more precious than Glenarvan's">
+      <data key="d2">BELIEVED</data>
+      <data key="d3">["in search of the castaways__chunk__868"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="fierce regret">
+      <data key="d2">EXHIBITED_EMOTION</data>
+      <data key="d3">["in search of the castaways__chunk__868"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="English">
+      <data key="d2">SPOKE_LANGUAGE</data>
+      <data key="d3">["in search of the castaways__chunk__868", "in search of the castaways__chunk__833"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Tohonga's death">
+      <data key="d2">RECEIVED_NEWS</data>
+      <data key="d3">["in search of the castaways__chunk__868"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Glenarvan and companions to death at daybreak">
+      <data key="d2">SENTENCED</data>
+      <data key="d3">["in search of the castaways__chunk__868"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="a tribe">
+      <data key="d2">IS_CHIEF_OF</data>
+      <data key="d3">["in search of the castaways__chunk__831", "in search of the castaways__chunk__901"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="British troops">
+      <data key="d2">DEFEATED_BY</data>
+      <data key="d3">["in search of the castaways__chunk__831"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="regions of the upper Waikato">
+      <data key="d2">RETURNING_TO</data>
+      <data key="d3">["in search of the castaways__chunk__831"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="principal warriors">
+      <data key="d2">LOST</data>
+      <data key="d3">["in search of the castaways__chunk__831"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="rouse river tribes again">
+      <data key="d2">INTENDS_TO</data>
+      <data key="d3">["in search of the castaways__chunk__831"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="he who eats the limbs of his enemy">
+      <data key="d2">NAME_MEANS</data>
+      <data key="d3">["in search of the castaways__chunk__831"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="brave">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__831"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="bold">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__831"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="cruel">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__831"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="pity">
+      <data key="d2">LACKED</data>
+      <data key="d3">["in search of the castaways__chunk__831"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="English soldiers">
+      <data key="d2">KNOWN_BY</data>
+      <data key="d3">["in search of the castaways__chunk__831"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="by governor of New Zealand">
+      <data key="d2">HAS_BOUNTY_ON_HEAD</data>
+      <data key="d3">["in search of the castaways__chunk__831"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="another canoe with ten natives">
+      <data key="d2">ACCOMPANIED_BY</data>
+      <data key="d3">["in search of the castaways__chunk__840"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="came out of his house">
+      <data key="d2">PERFORMED_ACTION</data>
+      <data key="d3">["in search of the castaways__chunk__866"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="center of the fortification on a mound">
+      <data key="d2">TOOK_POSITION_IN</data>
+      <data key="d3">["in search of the castaways__chunk__866"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="a warrior to advance towards the temple">
+      <data key="d2">GAVE_SIGN_FOR</data>
+      <data key="d3">["in search of the castaways__chunk__866"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Maori custom of unburied corpse for three days">
+      <data key="d2">ACTED_DURING_CUSTOM</data>
+      <data key="d3">["in search of the castaways__chunk__866"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Glenarvan about his companions">
+      <data key="d2">ASKS</data>
+      <data key="d3">["in search of the castaways__chunk__858"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="every Englishman is enemy">
+      <data key="d2">HAS_BELIEF</data>
+      <data key="d3">["in search of the castaways__chunk__858"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Tohonga is prisoner of Pakekas (Europeans)">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["in search of the castaways__chunk__858"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Nouï-Atoua">
+      <data key="d2">SERVES_DEITY</data>
+      <data key="d3">["in search of the castaways__chunk__858"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="ransom life of Tohonga">
+      <data key="d2">MOTIVATED_BY</data>
+      <data key="d3">["in search of the castaways__chunk__858"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="tear out Glenarvan's heart">
+      <data key="d2">EXPRESSED_INTENT_TO</data>
+      <data key="d3">["in search of the castaways__chunk__858"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="hang companions' heads to stakes">
+      <data key="d2">EXPRESSED_INTENT_TO</data>
+      <data key="d3">["in search of the castaways__chunk__858"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Nouï-Atoua's spoken word">
+      <data key="d2">ACTIONS_INFLUENCED_BY</data>
+      <data key="d3">["in search of the castaways__chunk__858"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="death of Kara-Tété">
+      <data key="d2">AFFECTED_BY</data>
+      <data key="d3">["in search of the castaways__chunk__865"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="idea of exchange">
+      <data key="d2">WAS_PERCEIVED_TO_ABANDON</data>
+      <data key="d3">["in search of the castaways__chunk__865"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="obliged to Glenarvan (by the major)">
+      <data key="d2">WAS_PERCEIVED_TO_FEEL</data>
+      <data key="d3">["in search of the castaways__chunk__865"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="chief">
+      <data key="d2">LEADER_OF</data>
+      <data key="d3">["in search of the castaways__chunk__834", "in search of the castaways__chunk__863", "in search of the castaways__chunk__854"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="gazed coldly">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__834"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="spoke in a stern voice">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__834"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="exchange prisoners for ransom">
+      <data key="d2">INTENDS_TO</data>
+      <data key="d3">["in search of the castaways__chunk__834"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="kill prisoners if ransom refused">
+      <data key="d2">INTENDS_TO</data>
+      <data key="d3">["in search of the castaways__chunk__834"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Maori tribe">
+      <data key="d2">LEADER_OF</data>
+      <data key="d3">["in search of the castaways__chunk__834"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="rage">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__863"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="hut">
+      <data key="d2">OWNS</data>
+      <data key="d3">["in search of the castaways__chunk__854"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="savages' attention">
+      <data key="d2">COMMANDS</data>
+      <data key="d3">["in search of the castaways__chunk__854"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Maoris">
+      <data key="d2">LEADER_OF</data>
+      <data key="d3">["in search of the castaways__chunk__938", "in search of the castaways__chunk__836"]</data>
     </edge>
     <edge source="Kai-Koumou" target="New Zealand">
-      <data key="d1">LIVES_IN</data>
-      <data key="d2">["in search of the castaways__chunk__935", "in search of the castaways__chunk__796"]</data>
+      <data key="d2">RESIDES_AT</data>
+      <data key="d3">["in search of the castaways__chunk__835"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="travelers">
-      <data key="d1">FEARED_BY</data>
-      <data key="d2">["in search of the castaways__chunk__936"]</data>
+    <edge source="Kai-Koumou" target="funeral dance">
+      <data key="d2">WAS_PRESENT_DURING</data>
+      <data key="d3">["in search of the castaways__chunk__874"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="Lake Taupo region">
-      <data key="d1">LIVES_IN</data>
-      <data key="d2">["in search of the castaways__chunk__936"]</data>
+    <edge source="Kai-Koumou" target="general intoxication">
+      <data key="d2">WITNESSED</data>
+      <data key="d3">["in search of the castaways__chunk__874"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="English government">
-      <data key="d1">ENEMY_OF</data>
-      <data key="d2">["in search of the castaways__chunk__796"]</data>
+    <edge source="Kai-Koumou" target="preserved his reason">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__874"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="leaves of the Bible for wads in guns">
-      <data key="d1">USES</data>
-      <data key="d2">["in search of the castaways__chunk__911"]</data>
+    <edge source="Kai-Koumou" target="bloody orgy">
+      <data key="d2">WITNESSED</data>
+      <data key="d3">["in search of the castaways__chunk__874"]</data>
     </edge>
-    <edge source="Kai-Koumou" target="pursuit of prisoners">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["in search of the castaways__chunk__899"]</data>
+    <edge source="Kai-Koumou" target="bloody orgy for an hour">
+      <data key="d2">PERMITTED</data>
+      <data key="d3">["in search of the castaways__chunk__874"]</data>
     </edge>
-    <edge source="Maoris" target="superstitious">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["in search of the castaways__chunk__927"]</data>
+    <edge source="Kai-Koumou" target="last act of the funeral was played with the usual rites">
+      <data key="d2">ENSURED</data>
+      <data key="d3">["in search of the castaways__chunk__874"]</data>
     </edge>
-    <edge source="Ayrton" target="Irishman's farm">
-      <data key="d1">EMPLOYED_BY</data>
-      <data key="d2">["in search of the castaways__chunk__989"]</data>
+    <edge source="Kai-Koumou" target="captives">
+      <data key="d2">LEADER_OF</data>
+      <data key="d3">["in search of the castaways__chunk__836"]</data>
     </edge>
-    <edge source="Ayrton" target="Ben Joyce">
-      <data key="d1">ALIAS</data>
-      <data key="d2">["in search of the castaways__chunk__989"]</data>
+    <edge source="Kai-Koumou" target="captives to Lake Taupo">
+      <data key="d2">INTENDS_TO_TAKE</data>
+      <data key="d3">["in search of the castaways__chunk__836"]</data>
     </edge>
-    <edge source="Ayrton" target="penitentiary of Perth">
-      <data key="d1">FLED_FROM</data>
-      <data key="d2">["in search of the castaways__chunk__989"]</data>
+    <edge source="Kai-Koumou" target="canoe">
+      <data key="d2">TRAVELS_BY</data>
+      <data key="d3">["in search of the castaways__chunk__836"]</data>
     </edge>
-    <edge source="Ayrton" target="Australia">
-      <data key="d1">ARRIVED_AT</data>
-      <data key="d2">["in search of the castaways__chunk__600"]</data>
+    <edge source="Kai-Koumou" target="a pah">
+      <data key="d2">LOCATED_IN</data>
+      <data key="d3">["in search of the castaways__chunk__856"]</data>
     </edge>
-    <edge source="Ayrton" target="band of convicts">
-      <data key="d1">LEADER_OF</data>
-      <data key="d2">["in search of the castaways__chunk__600"]</data>
+    <edge source="Kai-Koumou" target="Glenarvan and his companions">
+      <data key="d2">ENCOUNTERED_BY</data>
+      <data key="d3">["in search of the castaways__chunk__856"]</data>
     </edge>
-    <edge source="Ayrton" target="formidable bandit">
-      <data key="d1">KNOWN_FOR</data>
-      <data key="d2">["in search of the castaways__chunk__677"]</data>
+    <edge source="Kai-Koumou" target="natives">
+      <data key="d2">LEADER_OF</data>
+      <data key="d3">["in search of the castaways__chunk__833"]</data>
     </edge>
-    <edge source="Ayrton" target="railway disaster">
-      <data key="d1">PARTICIPATED_IN</data>
-      <data key="d2">["in search of the castaways__chunk__677"]</data>
+    <edge source="Kai-Koumou" target="taciturn">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__833"]</data>
     </edge>
-    <edge source="Ayrton" target="accomplices">
-      <data key="d1">BETRAYED_BY</data>
-      <data key="d2">["in search of the castaways__chunk__992"]</data>
+    <edge source="Kai-Koumou" target="Glenarvan and companions">
+      <data key="d2">CARRIES_AWAY</data>
+      <data key="d3">["in search of the castaways__chunk__833"]</data>
     </edge>
-    <edge source="Ayrton" target="gain possession of a vessel">
-      <data key="d1">MOTIVATED_BY</data>
-      <data key="d2">["in search of the castaways__chunk__989"]</data>
+    <edge source="Kai-Koumou" target="Waikato">
+      <data key="d2">TRAVELED_TO</data>
+      <data key="d3">["in search of the castaways__chunk__833"]</data>
     </edge>
-    <edge source="Ayrton" target="mutiny">
-      <data key="d1">ATTEMPTED</data>
-      <data key="d2">["in search of the castaways__chunk__965"]</data>
+    <edge source="Kai-Koumou" target="cold demeanor">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__833"]</data>
     </edge>
-    <edge source="Ayrton" target="cabin in the forecastle">
-      <data key="d1">IMPRISONED_IN</data>
-      <data key="d2">["in search of the castaways__chunk__965"]</data>
+    <edge source="Kai-Koumou" target="Glenarvan's question">
+      <data key="d2">DID_NOT_ANSWER</data>
+      <data key="d3">["in search of the castaways__chunk__833"]</data>
     </edge>
-    <edge source="New Zealanders" target="cruelty">
-      <data key="d1">KNOWN_FOR</data>
-      <data key="d2">["in search of the castaways__chunk__798"]</data>
+    <edge source="Kai-Koumou" target="Maori">
+      <data key="d2">NATIONALITY_IS</data>
+      <data key="d3">["in search of the castaways__chunk__901"]</data>
     </edge>
-    <edge source="Glenarvan" target="volcanic effervescence">
-      <data key="d1">WITNESSED</data>
-      <data key="d2">["in search of the castaways__chunk__933"]</data>
+    <edge source="Kai-Koumou" target="charm">
+      <data key="d2">SUBJECT_TO</data>
+      <data key="d3">["in search of the castaways__chunk__901"]</data>
     </edge>
-    <edge source="Glenarvan" target="torrents of lava">
-      <data key="d1">WITNESSED</data>
-      <data key="d2">["in search of the castaways__chunk__933"]</data>
+    <edge source="Kai-Koumou" target="invisible power">
+      <data key="d2">SUBJECT_TO</data>
+      <data key="d3">["in search of the castaways__chunk__901"]</data>
     </edge>
-    <edge source="Glenarvan" target="thick, yellowish vapors mingled with the flames">
-      <data key="d1">WITNESSED</data>
-      <data key="d2">["in search of the castaways__chunk__933"]</data>
+    <edge source="Kai-Koumou" target="Glenarvan's captivity in a wild country">
+      <data key="d2">WAS_PRESENT_DURING</data>
+      <data key="d3">["in search of the castaways__chunk__837"]</data>
     </edge>
-    <edge source="Glenarvan" target="the camp of the Maoris">
-      <data key="d1">WITNESSED</data>
-      <data key="d2">["in search of the castaways__chunk__933"]</data>
+    <edge source="Kai-Koumou" target="Glenarvan to hide his thoughts about Lady Helena">
+      <data key="d2">CAUSED</data>
+      <data key="d3">["in search of the castaways__chunk__837"]</data>
     </edge>
-    <edge source="Tangariro" target="outlets for volcanic expansion">
-      <data key="d1">SERVED_AS</data>
-      <data key="d2">["in search of the castaways__chunk__933"]</data>
+    <edge source="Kai-Koumou" target="a hundred miles above the junction of two streams">
+      <data key="d2">ENCAMPED_AT</data>
+      <data key="d3">["in search of the castaways__chunk__845"]</data>
     </edge>
+    <edge source="Kai-Koumou" target="ascending two rapids">
+      <data key="d2">PARTICIPATED_IN</data>
+      <data key="d3">["in search of the castaways__chunk__845"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Lake Taupo">
+      <data key="d2">TRAVELED_TO</data>
+      <data key="d3">["in search of the castaways__chunk__845"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="farrier">
+      <data key="d2">PROFESSION_IS</data>
+      <data key="d3">["in search of the castaways__chunk__557"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Ayrton">
+      <data key="d2">TRAVELED_WITH</data>
+      <data key="d3">["in search of the castaways__chunk__557"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="tall build">
+      <data key="d2">PHYSICAL_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__557"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="stout build">
+      <data key="d2">PHYSICAL_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__557"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="low appearance">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__557"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="brutish appearance">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__557"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="not prone to idle words">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__557"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="farrier trade">
+      <data key="d2">EXPERT_IN</data>
+      <data key="d3">["in search of the castaways__chunk__557"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="repaired wheels of the cart">
+      <data key="d2">SKILLFULLY</data>
+      <data key="d3">["in search of the castaways__chunk__557"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="uncommon energy in labor">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["in search of the castaways__chunk__557"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="Black Point Station">
+      <data key="d2">STATIONED_AT</data>
+      <data key="d3">["in search of the castaways__chunk__678"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="examining tracks on the ground with two other men">
+      <data key="d2">PARTICIPATED_IN</data>
+      <data key="d3">["in search of the castaways__chunk__678"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="the major">
+      <data key="d2">SUSPECTED_BY</data>
+      <data key="d3">["in search of the castaways__chunk__678"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="in any provided text">
+      <data key="d2">IS_NOT_MENTIONED</data>
+      <data key="d3">["in search of the castaways__chunk__953"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="ordering troops to burn an empty village during a war">
+      <data key="d2">HAS_NO_EVIDENCE_FOR</data>
+      <data key="d3">["in search of the castaways__chunk__949"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="luring troops into a swamp">
+      <data key="d2">HAS_NO_EVIDENCE_FOR</data>
+      <data key="d3">["in search of the castaways__chunk__509"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="using captured European cannon in battle">
+      <data key="d2">HAS_NO_EVIDENCE_FOR</data>
+      <data key="d3">["in search of the castaways__chunk__953"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="battering troops with captured European cannon">
+      <data key="d2">HAS_NO_EVIDENCE_FOR</data>
+      <data key="d3">["in search of the castaways__chunk__423"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="being known by the name 'Bone-Eater'">
+      <data key="d2">HAS_NO_EVIDENCE_FOR</data>
+      <data key="d3">["in search of the castaways__chunk__1006"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="suffering a crippled left leg from shrapnel">
+      <data key="d2">HAS_NO_EVIDENCE_FOR</data>
+      <data key="d3">["in search of the castaways__chunk__953"]</data>
+    </edge>
+    <edge source="Kai-Koumou" target="possessing a peach-wood staff carved with sea-monster totems">
+      <data key="d2">HAS_NO_EVIDENCE_FOR</data>
+      <data key="d3">["in search of the castaways__chunk__1006"]</data>
+    </edge>
+    <data key="d0">The provided evidence chunks do not contain any mention of a character named Kai-Koumou. Consequently, there is no information regarding his alleged participation in a north-island war, his military tactics such as burning villages or luring troops into swamps, or his use of captured European cannon. The texts also lack any details about him receiving the name “Bone-Eater,” suffering a crippled left leg from shrapnel, or using a peach-wood staff. While the evidence references general conflicts involving natives, deserted villages devastated by war, and hostile tribes, none of these events are attributed to Kai-Koumou or corroborate his specific backstory claims.</data>
   </graph>
 </graphml>

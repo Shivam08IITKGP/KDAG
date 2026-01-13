@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", default="test.csv", help="Input CSV")
+    parser.add_argument("--input", default="utils/test.csv", help="Input CSV")
     parser.add_argument("--limit", type=int, help="Limit number of rows")
     args = parser.parse_args()
 
@@ -43,8 +43,10 @@ def main():
         return
         
     # Output file setup
-    output_file = "final_output.csv"
-    feature_file = "features_test.csv"
+    output_dir = Path("output")
+    output_dir.mkdir(exist_ok=True)
+    output_file = output_dir / "final_output.csv"
+    feature_file = output_dir / "features_test.csv"
     
     results = []
     
@@ -117,13 +119,14 @@ def main():
                 # Re-reading is safer for now without changing `main.py` state definition.
                 
                 graph_path = state.get("graph_path")
-                graph_summary_text = "Graph unavailable."
+                narrative_summary = "Graph unavailable."
+                full_graph_text = "Graph unavailable."
                 if graph_path:
                     import networkx as nx
-                    from answering_agent.classifier import summarize_graph
+                    from answering_agent.classifier import get_graph_data
                     if Path(graph_path).exists():
                         g = nx.read_graphml(graph_path)
-                        graph_summary_text = summarize_graph(g)
+                        narrative_summary, full_graph_text = get_graph_data(g)
                 
                 # Get character summary (also local in answer function)
                 from extraction_agent.character_summaries import get_character_summary
@@ -133,7 +136,8 @@ def main():
                     book_name=book_name,
                     character_name=row['char'],
                     backstory=row['content'],
-                    graph_summary=graph_summary_text,
+                    narrative_summary=narrative_summary,
+                    full_graph_text=full_graph_text,
                     character_summary=char_summary,
                     target_label=ml_pred
                 )

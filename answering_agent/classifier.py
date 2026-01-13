@@ -1,50 +1,53 @@
-"""Classification module for answering agent."""
-import json
 import logging
-from pathlib import Path
 from typing import TypedDict
+from pydantic import BaseModel, Field
 
 import networkx as nx
-from langchain_openai import ChatOpenAI
+from langchain_core.language_models.chat_models import BaseChatModel
 
 from answering_agent.prompts import CLASSIFICATION_PROMPT
 
 logger = logging.getLogger(__name__)
 
 
+class ClassificationResult(BaseModel):
+    """Structured output format for backstory classification."""
+    label: int = Field(description="1 if consistent, 0 if contradictory")
+    reasoning: str = Field(description="Strictly 1-2 line concise analysis.")
+    evidence_queries: list[str] = Field(description="Queries to fetch supporting or contradictory evidence.")
+
+
 class ClassificationOutput(TypedDict):
-    """Output from classification."""
+    """Output from classification for the pipeline state."""
     label: int  # 1 or 0
     reasoning: str
-    evidence_queries: list[str]  # Queries to fetch supporting evidence
+    evidence_queries: list[str]
 
 
-def summarize_graph(graph: nx.DiGraph) -> str:
-    """Create a text summary of the graph.
+def get_graph_data(graph: nx.DiGraph) -> tuple[str, str]:
+    """Extract narrative summary and full triplet text from the graph.
     
     Args:
         graph: NetworkX directed graph.
         
     Returns:
-        Text summary of the graph.
+        Tuple of (narrative_summary, full_triplets_text).
     """
     if graph.number_of_nodes() == 0:
-        return "No graph data available."
+        return "No narrative summary available.", "No graph data available."
     
-    summary_parts = []
-    summary_parts.append(f"Graph has {graph.number_of_nodes()} nodes and {graph.number_of_edges()} edges.")
+    # Get the narrative summary stored as a graph attribute
+    narrative_summary = graph.graph.get("graph_summary", "No narrative summary available.")
     
-    # Extract some key relationships
+    # Format all edges into triplets
     edges_list = []
     for u, v, data in graph.edges(data=True):
         relation = data.get("relation", "related_to")
         edges_list.append(f"{u} --[{relation}]--> {v}")
     
-    if edges_list:
-        summary_parts.append("\nKey relationships:")
-        summary_parts.extend(edges_list[:10])  # Limit to first 10
+    full_triplets_text = "\n".join(edges_list) if edges_list else "No triplets found."
     
-    return "\n".join(summary_parts)
+    return narrative_summary, full_triplets_text
 
 
 def classify(
@@ -53,7 +56,7 @@ def classify(
     backstory: str,
     graph_summary: str,
     character_summary: str,
-    llm: ChatOpenAI,
+    llm: BaseChatModel,
 ) -> ClassificationOutput:
     """Classify backstory as consistent or contradicting.
     
@@ -70,73 +73,44 @@ def classify(
     """
     logger.info("Starting classification")
     
-    
     # Format prompt
     prompt = CLASSIFICATION_PROMPT.format(
         book_name=book_name,
         character_name=character_name,
         backstory=backstory,
-        graph_summary=graph_summary,
+        full_graph=graph_summary,
         character_summary=character_summary,
     )
     
     logger.debug(f"Classification prompt: {prompt[:200]}...")
     
-    # Get LLM response
-    logger.info("Calling LLM for classification")
-    response = llm.invoke(prompt)
-    response_text = response.content.strip()
-    
-    logger.debug(f"LLM response: {response_text}")
-    
-    # Parse JSON response
+    # Get LLM response with structured output
+    logger.info("Calling structured LLM for classification")
     try:
-        # Try to extract JSON from response
-        if "```" in response_text:
-            start = response_text.find("{")
-            end = response_text.rfind("}") + 1
-            if start != -1 and end > start:
-                response_text = response_text[start:end]
+        structured_llm = llm.with_structured_output(ClassificationResult)
+        result = structured_llm.invoke(prompt)
         
-        result = json.loads(response_text)
-        
-        # Validate and create TypedDict
-        label = result.get("label", 0)
-        if label not in [0, 1]:
-            logger.warning(f"Invalid label {label}, defaulting to 0")
-            label = 0
-        
-        reasoning = result.get("reasoning", "No reasoning provided")
-        
-        # Strictly enforce 1-2 lines by taking the first two sentences or lines
+        # Strictly enforce 1-2 lines for reasoning (defense in depth)
+        reasoning = result.reasoning
         reasoning_parts = reasoning.split('\n')
         if len(reasoning_parts) > 2:
             reasoning = " ".join(reasoning_parts[:2]).strip()
-        
-        evidence_queries = result.get("evidence_queries", [])
-        
-        # Validate queries
-        if not isinstance(evidence_queries, list):
-            logger.warning(f"evidence_queries is not a list, defaulting to empty")
-            evidence_queries = []
-        
+            
         output: ClassificationOutput = {
-            "label": label,
+            "label": result.label if result.label in [0, 1] else 0,
             "reasoning": reasoning,
-            "evidence_queries": evidence_queries,
+            "evidence_queries": result.evidence_queries,
         }
         
-        logger.info(f"Classification complete: label={label}, queries={len(evidence_queries)}")
-        logger.debug(f"Evidence queries: {evidence_queries}")
+        logger.info(f"Classification complete: label={output['label']}")
         return output
         
     except Exception as e:
-        logger.error(f"Error parsing classification response: {e}")
-        logger.error(f"Response text: {response_text}")
+        logger.error(f"Error during structured classification: {e}")
         
-        # Return default
-        return ClassificationOutput(
-            label=0,
-            reasoning=f"Error during classification: {e}",
-            evidence_queries=[],
-        )
+        # Return default failure state
+        return {
+            "label": 0,
+            "reasoning": f"Error during classification: {e}",
+            "evidence_queries": [],
+        }

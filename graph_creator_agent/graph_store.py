@@ -220,7 +220,7 @@ def add_triplets(graph: nx.DiGraph, triplets: list[Triplet]) -> None:
     logger.info(f"Added {len(triplets)} triplets to graph. Graph now has {graph.number_of_nodes()} nodes and {graph.number_of_edges()} edges")
 
 
-def save_graph(graph: nx.DiGraph, book_name: str, character_name: str) -> str:
+def save_graph(graph: nx.DiGraph, book_name: str, character_name: str, graph_summary: str = "") -> str:
     """Save graph to GraphML file.
     
     GraphML doesn't support lists, so we convert all list attributes to JSON strings.
@@ -229,6 +229,7 @@ def save_graph(graph: nx.DiGraph, book_name: str, character_name: str) -> str:
         graph: NetworkX directed graph.
         book_name: Name of the book.
         character_name: Name of the character.
+        graph_summary: Narrative summary of the character.
         
     Returns:
         Path to saved graph file.
@@ -240,6 +241,10 @@ def save_graph(graph: nx.DiGraph, book_name: str, character_name: str) -> str:
     safe_char = sanitize_filename(character_name)
     graph_filename = f"{safe_book}_{safe_char}.graphml"
     graph_path = graph_dir / graph_filename
+    
+    # Store graph summary as graph attribute
+    if graph_summary:
+        graph.graph["graph_summary"] = graph_summary
     
     # Convert all list attributes to JSON strings for GraphML compatibility
     # GraphML only supports scalar types (str, int, float, bool)

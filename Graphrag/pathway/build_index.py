@@ -128,13 +128,13 @@ def build_index(novel_path: str, name: str, embedding_model: str | None = None, 
         client = QdrantClient(url=host, api_key=api_key)
         collection_name = f"{name}_collection"
         
-        # We always rebuild for now to ensure new chunking/embedding strategy is applied
-        # existing_collections = client.get_collections().collections
-        # if any(c.name == collection_name for c in existing_collections):
-        #      info = client.get_collection(collection_name)
-        #      if info.points_count and info.points_count > 0:
-        #          print(f"✅ Index '{collection_name}' already exists. Skipping rebuild.")
-        #          return
+        # Check if collection exists and has points
+        existing_collections = client.get_collections().collections
+        if any(c.name == collection_name for c in existing_collections):
+             info = client.get_collection(collection_name)
+             if info.points_count and info.points_count > 0:
+                 print(f"✅ Index '{collection_name}' already exists. Skipping rebuild.")
+                 return
         print(f"Target Collection: {collection_name}")
     except Exception as e:
         print(f"Warning: Could not check existing collections: {e}")

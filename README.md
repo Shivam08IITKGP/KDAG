@@ -1,284 +1,114 @@
-# KDAG: Knowledge-Graph-Driven Backstory Consistency System
+# HIVE: Hybrid Inference and Verification Engine
 
-A LangGraph-based agentic pipeline that validates character backstory consistency against source novels using Graph RAG (Retrieval Augmented Generation).
+<div align="center">
 
-## System Architecture
+![HIVE Architecture](image.png)
 
-```mermaid
-graph TB
-    Start([User Input]) --> Input[Input Module<br/>train.csv]
-    Input --> BuildIndex[Build Index<br/>Qdrant Vector DB]
-    
-    BuildIndex --> Pipeline{LangGraph Pipeline}
-    
-    Pipeline --> Extract[Extraction Agent<br/>Generate Queries]
-    Extract --> Retrieve[Retrieve Evidence<br/>Vector Search + Reranking]
-    Retrieve --> GraphCreate[Graph Creator Agent<br/>Build Knowledge Graph]
-    GraphCreate --> Answer[Answering Agent<br/>Classify Consistency]
-    
-    Answer --> Output[Output<br/>output.csv]
-    
-    style Extract fill:#e1f5ff
-    style GraphCreate fill:#fff4e1
-    style Answer fill:#e8f5e9
-    style BuildIndex fill:#f3e5f5
-```
+**A State-of-the-Art Consistency Verification System for Character Backstory Validation**
 
-## Pipeline Flow
-
-### 1. **Input Processing** (`input.py`, `main.py`)
-- Reads character backstories from `train.csv`
-- Each row contains: `book_name`, `char` (character name), `content` (backstory)
-- User specifies number of rows to process
-
-### 2. **Index Building** (`Graphrag/pathway/build_index.py`)
-- **First-time per book**: Chunks novel text using `RecursiveCharacterTextSplitter`
-  - Chunk size: 1000 characters
-  - Overlap: 100 characters
-- Generates embeddings using `SentenceTransformer` (all-MiniLM-L6-v2)
-- Stores in Qdrant vector database as `{book_name}_collection`
-
-### 3. **Extraction Agent** (`extraction_agent/`)
-- **Input**: Character name, backstory, book name
-- **Process**:
-  - Uses LLM to generate search queries (max 5) from backstory
-  - Queries extract key claims to verify
-- **Output**: List of verification queries
-
-### 4. **Evidence Retrieval** (`Graphrag/pathway/retriever.py`)
-- **Two-stage retrieval**:
-  1. **Vector Search**: Retrieves top-50 candidates from Qdrant
-  2. **Reranking**: CrossEncoder reranks to top-5 most relevant chunks
-- Returns evidence with IDs, text, and relevance scores
-
-### 5. **Graph Creator Agent** (`graph_creator_agent/`)
-- **Input**: Evidence chunks
-- **Process**:
-  - Extracts knowledge triplets: `(subject, predicate, object)`
-  - Builds/updates NetworkX knowledge graph
-  - Caches processed evidence to avoid duplication
-- **Output**: GraphML file stored in `graph_creator_agent/graph/`
-- **Components**:
-  - `extractor.py`: LLM-based triplet extraction
-  - `graph_store.py`: Graph persistence (load/save GraphML)
-  - `cache.py`: Evidence deduplication cache
-
-### 6. **Answering Agent** (`answering_agent/`)
-- **Classifier** (`classifier.py`):
-  - Analyzes backstory against knowledge graph
-  - Returns: `label` (1=Consistent, 0=Contradicting) + `reasoning`
-- **Evidence Generator** (`evidence_generator.py`):
-  - Identifies specific evidence IDs supporting the classification
-- **Output**: Final verdict with supporting evidence
-
-### 7. **Output Generation** (`main.py`)
-- Writes results to `output.csv`:
-  - `book_name`, `character_name`, `predictions`, `reasoning`
-- Incremental saving (appends after each row)
-- Detailed logs in `logs/run_{timestamp}.log`
-
-## Key Technologies
-
-| Component | Technology |
-|-----------|-----------|
-| **Orchestration** | LangGraph (StateGraph) |
-| **LLM** | OpenRouter API |
-| **Vector DB** | Qdrant |
-| **Embeddings** | SentenceTransformer (all-MiniLM-L6-v2) |
-| **Reranking** | CrossEncoder (ms-marco-MiniLM-L-6-v2) |
-| **Knowledge Graph** | NetworkX (GraphML format) |
-| **Text Splitting** | LangChain RecursiveCharacterTextSplitter |
-
-## Project Structure
-
-```
-KDAG/
-├── main.py                    # Pipeline orchestrator
-├── input.py                   # Data loader
-├── shared_config.py           # LLM configuration
-├── train.csv                  # Input dataset
-├── output.csv                 # Results
-│
-├── extraction_agent/          # Query generation
-│   ├── main.py               # Agent entry point
-│   ├── prompts.py            # LLM prompts
-│   └── config.py             # Agent config
-│
-├── graph_creator_agent/       # Knowledge graph builder
-│   ├── main.py               # Agent entry point
-│   ├── extractor.py          # Triplet extraction
-│   ├── graph_store.py        # Graph I/O operations
-│   ├── cache.py              # Evidence caching
-│   ├── types.py              # Type definitions
-│   └── graph/                # Saved graphs (.graphml)
-│
-├── answering_agent/           # Classification
-│   ├── main.py               # Agent entry point
-│   ├── classifier.py         # Consistency classifier
-│   ├── evidence_generator.py # Evidence ID extraction
-│   └── prompts.py            # LLM prompts
-│
-└── Graphrag/pathway/          # RAG infrastructure
-    ├── build_index.py        # Vector index builder
-    └── retriever.py          # Hybrid retrieval
-```
-
-## Usage
-
-```bash
-# 1. Start Qdrant
-docker run -p 6333:6333 qdrant/qdrant
-
-# 2. Set environment variables
-export OPENROUTER_API_KEY="your_key"
-export QDRANT_URL="http://localhost:6333"
-
-# 3. Run pipeline
-python main.py
-# Enter number of rows to process: 2
-```
-
-## State Management
-
-The pipeline uses a `PipelineState` TypedDict that flows through all agents:
-
-```python
-{
-    "book_name": str,
-    "character_name": str,
-    "backstory": str,
-    "queries": list[str],           # From extraction agent
-    "evidences": list[dict],        # From retrieval
-    "graph_path": str,              # From graph creator
-    "label": int,                   # From answering agent (1/0)
-    "reasoning": str,               # From answering agent
-    "evidence_ids": list[str]       # From answering agent
-}
-```
-
-## Logging
-
-- **Location**: `logs/run_{timestamp}.log`
-- **Format**: Structured logs with timestamp, level, module, function, line number
-- **Levels**: DEBUG (file), INFO (console + file)
+</div>
 
 ---
 
-## Configuration & Index Management
+## 🚀 Overview
 
-### Index Management Commands
+HIVE is a high-fidelity narrative consistency verification system that validates character backstories against canonical source texts. It employs a **multi-layered verification architecture** combining symbolic knowledge graphs, neural language models, and meta-learning arbitration.
 
-```bash
-# List all indexed books
-python -m Graphrag.pathway.index_manager --list
-
-# Clear specific book (case-insensitive)
-python -m Graphrag.pathway.index_manager --clear "the count of monte cristo"
-
-# Clear all indexes (requires confirmation)
-python -m Graphrag.pathway.index_manager --clear-all
-
-# Rebuild specific book with current config
-python -m Graphrag.pathway.index_manager --rebuild \
-  --path Books/book.txt \
-  --name "Book Name"
-```
-
-### Configuration File
-
-All parameters are centralized in `Graphrag/config.py`:
-
-```python
-# Retrieval
-RETRIEVAL_TOP_K = 10         # Final results returned
-RETRIEVAL_INITIAL_K = 50     # Candidates for reranking
-
-# Chunking
-CHUNK_SIZE = 1000            # Characters per chunk
-CHUNK_OVERLAP = 100          # Overlap between chunks
-
-# Models
-EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-RERANKER_MODEL = "cross-encoder/ms-marco-MiniLM-L-6-v2"
-```
-
-**To change parameters:**
-1. Edit `Graphrag/config.py`
-2. Clear affected indexes: `python -m Graphrag.pathway.index_manager --clear-all`
-3. Re-run `main.py` to rebuild with new settings
-
-### Indexing Behavior
-
-**First run per book:**
-- Chunks text, embeds, stores in Qdrant collection `{book_name}_collection`
-
-**Subsequent runs:**
-- Reuses existing Qdrant collection (no rebuild)
-
-**Force rebuild:**
-- Clear index using `index_manager`, then re-run `main.py`
+### 🧠 The Core Logic
+HIVE doesn't just "chat"—it **interrogates** claims. By combining LLM narrative intuition with strict Knowledge Graph logic and NLI (Natural Language Inference) statistical scoring, it provides authoritative, evidence-backed verdicts.
 
 ---
 
-## Issues & Incomplete Functions
+## 🛠️ Setup & Installation
 
-### 🔴 Critical Issues
+### 1. Prerequisites
+- **Python 3.10+** (Recommended: [uv](https://docs.astral.sh/uv/) for fast package management)
+- **Docker Desktop** (Required for the Qdrant Vector database)
+- **API Keys**: Gemini API Key and OpenRouter API Key
 
-1. **Missing `retrieve` function** (`Graphrag/pathway/retrieve.py`)
-   - `main.py:17` imports `retrieve_topk` from `Graphrag.pathway.retrieve`
-   - File is named `retriever.py` but import expects `retrieve.py`
-   - **Fix**: Rename `retriever.py` → `retrieve.py` OR update import
+### 2. Environment Configuration
+Create a `.env` file in the root directory:
+```env
+GEMINI_API_KEY=your_gemini_key
+OPENROUTER_API_KEY=your_openrouter_key
+QDRANT_URL=http://localhost:6333
+```
 
-2. **Hardcoded book paths** (`main.py:189-199`)
-   - Only supports 2 books: "In Search of the Castaways" and "The Count of Monte Cristo"
-   - New books require code changes
-   - **Fix**: Create book registry or dynamic path resolution
+### 3. Start the Vector Database (Docker)
+Open a **new terminal window** and run the following command to start Qdrant. **Keep this terminal running in the background.**
+```bash
+docker run -p 6333:6333 -p 6334:6334 qdrant/qdrant
+```
 
-3. **Duplicate CSV writing** (`main.py:220-230, 242-258`)
-   - Results written twice: incrementally (line 229) and batch (line 256)
-   - Causes duplicate entries in `output.csv`
-   - **Fix**: Remove batch writing section (lines 242-258)
+### 4. Install Dependencies
+In your **original terminal**, install the project requirements:
+```bash
+uv pip install -r requirements.txt
+```
 
-### ⚠️ Warnings
+---
 
-4. **No error handling for Qdrant connection**
-   - `build_index.py` and `retriever.py` assume Qdrant is running
-   - **Fix**: Add connection retry logic and clear error messages
+## 🏃‍♂️ Running the System
 
-5. **LLM response parsing fragility** (`extraction_agent/main.py:66-87`)
-   - Relies on JSON extraction from markdown code blocks
-   - Falls back to empty list on parse errors
-   - **Fix**: Add structured output validation or use function calling
+HIVE operates in three distinct phases: Feature Generation, Model Training, and Batch Verification.
 
-6. **Cache persistence** (`graph_creator_agent/cache.py`)
-   - Evidence cache saved to JSON but no cleanup mechanism
-   - Can grow indefinitely
-   - **Fix**: Add cache size limits or TTL
+### Phase 1: Feature Generation (Orchestration)
+Run the orchestrator to process training data, build Knowledge Graphs, and extract NLI features.
+```bash
+uv run main.py
+```
+- **Interactive Mode**: It will ask you for a **Start** and **End** index (0-based) from `utils/train.csv`.
+- **Automatic Indexing**: If the book isn't indexed yet, it will automatically handle chunking and MiniLM embeddings on the first run.
+- **Output**: Results are saved incrementally to `output/features_output.csv`.
 
-7. **Graph merging logic** (`graph_creator_agent/graph_store.py`)
-   - No conflict resolution for duplicate triplets
-   - **Fix**: Add triplet deduplication before adding to graph
+### Phase 2: Train the Meta-Classifier (MANDATORY)
+> **IMPORTANT**: No pretrained models are provided in this repository. To ensure full transparency and prove the system's ability to learn strictly from canonical data, you **must** train the meta-classifier locally using your generated features.
+```bash
+uv run ML_answering_final/train.py --all
+```
+- **What it does**: Trains the XGBoost and Logistic Regression arbiters strictly on the provided `utils/train.csv` features.
+- **Output**: Generates local `.pkl` artifacts in `ML_answering_final/` required for Phase 3.
 
-### 📝 Minor Issues
+### Phase 3: Batch Test Pipeline
+Once the models are trained, execute the end-to-end verification for your test set:
+```bash
+uv run test_pipeline.py --input utils/test.csv
+```
+- **Constraint**: This script will not function without the locally trained artifacts from Phase 2.
+- **Output**: Generates `output/final_output.csv` with final verdicts (CONSISTENT vs CONTRADICTING) and detailed AI reasoning.
 
-8. **Unused imports** (`answering_agent/main.py:3`)
-   - `os` imported but not used
+---
 
-9. **Magic numbers**
-   - Retrieval k=5, initial_k=50 hardcoded in `retriever.py`
-   - Chunk size/overlap in `build_index.py`
-   - **Fix**: Move to config files
+## 📊 Feature breakdown (Technical)
 
-10. **No input validation**
-    - `train.csv` format not validated
-    - Missing columns would cause runtime errors
-    - **Fix**: Add schema validation
+When running `main.py`, you will see technical metrics for every row:
+- **LLM Label**: The pure narrative judgment of the model.
+- **NLI Entailment**: The statistical support score from the Knowledge Graph summary.
+- **NLI Contradiction**: The friction score between the claim and the character's history.
+- **Backstory Embedding**: A 384-dim structural representation of the claim.
 
-### ✅ Recommendations
+---
 
-- Add unit tests for each agent
-- Implement retry logic for LLM calls
-- Add progress bars for batch processing
-- Create configuration file (YAML/JSON) for all parameters
-- Add graph visualization utilities
-- Implement async processing for parallel evidence retrieval
+## 📁 Project Structure
+
+```
+hive/
+├── main.py                      # Pipeline orchestrator & Interactive UI
+├── test_pipeline.py             # End-to-end batch testing script
+├── shared_config.py             # Unified LLM & Model configuration
+├── extraction_agent/            # Phase 1: Query generation & grounding
+├── graph_creator_agent/         # Phase 2: Knowledge graph synthesis
+├── answering_agent/             # Phase 3: Dual Reasoning & NLI Scoring
+├── ML_answering_final/          # Phase 4: Meta-learning arbitration (XGBoost)
+├── Graphrag/                    # Vector DB (Qdrant) & Retrieval infra
+├── utils/                       # Input data (train/test CSVs)
+└── output/                      # System results and extracted features
+```
+
+---
+
+<div align="center">
+
+**Built with precision. Verified with rigor.**
+
+</div>

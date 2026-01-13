@@ -8,8 +8,8 @@ Character: {character_name}
 Canonical Character Summary:
 {character_summary}
 
-Knowledge Graph (canonical facts extracted from the novel):
-{graph_summary}
+Knowledge Graph (all canonical facts extracted from the novel):
+{full_graph}
 
 ---BACKSTORY TO VERIFY---
 {backstory}
@@ -138,23 +138,14 @@ Analysis:
 Decision: Label = 1
 Reasoning: "Canon never describes Noirtier's parents. This backstory provides a plausible origin for his revolutionary fervor without contradicting any established facts."
 
----
-
-**OUTPUT FORMAT (STRICT JSON)**
-
-{{
-  "label": 1 or 0,
-  "reasoning": "A strictly 1 to 2 line concise analysis of the decision, citing the most critical canonical fact or narrative constraint.",
-  "evidence_queries": [
-    "Query 1: [Specific canonical fact to verify, e.g., 'Verify Napoleon's fate at Waterloo 1815']",
-    "Query 2: [Timeline check, e.g., 'When was Noirtier paralyzed vs. when did Monte Cristo appear']",
-    "Query 3: [Causal check, e.g., 'Does novel mention Paganel's role in Britannia expedition planning']"
-  ]
-}}
+---OUTPUT INSTRUCTIONS---
+- **label**: 1 (CONSISTENT) or 0 (CONTRADICTORY).
+- **reasoning**: A strictly 1 to 2 line concise analysis of the decision, citing the most critical canonical fact or narrative constraint.
+- **evidence_queries**: A list of 5-15 word queries to fetch supporting or contradictory evidence from the novel.
 
 **REMEMBER**: 
 - The 'reasoning' MUST be strictly 1 to 2 lines only.
-- Default to CONTRADICTORY (0) when in doubt about major claims
-- Default to CONSISTENT (1) only for minor elaborations on confirmed canon
-- ALWAYS cite specific canonical facts in your reasoning
+- Default to CONTRADICTORY (0) when in doubt about major claims.
+- Default to CONSISTENT (1) only for minor elaborations on confirmed canon.
+- ALWAYS cite specific canonical facts in your reasoning.
 """

@@ -10,7 +10,8 @@ TRIPLET_EXTRACTION_PROMPT = """You are extracting structured knowledge triplets 
 {evidence_text}
 
 ---MISSION---
-Build a knowledge graph that captures ALL facts and builds a story about {character_name} that could confirm or contradict the backstory.
+1. NARRATIVE SUMMARY: Write a 5-7 sentence narrative summary of {character_name} BASED ONLY on the evidence provided. This summary should capture their origins, roles, and key life events in a chronological flow.
+2. KNOWLEDGE GRAPH: Build a structured knowledge graph (triplets) that captures ALL facts from the evidence to confirm or contradict the backstory.
 Focus on: origins, family, formative experiences, relationships, skills, beliefs, key events, timeline markers.
 
 ---CRITICAL EXTRACTION RULES---
@@ -156,33 +157,7 @@ Focus on: origins, family, formative experiences, relationships, skills, beliefs
    - [ ] Triplet helps confirm/deny backstory claims about origins, family, skills, or key events
    - [ ] No redundancy with other triplets from same evidence
 
----OUTPUT FORMAT---
-
-Return ONLY valid JSON. No markdown, no code blocks, no explanations.
-
-{{
-  "triplets": [
-    {{
-      "subject": "{character_name}",
-      "relation": "RELATION_TYPE",
-      "object": "specific entity/concept",
-      "evidence_id": "chunk_XXX"
-    }}
-  ]
-}}
-
-**Example for Jacques Paganel with backstory about "falling in love with geography at age 12":**
-
-{{
-  "triplets": [
-    {{"subject": "Jacques Paganel", "relation": "IS_SECRETARY_OF", "object": "Geographical Society of Paris", "evidence_id": "chunk_042"}},
-    {{"subject": "Jacques Paganel", "relation": "HAS_TRAIT", "object": "absent-minded", "evidence_id": "chunk_042"}},
-    {{"subject": "Jacques Paganel", "relation": "EXPERT_IN", "object": "geography", "evidence_id": "chunk_043"}},
-    {{"subject": "Jacques Paganel", "relation": "MISTAKENLY_BOARDED", "object": "Duncan instead of Scotia", "evidence_id": "chunk_044"}},
-    {{"subject": "Jacques Paganel", "relation": "CHILDHOOD_IN", "object": "France", "evidence_id": "chunk_045"}},
-    {{"subject": "Jacques Paganel", "relation": "STUDIED", "object": "nautical journals", "evidence_id": "chunk_045"}},
-    {{"subject": "Jacques Paganel", "relation": "TRAVELED_WITH", "object": "Lord Glenarvan", "evidence_id": "chunk_046"}}
-  ]
-}}
-
-Begin extraction now. Output ONLY the JSON object."""
+---OUTPUT INSTRUCTIONS---
+Generate a `graph_summary` (1-3 sentences) and a list of `triplets`.
+Each triplet must include `subject`, `relation`, `object`, and `evidence_id`.
+"""

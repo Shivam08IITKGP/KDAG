@@ -9,20 +9,10 @@ dependencies = [
     "langchain-openai",
     "networkx",
     "python-dotenv",
-<<<<<<< HEAD:rest/pyproject.toml
-<<<<<<< HEAD:pyproject.toml
-=======
-=======
->>>>>>> 62771eb5a441f5df4bc9469d19f2222a61614200:pyproject.toml
     "pandas>=2.3.3",
     "pathway",
     "qdrant-client",
     "pathway[xpack-llm]",
     "argparse",
-<<<<<<< HEAD:rest/pyproject.toml
     "sentence-transformers>=5.2.0",
->>>>>>> 9c03668 (working):rest/pyproject.toml
-=======
-    
->>>>>>> 62771eb5a441f5df4bc9469d19f2222a61614200:pyproject.toml
 ]

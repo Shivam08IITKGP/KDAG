@@ -1,655 +1,3071 @@
 <?xml version='1.0' encoding='utf-8'?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
-  <key id="d2" for="edge" attr.name="evidence_ids" attr.type="string" />
-  <key id="d1" for="edge" attr.name="relation" attr.type="string" />
-  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <key id="d3" for="edge" attr.name="evidence_ids" attr.type="string" />
+  <key id="d2" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d1" for="node" attr.name="type" attr.type="string" />
+  <key id="d0" for="graph" attr.name="graph_summary" attr.type="string" />
   <graph edgedefault="directed">
     <node id="Faria">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Château d'If">
-      <data key="d0">entity</data>
-    </node>
-    <node id="fortress of Fenestrelle">
-      <data key="d0">entity</data>
-    </node>
-    <node id="mad">
-      <data key="d0">entity</data>
+      <data key="d1">entity</data>
     </node>
     <node id="Rome">
-      <data key="d0">entity</data>
+      <data key="d1">entity</data>
     </node>
     <node id="Cardinal Spada">
-      <data key="d0">entity</data>
+      <data key="d1">entity</data>
+    </node>
+    <node id="Cardinal Spada for twenty years">
+      <data key="d1">entity</data>
+    </node>
+    <node id="beginning of the year 1811">
+      <data key="d1">entity</data>
     </node>
     <node id="Piombino">
-      <data key="d0">entity</data>
+      <data key="d1">entity</data>
     </node>
-    <node id="A Treatise on the Possibility of a General Monarchy in Italy">
-      <data key="d0">entity</data>
+    <node id="Italian and French government">
+      <data key="d1">entity</data>
     </node>
-    <node id="beneficent">
-      <data key="d0">entity</data>
+    <node id="day of his arrest">
+      <data key="d1">entity</data>
     </node>
-    <node id="cheerful">
-      <data key="d0">entity</data>
+    <node id="Piombino became capital of French department">
+      <data key="d1">entity</data>
     </node>
-    <node id="Dantès">
-      <data key="d0">entity</data>
+    <node id="Emperor created Kingdom of Rome for his son">
+      <data key="d1">entity</data>
     </node>
-    <node id="languages">
-      <data key="d0">entity</data>
+    <node id="Emperor realized dream of Machiavelli and Cæsar Borgia">
+      <data key="d1">entity</data>
     </node>
-    <node id="chemistry">
-      <data key="d0">entity</data>
+    <node id="fortress of Fenestrelle for three years">
+      <data key="d1">entity</data>
     </node>
-    <node id="Cabanis">
-      <data key="d0">entity</data>
+    <node id="Château d’If since 1811">
+      <data key="d1">entity</data>
     </node>
-    <node id="Lavoisier">
-      <data key="d0">entity</data>
+    <node id="Piedmont in France in 1811">
+      <data key="d1">entity</data>
     </node>
-    <node id="acute hearing">
-      <data key="d0">entity</data>
+    <node id="1811 Napoleon had a son">
+      <data key="d1">entity</data>
     </node>
-    <node id="teaching Dantès">
-      <data key="d0">entity</data>
+    <node id="Napoleon's overthrow four years afterwards">
+      <data key="d1">entity</data>
     </node>
-    <node id="making something from nothing">
-      <data key="d0">entity</data>
+    <node id="plan Napoleon tried to realize in 1811">
+      <data key="d1">entity</data>
     </node>
-    <node id="clear understanding">
-      <data key="d0">entity</data>
+    <node id="political face of Italy">
+      <data key="d1">entity</data>
     </node>
-    <node id="dungeon">
-      <data key="d0">entity</data>
+    <node id="one large, compact, and powerful Italian empire">
+      <data key="d1">entity</data>
     </node>
-    <node id="Edmond Dantès">
-      <data key="d0">entity</data>
+    <node id="desired to alter political face of Italy">
+      <data key="d1">entity</data>
     </node>
-    <node id="paralyzed in the right arm">
-      <data key="d0">entity</data>
+    <node id="Cæsar Borgia in a crowned simpleton">
+      <data key="d1">entity</data>
     </node>
-    <node id="paralyzed in the left leg">
-      <data key="d0">entity</data>
-    </node>
-    <node id="treasure">
-      <data key="d0">entity</data>
-    </node>
-    <node id="giving instructions to Dantès">
-      <data key="d0">entity</data>
-    </node>
-    <node id="pale">
-      <data key="d0">entity</data>
-    </node>
-    <node id="erect">
-      <data key="d0">entity</data>
-    </node>
-    <node id="prison">
-      <data key="d0">entity</data>
-    </node>
-    <node id="ancient name">
-      <data key="d0">entity</data>
-    </node>
-    <node id="very learned">
-      <data key="d0">entity</data>
-    </node>
-    <node id="rational">
-      <data key="d0">entity</data>
-    </node>
-    <node id="intractable about treasure">
-      <data key="d0">entity</data>
-    </node>
-    <node id="monomaniac">
-      <data key="d0">entity</data>
-    </node>
-    <node id="amusing">
-      <data key="d0">entity</data>
-    </node>
-    <node id="medicine">
-      <data key="d0">entity</data>
-    </node>
-    <node id="history of nations">
-      <data key="d0">entity</data>
-    </node>
-    <node id="great men">
-      <data key="d0">entity</data>
-    </node>
-    <node id="melancholy dignity">
-      <data key="d0">entity</data>
-    </node>
-    <node id="man of the world">
-      <data key="d0">entity</data>
-    </node>
-    <node id="altering the political face of Italy">
-      <data key="d0">entity</data>
-    </node>
-    <node id="one large, compact, and powerful empire in Italy">
-      <data key="d0">entity</data>
-    </node>
-    <node id="alter the political face of Italy">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Dantès on recovering treasure">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Island of Monte Cristo for Dantès">
-      <data key="d0">entity</data>
-    </node>
-    <node id="knife">
-      <data key="d0">entity</data>
-    </node>
-    <node id="benignant">
-      <data key="d0">entity</data>
-    </node>
-    <node id="reputation of being out of his mind">
-      <data key="d0">entity</data>
-    </node>
-    <node id="philosopher">
-      <data key="d0">entity</data>
-    </node>
-    <node id="politics">
-      <data key="d0">entity</data>
-    </node>
-    <node id="ink">
-      <data key="d0">entity</data>
-    </node>
-    <node id="ink from soot and wine">
-      <data key="d0">entity</data>
-    </node>
-    <node id="ink from blood">
-      <data key="d0">entity</data>
-    </node>
-    <node id="sheet of paper">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Gothic characters inscribed with a peculiar kind of ink">
-      <data key="d0">entity</data>
-    </node>
-    <node id="light">
-      <data key="d0">entity</data>
-    </node>
-    <node id="mysterious and sympathetic ink">
-      <data key="d0">entity</data>
-    </node>
-    <node id="characters traced in mysterious and sympathetic ink">
-      <data key="d0">entity</data>
-    </node>
-    <node id="dying">
-      <data key="d0">entity</data>
-    </node>
-    <node id="treasure of the Spadas">
-      <data key="d0">entity</data>
-    </node>
-    <node id="sciences">
-      <data key="d0">entity</data>
-    </node>
-    <node id="logical">
-      <data key="d0">entity</data>
-    </node>
-    <node id="sagacious">
-      <data key="d0">entity</data>
-    </node>
-    <node id="leave dungeon">
-      <data key="d0">entity</data>
-    </node>
-    <node id="sad">
-      <data key="d0">entity</data>
-    </node>
-    <node id="thought">
-      <data key="d0">entity</data>
-    </node>
-    <node id="no sentinel">
-      <data key="d0">entity</data>
-    </node>
-    <node id="kingdoms of Italy">
-      <data key="d0">entity</data>
-    </node>
-    <node id="great work upon the kingdoms of Italy">
-      <data key="d0">entity</data>
-    </node>
-    <node id="manuscript">
-      <data key="d0">entity</data>
-    </node>
-    <node id="cell">
-      <data key="d0">entity</data>
-    </node>
-    <node id="wise">
-      <data key="d0">entity</data>
-    </node>
-    <node id="treasure location">
-      <data key="d0">entity</data>
-    </node>
-    <node id="location of Spada treasure">
-      <data key="d0">entity</data>
-    </node>
-    <node id="declaration of Cardinal Spada">
-      <data key="d0">entity</data>
-    </node>
-    <node id="will of Cardinal Spada">
-      <data key="d0">entity</data>
-    </node>
-    <node id="treasures">
-      <data key="d0">entity</data>
-    </node>
-    <node id="using clews to guide through labyrinths of probabilities">
-      <data key="d0">entity</data>
-    </node>
-    <node id="self-possession">
-      <data key="d0">entity</data>
-    </node>
-    <node id="noble-minded">
-      <data key="d0">entity</data>
-    </node>
-    <node id="single-hearted">
-      <data key="d0">entity</data>
-    </node>
-    <node id="high-principled">
-      <data key="d0">entity</data>
-    </node>
-    <node id="invalid">
-      <data key="d0">entity</data>
-    </node>
-    <node id="communicate something of the greatest importance">
-      <data key="d0">entity</data>
-    </node>
-    <node id="penetrating eye">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Dantès's passion for vengeance">
-      <data key="d0">entity</data>
-    </node>
-    <node id="Château d’If">
-      <data key="d0">entity</data>
-    </node>
-    <node id="jailer leaves Faria's dungeon">
-      <data key="d0">entity</data>
-    </node>
-    <node id="shivering">
-      <data key="d0">entity</data>
-    </node>
-    <node id="separation from Dantès">
-      <data key="d0">entity</data>
-    </node>
-    <node id="catalepsy">
-      <data key="d0">entity</data>
-    </node>
-    <node id="secretive">
-      <data key="d0">entity</data>
-    </node>
-    <node id="treasure on Monte Cristo">
-      <data key="d0">entity</data>
+    <node id="crowned simpleton">
+      <data key="d1">entity</data>
     </node>
     <node id="Abbé Faria">
-      <data key="d0">entity</data>
+      <data key="d1">entity</data>
     </node>
-    <edge source="Faria" target="Château d'If">
-      <data key="d1">IMPRISONED_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__372", "the count of monte cristo__chunk__375", "the count of monte cristo__chunk__390", "the count of monte cristo__chunk__515", "the count of monte cristo__chunk__313", "the count of monte cristo__chunk__3268"]</data>
-    </edge>
-    <edge source="Faria" target="fortress of Fenestrelle">
-      <data key="d1">IMPRISONED_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__372"]</data>
-    </edge>
-    <edge source="Faria" target="mad">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__375", "the count of monte cristo__chunk__318", "the count of monte cristo__chunk__424"]</data>
-    </edge>
+    <node id="ill in Château d’If">
+      <data key="d1">entity</data>
+    </node>
+    <node id="considered mad">
+      <data key="d1">entity</data>
+    </node>
+    <node id="poor mad prisoner of the Château d’If">
+      <data key="d1">entity</data>
+    </node>
+    <node id="his insanity for many years">
+      <data key="d1">entity</data>
+    </node>
+    <node id="escape">
+      <data key="d1">entity</data>
+    </node>
+    <node id="attempt escape">
+      <data key="d1">entity</data>
+    </node>
+    <node id="carrying his great work">
+      <data key="d1">entity</data>
+    </node>
+    <node id="work on the unity of the Italian kingdom">
+      <data key="d1">entity</data>
+    </node>
+    <node id="imperial police due to hasty departure">
+      <data key="d1">entity</data>
+    </node>
+    <node id="half treasure to Dantès if they escape together">
+      <data key="d1">entity</data>
+    </node>
+    <node id="treasure exists">
+      <data key="d1">entity</data>
+    </node>
+    <node id="million francs for release in first year">
+      <data key="d1">entity</data>
+    </node>
+    <node id="fifth year of captivity">
+      <data key="d1">entity</data>
+    </node>
+    <node id="No. 27">
+      <data key="d1">entity</data>
+    </node>
+    <node id="the mad abbé by prisoners">
+      <data key="d1">entity</data>
+    </node>
+    <node id="governor during his illness">
+      <data key="d1">entity</data>
+    </node>
+    <node id="paralysis from the governor">
+      <data key="d1">entity</data>
+    </node>
+    <node id="removal to better quarters separating him from Dantès">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Château d’If">
+      <data key="d1">entity</data>
+    </node>
+    <node id="beneficent and cheerful companion to Dantès">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès on recovering treasure">
+      <data key="d1">entity</data>
+    </node>
+    <node id="his madness">
+      <data key="d1">entity</data>
+    </node>
+    <node id="breach behind bed (escape tunnel)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="great work upon the kingdoms of Italy">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès not to give way to listlessness for escape">
+      <data key="d1">entity</data>
+    </node>
+    <node id="perpetual captivity due to perceived madness">
+      <data key="d1">entity</data>
+    </node>
+    <node id="large sum of five millions">
+      <data key="d1">entity</data>
+    </node>
+    <node id="his treasures">
+      <data key="d1">entity</data>
+    </node>
+    <node id="gigantic plan for Italy">
+      <data key="d1">entity</data>
+    </node>
+    <node id="plan would make Italy strong, happy, and independent">
+      <data key="d1">entity</data>
+    </node>
+    <node id="important calculation">
+      <data key="d1">entity</data>
+    </node>
+    <node id="calculation could change Newton's system">
+      <data key="d1">entity</data>
+    </node>
+    <node id="mad by others due to treasure claims">
+      <data key="d1">entity</data>
+    </node>
+    <node id="clear understanding">
+      <data key="d1">entity</data>
+    </node>
+    <node id="unrecovered hand and foot use">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès the duty of a prisoner">
+      <data key="d1">entity</data>
+    </node>
+    <node id="unspecified illness">
+      <data key="d1">entity</data>
+    </node>
+    <node id="very learned">
+      <data key="d1">entity</data>
+    </node>
+    <node id="rational on most points">
+      <data key="d1">entity</data>
+    </node>
+    <node id="intractable regarding his treasure">
+      <data key="d1">entity</data>
+    </node>
+    <node id="monomania">
+      <data key="d1">entity</data>
+    </node>
+    <node id="jailer with stories">
+      <data key="d1">entity</data>
+    </node>
+    <node id="prescription to jailer's wife">
+      <data key="d1">entity</data>
+    </node>
+    <node id="medicine">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès in languages">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès history of nations and great men">
+      <data key="d1">entity</data>
+    </node>
+    <node id="man of the world">
+      <data key="d1">entity</data>
+    </node>
+    <node id="first society of the day">
+      <data key="d1">entity</data>
+    </node>
+    <node id="melancholy dignity">
+      <data key="d1">entity</data>
+    </node>
+    <node id="prison">
+      <data key="d1">entity</data>
+    </node>
+    <node id="fifty feet">
+      <data key="d1">entity</data>
+    </node>
+    <node id="three years to escape task">
+      <data key="d1">entity</data>
+    </node>
+    <node id="fifty during escape attempt">
+      <data key="d1">entity</data>
+    </node>
+    <node id="priest">
+      <data key="d1">entity</data>
+    </node>
+    <node id="savant">
+      <data key="d1">entity</data>
+    </node>
+    <node id="swimming three miles to islands">
+      <data key="d1">entity</data>
+    </node>
+    <node id="great work on the monarchy of Italy">
+      <data key="d1">entity</data>
+    </node>
+    <node id="monarchy of Italy about a week ago">
+      <data key="d1">entity</data>
+    </node>
+    <node id="torn shirts and handkerchiefs for writing">
+      <data key="d1">entity</data>
+    </node>
+    <node id="publication of his work in Italy">
+      <data key="d1">entity</data>
+    </node>
+    <node id="secured literary reputation">
+      <data key="d1">entity</data>
+    </node>
+    <node id="at least four or five years">
+      <data key="d1">entity</data>
+    </node>
+    <node id="abbé">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Noirtier de Villefort">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Noirtier de Villefort was Villefort's father's right name">
+      <data key="d1">entity</data>
+    </node>
+    <node id="after sickness">
+      <data key="d1">entity</data>
+    </node>
+    <node id="helpless and exhausted">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès' plan for flight">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Spada family arms for Dantès">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Spada family arms">
+      <data key="d1">entity</data>
+    </node>
+    <node id="strength to restrain Dantès">
+      <data key="d1">entity</data>
+    </node>
+    <node id="dungeon">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès' escape">
+      <data key="d1">entity</data>
+    </node>
+    <node id="he is a hindrance to escape">
+      <data key="d1">entity</data>
+    </node>
+    <node id="it is time to die">
+      <data key="d1">entity</data>
+    </node>
+    <node id="millions for liberty">
+      <data key="d1">entity</data>
+    </node>
+    <node id="the abbé">
+      <data key="d1">entity</data>
+    </node>
+    <node id="aged">
+      <data key="d1">entity</data>
+    </node>
+    <node id="weak">
+      <data key="d1">entity</data>
+    </node>
+    <node id="vacillating mind">
+      <data key="d1">entity</data>
+    </node>
+    <node id="passage between dungeons">
+      <data key="d1">entity</data>
+    </node>
+    <node id="knife">
+      <data key="d1">entity</data>
+    </node>
+    <node id="prison/dungeon">
+      <data key="d1">entity</data>
+    </node>
+    <node id="treasure">
+      <data key="d1">entity</data>
+    </node>
+    <node id="his paralysis">
+      <data key="d1">entity</data>
+    </node>
+    <node id="paralyzed in right arm">
+      <data key="d1">entity</data>
+    </node>
+    <node id="paralyzed in left leg">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès about treasure and freedom">
+      <data key="d1">entity</data>
+    </node>
+    <node id="memorize a letter">
+      <data key="d1">entity</data>
+    </node>
+    <node id="a letter about treasure">
+      <data key="d1">entity</data>
+    </node>
+    <node id="second portion of a letter">
+      <data key="d1">entity</data>
+    </node>
+    <node id="forgetting his misfortunes">
+      <data key="d1">entity</data>
+    </node>
+    <node id="English history">
+      <data key="d1">entity</data>
+    </node>
+    <node id="political changes towards constitution and liberty">
+      <data key="d1">entity</data>
+    </node>
+    <node id="reason for imprisonment by Dantès">
+      <data key="d1">entity</data>
+    </node>
+    <node id="composed">
+      <data key="d1">entity</data>
+    </node>
+    <node id="sheet of paper with Gothic characters">
+      <data key="d1">entity</data>
+    </node>
+    <node id="peculiar kind of ink">
+      <data key="d1">entity</data>
+    </node>
+    <node id="paper his treasure">
+      <data key="d1">entity</data>
+    </node>
+    <node id="mysterious and sympathetic ink">
+      <data key="d1">entity</data>
+    </node>
+    <node id="exposed to fire (ink)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="reddish color resembling rust (ink)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="ink from soot">
+      <data key="d1">entity</data>
+    </node>
+    <node id="soot in wine">
+      <data key="d1">entity</data>
+    </node>
+    <node id="his own blood for important notes">
+      <data key="d1">entity</data>
+    </node>
+    <node id="ink from time to time as required">
+      <data key="d1">entity</data>
+    </node>
+    <node id="night">
+      <data key="d1">entity</data>
+    </node>
+    <node id="light">
+      <data key="d1">entity</data>
+    </node>
+    <node id="small quantity of wine every Sunday">
+      <data key="d1">entity</data>
+    </node>
+    <node id="richly gifted">
+      <data key="d1">entity</data>
+    </node>
+    <node id="paper for many nights">
+      <data key="d1">entity</data>
+    </node>
+    <node id="every phrase on paper">
+      <data key="d1">entity</data>
+    </node>
+    <node id="pens">
+      <data key="d1">entity</data>
+    </node>
+    <node id="paper">
+      <data key="d1">entity</data>
+    </node>
+    <node id="pens, ink, and paper">
+      <data key="d1">entity</data>
+    </node>
+    <node id="A Treatise on the Possibility of a General Monarchy in Italy">
+      <data key="d1">entity</data>
+    </node>
+    <node id="thoughts and reflections of his whole life">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Colosseum at Rome">
+      <data key="d1">entity</data>
+    </node>
+    <node id="foot of St. Mark's column at Venice">
+      <data key="d1">entity</data>
+    </node>
+    <node id="borders of the Arno at Florence">
+      <data key="d1">entity</data>
+    </node>
+    <node id="preparation for writing on linen">
+      <data key="d1">entity</data>
+    </node>
+    <node id="chemistry">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Lavoisier">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Cabanis">
+      <data key="d1">entity</data>
+    </node>
+    <node id="rational">
+      <data key="d1">entity</data>
+    </node>
+    <node id="logical">
+      <data key="d1">entity</data>
+    </node>
+    <node id="sagacious">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Château d'If">
+      <data key="d1">entity</data>
+    </node>
+    <node id="story of Spada family">
+      <data key="d1">entity</data>
+    </node>
+    <node id="hour of his death">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Edmond Dantès">
+      <data key="d1">entity</data>
+    </node>
+    <node id="repressed desires">
+      <data key="d1">entity</data>
+    </node>
+    <node id="stifled sighs">
+      <data key="d1">entity</data>
+    </node>
+    <node id="plaintive voice">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Edmond">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Edmond's cell">
+      <data key="d1">entity</data>
+    </node>
+    <node id="cutting a peg for rope-ladder">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Edmond in a tone indicative of great suffering">
+      <data key="d1">entity</data>
+    </node>
+    <node id="great suffering">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Edmond's society">
+      <data key="d1">entity</data>
+    </node>
+    <node id="grew sadder daily">
+      <data key="d1">entity</data>
+    </node>
+    <node id="one thought incessantly">
+      <data key="d1">entity</data>
+    </node>
+    <node id="long reveries">
+      <data key="d1">entity</data>
+    </node>
+    <node id="heavy and involuntary sighs">
+      <data key="d1">entity</data>
+    </node>
+    <node id="confined space of his dungeon">
+      <data key="d1">entity</data>
+    </node>
+    <node id="for no sentinel">
+      <data key="d1">entity</data>
+    </node>
+    <node id="treasures">
+      <data key="d1">entity</data>
+    </node>
+    <node id="ladder of cords (25-30 feet long)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="ladder of cords">
+      <data key="d1">entity</data>
+    </node>
+    <node id="hollow space behind bed">
+      <data key="d1">entity</data>
+    </node>
+    <node id="stone with dust">
+      <data key="d1">entity</data>
+    </node>
+    <node id="stone by foot rubbing">
+      <data key="d1">entity</data>
+    </node>
+    <node id="languages to Dantès">
+      <data key="d1">entity</data>
+    </node>
+    <node id="sciences to Dantès">
+      <data key="d1">entity</data>
+    </node>
+    <node id="knowledge of languages">
+      <data key="d1">entity</data>
+    </node>
+    <node id="knowledge of sciences">
+      <data key="d1">entity</data>
+    </node>
+    <node id="intelligent">
+      <data key="d1">entity</data>
+    </node>
+    <node id="the treasure">
+      <data key="d1">entity</data>
+    </node>
+    <node id="inert leg">
+      <data key="d1">entity</data>
+    </node>
+    <node id="unusable arm">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès' chamber with difficulty">
+      <data key="d1">entity</data>
+    </node>
+    <node id="celebrated cases of escape">
+      <data key="d1">entity</data>
+    </node>
+    <node id="successful escapes are rare">
+      <data key="d1">entity</data>
+    </node>
+    <node id="successful escapes require long meditation">
+      <data key="d1">entity</data>
+    </node>
+    <node id="successful escapes require careful arrangement">
+      <data key="d1">entity</data>
+    </node>
+    <node id="chance affords escape opportunities">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès to wait for a favorable escape moment">
+      <data key="d1">entity</data>
+    </node>
+    <node id="story of the Spada family inheritance">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Spada family inheritance papers">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Spada's will">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Cæsar and the pope's search for inheritance">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Spada's description of inheritance (coffers, books, breviary)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Spada's heirs finding no treasures">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Spada's wealth in science (library, laboratories)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès his son">
+      <data key="d1">entity</data>
+    </node>
+    <node id="The treasure of the Spadas exists">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Spada treasure in inner cavern">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès to hasten to Monte Cristo">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès to avail himself of the Spada fortune">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Spada treasure location (Monte Cristo)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="mad by the world">
+      <data key="d1">entity</data>
+    </node>
+    <node id="he was not mad">
+      <data key="d1">entity</data>
+    </node>
+    <node id="fragments of a document (Spada treasure clue)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="fragments of a document to Dantès">
+      <data key="d1">entity</data>
+    </node>
+    <node id="treasure mentioned in fragments">
+      <data key="d1">entity</data>
+    </node>
+    <node id="location of treasure (caves)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="contents of treasure (ingots, gold, money, millions of Roman crowns)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="name associated with treasure (Spada)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="declaration of Cardinal Spada">
+      <data key="d1">entity</data>
+    </node>
+    <node id="will so long sought for">
+      <data key="d1">entity</data>
+    </node>
+    <node id="rest of the document aided by a fragment">
+      <data key="d1">entity</data>
+    </node>
+    <node id="length of lines by those of the paper">
+      <data key="d1">entity</data>
+    </node>
+    <node id="hidden meaning by means of what was in part revealed">
+      <data key="d1">entity</data>
+    </node>
+    <node id="a dungeon">
+      <data key="d1">entity</data>
+    </node>
+    <node id="attack of catalepsy">
+      <data key="d1">entity</data>
+    </node>
+    <node id="escape projects to be cut short">
+      <data key="d1">entity</data>
+    </node>
+    <node id="intention of escape">
+      <data key="d1">entity</data>
+    </node>
+    <node id="construction of cell walls">
+      <data key="d1">entity</data>
+    </node>
+    <node id="cell with wall built against solid rock">
+      <data key="d1">entity</data>
+    </node>
+    <node id="cell with wall adjoining governor’s apartments">
+      <data key="d1">entity</data>
+    </node>
+    <node id="cell with wall facing a loophole for light">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Edmond Dantès to climb">
+      <data key="d1">entity</data>
+    </node>
+    <node id="sketch for their escape to Dantès">
+      <data key="d1">entity</data>
+    </node>
+    <node id="plan of his own cell for escape">
+      <data key="d1">entity</data>
+    </node>
+    <node id="plan of Dantès' cell for escape">
+      <data key="d1">entity</data>
+    </node>
+    <node id="plan of passage which united cells">
+      <data key="d1">entity</data>
+    </node>
+    <node id="driving a level in passage">
+      <data key="d1">entity</data>
+    </node>
+    <node id="large excavation beneath gallery where sentry kept watch">
+      <data key="d1">entity</data>
+    </node>
+    <node id="loosening of a flag-stone for escape">
+      <data key="d1">entity</data>
+    </node>
+    <node id="ladder of cords for escape">
+      <data key="d1">entity</data>
+    </node>
+    <node id="late 1807 or early 1808">
+      <data key="d1">entity</data>
+    </node>
+    <node id="death of Count of Spada">
+      <data key="d1">entity</data>
+    </node>
+    <node id="arranging papers">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Florence">
+      <data key="d1">entity</data>
+    </node>
+    <node id="12,000 francs">
+      <data key="d1">entity</data>
+    </node>
+    <node id="a library">
+      <data key="d1">entity</data>
+    </node>
+    <node id="a famous breviary">
+      <data key="d1">entity</data>
+    </node>
+    <node id="dangerous">
+      <data key="d1">entity</data>
+    </node>
+    <node id="industrious">
+      <data key="d1">entity</data>
+    </node>
+    <node id="poor mad priest">
+      <data key="d1">entity</data>
+    </node>
+    <node id="history of Pope and Cæsar Borgia">
+      <data key="d1">entity</data>
+    </node>
+    <node id="assassination methods for cardinals">
+      <data key="d1">entity</data>
+    </node>
+    <node id="history of Spada family">
+      <data key="d1">entity</data>
+    </node>
+    <node id="secrets of confession are sacred">
+      <data key="d1">entity</data>
+    </node>
+    <node id="probity">
+      <data key="d1">entity</data>
+    </node>
+    <node id="official from prefect">
+      <data key="d1">entity</data>
+    </node>
+    <node id="public safety particulars">
+      <data key="d1">entity</data>
+    </node>
+    <node id="reflective">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès' life history">
+      <data key="d1">entity</data>
+    </node>
+    <node id="cheerful presence">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès's suicidal thoughts">
+      <data key="d1">entity</data>
+    </node>
+    <node id="an abbé">
+      <data key="d1">entity</data>
+    </node>
+    <node id="horrible suffering">
+      <data key="d1">entity</data>
+    </node>
+    <node id="after his suffering">
+      <data key="d1">entity</data>
+    </node>
+    <node id="a treasure">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès as a son">
+      <data key="d1">entity</data>
+    </node>
+    <node id="thirteen or fourteen millions of francs">
+      <data key="d1">entity</data>
+    </node>
+    <node id="how to use treasure for good">
+      <data key="d1">entity</data>
+    </node>
+    <node id="treasure could ensure Dantès's happiness">
+      <data key="d1">entity</data>
+    </node>
+    <node id="bored way from cell">
+      <data key="d1">entity</data>
+    </node>
+    <node id="cell">
+      <data key="d1">entity</data>
+    </node>
+    <node id="imprisoned">
+      <data key="d1">entity</data>
+    </node>
+    <node id="shivering">
+      <data key="d1">entity</data>
+    </node>
+    <node id="fit of catalepsy">
+      <data key="d1">entity</data>
+    </node>
+    <node id="symptoms include motionless">
+      <data key="d1">entity</data>
+    </node>
+    <node id="symptoms include violent convulsions">
+      <data key="d1">entity</data>
+    </node>
+    <node id="removal to another prison part">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Dantès to administer liquor">
+      <data key="d1">entity</data>
+    </node>
+    <node id="phial of liquor">
+      <data key="d1">entity</data>
+    </node>
+    <node id="liquor may revive him">
+      <data key="d1">entity</data>
+    </node>
+    <node id="old man">
+      <data key="d1">entity</data>
+    </node>
+    <node id="pale">
+      <data key="d1">entity</data>
+    </node>
+    <node id="resigned">
+      <data key="d1">entity</data>
+    </node>
+    <node id="horrible symptoms">
+      <data key="d1">entity</data>
+    </node>
+    <node id="restrain Dantès">
+      <data key="d1">entity</data>
+    </node>
+    <node id="twelve drops of liquor">
+      <data key="d1">entity</data>
+    </node>
+    <node id="whole liquid from phial">
+      <data key="d1">entity</data>
+    </node>
+    <node id="galvanic effect">
+      <data key="d1">entity</data>
+    </node>
+    <node id="violent trembling">
+      <data key="d1">entity</data>
+    </node>
+    <node id="eyes opened fearfully">
+      <data key="d1">entity</data>
+    </node>
+    <node id="sighed like a shriek">
+      <data key="d1">entity</data>
+    </node>
+    <node id="body returned to immobility">
+      <data key="d1">entity</data>
+    </node>
+    <node id="eyes remained open">
+      <data key="d1">entity</data>
+    </node>
+    <node id="treasure location on a deserted island">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Edmond Dantès the tale of the Arabian fisherman">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Count of Spada">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Count of Spada to invest in an annuity">
+      <data key="d1">entity</data>
+    </node>
+    <node id="celebrated breviary owned by Count of Spada">
+      <data key="d1">entity</data>
+    </node>
+    <node id="history of Spada family possessions">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Spada family inheritance was unpossessed">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Spada family finances for three hundred years">
+      <data key="d1">entity</data>
+    </node>
+    <node id="income and expenditure of Spada family">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Spada family papers">
+      <data key="d1">entity</data>
+    </node>
+    <node id="library of five thousand volumes">
+      <data key="d1">entity</data>
+    </node>
+    <node id="famous breviary">
+      <data key="d1">entity</data>
+    </node>
+    <node id="one thousand Roman crowns">
+      <data key="d1">entity</data>
+    </node>
+    <node id="anniversary masses for Count of Spada's soul">
+      <data key="d1">entity</data>
+    </node>
+    <node id="genealogical tree of Spada house">
+      <data key="d1">entity</data>
+    </node>
+    <node id="history of Spada house">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Abbé">
+      <data key="d1">entity</data>
+    </node>
+    <node id="his pupil">
+      <data key="d1">entity</data>
+    </node>
+    <node id="judging men and things well">
+      <data key="d1">entity</data>
+    </node>
+    <node id="events surrounding Edmond Dantès' denunciation">
+      <data key="d1">entity</data>
+    </node>
+    <node id="philosophy is application of sciences to truth">
+      <data key="d1">entity</data>
+    </node>
+    <node id="the Count">
+      <data key="d1">entity</data>
+    </node>
+    <node id="liberty">
+      <data key="d1">entity</data>
+    </node>
+    <node id="knowledge">
+      <data key="d1">entity</data>
+    </node>
+    <node id="riches">
+      <data key="d1">entity</data>
+    </node>
+    <node id="science of good and evil">
+      <data key="d1">entity</data>
+    </node>
+    <node id="human nature revolts at crime unless depraved">
+      <data key="d1">entity</data>
+    </node>
+    <node id="artificial civilization creates wants, vices, and false tastes">
+      <data key="d1">entity</data>
+    </node>
+    <node id="to find author of bad action, seek who benefited">
+      <data key="d1">entity</data>
+    </node>
+    <node id="history of Cæsar Borgia and Pope">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Romagna wars">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Louis XII King of France">
+      <data key="d1">entity</data>
+    </node>
+    <node id="he will stay in cell">
+      <data key="d1">entity</data>
+    </node>
+    <node id="gold">
+      <data key="d1">entity</data>
+    </node>
+    <node id="God will give him liberty">
+      <data key="d1">entity</data>
+    </node>
+    <node id="calculations">
+      <data key="d1">entity</data>
+    </node>
+    <node id="insane by prison officials">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Edmond Dantès' character">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Edmond Dantès to Monte Cristo">
+      <data key="d1">entity</data>
+    </node>
+    <node id="catalepsy">
+      <data key="d1">entity</data>
+    </node>
+    <node id="son">
+      <data key="d1">entity</data>
+    </node>
+    <node id="child of captivity">
+      <data key="d1">entity</data>
+    </node>
+    <node id="celibacy">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Edmond Dantès to console him">
+      <data key="d1">entity</data>
+    </node>
+    <node id="use of only one arm">
+      <data key="d1">entity</data>
+    </node>
+    <node id="violent convulsion">
+      <data key="d1">entity</data>
+    </node>
+    <node id="eyes injected with blood">
+      <data key="d1">entity</data>
+    </node>
+    <node id="true">
+      <data key="d1">entity</data>
+    </node>
+    <node id="old men see death more clearly">
+      <data key="d1">entity</data>
+    </node>
+    <node id="sight">
+      <data key="d1">entity</data>
+    </node>
+    <node id="senses">
+      <data key="d1">entity</data>
+    </node>
+    <node id="M. Morrel">
+      <data key="d1">entity</data>
+    </node>
+    <node id="M. Morrel was owner of the Pharaon">
+      <data key="d1">entity</data>
+    </node>
+    <node id="M. Morrel was patron of Dantès">
+      <data key="d1">entity</data>
+    </node>
+    <node id="M. Morrel's part in 'this sad drama'">
+      <data key="d1">entity</data>
+    </node>
+    <node id="M. Morrel interceded for Edmond">
+      <data key="d1">entity</data>
+    </node>
+    <node id="M. Morrel was persecuted as a Bonapartist">
+      <data key="d1">entity</data>
+    </node>
+    <node id="M. Morrel visited Dantès' father">
+      <data key="d1">entity</data>
+    </node>
+    <node id="M. Morrel offered to receive Dantès' father in his house">
+      <data key="d1">entity</data>
+    </node>
+    <node id="M. Morrel left purse for Dantès' father's debts and burial">
+      <data key="d1">entity</data>
+    </node>
+    <node id="M. Morrel was still alive">
+      <data key="d1">entity</data>
+    </node>
+    <node id="writing pen">
+      <data key="d1">entity</data>
+    </node>
+    <node id="writing pen (made from slender stick and cartilage)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="penknife">
+      <data key="d1">entity</data>
+    </node>
+    <node id="old iron candlestick (for penknife)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="penknife (sharp and keen as a razor)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="larger knife">
+      <data key="d1">entity</data>
+    </node>
+    <node id="old iron candlestick (for larger knife)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="larger knife (for cutting and thrusting)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="penknife to shape writing pen">
+      <data key="d1">entity</data>
+    </node>
+    <node id="ingenious">
+      <data key="d1">entity</data>
+    </node>
+    <node id="poor">
+      <data key="d1">entity</data>
+    </node>
+    <node id="jailer">
+      <data key="d1">entity</data>
+    </node>
+    <node id="deceased">
+      <data key="d1">entity</data>
+    </node>
+    <node id="turnkeys to call for help">
+      <data key="d1">entity</data>
+    </node>
+    <node id="soldiers to arrive">
+      <data key="d1">entity</data>
+    </node>
+    <node id="governor to arrive">
+      <data key="d1">entity</data>
+    </node>
+    <node id="doctor to be sent for">
+      <data key="d1">entity</data>
+    </node>
+    <node id="attempted resuscitation">
+      <data key="d1">entity</data>
+    </node>
+    <node id="corpse movement">
+      <data key="d1">entity</data>
+    </node>
+    <node id="tattered garments">
+      <data key="d1">entity</data>
+    </node>
+    <node id="geometrical calculations">
+      <data key="d1">entity</data>
+    </node>
+    <node id="absorbed in problems">
+      <data key="d1">entity</data>
+    </node>
+    <node id="inspector">
+      <data key="d1">entity</data>
+    </node>
+    <node id="abbé’s cell">
+      <data key="d1">entity</data>
+    </node>
+    <node id="subterranean passage">
+      <data key="d1">entity</data>
+    </node>
+    <node id="laborious task">
+      <data key="d1">entity</data>
+    </node>
+    <node id="stone in cell floor">
+      <data key="d1">entity</data>
+    </node>
+    <node id="enormous degree of intelligence">
+      <data key="d1">entity</data>
+    </node>
+    <node id="enormous degree of ability">
+      <data key="d1">entity</data>
+    </node>
+    <node id="misfortune is needed to bring to light treasures of human intellect">
+      <data key="d1">entity</data>
+    </node>
+    <node id="captivity has brought mental faculties to a focus">
+      <data key="d1">entity</data>
+    </node>
+    <node id="nearly five thousand volumes in his library">
+      <data key="d1">entity</data>
+    </node>
+    <node id="one hundred and fifty well-chosen books offer essential human knowledge">
+      <data key="d1">entity</data>
+    </node>
+    <node id="one hundred and fifty volumes for three years">
+      <data key="d1">entity</data>
+    </node>
+    <node id="reciting contents of numerous classical works from memory">
+      <data key="d1">entity</data>
+    </node>
+    <node id="a variety of languages">
+      <data key="d1">entity</data>
+    </node>
+    <node id="old abbé">
+      <data key="d1">entity</data>
+    </node>
+    <node id="leader of a party in Italy">
+      <data key="d1">entity</data>
+    </node>
+    <node id="1811">
+      <data key="d1">entity</data>
+    </node>
+    <node id="madness">
+      <data key="d1">entity</data>
+    </node>
+    <node id="1813 (went mad)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="amusing madness">
+      <data key="d1">entity</data>
+    </node>
+    <node id="changed from weeping to laughing (after going mad)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="changed from thin to fat (after going mad)">
+      <data key="d1">entity</data>
+    </node>
+    <node id="innocent">
+      <data key="d1">entity</data>
+    </node>
+    <node id="conspiring to aid the emperor's return">
+      <data key="d1">entity</data>
+    </node>
+    <node id="since 1811">
+      <data key="d1">entity</data>
+    </node>
+    <node id="emperor's abdication at Fontainebleau in 1814">
+      <data key="d1">entity</data>
+    </node>
+    <node id="emperor sent to Island of Elba">
+      <data key="d1">entity</data>
+    </node>
+    <node id="chamber in prison">
+      <data key="d1">entity</data>
+    </node>
+    <node id="excavation behind his bed">
+      <data key="d1">entity</data>
+    </node>
+    <node id="papers of all sorts">
+      <data key="d1">entity</data>
+    </node>
+    <node id="titles">
+      <data key="d1">entity</data>
+    </node>
+    <node id="contracts">
+      <data key="d1">entity</data>
+    </node>
+    <node id="parchments">
+      <data key="d1">entity</data>
+    </node>
+    <node id="family archives">
+      <data key="d1">entity</data>
+    </node>
+    <node id="documents descending from the poisoned cardinal">
+      <data key="d1">entity</data>
+    </node>
+    <node id="a precise history of the Borgia family">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Cardinal Cæsar Spada's death">
+      <data key="d1">entity</data>
+    </node>
+    <node id="acquisition of property of Cardinal Rospigliosi">
+      <data key="d1">entity</data>
+    </node>
+    <node id="fortune increase for Borgias from Cardinal Spada's death">
+      <data key="d1">entity</data>
+    </node>
+    <node id="mathematics">
+      <data key="d1">entity</data>
+    </node>
+    <node id="physics">
+      <data key="d1">entity</data>
+    </node>
+    <node id="history">
+      <data key="d1">entity</data>
+    </node>
+    <node id="three or four modern languages">
+      <data key="d1">entity</data>
+    </node>
+    <node id="learned">
+      <data key="d1">entity</data>
+    </node>
+    <node id="stock of learning">
+      <data key="d1">entity</data>
+    </node>
+    <node id="can communicate learning in two years">
+      <data key="d1">entity</data>
+    </node>
+    <node id="prefers absolute solitude">
+      <data key="d1">entity</data>
+    </node>
+    <node id="papers related to treasure">
+      <data key="d1">entity</data>
+    </node>
+    <node id="papers to Dantès">
+      <data key="d1">entity</data>
+    </node>
+    <node id="information about treasure's location">
+      <data key="d1">entity</data>
+    </node>
+    <node id="treasure on Island of Monte Cristo">
+      <data key="d1">entity</data>
+    </node>
+    <node id="will dated 25th April, 1498">
+      <data key="d1">entity</data>
+    </node>
+    <node id="will from Cæs[ar] Spada">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Will">
+      <data key="d1">entity</data>
+    </node>
+    <node id="25th April, 1498">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Guido Spada">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Treasure">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Island of Monte Cristo">
+      <data key="d1">entity</data>
+    </node>
+    <node id="jewels">
+      <data key="d1">entity</data>
+    </node>
+    <node id="diamonds">
+      <data key="d1">entity</data>
+    </node>
+    <node id="gems">
+      <data key="d1">entity</data>
+    </node>
+    <node id="nearly two million">
+      <data key="d1">entity</data>
+    </node>
+    <node id="treasure of Cardinal Spada">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Cardinal Spada's nephews">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Cardinal Spada for ten years">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Cardinal Spada's house">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Cardinal Spada annotating ancient volumes">
+      <data key="d1">entity</data>
+    </node>
+    <node id="Cardinal Spada searching family manuscripts">
+      <data key="d1">entity</data>
+    </node>
+    <node id="decline of Spada family wealth">
+      <data key="d1">entity</data>
+    </node>
     <edge source="Faria" target="Rome">
-      <data key="d1">BORN_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__311"]</data>
+      <data key="d2">BORN_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__311", "the count of monte cristo__chunk__477", "the count of monte cristo__chunk__391"]</data>
     </edge>
     <edge source="Faria" target="Cardinal Spada">
-      <data key="d1">SECRETARY_OF</data>
-      <data key="d2">["the count of monte cristo__chunk__311"]</data>
+      <data key="d2">SECRETARY_OF</data>
+      <data key="d3">["the count of monte cristo__chunk__311", "the count of monte cristo__chunk__462"]</data>
+    </edge>
+    <edge source="Faria" target="Cardinal Spada for twenty years">
+      <data key="d2">SERVED_UNDER</data>
+      <data key="d3">["the count of monte cristo__chunk__311"]</data>
+    </edge>
+    <edge source="Faria" target="beginning of the year 1811">
+      <data key="d2">ARRESTED_ON</data>
+      <data key="d3">["the count of monte cristo__chunk__311"]</data>
     </edge>
     <edge source="Faria" target="Piombino">
-      <data key="d1">IMPRISONED_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__484"]</data>
-    </edge>
-    <edge source="Faria" target="A Treatise on the Possibility of a General Monarchy in Italy">
-      <data key="d1">AUTHORED</data>
-      <data key="d2">["the count of monte cristo__chunk__390"]</data>
-    </edge>
-    <edge source="Faria" target="beneficent">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__515"]</data>
-    </edge>
-    <edge source="Faria" target="cheerful">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__515"]</data>
-    </edge>
-    <edge source="Faria" target="Dantès">
-      <data key="d1">MENTOR_OF</data>
-      <data key="d2">["the count of monte cristo__chunk__531", "the count of monte cristo__chunk__488", "the count of monte cristo__chunk__491", "the count of monte cristo__chunk__431", "the count of monte cristo__chunk__641", "the count of monte cristo__chunk__451", "the count of monte cristo__chunk__452", "the count of monte cristo__chunk__425", "the count of monte cristo__chunk__507", "the count of monte cristo__chunk__486"]</data>
-    </edge>
-    <edge source="Faria" target="languages">
-      <data key="d1">EXPERT_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__398", "the count of monte cristo__chunk__437", "the count of monte cristo__chunk__491", "the count of monte cristo__chunk__554"]</data>
-    </edge>
-    <edge source="Faria" target="chemistry">
-      <data key="d1">EXPERT_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__390"]</data>
-    </edge>
-    <edge source="Faria" target="Cabanis">
-      <data key="d1">FRIEND_OF</data>
-      <data key="d2">["the count of monte cristo__chunk__390"]</data>
-    </edge>
-    <edge source="Faria" target="Lavoisier">
-      <data key="d1">KNOWS_ABOUT</data>
-      <data key="d2">["the count of monte cristo__chunk__390"]</data>
-    </edge>
-    <edge source="Faria" target="acute hearing">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__315"]</data>
-    </edge>
-    <edge source="Faria" target="teaching Dantès">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["the count of monte cristo__chunk__495"]</data>
-    </edge>
-    <edge source="Faria" target="making something from nothing">
-      <data key="d1">TRAINED_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__495"]</data>
-    </edge>
-    <edge source="Faria" target="clear understanding">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__495"]</data>
-    </edge>
-    <edge source="Faria" target="dungeon">
-      <data key="d1">LIVES_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__496", "the count of monte cristo__chunk__394", "the count of monte cristo__chunk__431", "the count of monte cristo__chunk__507"]</data>
-    </edge>
-    <edge source="Faria" target="Edmond Dantès">
-      <data key="d1">FRIEND_OF</data>
-      <data key="d2">["the count of monte cristo__chunk__496", "the count of monte cristo__chunk__493", "the count of monte cristo__chunk__437", "the count of monte cristo__chunk__447", "the count of monte cristo__chunk__589"]</data>
-    </edge>
-    <edge source="Faria" target="paralyzed in the right arm">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__493"]</data>
-    </edge>
-    <edge source="Faria" target="paralyzed in the left leg">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__493"]</data>
-    </edge>
-    <edge source="Faria" target="treasure">
-      <data key="d1">KNOWS_ABOUT</data>
-      <data key="d2">["the count of monte cristo__chunk__493", "the count of monte cristo__chunk__453"]</data>
-    </edge>
-    <edge source="Faria" target="giving instructions to Dantès">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["the count of monte cristo__chunk__493"]</data>
-    </edge>
-    <edge source="Faria" target="pale">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__497"]</data>
-    </edge>
-    <edge source="Faria" target="erect">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__497"]</data>
-    </edge>
-    <edge source="Faria" target="prison">
-      <data key="d1">DIED_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__512"]</data>
-    </edge>
-    <edge source="Faria" target="ancient name">
-      <data key="d1">KNOWN_FOR</data>
-      <data key="d2">["the count of monte cristo__chunk__512"]</data>
-    </edge>
-    <edge source="Faria" target="very learned">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__512"]</data>
-    </edge>
-    <edge source="Faria" target="rational">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__512", "the count of monte cristo__chunk__460"]</data>
-    </edge>
-    <edge source="Faria" target="intractable about treasure">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__512"]</data>
-    </edge>
-    <edge source="Faria" target="monomaniac">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__512"]</data>
-    </edge>
-    <edge source="Faria" target="amusing">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__512"]</data>
-    </edge>
-    <edge source="Faria" target="medicine">
-      <data key="d1">KNOWS_ABOUT</data>
-      <data key="d2">["the count of monte cristo__chunk__512"]</data>
-    </edge>
-    <edge source="Faria" target="history of nations">
-      <data key="d1">KNOWS_ABOUT</data>
-      <data key="d2">["the count of monte cristo__chunk__437"]</data>
-    </edge>
-    <edge source="Faria" target="great men">
-      <data key="d1">KNOWS_ABOUT</data>
-      <data key="d2">["the count of monte cristo__chunk__437"]</data>
-    </edge>
-    <edge source="Faria" target="melancholy dignity">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__437"]</data>
-    </edge>
-    <edge source="Faria" target="man of the world">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__437"]</data>
-    </edge>
-    <edge source="Faria" target="altering the political face of Italy">
-      <data key="d1">PARTICIPATED_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__374"]</data>
-    </edge>
-    <edge source="Faria" target="one large, compact, and powerful empire in Italy">
-      <data key="d1">HOPED_FOR</data>
-      <data key="d2">["the count of monte cristo__chunk__374"]</data>
-    </edge>
-    <edge source="Faria" target="alter the political face of Italy">
-      <data key="d1">FAILED_TO</data>
-      <data key="d2">["the count of monte cristo__chunk__374"]</data>
-    </edge>
-    <edge source="Faria" target="Dantès on recovering treasure">
-      <data key="d1">ADVISED</data>
-      <data key="d2">["the count of monte cristo__chunk__488"]</data>
-    </edge>
-    <edge source="Faria" target="Island of Monte Cristo for Dantès">
-      <data key="d1">DREW_PLAN_OF</data>
-      <data key="d2">["the count of monte cristo__chunk__488"]</data>
-    </edge>
-    <edge source="Faria" target="knife">
-      <data key="d1">CREATED</data>
-      <data key="d2">["the count of monte cristo__chunk__518"]</data>
-    </edge>
-    <edge source="Faria" target="benignant">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__461"]</data>
-    </edge>
-    <edge source="Faria" target="reputation of being out of his mind">
-      <data key="d1">KNOWN_FOR</data>
-      <data key="d2">["the count of monte cristo__chunk__424"]</data>
-    </edge>
-    <edge source="Faria" target="philosopher">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__269"]</data>
-    </edge>
-    <edge source="Faria" target="politics">
-      <data key="d1">KNOWS_ABOUT</data>
-      <data key="d2">["the count of monte cristo__chunk__269"]</data>
-    </edge>
-    <edge source="Faria" target="ink">
-      <data key="d1">CREATED</data>
-      <data key="d2">["the count of monte cristo__chunk__394"]</data>
-    </edge>
-    <edge source="Faria" target="ink from soot and wine">
-      <data key="d1">CREATED</data>
-      <data key="d2">["the count of monte cristo__chunk__394"]</data>
-    </edge>
-    <edge source="Faria" target="ink from blood">
-      <data key="d1">CREATED</data>
-      <data key="d2">["the count of monte cristo__chunk__394"]</data>
-    </edge>
-    <edge source="Faria" target="sheet of paper">
-      <data key="d1">OWNS</data>
-      <data key="d2">["the count of monte cristo__chunk__453"]</data>
-    </edge>
-    <edge source="Faria" target="Gothic characters inscribed with a peculiar kind of ink">
-      <data key="d1">AUTHORED</data>
-      <data key="d2">["the count of monte cristo__chunk__453"]</data>
-    </edge>
-    <edge source="Faria" target="light">
-      <data key="d1">CREATED</data>
-      <data key="d2">["the count of monte cristo__chunk__400"]</data>
-    </edge>
-    <edge source="Faria" target="mysterious and sympathetic ink">
-      <data key="d1">CREATED</data>
-      <data key="d2">["the count of monte cristo__chunk__479"]</data>
-    </edge>
-    <edge source="Faria" target="characters traced in mysterious and sympathetic ink">
-      <data key="d1">AUTHORED</data>
-      <data key="d2">["the count of monte cristo__chunk__479"]</data>
-    </edge>
-    <edge source="Faria" target="dying">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__501"]</data>
-    </edge>
-    <edge source="Faria" target="treasure of the Spadas">
-      <data key="d1">EXPERT_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__501"]</data>
-    </edge>
-    <edge source="Faria" target="sciences">
-      <data key="d1">EXPERT_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__491"]</data>
-    </edge>
-    <edge source="Faria" target="logical">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__460"]</data>
-    </edge>
-    <edge source="Faria" target="sagacious">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__460"]</data>
-    </edge>
-    <edge source="Faria" target="leave dungeon">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["the count of monte cristo__chunk__498"]</data>
-    </edge>
-    <edge source="Faria" target="sad">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__431"]</data>
-    </edge>
-    <edge source="Faria" target="thought">
-      <data key="d1">MOTIVATED_BY</data>
-      <data key="d2">["the count of monte cristo__chunk__431"]</data>
-    </edge>
-    <edge source="Faria" target="no sentinel">
-      <data key="d1">HOPED_FOR</data>
-      <data key="d2">["the count of monte cristo__chunk__431"]</data>
-    </edge>
-    <edge source="Faria" target="kingdoms of Italy">
-      <data key="d1">KNOWS_ABOUT</data>
-      <data key="d2">["the count of monte cristo__chunk__3282"]</data>
-    </edge>
-    <edge source="Faria" target="great work upon the kingdoms of Italy">
-      <data key="d1">AUTHORED</data>
-      <data key="d2">["the count of monte cristo__chunk__3282"]</data>
-    </edge>
-    <edge source="Faria" target="manuscript">
-      <data key="d1">POSSESSES</data>
-      <data key="d2">["the count of monte cristo__chunk__3282"]</data>
-    </edge>
-    <edge source="Faria" target="cell">
-      <data key="d1">IMPRISONED_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__316"]</data>
-    </edge>
-    <edge source="Faria" target="wise">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__589"]</data>
-    </edge>
-    <edge source="Faria" target="treasure location">
-      <data key="d1">EXPERT_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__482"]</data>
-    </edge>
-    <edge source="Faria" target="location of Spada treasure">
-      <data key="d1">DISCOVERED</data>
-      <data key="d2">["the count of monte cristo__chunk__483"]</data>
-    </edge>
-    <edge source="Faria" target="declaration of Cardinal Spada">
-      <data key="d1">CREATED</data>
-      <data key="d2">["the count of monte cristo__chunk__483"]</data>
-    </edge>
-    <edge source="Faria" target="will of Cardinal Spada">
-      <data key="d1">CREATED</data>
-      <data key="d2">["the count of monte cristo__chunk__483"]</data>
-    </edge>
-    <edge source="Faria" target="treasures">
-      <data key="d1">HID</data>
-      <data key="d2">["the count of monte cristo__chunk__402"]</data>
-    </edge>
-    <edge source="Faria" target="using clews to guide through labyrinths of probabilities">
-      <data key="d1">EXPERT_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__605"]</data>
-    </edge>
-    <edge source="Faria" target="self-possession">
-      <data key="d1">TRAINED_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__641"]</data>
-    </edge>
-    <edge source="Faria" target="noble-minded">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__451"]</data>
-    </edge>
-    <edge source="Faria" target="single-hearted">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__451"]</data>
-    </edge>
-    <edge source="Faria" target="high-principled">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__451"]</data>
-    </edge>
-    <edge source="Faria" target="invalid">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__452"]</data>
-    </edge>
-    <edge source="Faria" target="communicate something of the greatest importance">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["the count of monte cristo__chunk__452"]</data>
-    </edge>
-    <edge source="Faria" target="penetrating eye">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__425"]</data>
-    </edge>
-    <edge source="Faria" target="Dantès's passion for vengeance">
-      <data key="d1">CAUSED</data>
-      <data key="d2">["the count of monte cristo__chunk__425"]</data>
-    </edge>
-    <edge source="Faria" target="Château d’If">
-      <data key="d1">IMPRISONED_IN</data>
-      <data key="d2">["the count of monte cristo__chunk__3267"]</data>
-    </edge>
-    <edge source="Faria" target="jailer leaves Faria's dungeon">
-      <data key="d1">NEXT_ACTION_IS</data>
-      <data key="d2">["the count of monte cristo__chunk__507"]</data>
-    </edge>
-    <edge source="Faria" target="shivering">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__443"]</data>
-    </edge>
-    <edge source="Faria" target="separation from Dantès">
-      <data key="d1">FEARED</data>
-      <data key="d2">["the count of monte cristo__chunk__443"]</data>
-    </edge>
-    <edge source="Faria" target="catalepsy">
-      <data key="d1">KNOWS_ABOUT</data>
-      <data key="d2">["the count of monte cristo__chunk__443"]</data>
-    </edge>
-    <edge source="Faria" target="secretive">
-      <data key="d1">HAS_TRAIT</data>
-      <data key="d2">["the count of monte cristo__chunk__486"]</data>
-    </edge>
-    <edge source="Faria" target="treasure on Monte Cristo">
-      <data key="d1">KNOWS_ABOUT</data>
-      <data key="d2">["the count of monte cristo__chunk__486"]</data>
+      <data key="d2">ARRESTED_AT</data>
+      <data key="d3">["the count of monte cristo__chunk__311", "the count of monte cristo__chunk__484"]</data>
+    </edge>
+    <edge source="Faria" target="Italian and French government">
+      <data key="d2">DEMANDED_LIBERTY_FROM</data>
+      <data key="d3">["the count of monte cristo__chunk__311"]</data>
+    </edge>
+    <edge source="Faria" target="day of his arrest">
+      <data key="d2">INFORMATION_DATES_FROM</data>
+      <data key="d3">["the count of monte cristo__chunk__311"]</data>
+    </edge>
+    <edge source="Faria" target="Piombino became capital of French department">
+      <data key="d2">PRESUMED</data>
+      <data key="d3">["the count of monte cristo__chunk__311"]</data>
+    </edge>
+    <edge source="Faria" target="Emperor created Kingdom of Rome for his son">
+      <data key="d2">PRESUMED</data>
+      <data key="d3">["the count of monte cristo__chunk__311"]</data>
+    </edge>
+    <edge source="Faria" target="Emperor realized dream of Machiavelli and Cæsar Borgia">
+      <data key="d2">PRESUMED</data>
+      <data key="d3">["the count of monte cristo__chunk__311"]</data>
+    </edge>
+    <edge source="Faria" target="fortress of Fenestrelle for three years">
+      <data key="d2">HAD_BEEN_CONFINED_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__372"]</data>
+    </edge>
+    <edge source="Faria" target="Château d’If since 1811">
+      <data key="d2">IMPRISONED_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__372"]</data>
+    </edge>
+    <edge source="Faria" target="Piedmont in France in 1811">
+      <data key="d2">TRANSFERRED_TO</data>
+      <data key="d3">["the count of monte cristo__chunk__372"]</data>
+    </edge>
+    <edge source="Faria" target="1811 Napoleon had a son">
+      <data key="d2">LEARNED_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__372"]</data>
+    </edge>
+    <edge source="Faria" target="Napoleon's overthrow four years afterwards">
+      <data key="d2">WAS_UNAWARE_OF</data>
+      <data key="d3">["the count of monte cristo__chunk__372"]</data>
+    </edge>
+    <edge source="Faria" target="plan Napoleon tried to realize in 1811">
+      <data key="d2">DREAMED_OF</data>
+      <data key="d3">["the count of monte cristo__chunk__374"]</data>
+    </edge>
+    <edge source="Faria" target="political face of Italy">
+      <data key="d2">DESIRED_TO_ALTER</data>
+      <data key="d3">["the count of monte cristo__chunk__374"]</data>
+    </edge>
+    <edge source="Faria" target="one large, compact, and powerful Italian empire">
+      <data key="d2">SOUGHT_TO_FORM</data>
+      <data key="d3">["the count of monte cristo__chunk__374"]</data>
+    </edge>
+    <edge source="Faria" target="desired to alter political face of Italy">
+      <data key="d2">IMPRISONED_BECAUSE</data>
+      <data key="d3">["the count of monte cristo__chunk__374"]</data>
+    </edge>
+    <edge source="Faria" target="Cæsar Borgia in a crowned simpleton">
+      <data key="d2">FANCIED_FOUND_HIS</data>
+      <data key="d3">["the count of monte cristo__chunk__374"]</data>
+    </edge>
+    <edge source="Faria" target="crowned simpleton">
+      <data key="d2">BETRAYED_BY</data>
+      <data key="d3">["the count of monte cristo__chunk__374"]</data>
     </edge>
     <edge source="Faria" target="Abbé Faria">
-      <data key="d1">STUDENT_OF</data>
-      <data key="d2">["the count of monte cristo__chunk__554"]</data>
+      <data key="d2">IS</data>
+      <data key="d3">["the count of monte cristo__chunk__375"]</data>
     </edge>
+    <edge source="Faria" target="ill in Château d’If">
+      <data key="d2">GENERALLY_THOUGHT_TO_BE</data>
+      <data key="d3">["the count of monte cristo__chunk__375"]</data>
+    </edge>
+    <edge source="Faria" target="considered mad">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__375"]</data>
+    </edge>
+    <edge source="Faria" target="poor mad prisoner of the Château d’If">
+      <data key="d2">ACKNOWLEDGES_BEING</data>
+      <data key="d3">["the count of monte cristo__chunk__375"]</data>
+    </edge>
+    <edge source="Faria" target="his insanity for many years">
+      <data key="d2">AMUSED_VISITORS_WITH</data>
+      <data key="d3">["the count of monte cristo__chunk__375"]</data>
+    </edge>
+    <edge source="Faria" target="escape">
+      <data key="d2">ABANDONED_HOPE_OF</data>
+      <data key="d3">["the count of monte cristo__chunk__375"]</data>
+    </edge>
+    <edge source="Faria" target="attempt escape">
+      <data key="d2">CONSIDERED_IMPIOUS_TO</data>
+      <data key="d3">["the count of monte cristo__chunk__375"]</data>
+    </edge>
+    <edge source="Faria" target="carrying his great work">
+      <data key="d2">RESOLVED_TO_SET_OUT</data>
+      <data key="d3">["the count of monte cristo__chunk__484"]</data>
+    </edge>
+    <edge source="Faria" target="work on the unity of the Italian kingdom">
+      <data key="d2">AUTHORED</data>
+      <data key="d3">["the count of monte cristo__chunk__484"]</data>
+    </edge>
+    <edge source="Faria" target="imperial police due to hasty departure">
+      <data key="d2">AROUSED_SUSPICIONS_OF</data>
+      <data key="d3">["the count of monte cristo__chunk__484"]</data>
+    </edge>
+    <edge source="Faria" target="half treasure to Dantès if they escape together">
+      <data key="d2">OFFERS</data>
+      <data key="d3">["the count of monte cristo__chunk__484"]</data>
+    </edge>
+    <edge source="Faria" target="treasure exists">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__315", "the count of monte cristo__chunk__454"]</data>
+    </edge>
+    <edge source="Faria" target="million francs for release in first year">
+      <data key="d2">OFFERED_GOVERNMENT</data>
+      <data key="d3">["the count of monte cristo__chunk__309"]</data>
+    </edge>
+    <edge source="Faria" target="fifth year of captivity">
+      <data key="d2">IS_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__309"]</data>
+    </edge>
+    <edge source="Faria" target="No. 27">
+      <data key="d2">WAS_CALLED</data>
+      <data key="d3">["the count of monte cristo__chunk__309"]</data>
+    </edge>
+    <edge source="Faria" target="the mad abbé by prisoners">
+      <data key="d2">WAS_CALLED</data>
+      <data key="d3">["the count of monte cristo__chunk__309"]</data>
+    </edge>
+    <edge source="Faria" target="governor during his illness">
+      <data key="d2">WAS_SEEN_BY</data>
+      <data key="d3">["the count of monte cristo__chunk__459"]</data>
+    </edge>
+    <edge source="Faria" target="paralysis from the governor">
+      <data key="d2">CONCEALED</data>
+      <data key="d3">["the count of monte cristo__chunk__459"]</data>
+    </edge>
+    <edge source="Faria" target="removal to better quarters separating him from Dantès">
+      <data key="d2">FEARED</data>
+      <data key="d3">["the count of monte cristo__chunk__459"]</data>
+    </edge>
+    <edge source="Faria" target="Château d’If">
+      <data key="d2">DIED_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__515"]</data>
+    </edge>
+    <edge source="Faria" target="beneficent and cheerful companion to Dantès">
+      <data key="d2">WAS</data>
+      <data key="d3">["the count of monte cristo__chunk__515"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès on recovering treasure">
+      <data key="d2">GAVE_ADVICE_TO</data>
+      <data key="d3">["the count of monte cristo__chunk__488"]</data>
+    </edge>
+    <edge source="Faria" target="his madness">
+      <data key="d2">DISCOVERY_AROUSED_SUSPICION_OF</data>
+      <data key="d3">["the count of monte cristo__chunk__488"]</data>
+    </edge>
+    <edge source="Faria" target="breach behind bed (escape tunnel)">
+      <data key="d2">MADE</data>
+      <data key="d3">["the count of monte cristo__chunk__3268"]</data>
+    </edge>
+    <edge source="Faria" target="great work upon the kingdoms of Italy">
+      <data key="d2">AUTHORED</data>
+      <data key="d3">["the count of monte cristo__chunk__3282"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès not to give way to listlessness for escape">
+      <data key="d2">ADVISED</data>
+      <data key="d3">["the count of monte cristo__chunk__531"]</data>
+    </edge>
+    <edge source="Faria" target="perpetual captivity due to perceived madness">
+      <data key="d2">CONDEMNED_TO</data>
+      <data key="d3">["the count of monte cristo__chunk__318"]</data>
+    </edge>
+    <edge source="Faria" target="large sum of five millions">
+      <data key="d2">DISCUSSED</data>
+      <data key="d3">["the count of monte cristo__chunk__313"]</data>
+    </edge>
+    <edge source="Faria" target="his treasures">
+      <data key="d2">DISCUSSED</data>
+      <data key="d3">["the count of monte cristo__chunk__313"]</data>
+    </edge>
+    <edge source="Faria" target="gigantic plan for Italy">
+      <data key="d2">ADVOCATED</data>
+      <data key="d3">["the count of monte cristo__chunk__313"]</data>
+    </edge>
+    <edge source="Faria" target="plan would make Italy strong, happy, and independent">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__313"]</data>
+    </edge>
+    <edge source="Faria" target="important calculation">
+      <data key="d2">WORKED_ON</data>
+      <data key="d3">["the count of monte cristo__chunk__313"]</data>
+    </edge>
+    <edge source="Faria" target="calculation could change Newton's system">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__313"]</data>
+    </edge>
+    <edge source="Faria" target="mad by others due to treasure claims">
+      <data key="d2">CONSIDERED</data>
+      <data key="d3">["the count of monte cristo__chunk__454"]</data>
+    </edge>
+    <edge source="Faria" target="clear understanding">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__495"]</data>
+    </edge>
+    <edge source="Faria" target="unrecovered hand and foot use">
+      <data key="d2">SUFFERED_FROM</data>
+      <data key="d3">["the count of monte cristo__chunk__495"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès">
+      <data key="d2">MENTOR_OF</data>
+      <data key="d3">["the count of monte cristo__chunk__495", "the count of monte cristo__chunk__423", "the count of monte cristo__chunk__620", "the count of monte cristo__chunk__498", "the count of monte cristo__chunk__3270", "the count of monte cristo__chunk__518", "the count of monte cristo__chunk__491", "the count of monte cristo__chunk__461", "the count of monte cristo__chunk__501", "the count of monte cristo__chunk__641", "the count of monte cristo__chunk__516", "the count of monte cristo__chunk__429", "the count of monte cristo__chunk__395", "the count of monte cristo__chunk__428"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès the duty of a prisoner">
+      <data key="d2">TAUGHT</data>
+      <data key="d3">["the count of monte cristo__chunk__495"]</data>
+    </edge>
+    <edge source="Faria" target="unspecified illness">
+      <data key="d2">DIED_OF</data>
+      <data key="d3">["the count of monte cristo__chunk__512"]</data>
+    </edge>
+    <edge source="Faria" target="very learned">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__512"]</data>
+    </edge>
+    <edge source="Faria" target="rational on most points">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__512"]</data>
+    </edge>
+    <edge source="Faria" target="intractable regarding his treasure">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__512"]</data>
+    </edge>
+    <edge source="Faria" target="monomania">
+      <data key="d2">DIAGNOSED_WITH</data>
+      <data key="d3">["the count of monte cristo__chunk__512"]</data>
+    </edge>
+    <edge source="Faria" target="jailer with stories">
+      <data key="d2">AMUSED</data>
+      <data key="d3">["the count of monte cristo__chunk__512"]</data>
+    </edge>
+    <edge source="Faria" target="prescription to jailer's wife">
+      <data key="d2">GAVE</data>
+      <data key="d3">["the count of monte cristo__chunk__512"]</data>
+    </edge>
+    <edge source="Faria" target="medicine">
+      <data key="d2">KNOWS_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__512"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès in languages">
+      <data key="d2">INSTRUCTED</data>
+      <data key="d3">["the count of monte cristo__chunk__437"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès history of nations and great men">
+      <data key="d2">TAUGHT</data>
+      <data key="d3">["the count of monte cristo__chunk__437"]</data>
+    </edge>
+    <edge source="Faria" target="man of the world">
+      <data key="d2">IS_A</data>
+      <data key="d3">["the count of monte cristo__chunk__437"]</data>
+    </edge>
+    <edge source="Faria" target="first society of the day">
+      <data key="d2">ASSOCIATED_WITH</data>
+      <data key="d3">["the count of monte cristo__chunk__437"]</data>
+    </edge>
+    <edge source="Faria" target="melancholy dignity">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__437"]</data>
+    </edge>
+    <edge source="Faria" target="prison">
+      <data key="d2">ATTEMPTED_TO_ESCAPE</data>
+      <data key="d3">["the count of monte cristo__chunk__381", "the count of monte cristo__chunk__373", "the count of monte cristo__chunk__491", "the count of monte cristo__chunk__388", "the count of monte cristo__chunk__501", "the count of monte cristo__chunk__310", "the count of monte cristo__chunk__405"]</data>
+    </edge>
+    <edge source="Faria" target="fifty feet">
+      <data key="d2">DUG</data>
+      <data key="d3">["the count of monte cristo__chunk__381"]</data>
+    </edge>
+    <edge source="Faria" target="three years to escape task">
+      <data key="d2">DEVOTED</data>
+      <data key="d3">["the count of monte cristo__chunk__381"]</data>
+    </edge>
+    <edge source="Faria" target="fifty during escape attempt">
+      <data key="d2">AGED</data>
+      <data key="d3">["the count of monte cristo__chunk__381"]</data>
+    </edge>
+    <edge source="Faria" target="priest">
+      <data key="d2">IS_A</data>
+      <data key="d3">["the count of monte cristo__chunk__381", "the count of monte cristo__chunk__2121"]</data>
+    </edge>
+    <edge source="Faria" target="savant">
+      <data key="d2">IS_A</data>
+      <data key="d3">["the count of monte cristo__chunk__381"]</data>
+    </edge>
+    <edge source="Faria" target="swimming three miles to islands">
+      <data key="d2">CONSIDERED_RISKING_LIFE</data>
+      <data key="d3">["the count of monte cristo__chunk__381"]</data>
+    </edge>
+    <edge source="Faria" target="great work on the monarchy of Italy">
+      <data key="d2">AUTHORED</data>
+      <data key="d3">["the count of monte cristo__chunk__398"]</data>
+    </edge>
+    <edge source="Faria" target="monarchy of Italy about a week ago">
+      <data key="d2">COMPLETED_WORK_ON</data>
+      <data key="d3">["the count of monte cristo__chunk__398"]</data>
+    </edge>
+    <edge source="Faria" target="torn shirts and handkerchiefs for writing">
+      <data key="d2">USED</data>
+      <data key="d3">["the count of monte cristo__chunk__398"]</data>
+    </edge>
+    <edge source="Faria" target="publication of his work in Italy">
+      <data key="d2">WISHES_FOR</data>
+      <data key="d3">["the count of monte cristo__chunk__398"]</data>
+    </edge>
+    <edge source="Faria" target="secured literary reputation">
+      <data key="d2">HOPED_FOR</data>
+      <data key="d3">["the count of monte cristo__chunk__398"]</data>
+    </edge>
+    <edge source="Faria" target="at least four or five years">
+      <data key="d2">IMPRISONED_FOR</data>
+      <data key="d3">["the count of monte cristo__chunk__313"]</data>
+    </edge>
+    <edge source="Faria" target="abbé">
+      <data key="d2">IS_A</data>
+      <data key="d3">["the count of monte cristo__chunk__423", "the count of monte cristo__chunk__443", "the count of monte cristo__chunk__395"]</data>
+    </edge>
+    <edge source="Faria" target="Noirtier de Villefort">
+      <data key="d2">KNOWS_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__423"]</data>
+    </edge>
+    <edge source="Faria" target="Noirtier de Villefort was Villefort's father's right name">
+      <data key="d2">STATED_THAT</data>
+      <data key="d3">["the count of monte cristo__chunk__423"]</data>
+    </edge>
+    <edge source="Faria" target="after sickness">
+      <data key="d2">REGAINED_CONSCIOUSNESS</data>
+      <data key="d3">["the count of monte cristo__chunk__447"]</data>
+    </edge>
+    <edge source="Faria" target="helpless and exhausted">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__447"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès' plan for flight">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__447"]</data>
+    </edge>
+    <edge source="Faria" target="Spada family arms for Dantès">
+      <data key="d2">OFTEN_DREW</data>
+      <data key="d3">["the count of monte cristo__chunk__620"]</data>
+    </edge>
+    <edge source="Faria" target="Spada family arms">
+      <data key="d2">POSSESSED_KNOWLEDGE_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__620"]</data>
+    </edge>
+    <edge source="Faria" target="strength to restrain Dantès">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__498"]</data>
+    </edge>
+    <edge source="Faria" target="dungeon">
+      <data key="d2">IMPRISONED_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__498", "the count of monte cristo__chunk__394", "the count of monte cristo__chunk__496", "the count of monte cristo__chunk__507", "the count of monte cristo__chunk__302"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès' escape">
+      <data key="d2">PLANNED_FOR</data>
+      <data key="d3">["the count of monte cristo__chunk__498"]</data>
+    </edge>
+    <edge source="Faria" target="he is a hindrance to escape">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__498"]</data>
+    </edge>
+    <edge source="Faria" target="it is time to die">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__498"]</data>
+    </edge>
+    <edge source="Faria" target="millions for liberty">
+      <data key="d2">OFFERED</data>
+      <data key="d3">["the count of monte cristo__chunk__3270"]</data>
+    </edge>
+    <edge source="Faria" target="the abbé">
+      <data key="d2">IS_KNOWN_AS</data>
+      <data key="d3">["the count of monte cristo__chunk__3270"]</data>
+    </edge>
+    <edge source="Faria" target="aged">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__3270"]</data>
+    </edge>
+    <edge source="Faria" target="weak">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__3270"]</data>
+    </edge>
+    <edge source="Faria" target="vacillating mind">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__3270"]</data>
+    </edge>
+    <edge source="Faria" target="passage between dungeons">
+      <data key="d2">DID_NOT_MAKE</data>
+      <data key="d3">["the count of monte cristo__chunk__3270"]</data>
+    </edge>
+    <edge source="Faria" target="knife">
+      <data key="d2">CREATED</data>
+      <data key="d3">["the count of monte cristo__chunk__518"]</data>
+    </edge>
+    <edge source="Faria" target="prison/dungeon">
+      <data key="d2">DIED_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__518"]</data>
+    </edge>
+    <edge source="Faria" target="treasure">
+      <data key="d2">POSSESSES</data>
+      <data key="d3">["the count of monte cristo__chunk__493", "the count of monte christo__chunk__457", "the count of monte cristo__chunk__480"]</data>
+    </edge>
+    <edge source="Faria" target="his paralysis">
+      <data key="d2">PREDICTED</data>
+      <data key="d3">["the count of monte cristo__chunk__493"]</data>
+    </edge>
+    <edge source="Faria" target="paralyzed in right arm">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__493"]</data>
+    </edge>
+    <edge source="Faria" target="paralyzed in left leg">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__493"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès about treasure and freedom">
+      <data key="d2">INSTRUCTED</data>
+      <data key="d3">["the count of monte cristo__chunk__493"]</data>
+    </edge>
+    <edge source="Faria" target="memorize a letter">
+      <data key="d2">CAUSED_DANTÈS_TO</data>
+      <data key="d3">["the count of monte cristo__chunk__493"]</data>
+    </edge>
+    <edge source="Faria" target="a letter about treasure">
+      <data key="d2">AUTHORED</data>
+      <data key="d3">["the count of monte cristo__chunk__493"]</data>
+    </edge>
+    <edge source="Faria" target="second portion of a letter">
+      <data key="d2">DESTROYED</data>
+      <data key="d3">["the count of monte cristo__chunk__493"]</data>
+    </edge>
+    <edge source="Faria" target="forgetting his misfortunes">
+      <data key="d2">KNOWN_FOR</data>
+      <data key="d3">["the count of monte cristo__chunk__373"]</data>
+    </edge>
+    <edge source="Faria" target="English history">
+      <data key="d2">EXPERT_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__373"]</data>
+    </edge>
+    <edge source="Faria" target="political changes towards constitution and liberty">
+      <data key="d2">PREDICTED</data>
+      <data key="d3">["the count of monte cristo__chunk__373"]</data>
+    </edge>
+    <edge source="Faria" target="reason for imprisonment by Dantès">
+      <data key="d2">WAS_ASKED_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__373"]</data>
+    </edge>
+    <edge source="Faria" target="composed">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__453"]</data>
+    </edge>
+    <edge source="Faria" target="sheet of paper with Gothic characters">
+      <data key="d2">POSSESSES</data>
+      <data key="d3">["the count of monte cristo__chunk__453"]</data>
+    </edge>
+    <edge source="Faria" target="peculiar kind of ink">
+      <data key="d2">POSSESSES</data>
+      <data key="d3">["the count of monte cristo__chunk__453"]</data>
+    </edge>
+    <edge source="Faria" target="paper his treasure">
+      <data key="d2">CALLS</data>
+      <data key="d3">["the count of monte cristo__chunk__453"]</data>
+    </edge>
+    <edge source="Faria" target="mysterious and sympathetic ink">
+      <data key="d2">POSSESSES</data>
+      <data key="d3">["the count of monte cristo__chunk__479"]</data>
+    </edge>
+    <edge source="Faria" target="exposed to fire (ink)">
+      <data key="d2">APPEARS_WHEN</data>
+      <data key="d3">["the count of monte cristo__chunk__479"]</data>
+    </edge>
+    <edge source="Faria" target="reddish color resembling rust (ink)">
+      <data key="d2">HAS_PHYSICAL_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__479"]</data>
+    </edge>
+    <edge source="Faria" target="ink from soot">
+      <data key="d2">MADE</data>
+      <data key="d3">["the count of monte cristo__chunk__394"]</data>
+    </edge>
+    <edge source="Faria" target="soot in wine">
+      <data key="d2">DISSOLVED</data>
+      <data key="d3">["the count of monte cristo__chunk__394"]</data>
+    </edge>
+    <edge source="Faria" target="his own blood for important notes">
+      <data key="d2">WROTE_WITH</data>
+      <data key="d3">["the count of monte cristo__chunk__394"]</data>
+    </edge>
+    <edge source="Faria" target="ink from time to time as required">
+      <data key="d2">MADE</data>
+      <data key="d3">["the count of monte cristo__chunk__400"]</data>
+    </edge>
+    <edge source="Faria" target="night">
+      <data key="d2">WORKED_AT</data>
+      <data key="d3">["the count of monte cristo__chunk__400"]</data>
+    </edge>
+    <edge source="Faria" target="light">
+      <data key="d2">SUPPLIED_HIMSELF_WITH</data>
+      <data key="d3">["the count of monte cristo__chunk__400"]</data>
+    </edge>
+    <edge source="Faria" target="small quantity of wine every Sunday">
+      <data key="d2">RECEIVED</data>
+      <data key="d3">["the count of monte cristo__chunk__424"]</data>
+    </edge>
+    <edge source="Faria" target="richly gifted">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__427"]</data>
+    </edge>
+    <edge source="Faria" target="paper for many nights">
+      <data key="d2">STUDIED</data>
+      <data key="d3">["the count of monte cristo__chunk__458"]</data>
+    </edge>
+    <edge source="Faria" target="every phrase on paper">
+      <data key="d2">RECONSTRUCTED</data>
+      <data key="d3">["the count of monte cristo__chunk__458"]</data>
+    </edge>
+    <edge source="Faria" target="pens">
+      <data key="d2">MADE</data>
+      <data key="d3">["the count of monte cristo__chunk__389"]</data>
+    </edge>
+    <edge source="Faria" target="paper">
+      <data key="d2">MADE</data>
+      <data key="d3">["the count of monte cristo__chunk__389"]</data>
+    </edge>
+    <edge source="Faria" target="pens, ink, and paper">
+      <data key="d2">WAS_NOT_PERMITTED</data>
+      <data key="d3">["the count of monte cristo__chunk__389"]</data>
+    </edge>
+    <edge source="Faria" target="A Treatise on the Possibility of a General Monarchy in Italy">
+      <data key="d2">AUTHORED</data>
+      <data key="d3">["the count of monte cristo__chunk__390"]</data>
+    </edge>
+    <edge source="Faria" target="thoughts and reflections of his whole life">
+      <data key="d2">STUDIED</data>
+      <data key="d3">["the count of monte cristo__chunk__390"]</data>
+    </edge>
+    <edge source="Faria" target="Colosseum at Rome">
+      <data key="d2">MEDITATED_IN</data>
+      <data key="d3">["the count of monte christo__chunk__390"]</data>
+    </edge>
+    <edge source="Faria" target="foot of St. Mark's column at Venice">
+      <data key="d2">MEDITATED_IN</data>
+      <data key="d3">["the count of monte christo__chunk__390"]</data>
+    </edge>
+    <edge source="Faria" target="borders of the Arno at Florence">
+      <data key="d2">MEDITATED_IN</data>
+      <data key="d3">["the count of monte christo__chunk__390"]</data>
+    </edge>
+    <edge source="Faria" target="preparation for writing on linen">
+      <data key="d2">INVENTED</data>
+      <data key="d3">["the count of monte christo__chunk__390"]</data>
+    </edge>
+    <edge source="Faria" target="chemistry">
+      <data key="d2">EXPERT_IN</data>
+      <data key="d3">["the count of monte christo__chunk__390"]</data>
+    </edge>
+    <edge source="Faria" target="Lavoisier">
+      <data key="d2">KNOWS_ABOUT</data>
+      <data key="d3">["the count of monte christo__chunk__390"]</data>
+    </edge>
+    <edge source="Faria" target="Cabanis">
+      <data key="d2">FRIEND_OF</data>
+      <data key="d3">["the count of monte christo__chunk__390"]</data>
+    </edge>
+    <edge source="Faria" target="rational">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte christo__chunk__460"]</data>
+    </edge>
+    <edge source="Faria" target="logical">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte christo__chunk__460"]</data>
+    </edge>
+    <edge source="Faria" target="sagacious">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte christo__chunk__460"]</data>
+    </edge>
+    <edge source="Faria" target="Château d'If">
+      <data key="d2">IMPRISONED_IN</data>
+      <data key="d3">["the count of monte christo__chunk__390", "the count of monte cristo__chunk__3269"]</data>
+    </edge>
+    <edge source="Faria" target="story of Spada family">
+      <data key="d2">NARRATED</data>
+      <data key="d3">["the count of monte christo__chunk__473"]</data>
+    </edge>
+    <edge source="Faria" target="hour of his death">
+      <data key="d2">EXPECTS_TO_REMAIN_UNTIL</data>
+      <data key="d3">["the count of monte christo__chunk__451"]</data>
+    </edge>
+    <edge source="Faria" target="Edmond Dantès">
+      <data key="d2">MENTOR_OF</data>
+      <data key="d3">["the count of monte christo__chunk__451", "the count of monte cristo__chunk__733", "the count of monte cristo__chunk__476", "the count of monte cristo__chunk__486", "the count of monte cristo__chunk__502", "the count of monte cristo__chunk__571"]</data>
+    </edge>
+    <edge source="Faria" target="repressed desires">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__496"]</data>
+    </edge>
+    <edge source="Faria" target="stifled sighs">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__496"]</data>
+    </edge>
+    <edge source="Faria" target="plaintive voice">
+      <data key="d2">EMITTED</data>
+      <data key="d3">["the count of monte cristo__chunk__496"]</data>
+    </edge>
+    <edge source="Faria" target="Edmond">
+      <data key="d2">CALLED</data>
+      <data key="d3">["the count of monte cristo__chunk__496"]</data>
+    </edge>
+    <edge source="Faria" target="Edmond's cell">
+      <data key="d2">REMAINED_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__438"]</data>
+    </edge>
+    <edge source="Faria" target="cutting a peg for rope-ladder">
+      <data key="d2">PERFORMED_TASK</data>
+      <data key="d3">["the count of monte cristo__chunk__438"]</data>
+    </edge>
+    <edge source="Faria" target="Edmond in a tone indicative of great suffering">
+      <data key="d2">CALLED</data>
+      <data key="d3">["the count of monte cristo__chunk__438"]</data>
+    </edge>
+    <edge source="Faria" target="great suffering">
+      <data key="d2">EXPERIENCED</data>
+      <data key="d3">["the count of monte cristo__chunk__438"]</data>
+    </edge>
+    <edge source="Faria" target="Edmond's society">
+      <data key="d2">RECEIVED_RELIEF_FROM</data>
+      <data key="d3">["the count of monte cristo__chunk__431"]</data>
+    </edge>
+    <edge source="Faria" target="grew sadder daily">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__431"]</data>
+    </edge>
+    <edge source="Faria" target="one thought incessantly">
+      <data key="d2">HARASSED_BY</data>
+      <data key="d3">["the count of monte cristo__chunk__431"]</data>
+    </edge>
+    <edge source="Faria" target="long reveries">
+      <data key="d2">FELL_INTO</data>
+      <data key="d3">["the count of monte cristo__chunk__431"]</data>
+    </edge>
+    <edge source="Faria" target="heavy and involuntary sighs">
+      <data key="d2">EMITTED</data>
+      <data key="d3">["the count of monte cristo__chunk__431"]</data>
+    </edge>
+    <edge source="Faria" target="confined space of his dungeon">
+      <data key="d2">PACED</data>
+      <data key="d3">["the count of monte cristo__chunk__431"]</data>
+    </edge>
+    <edge source="Faria" target="for no sentinel">
+      <data key="d2">EXPRESSED_DESIRE</data>
+      <data key="d3">["the count of monte cristo__chunk__431"]</data>
+    </edge>
+    <edge source="Faria" target="treasures">
+      <data key="d2">POSSESSES</data>
+      <data key="d3">["the count of monte cristo__chunk__402"]</data>
+    </edge>
+    <edge source="Faria" target="ladder of cords (25-30 feet long)">
+      <data key="d2">CREATED</data>
+      <data key="d3">["the count of monte cristo__chunk__402"]</data>
+    </edge>
+    <edge source="Faria" target="ladder of cords">
+      <data key="d2">HID</data>
+      <data key="d3">["the count of monte cristo__chunk__402"]</data>
+    </edge>
+    <edge source="Faria" target="hollow space behind bed">
+      <data key="d2">CONCEALED</data>
+      <data key="d3">["the count of monte cristo__chunk__402"]</data>
+    </edge>
+    <edge source="Faria" target="stone with dust">
+      <data key="d2">DISGUISED</data>
+      <data key="d3">["the count of monte cristo__chunk__402"]</data>
+    </edge>
+    <edge source="Faria" target="stone by foot rubbing">
+      <data key="d2">DISGUISED</data>
+      <data key="d3">["the count of monte cristo__chunk__402"]</data>
+    </edge>
+    <edge source="Faria" target="languages to Dantès">
+      <data key="d2">TAUGHT</data>
+      <data key="d3">["the count of monte cristo__chunk__491"]</data>
+    </edge>
+    <edge source="Faria" target="sciences to Dantès">
+      <data key="d2">TAUGHT</data>
+      <data key="d3">["the count of monte cristo__chunk__491"]</data>
+    </edge>
+    <edge source="Faria" target="knowledge of languages">
+      <data key="d2">POSSESSES</data>
+      <data key="d3">["the count of monte cristo__chunk__491"]</data>
+    </edge>
+    <edge source="Faria" target="knowledge of sciences">
+      <data key="d2">POSSESSES</data>
+      <data key="d3">["the count of monte cristo__chunk__491"]</data>
+    </edge>
+    <edge source="Faria" target="intelligent">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__491"]</data>
+    </edge>
+    <edge source="Faria" target="the treasure">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__491"]</data>
+    </edge>
+    <edge source="Faria" target="inert leg">
+      <data key="d2">HAS_PHYSICAL_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__461"]</data>
+    </edge>
+    <edge source="Faria" target="unusable arm">
+      <data key="d2">HAS_PHYSICAL_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__461"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès' chamber with difficulty">
+      <data key="d2">TRAVELED_TO</data>
+      <data key="d3">["the count of monte cristo__chunk__461"]</data>
+    </edge>
+    <edge source="Faria" target="celebrated cases of escape">
+      <data key="d2">RESEARCHED</data>
+      <data key="d3">["the count of monte cristo__chunk__388"]</data>
+    </edge>
+    <edge source="Faria" target="successful escapes are rare">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__388"]</data>
+    </edge>
+    <edge source="Faria" target="successful escapes require long meditation">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__388"]</data>
+    </edge>
+    <edge source="Faria" target="successful escapes require careful arrangement">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__388"]</data>
+    </edge>
+    <edge source="Faria" target="chance affords escape opportunities">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__388"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès to wait for a favorable escape moment">
+      <data key="d2">ADVISED</data>
+      <data key="d3">["the count of monte cristo__chunk__388"]</data>
+    </edge>
+    <edge source="Faria" target="story of the Spada family inheritance">
+      <data key="d2">NARRATED</data>
+      <data key="d3">["the count of monte cristo__chunk__471"]</data>
+    </edge>
+    <edge source="Faria" target="Spada family inheritance papers">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__471"]</data>
+    </edge>
+    <edge source="Faria" target="Spada's will">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__471"]</data>
+    </edge>
+    <edge source="Faria" target="Cæsar and the pope's search for inheritance">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__471"]</data>
+    </edge>
+    <edge source="Faria" target="Spada's description of inheritance (coffers, books, breviary)">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__471"]</data>
+    </edge>
+    <edge source="Faria" target="Spada's heirs finding no treasures">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__471"]</data>
+    </edge>
+    <edge source="Faria" target="Spada's wealth in science (library, laboratories)">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__471"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès his son">
+      <data key="d2">CALLED</data>
+      <data key="d3">["the count of monte cristo__chunk__501"]</data>
+    </edge>
+    <edge source="Faria" target="The treasure of the Spadas exists">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__501"]</data>
+    </edge>
+    <edge source="Faria" target="Spada treasure in inner cavern">
+      <data key="d2">HAS_VISION_OF</data>
+      <data key="d3">["the count of monte cristo__chunk__501"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès to hasten to Monte Cristo">
+      <data key="d2">ADVISED</data>
+      <data key="d3">["the count of monte cristo__chunk__501"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès to avail himself of the Spada fortune">
+      <data key="d2">ADVISED</data>
+      <data key="d3">["the count of monte cristo__chunk__501"]</data>
+    </edge>
+    <edge source="Faria" target="Spada treasure location (Monte Cristo)">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__501"]</data>
+    </edge>
+    <edge source="Faria" target="mad by the world">
+      <data key="d2">WAS_CALLED</data>
+      <data key="d3">["the count of monte cristo__chunk__501"]</data>
+    </edge>
+    <edge source="Faria" target="he was not mad">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__501"]</data>
+    </edge>
+    <edge source="Faria" target="fragments of a document (Spada treasure clue)">
+      <data key="d2">POSSESSES</data>
+      <data key="d3">["the count of monte cristo__chunk__481"]</data>
+    </edge>
+    <edge source="Faria" target="fragments of a document to Dantès">
+      <data key="d2">REVEALED</data>
+      <data key="d3">["the count of monte cristo__chunk__481"]</data>
+    </edge>
+    <edge source="Faria" target="treasure mentioned in fragments">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__481"]</data>
+    </edge>
+    <edge source="Faria" target="location of treasure (caves)">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__481"]</data>
+    </edge>
+    <edge source="Faria" target="contents of treasure (ingots, gold, money, millions of Roman crowns)">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__481"]</data>
+    </edge>
+    <edge source="Faria" target="name associated with treasure (Spada)">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__481"]</data>
+    </edge>
+    <edge source="Faria" target="declaration of Cardinal Spada">
+      <data key="d2">COMPLETED</data>
+      <data key="d3">["the count of monte cristo__chunk__483"]</data>
+    </edge>
+    <edge source="Faria" target="will so long sought for">
+      <data key="d2">COMPLETED</data>
+      <data key="d3">["the count of monte cristo__chunk__483"]</data>
+    </edge>
+    <edge source="Faria" target="rest of the document aided by a fragment">
+      <data key="d2">GUESSED</data>
+      <data key="d3">["the count of monte cristo__chunk__483"]</data>
+    </edge>
+    <edge source="Faria" target="length of lines by those of the paper">
+      <data key="d2">MEASURED</data>
+      <data key="d3">["the count of monte cristo__chunk__483"]</data>
+    </edge>
+    <edge source="Faria" target="hidden meaning by means of what was in part revealed">
+      <data key="d2">DIVINED</data>
+      <data key="d3">["the count of monte cristo__chunk__483"]</data>
+    </edge>
+    <edge source="Faria" target="a dungeon">
+      <data key="d2">IMPRISONED_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__733"]</data>
+    </edge>
+    <edge source="Faria" target="attack of catalepsy">
+      <data key="d2">DIED_FROM</data>
+      <data key="d3">["the count of monte cristo__chunk__733"]</data>
+    </edge>
+    <edge source="Faria" target="escape projects to be cut short">
+      <data key="d2">CAUSED</data>
+      <data key="d3">["the count of monte cristo__chunk__733"]</data>
+    </edge>
+    <edge source="Faria" target="intention of escape">
+      <data key="d2">PARTICIPATED_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__733"]</data>
+    </edge>
+    <edge source="Faria" target="construction of cell walls">
+      <data key="d2">DISCUSSED</data>
+      <data key="d3">["the count of monte cristo__chunk__368"]</data>
+    </edge>
+    <edge source="Faria" target="cell with wall built against solid rock">
+      <data key="d2">RESIDES_AT</data>
+      <data key="d3">["the count of monte cristo__chunk__368"]</data>
+    </edge>
+    <edge source="Faria" target="cell with wall adjoining governor’s apartments">
+      <data key="d2">RESIDES_AT</data>
+      <data key="d3">["the count of monte cristo__chunk__368"]</data>
+    </edge>
+    <edge source="Faria" target="cell with wall facing a loophole for light">
+      <data key="d2">RESIDES_AT</data>
+      <data key="d3">["the count of monte cristo__chunk__368"]</data>
+    </edge>
+    <edge source="Faria" target="Edmond Dantès to climb">
+      <data key="d2">INSTRUCTED</data>
+      <data key="d3">["the count of monte cristo__chunk__368"]</data>
+    </edge>
+    <edge source="Faria" target="sketch for their escape to Dantès">
+      <data key="d2">SHOWED</data>
+      <data key="d3">["the count of monte cristo__chunk__435"]</data>
+    </edge>
+    <edge source="Faria" target="plan of his own cell for escape">
+      <data key="d2">CREATED</data>
+      <data key="d3">["the count of monte cristo__chunk__435"]</data>
+    </edge>
+    <edge source="Faria" target="plan of Dantès' cell for escape">
+      <data key="d2">CREATED</data>
+      <data key="d3">["the count of monte cristo__chunk__435"]</data>
+    </edge>
+    <edge source="Faria" target="plan of passage which united cells">
+      <data key="d2">CREATED</data>
+      <data key="d3">["the count of monte cristo__chunk__435"]</data>
+    </edge>
+    <edge source="Faria" target="driving a level in passage">
+      <data key="d2">PROPOSED</data>
+      <data key="d3">["the count of monte cristo__chunk__435"]</data>
+    </edge>
+    <edge source="Faria" target="large excavation beneath gallery where sentry kept watch">
+      <data key="d2">PLANNED</data>
+      <data key="d3">["the count of monte cristo__chunk__435"]</data>
+    </edge>
+    <edge source="Faria" target="loosening of a flag-stone for escape">
+      <data key="d2">PLANNED</data>
+      <data key="d3">["the count of monte cristo__chunk__435"]</data>
+    </edge>
+    <edge source="Faria" target="ladder of cords for escape">
+      <data key="d2">POSSESSES</data>
+      <data key="d3">["the count of monte cristo__chunk__435"]</data>
+    </edge>
+    <edge source="Faria" target="late 1807 or early 1808">
+      <data key="d2">ARRESTED_AROUND</data>
+      <data key="d3">["the count of monte cristo__chunk__477"]</data>
+    </edge>
+    <edge source="Faria" target="death of Count of Spada">
+      <data key="d2">ARRESTED_AFTER</data>
+      <data key="d3">["the count of monte cristo__chunk__477"]</data>
+    </edge>
+    <edge source="Faria" target="arranging papers">
+      <data key="d2">ENGAGED_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__477"]</data>
+    </edge>
+    <edge source="Faria" target="Florence">
+      <data key="d2">PLANNED_TO_MOVE_TO</data>
+      <data key="d3">["the count of monte cristo__chunk__477"]</data>
+    </edge>
+    <edge source="Faria" target="12,000 francs">
+      <data key="d2">OWNED</data>
+      <data key="d3">["the count of monte cristo__chunk__477"]</data>
+    </edge>
+    <edge source="Faria" target="a library">
+      <data key="d2">OWNED</data>
+      <data key="d3">["the count of monte cristo__chunk__477"]</data>
+    </edge>
+    <edge source="Faria" target="a famous breviary">
+      <data key="d2">OWNED</data>
+      <data key="d3">["the count of monte cristo__chunk__477"]</data>
+    </edge>
+    <edge source="Faria" target="dangerous">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__3269"]</data>
+    </edge>
+    <edge source="Faria" target="industrious">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__3269"]</data>
+    </edge>
+    <edge source="Faria" target="poor mad priest">
+      <data key="d2">DESCRIBED_AS</data>
+      <data key="d3">["the count of monte cristo__chunk__3269"]</data>
+    </edge>
+    <edge source="Faria" target="history of Pope and Cæsar Borgia">
+      <data key="d2">KNOWS_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__466"]</data>
+    </edge>
+    <edge source="Faria" target="assassination methods for cardinals">
+      <data key="d2">KNOWS_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__466"]</data>
+    </edge>
+    <edge source="Faria" target="history of Spada family">
+      <data key="d2">NARRATED</data>
+      <data key="d3">["the count of monte cristo__chunk__466"]</data>
+    </edge>
+    <edge source="Faria" target="secrets of confession are sacred">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__2121"]</data>
+    </edge>
+    <edge source="Faria" target="probity">
+      <data key="d2">IS_KNOWN_FOR</data>
+      <data key="d3">["the count of monte cristo__chunk__2121"]</data>
+    </edge>
+    <edge source="Faria" target="official from prefect">
+      <data key="d2">VISITED_BY</data>
+      <data key="d3">["the count of monte cristo__chunk__2121"]</data>
+    </edge>
+    <edge source="Faria" target="public safety particulars">
+      <data key="d2">QUESTIONED_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__2121"]</data>
+    </edge>
+    <edge source="Faria" target="reflective">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__408"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès' life history">
+      <data key="d2">LISTENED_TO</data>
+      <data key="d3">["the count of monte cristo__chunk__408"]</data>
+    </edge>
+    <edge source="Faria" target="cheerful presence">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__516"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès's suicidal thoughts">
+      <data key="d2">PREVENTED</data>
+      <data key="d3">["the count of monte cristo__chunk__516"]</data>
+    </edge>
+    <edge source="Faria" target="an abbé">
+      <data key="d2">WAS</data>
+      <data key="d3">["the count of monte cristo__chunk__516", "the count of monte cristo__chunk__487"]</data>
+    </edge>
+    <edge source="Faria" target="horrible suffering">
+      <data key="d2">EXPERIENCED</data>
+      <data key="d3">["the count of monte cristo__chunk__516"]</data>
+    </edge>
+    <edge source="Faria" target="after his suffering">
+      <data key="d2">DIED</data>
+      <data key="d3">["the count of monte cristo__chunk__516"]</data>
+    </edge>
+    <edge source="Faria" target="a treasure">
+      <data key="d2">MEDITATED_ON</data>
+      <data key="d3">["the count of monte cristo__chunk__487"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès as a son">
+      <data key="d2">LOVED</data>
+      <data key="d3">["the count of monte cristo__chunk__487"]</data>
+    </edge>
+    <edge source="Faria" target="thirteen or fourteen millions of francs">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__487"]</data>
+    </edge>
+    <edge source="Faria" target="how to use treasure for good">
+      <data key="d2">EXPLAINED</data>
+      <data key="d3">["the count of monte cristo__chunk__487"]</data>
+    </edge>
+    <edge source="Faria" target="treasure could ensure Dantès's happiness">
+      <data key="d2">BELIEVED</data>
+      <data key="d3">["the count of monte cristo__chunk__487"]</data>
+    </edge>
+    <edge source="Faria" target="bored way from cell">
+      <data key="d2">PERFORMS_ACTION</data>
+      <data key="d3">["the count of monte cristo__chunk__383"]</data>
+    </edge>
+    <edge source="Faria" target="cell">
+      <data key="d2">LIVES_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__383", "the count of monte cristo__chunk__316"]</data>
+    </edge>
+    <edge source="Faria" target="imprisoned">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__383"]</data>
+    </edge>
+    <edge source="Faria" target="shivering">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__443"]</data>
+    </edge>
+    <edge source="Faria" target="fit of catalepsy">
+      <data key="d2">EXPERIENCES</data>
+      <data key="d3">["the count of monte cristo__chunk__443"]</data>
+    </edge>
+    <edge source="Faria" target="symptoms include motionless">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__443"]</data>
+    </edge>
+    <edge source="Faria" target="symptoms include violent convulsions">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__443"]</data>
+    </edge>
+    <edge source="Faria" target="removal to another prison part">
+      <data key="d2">FEARED</data>
+      <data key="d3">["the count of monte cristo__chunk__443"]</data>
+    </edge>
+    <edge source="Faria" target="Dantès to administer liquor">
+      <data key="d2">INSTRUCTS</data>
+      <data key="d3">["the count of monte cristo__chunk__443"]</data>
+    </edge>
+    <edge source="Faria" target="phial of liquor">
+      <data key="d2">POSSESSES</data>
+      <data key="d3">["the count of monte cristo__chunk__443"]</data>
+    </edge>
+    <edge source="Faria" target="liquor may revive him">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__443"]</data>
+    </edge>
+    <edge source="Faria" target="old man">
+      <data key="d2">HAS_PHYSICAL_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__497"]</data>
+    </edge>
+    <edge source="Faria" target="pale">
+      <data key="d2">HAS_PHYSICAL_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__497"]</data>
+    </edge>
+    <edge source="Faria" target="resigned">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__497"]</data>
+    </edge>
+    <edge source="Faria" target="horrible symptoms">
+      <data key="d2">EXPERIENCES</data>
+      <data key="d3">["the count of monte cristo__chunk__497"]</data>
+    </edge>
+    <edge source="Faria" target="restrain Dantès">
+      <data key="d2">HAS_ABILITY</data>
+      <data key="d3">["the count of monte cristo__chunk__497"]</data>
+    </edge>
+    <edge source="Faria" target="twelve drops of liquor">
+      <data key="d2">RECEIVED</data>
+      <data key="d3">["the count of monte cristo__chunk__504"]</data>
+    </edge>
+    <edge source="Faria" target="whole liquid from phial">
+      <data key="d2">RECEIVED</data>
+      <data key="d3">["the count of monte cristo__chunk__504"]</data>
+    </edge>
+    <edge source="Faria" target="galvanic effect">
+      <data key="d2">EXPERIENCED</data>
+      <data key="d3">["the count of monte cristo__chunk__504"]</data>
+    </edge>
+    <edge source="Faria" target="violent trembling">
+      <data key="d2">EXPERIENCED</data>
+      <data key="d3">["the count of monte cristo__chunk__504"]</data>
+    </edge>
+    <edge source="Faria" target="eyes opened fearfully">
+      <data key="d2">EXPERIENCED</data>
+      <data key="d3">["the count of monte cristo__chunk__504"]</data>
+    </edge>
+    <edge source="Faria" target="sighed like a shriek">
+      <data key="d2">EXPERIENCED</data>
+      <data key="d3">["the count of monte cristo__chunk__504"]</data>
+    </edge>
+    <edge source="Faria" target="body returned to immobility">
+      <data key="d2">EXPERIENCED</data>
+      <data key="d3">["the count of monte cristo__chunk__504"]</data>
+    </edge>
+    <edge source="Faria" target="eyes remained open">
+      <data key="d2">EXPERIENCED</data>
+      <data key="d3">["the count of monte cristo__chunk__504"]</data>
+    </edge>
+    <edge source="Faria" target="treasure location on a deserted island">
+      <data key="d2">HAD_ACCURATE_KNOWLEDGE_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__616"]</data>
+    </edge>
+    <edge source="Faria" target="Edmond Dantès the tale of the Arabian fisherman">
+      <data key="d2">RELATED_TO</data>
+      <data key="d3">["the count of monte cristo__chunk__601"]</data>
+    </edge>
+    <edge source="Faria" target="Count of Spada">
+      <data key="d2">SECRETARY_OF</data>
+      <data key="d3">["the count of monte cristo__chunk__474", "the count of monte cristo__chunk__476"]</data>
+    </edge>
+    <edge source="Faria" target="Count of Spada to invest in an annuity">
+      <data key="d2">ADVISED</data>
+      <data key="d3">["the count of monte cristo__chunk__474"]</data>
+    </edge>
+    <edge source="Faria" target="celebrated breviary owned by Count of Spada">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__474"]</data>
+    </edge>
+    <edge source="Faria" target="history of Spada family possessions">
+      <data key="d2">KNEW_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__474"]</data>
+    </edge>
+    <edge source="Faria" target="Spada family inheritance was unpossessed">
+      <data key="d2">BELIEVED</data>
+      <data key="d3">["the count of monte cristo__chunk__476"]</data>
+    </edge>
+    <edge source="Faria" target="Spada family finances for three hundred years">
+      <data key="d2">RESEARCHED</data>
+      <data key="d3">["the count of monte cristo__chunk__476"]</data>
+    </edge>
+    <edge source="Faria" target="income and expenditure of Spada family">
+      <data key="d2">STUDIED</data>
+      <data key="d3">["the count of monte cristo__chunk__476"]</data>
+    </edge>
+    <edge source="Faria" target="Spada family papers">
+      <data key="d2">INHERITED</data>
+      <data key="d3">["the count of monte cristo__chunk__476"]</data>
+    </edge>
+    <edge source="Faria" target="library of five thousand volumes">
+      <data key="d2">INHERITED</data>
+      <data key="d3">["the count of monte cristo__chunk__476"]</data>
+    </edge>
+    <edge source="Faria" target="famous breviary">
+      <data key="d2">INHERITED</data>
+      <data key="d3">["the count of monte cristo__chunk__476"]</data>
+    </edge>
+    <edge source="Faria" target="one thousand Roman crowns">
+      <data key="d2">INHERITED</data>
+      <data key="d3">["the count of monte cristo__chunk__476"]</data>
+    </edge>
+    <edge source="Faria" target="anniversary masses for Count of Spada's soul">
+      <data key="d2">PERFORMED</data>
+      <data key="d3">["the count of monte cristo__chunk__476"]</data>
+    </edge>
+    <edge source="Faria" target="genealogical tree of Spada house">
+      <data key="d2">CREATED</data>
+      <data key="d3">["the count of monte cristo__chunk__476"]</data>
+    </edge>
+    <edge source="Faria" target="history of Spada house">
+      <data key="d2">AUTHORED</data>
+      <data key="d3">["the count of monte cristo__chunk__476"]</data>
+    </edge>
+    <edge source="Faria" target="Abbé">
+      <data key="d2">IS_AN</data>
+      <data key="d3">["the count of monte cristo__chunk__740", "the count of monte cristo__chunk__571"]</data>
+    </edge>
+    <edge source="Faria" target="his pupil">
+      <data key="d2">IS_MENTOR_OF</data>
+      <data key="d3">["the count of monte cristo__chunk__740"]</data>
+    </edge>
+    <edge source="Faria" target="judging men and things well">
+      <data key="d2">KNOWN_FOR</data>
+      <data key="d3">["the count of monte cristo__chunk__702"]</data>
+    </edge>
+    <edge source="Faria" target="events surrounding Edmond Dantès' denunciation">
+      <data key="d2">KNOWS_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__702"]</data>
+    </edge>
+    <edge source="Faria" target="philosophy is application of sciences to truth">
+      <data key="d2">HAS_BELIEF</data>
+      <data key="d3">["the count of monte cristo__chunk__429"]</data>
+    </edge>
+    <edge source="Faria" target="the Count">
+      <data key="d2">IS_MENTOR_OF</data>
+      <data key="d3">["the count of monte cristo__chunk__3281"]</data>
+    </edge>
+    <edge source="Faria" target="liberty">
+      <data key="d2">GAVE</data>
+      <data key="d3">["the count of monte cristo__chunk__3281", "the count of monte cristo__chunk__316"]</data>
+    </edge>
+    <edge source="Faria" target="knowledge">
+      <data key="d2">GAVE</data>
+      <data key="d3">["the count of monte cristo__chunk__3281"]</data>
+    </edge>
+    <edge source="Faria" target="riches">
+      <data key="d2">GAVE</data>
+      <data key="d3">["the count of monte cristo__chunk__3281"]</data>
+    </edge>
+    <edge source="Faria" target="science of good and evil">
+      <data key="d2">KNOWS_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__3281"]</data>
+    </edge>
+    <edge source="Faria" target="human nature revolts at crime unless depraved">
+      <data key="d2">HAS_BELIEF</data>
+      <data key="d3">["the count of monte cristo__chunk__409"]</data>
+    </edge>
+    <edge source="Faria" target="artificial civilization creates wants, vices, and false tastes">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__409"]</data>
+    </edge>
+    <edge source="Faria" target="to find author of bad action, seek who benefited">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__409"]</data>
+    </edge>
+    <edge source="Faria" target="history of Cæsar Borgia and Pope">
+      <data key="d2">NARRATES</data>
+      <data key="d3">["the count of monte cristo__chunk__464"]</data>
+    </edge>
+    <edge source="Faria" target="Romagna wars">
+      <data key="d2">KNOWS_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__464"]</data>
+    </edge>
+    <edge source="Faria" target="Louis XII King of France">
+      <data key="d2">KNOWS_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__464"]</data>
+    </edge>
+    <edge source="Faria" target="he will stay in cell">
+      <data key="d2">ASSERTS</data>
+      <data key="d3">["the count of monte cristo__chunk__316"]</data>
+    </edge>
+    <edge source="Faria" target="gold">
+      <data key="d2">POSSESSES</data>
+      <data key="d3">["the count of monte cristo__chunk__316"]</data>
+    </edge>
+    <edge source="Faria" target="God will give him liberty">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__316"]</data>
+    </edge>
+    <edge source="Faria" target="calculations">
+      <data key="d2">ENGAGES_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__316"]</data>
+    </edge>
+    <edge source="Faria" target="insane by prison officials">
+      <data key="d2">PERCEIVED_AS</data>
+      <data key="d3">["the count of monte cristo__chunk__316"]</data>
+    </edge>
+    <edge source="Faria" target="Edmond Dantès' character">
+      <data key="d2">INTENDED_TO_TEST</data>
+      <data key="d3">["the count of monte cristo__chunk__486"]</data>
+    </edge>
+    <edge source="Faria" target="Edmond Dantès to Monte Cristo">
+      <data key="d2">INTENDED_TO_CONDUCT</data>
+      <data key="d3">["the count of monte cristo__chunk__486"]</data>
+    </edge>
+    <edge source="Faria" target="catalepsy">
+      <data key="d2">HAS_CONDITION</data>
+      <data key="d3">["the count of monte cristo__chunk__486"]</data>
+    </edge>
+    <edge source="Faria" target="son">
+      <data key="d2">CONSIDERS_EDMOND_AS</data>
+      <data key="d3">["the count of monte cristo__chunk__486"]</data>
+    </edge>
+    <edge source="Faria" target="child of captivity">
+      <data key="d2">CONSIDERS_EDMOND_AS</data>
+      <data key="d3">["the count of monte cristo__chunk__486"]</data>
+    </edge>
+    <edge source="Faria" target="celibacy">
+      <data key="d2">PROFESSION_CONDEMNED_HIM_TO</data>
+      <data key="d3">["the count of monte cristo__chunk__486"]</data>
+    </edge>
+    <edge source="Faria" target="Edmond Dantès to console him">
+      <data key="d2">BELIEVES_GOD_SENT</data>
+      <data key="d3">["the count of monte cristo__chunk__486"]</data>
+    </edge>
+    <edge source="Faria" target="use of only one arm">
+      <data key="d2">PHYSICAL_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__486"]</data>
+    </edge>
+    <edge source="Faria" target="violent convulsion">
+      <data key="d2">EXPERIENCED</data>
+      <data key="d3">["the count of monte cristo__chunk__502"]</data>
+    </edge>
+    <edge source="Faria" target="eyes injected with blood">
+      <data key="d2">PHYSICAL_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__502"]</data>
+    </edge>
+    <edge source="Faria" target="true">
+      <data key="d2">IS_DYING</data>
+      <data key="d3">["the count of monte cristo__chunk__502"]</data>
+    </edge>
+    <edge source="Faria" target="old men see death more clearly">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__502"]</data>
+    </edge>
+    <edge source="Faria" target="sight">
+      <data key="d2">LOST</data>
+      <data key="d3">["the count of monte cristo__chunk__502"]</data>
+    </edge>
+    <edge source="Faria" target="senses">
+      <data key="d2">LOST</data>
+      <data key="d3">["the count of monte cristo__chunk__502"]</data>
+    </edge>
+    <edge source="Faria" target="M. Morrel">
+      <data key="d2">INQUIRED_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__705"]</data>
+    </edge>
+    <edge source="Faria" target="M. Morrel was owner of the Pharaon">
+      <data key="d2">LEARNED</data>
+      <data key="d3">["the count of monte cristo__chunk__705"]</data>
+    </edge>
+    <edge source="Faria" target="M. Morrel was patron of Dantès">
+      <data key="d2">LEARNED</data>
+      <data key="d3">["the count of monte cristo__chunk__705"]</data>
+    </edge>
+    <edge source="Faria" target="M. Morrel's part in 'this sad drama'">
+      <data key="d2">INQUIRED_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__705"]</data>
+    </edge>
+    <edge source="Faria" target="M. Morrel interceded for Edmond">
+      <data key="d2">LEARNED</data>
+      <data key="d3">["the count of monte cristo__chunk__705"]</data>
+    </edge>
+    <edge source="Faria" target="M. Morrel was persecuted as a Bonapartist">
+      <data key="d2">LEARNED</data>
+      <data key="d3">["the count of monte cristo__chunk__705"]</data>
+    </edge>
+    <edge source="Faria" target="M. Morrel visited Dantès' father">
+      <data key="d2">LEARNED</data>
+      <data key="d3">["the count of monte cristo__chunk__705"]</data>
+    </edge>
+    <edge source="Faria" target="M. Morrel offered to receive Dantès' father in his house">
+      <data key="d2">LEARNED</data>
+      <data key="d3">["the count of monte cristo__chunk__705"]</data>
+    </edge>
+    <edge source="Faria" target="M. Morrel left purse for Dantès' father's debts and burial">
+      <data key="d2">LEARNED</data>
+      <data key="d3">["the count of monte cristo__chunk__705"]</data>
+    </edge>
+    <edge source="Faria" target="M. Morrel was still alive">
+      <data key="d2">INQUIRED_IF</data>
+      <data key="d3">["the count of monte cristo__chunk__705"]</data>
+    </edge>
+    <edge source="Faria" target="writing pen">
+      <data key="d2">CREATED</data>
+      <data key="d3">["the count of monte cristo__chunk__399"]</data>
+    </edge>
+    <edge source="Faria" target="writing pen (made from slender stick and cartilage)">
+      <data key="d2">OWNS</data>
+      <data key="d3">["the count of monte cristo__chunk__399"]</data>
+    </edge>
+    <edge source="Faria" target="penknife">
+      <data key="d2">CREATED</data>
+      <data key="d3">["the count of monte cristo__chunk__399"]</data>
+    </edge>
+    <edge source="Faria" target="old iron candlestick (for penknife)">
+      <data key="d2">MADE_FROM</data>
+      <data key="d3">["the count of monte cristo__chunk__399"]</data>
+    </edge>
+    <edge source="Faria" target="penknife (sharp and keen as a razor)">
+      <data key="d2">POSSESSES</data>
+      <data key="d3">["the count of monte cristo__chunk__399"]</data>
+    </edge>
+    <edge source="Faria" target="larger knife">
+      <data key="d2">CREATED</data>
+      <data key="d3">["the count of monte cristo__chunk__399"]</data>
+    </edge>
+    <edge source="Faria" target="old iron candlestick (for larger knife)">
+      <data key="d2">MADE_FROM</data>
+      <data key="d3">["the count of monte cristo__chunk__399"]</data>
+    </edge>
+    <edge source="Faria" target="larger knife (for cutting and thrusting)">
+      <data key="d2">POSSESSES</data>
+      <data key="d3">["the count of monte cristo__chunk__399"]</data>
+    </edge>
+    <edge source="Faria" target="penknife to shape writing pen">
+      <data key="d2">USED</data>
+      <data key="d3">["the count of monte cristo__chunk__399"]</data>
+    </edge>
+    <edge source="Faria" target="ingenious">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__399"]</data>
+    </edge>
+    <edge source="Faria" target="poor">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__571"]</data>
+    </edge>
+    <edge source="Faria" target="jailer">
+      <data key="d2">WAS_VISITED_BY</data>
+      <data key="d3">["the count of monte cristo__chunk__507"]</data>
+    </edge>
+    <edge source="Faria" target="deceased">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__507"]</data>
+    </edge>
+    <edge source="Faria" target="turnkeys to call for help">
+      <data key="d2">CAUSED</data>
+      <data key="d3">["the count of monte cristo__chunk__507"]</data>
+    </edge>
+    <edge source="Faria" target="soldiers to arrive">
+      <data key="d2">CAUSED</data>
+      <data key="d3">["the count of monte cristo__chunk__507"]</data>
+    </edge>
+    <edge source="Faria" target="governor to arrive">
+      <data key="d2">CAUSED</data>
+      <data key="d3">["the count of monte cristo__chunk__507"]</data>
+    </edge>
+    <edge source="Faria" target="doctor to be sent for">
+      <data key="d2">CAUSED</data>
+      <data key="d3">["the count of monte cristo__chunk__507"]</data>
+    </edge>
+    <edge source="Faria" target="attempted resuscitation">
+      <data key="d2">PARTICIPATED_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__507"]</data>
+    </edge>
+    <edge source="Faria" target="corpse movement">
+      <data key="d2">PARTICIPATED_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__507"]</data>
+    </edge>
+    <edge source="Faria" target="tattered garments">
+      <data key="d2">WEARS</data>
+      <data key="d3">["the count of monte cristo__chunk__310"]</data>
+    </edge>
+    <edge source="Faria" target="geometrical calculations">
+      <data key="d2">EXPERT_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__310"]</data>
+    </edge>
+    <edge source="Faria" target="absorbed in problems">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__310"]</data>
+    </edge>
+    <edge source="Faria" target="inspector">
+      <data key="d2">SPOKE_WITH</data>
+      <data key="d3">["the count of monte cristo__chunk__310"]</data>
+    </edge>
+    <edge source="Faria" target="abbé’s cell">
+      <data key="d2">IMPRISONED_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__395"]</data>
+    </edge>
+    <edge source="Faria" target="subterranean passage">
+      <data key="d2">USED</data>
+      <data key="d3">["the count of monte christo__chunk__395"]</data>
+    </edge>
+    <edge source="Faria" target="laborious task">
+      <data key="d2">COMMENCED</data>
+      <data key="d3">["the count of monte cristo__chunk__395"]</data>
+    </edge>
+    <edge source="Faria" target="stone in cell floor">
+      <data key="d2">DISCOVERED</data>
+      <data key="d3">["the count of monte cristo__chunk__395"]</data>
+    </edge>
+    <edge source="Faria" target="enormous degree of intelligence">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__405"]</data>
+    </edge>
+    <edge source="Faria" target="enormous degree of ability">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__405"]</data>
+    </edge>
+    <edge source="Faria" target="misfortune is needed to bring to light treasures of human intellect">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__405"]</data>
+    </edge>
+    <edge source="Faria" target="captivity has brought mental faculties to a focus">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__405"]</data>
+    </edge>
+    <edge source="Faria" target="nearly five thousand volumes in his library">
+      <data key="d2">OWNS</data>
+      <data key="d3">["the count of monte cristo__chunk__391"]</data>
+    </edge>
+    <edge source="Faria" target="one hundred and fifty well-chosen books offer essential human knowledge">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__391"]</data>
+    </edge>
+    <edge source="Faria" target="one hundred and fifty volumes for three years">
+      <data key="d2">STUDIED</data>
+      <data key="d3">["the count of monte cristo__chunk__391"]</data>
+    </edge>
+    <edge source="Faria" target="reciting contents of numerous classical works from memory">
+      <data key="d2">HAS_SKILL</data>
+      <data key="d3">["the count of monte cristo__chunk__391"]</data>
+    </edge>
+    <edge source="Faria" target="a variety of languages">
+      <data key="d2">FLUENT_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__391"]</data>
+    </edge>
+    <edge source="Faria" target="old abbé">
+      <data key="d2">IS</data>
+      <data key="d3">["the count of monte cristo__chunk__302"]</data>
+    </edge>
+    <edge source="Faria" target="leader of a party in Italy">
+      <data key="d2">WAS</data>
+      <data key="d3">["the count of monte cristo__chunk__302"]</data>
+    </edge>
+    <edge source="Faria" target="1811">
+      <data key="d2">IMPRISONED_SINCE</data>
+      <data key="d3">["the count of monte cristo__chunk__302"]</data>
+    </edge>
+    <edge source="Faria" target="madness">
+      <data key="d2">EXPERIENCED</data>
+      <data key="d3">["the count of monte cristo__chunk__302"]</data>
+    </edge>
+    <edge source="Faria" target="1813 (went mad)">
+      <data key="d2">OCCURRED_DURING</data>
+      <data key="d3">["the count of monte cristo__chunk__302"]</data>
+    </edge>
+    <edge source="Faria" target="amusing madness">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__302"]</data>
+    </edge>
+    <edge source="Faria" target="changed from weeping to laughing (after going mad)">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__302"]</data>
+    </edge>
+    <edge source="Faria" target="changed from thin to fat (after going mad)">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__302"]</data>
+    </edge>
+    <edge source="Faria" target="innocent">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__356"]</data>
+    </edge>
+    <edge source="Faria" target="conspiring to aid the emperor's return">
+      <data key="d2">ACCUSED_OF</data>
+      <data key="d3">["the count of monte cristo__chunk__356"]</data>
+    </edge>
+    <edge source="Faria" target="since 1811">
+      <data key="d2">IMPRISONED_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__356"]</data>
+    </edge>
+    <edge source="Faria" target="emperor's abdication at Fontainebleau in 1814">
+      <data key="d2">KNOWS_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__356"]</data>
+    </edge>
+    <edge source="Faria" target="emperor sent to Island of Elba">
+      <data key="d2">KNOWS_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__356"]</data>
+    </edge>
+    <edge source="Faria" target="chamber in prison">
+      <data key="d2">RESIDES_AT</data>
+      <data key="d3">["the count of monte cristo__chunk__356"]</data>
+    </edge>
+    <edge source="Faria" target="excavation behind his bed">
+      <data key="d2">HAS</data>
+      <data key="d3">["the count of monte cristo__chunk__356"]</data>
+    </edge>
+    <edge source="Faria" target="papers of all sorts">
+      <data key="d2">EXAMINED</data>
+      <data key="d3">["the count of monte cristo__chunk__475"]</data>
+    </edge>
+    <edge source="Faria" target="titles">
+      <data key="d2">EXAMINED</data>
+      <data key="d3">["the count of monte cristo__chunk__475"]</data>
+    </edge>
+    <edge source="Faria" target="contracts">
+      <data key="d2">EXAMINED</data>
+      <data key="d3">["the count of monte cristo__chunk__475"]</data>
+    </edge>
+    <edge source="Faria" target="parchments">
+      <data key="d2">EXAMINED</data>
+      <data key="d3">["the count of monte cristo__chunk__475"]</data>
+    </edge>
+    <edge source="Faria" target="family archives">
+      <data key="d2">STUDIED</data>
+      <data key="d3">["the count of monte cristo__chunk__475"]</data>
+    </edge>
+    <edge source="Faria" target="documents descending from the poisoned cardinal">
+      <data key="d2">RESEARCHED</data>
+      <data key="d3">["the count of monte cristo__chunk__475"]</data>
+    </edge>
+    <edge source="Faria" target="a precise history of the Borgia family">
+      <data key="d2">AUTHORED</data>
+      <data key="d3">["the count of monte cristo__chunk__475"]</data>
+    </edge>
+    <edge source="Faria" target="Cardinal Cæsar Spada's death">
+      <data key="d2">RESEARCHED</data>
+      <data key="d3">["the count of monte cristo__chunk__475"]</data>
+    </edge>
+    <edge source="Faria" target="acquisition of property of Cardinal Rospigliosi">
+      <data key="d2">TRACED</data>
+      <data key="d3">["the count of monte cristo__chunk__475"]</data>
+    </edge>
+    <edge source="Faria" target="fortune increase for Borgias from Cardinal Spada's death">
+      <data key="d2">FOUND_NOTHING</data>
+      <data key="d3">["the count of monte cristo__chunk__475"]</data>
+    </edge>
+    <edge source="Faria" target="mathematics">
+      <data key="d2">EXPERT_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__428"]</data>
+    </edge>
+    <edge source="Faria" target="physics">
+      <data key="d2">EXPERT_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__428"]</data>
+    </edge>
+    <edge source="Faria" target="history">
+      <data key="d2">EXPERT_IN</data>
+      <data key="d3">["the count of monte cristo__chunk__428"]</data>
+    </edge>
+    <edge source="Faria" target="three or four modern languages">
+      <data key="d2">KNOWS_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__428"]</data>
+    </edge>
+    <edge source="Faria" target="learned">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__428"]</data>
+    </edge>
+    <edge source="Faria" target="stock of learning">
+      <data key="d2">POSSESSES</data>
+      <data key="d3">["the count of monte cristo__chunk__428"]</data>
+    </edge>
+    <edge source="Faria" target="can communicate learning in two years">
+      <data key="d2">BELIEVES</data>
+      <data key="d3">["the count of monte cristo__chunk__428"]</data>
+    </edge>
+    <edge source="Faria" target="prefers absolute solitude">
+      <data key="d2">HAS_TRAIT</data>
+      <data key="d3">["the count of monte cristo__chunk__428"]</data>
+    </edge>
+    <edge source="Faria" target="papers related to treasure">
+      <data key="d2">POSSESSES</data>
+      <data key="d3">["the count of monte cristo__chunk__480"]</data>
+    </edge>
+    <edge source="Faria" target="papers to Dantès">
+      <data key="d2">PRESENTED</data>
+      <data key="d3">["the count of monte cristo__chunk__480"]</data>
+    </edge>
+    <edge source="Faria" target="information about treasure's location">
+      <data key="d2">REVEALED</data>
+      <data key="d3">["the count of monte cristo__chunk__480"]</data>
+    </edge>
+    <edge source="Faria" target="treasure on Island of Monte Cristo">
+      <data key="d2">HAS_KNOWLEDGE_OF</data>
+      <data key="d3">["the count of monte cristo__chunk__480"]</data>
+    </edge>
+    <edge source="Faria" target="will dated 25th April, 1498">
+      <data key="d2">NOT_AUTHORED</data>
+      <data key="d3">["the count of monte cristo__chunk__480"]</data>
+    </edge>
+    <edge source="Faria" target="will from Cæs[ar] Spada">
+      <data key="d2">DISCOVERED</data>
+      <data key="d3">["the count of monte cristo__chunk__480"]</data>
+    </edge>
+    <edge source="Faria" target="treasure of Cardinal Spada">
+      <data key="d2">DREAMED_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__610"]</data>
+    </edge>
+    <edge source="Faria" target="Cardinal Spada's nephews">
+      <data key="d2">TUTOR_TO</data>
+      <data key="d3">["the count of monte cristo__chunk__462"]</data>
+    </edge>
+    <edge source="Faria" target="Cardinal Spada for ten years">
+      <data key="d2">SERVED_UNDER</data>
+      <data key="d3">["the count of monte cristo__chunk__462"]</data>
+    </edge>
+    <edge source="Faria" target="Cardinal Spada's house">
+      <data key="d2">KNOWS_ABOUT</data>
+      <data key="d3">["the count of monte cristo__chunk__462"]</data>
+    </edge>
+    <edge source="Faria" target="Cardinal Spada annotating ancient volumes">
+      <data key="d2">WITNESSED</data>
+      <data key="d3">["the count of monte cristo__chunk__462"]</data>
+    </edge>
+    <edge source="Faria" target="Cardinal Spada searching family manuscripts">
+      <data key="d2">WITNESSED</data>
+      <data key="d3">["the count of monte cristo__chunk__462"]</data>
+    </edge>
+    <edge source="Faria" target="decline of Spada family wealth">
+      <data key="d2">OBSERVED</data>
+      <data key="d3">["the count of monte cristo__chunk__462"]</data>
+    </edge>
+    <edge source="Will" target="25th April, 1498">
+      <data key="d2">DATED_ON</data>
+      <data key="d3">["the count of monte cristo__chunk__480"]</data>
+    </edge>
+    <edge source="Will" target="Guido Spada">
+      <data key="d2">NAMES_HEIR</data>
+      <data key="d3">["the count of monte cristo__chunk__480"]</data>
+    </edge>
+    <edge source="Treasure" target="Island of Monte Cristo">
+      <data key="d2">LOCATED_AT</data>
+      <data key="d3">["the count of monte cristo__chunk__480"]</data>
+    </edge>
+    <edge source="Treasure" target="jewels">
+      <data key="d2">INCLUDES</data>
+      <data key="d3">["the count of monte cristo__chunk__480"]</data>
+    </edge>
+    <edge source="Treasure" target="diamonds">
+      <data key="d2">INCLUDES</data>
+      <data key="d3">["the count of monte cristo__chunk__480"]</data>
+    </edge>
+    <edge source="Treasure" target="gems">
+      <data key="d2">INCLUDES</data>
+      <data key="d3">["the count of monte cristo__chunk__480"]</data>
+    </edge>
+    <edge source="Treasure" target="nearly two million">
+      <data key="d2">VALUE_IS</data>
+      <data key="d3">["the count of monte cristo__chunk__480"]</data>
+    </edge>
+    <data key="d0">Faria served as the secretary and close companion to Cardinal Spada, the last member of a formerly wealthy and noble family. He considered the Cardinal's palace his paradise and attributed all his happiness to this lord. Faria also acted as a tutor to Cardinal Spada's nephews until their deaths. Following the Cardinal's isolation, Faria dedicated himself to him for ten years of unwavering kindness. During this period, Faria gained intimate knowledge of the Cardinal's household. He observed his patron extensively annotating old volumes and diligently searching through historical family manuscripts. Despite their family's famed wealth, Faria noted that Cardinal Spada himself was not rich, reflecting the decline of his once-prominent house.</data>
   </graph>
 </graphml>

@@ -1,5 +1,6 @@
 """Justification Agent: Defense Attorney logic."""
 import logging
+import json
 from typing import TypedDict, List
 from shared_config import create_llm
 from langchain_core.prompts import ChatPromptTemplate
@@ -7,9 +8,18 @@ from answering_agent.evidence_generator import retrieve_evidence_for_queries
 
 logger = logging.getLogger(__name__)
 
+from pydantic import BaseModel, Field
+
+class JustificationLLMOutput(BaseModel):
+    """Output structure for the Justification LLM."""
+    label: str = Field(description="The determined label: CONSISTENT or CONTRADICTING.")
+    reasoning: str = Field(description="A strictly 1 to 2 line concise justification.")
+    evidence_queries: List[str] = Field(description="Specific queries to fetch supporting evidence.")
+
 class JustificationOutput(TypedDict):
+    """Final output from the Justification Agent."""
     reasoning: str
-    evidence_chunks: List[str]
+    evidence_chunks: List[dict]
 
 DEFENSE_ATTORNEY_SYSTEM_PROMPT = """
 You are an expert narrative consistency verifier acting in a DEFENSIVE JUSTIFICATION role.
@@ -30,8 +40,11 @@ Character: {character_name}
 Canonical Character Summary:
 {character_summary}
 
-Knowledge Graph (canonical facts extracted from the novel):
-{graph_summary}
+Narrative Summary (overview of character's life):
+{narrative_summary}
+
+Knowledge Graph (all canonical facts extracted from the novel):
+{full_graph_text}
 
 ---BACKSTORY TO ANALYZE---
 {backstory}
@@ -102,21 +115,8 @@ You must sound confident, precise, and evidence-driven.
 
 ---
 
-**OUTPUT FORMAT (STRICT JSON)**
-
-{
-  "label": {target_label},
-  "reasoning": "A strictly 1 to 2 line concise justification of why the given verdict is correct based on the canon/graph.",
-  "evidence_queries": [
-    "Query 1: [Specific canonical fact that supports the verdict]",
-    "Query 2: [Timeline or causal verification query]",
-    "Query 3: [Narrative or role-based verification query]"
-  ]
-}
-
-**IMPORTANT CONSTRAINTS**
-- The verdict ({target_label}) is FINAL and authoritative.
-- The 'reasoning' MUST be strictly 1 to 2 lines only.
+**OUTPUT INSTRUCTIONS**
+- The reasoning MUST be strictly 1 to 2 lines only.
 - Do NOT say 'could be' or 'might be'.
 - Do NOT hedge.
 - Do NOT introduce counter-arguments.
@@ -127,7 +127,8 @@ def generate_justification(
     book_name: str,
     character_name: str,
     backstory: str,
-    graph_summary: str,
+    narrative_summary: str,
+    full_graph_text: str,
     character_summary: str,
     target_label: int,  # 1 for Consistent, 0 for Contradictory
 ) -> JustificationOutput:
@@ -137,66 +138,37 @@ def generate_justification(
     logger.info(f"Generating justification for FORCED verdict: {label_str}")
     
     llm = create_llm()
+    structured_llm = llm.with_structured_output(JustificationLLMOutput)
+    
     prompt = ChatPromptTemplate.from_template(DEFENSE_ATTORNEY_SYSTEM_PROMPT)
-    chain = prompt | llm
+    chain = prompt | structured_llm
     
-    response = chain.invoke({
-        "book": book_name,
-        "character": character_name,
-        "backstory": backstory,
-        "graph_summary": graph_summary,
-        "character_summary": character_summary,
-        "target_label": label_str
-    })
-    
-    content = response.content
-    logger.debug(f"Defense Attorney Raw Output:\n{content}")
-    
-    # Parse JSON output
     try:
-        # Try to extract JSON from response
-        if "```" in content:
-            start = content.find("{")
-            end = content.rfind("}") + 1
-            if start != -1 and end > start:
-                content = content[start:end]
+        result: JustificationLLMOutput = chain.invoke({
+            "book_name": book_name,
+            "character_name": character_name,
+            "backstory": backstory,
+            "narrative_summary": narrative_summary,
+            "full_graph_text": full_graph_text,
+            "character_summary": character_summary,
+            "target_label": label_str
+        })
         
-        result = json.loads(content)
-        reasoning = result.get("reasoning", "")
-        queries = result.get("evidence_queries", [])
+        reasoning = result.reasoning
+        queries = result.evidence_queries
         
     except Exception as e:
-        logger.error(f"Error parsing Defense Attorney response: {e}")
-        # Fallback to manual parsing if JSON fails
-        reasoning_lines = []
-        queries = []
-        capture_reasoning = False
-        
-        for line in content.split('\n'):
-            line_strip = line.strip()
-            if "reasoning\": \"" in line_strip.lower() or "reasoning\":" in line_strip.lower():
-                capture_reasoning = True
-                parts = line_strip.split(":", 1)
-                if len(parts) > 1:
-                    val = parts[1].strip().strip('",')
-                    if val: reasoning_lines.append(val)
-            elif "query" in line_strip.lower() and ":" in line_strip:
-                capture_reasoning = False
-                parts = line_strip.split(":", 1)
-                if len(parts) > 1:
-                    queries.append(parts[1].strip().strip('",[]'))
-            elif capture_reasoning and line_strip and not line_strip.startswith("}"):
-                reasoning_lines.append(line_strip.strip('",'))
-        
-        reasoning = " ".join(reasoning_lines).strip()
-            
-    if not reasoning:
-        reasoning = f"The ML model has determined this claim is {label_str} based on aggregated feature analysis."
-    
-    # Strictly enforce 1-2 lines by taking the first two sentences or lines if somehow it's still long
+        logger.error(f"Error calling structured LLM for Justification: {e}")
+        reasoning = f"The model has determined this claim is {label_str} based on aggregated character analysis."
+        queries = [f"Find evidence related to {character_name} in {book_name}"]
+
+    # Strictly enforce 1-2 lines by taking the first two sentences or lines
     reasoning_parts = reasoning.split('\n')
     if len(reasoning_parts) > 2:
         reasoning = " ".join(reasoning_parts[:2]).strip()
+    
+    # If it's still very long, just keep the first 200 characters or so to be safe
+    # But usually the split by newline is enough for 'lines'
         
     logger.info(f"Generated Reasoning: {reasoning}")
     logger.info(f"Generated Queries: {queries}")
@@ -212,3 +184,4 @@ def generate_justification(
         "reasoning": reasoning,
         "evidence_chunks": evidence_output["evidence_chunks"]
     }
+

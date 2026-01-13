@@ -8,11 +8,13 @@ load_dotenv()
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 OPENROUTER_MODEL = "nvidia/nemotron-3-nano-30b-a3b:free"
+ASSISTANT_MODEL = OPENROUTER_MODEL
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = "gemini-2.5-flash"
 
-ROW_DELAY_SECONDS = 7
+ROW_DELAY_SECONDS = 2
+MAX_QUERIES = 7
 
 
 def create_llm():
@@ -27,7 +29,7 @@ def create_llm():
     return ChatGoogleGenerativeAI(
         model=GEMINI_MODEL,
         google_api_key=GEMINI_API_KEY,
-        temperature=0
+        temperature=1.0
     )
 
     # Optional: OpenRouter (Commented out)

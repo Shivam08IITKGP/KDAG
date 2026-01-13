@@ -10,6 +10,7 @@ from graph_creator_agent.graph_store import (
 )
 from graph_creator_agent.utils import filter_new_evidence
 from graph_creator_agent.extractor import generate_triplets
+from shared_config import create_llm
 
 logger = logging.getLogger(__name__)
 
@@ -51,18 +52,17 @@ def create_graph(state: dict) -> dict:
     logger.info(f"Processing {len(new_evidences)} new evidence items")
     
     # Initialize LLM with OpenRouter config
-    from shared_config import create_llm
     llm = create_llm()
     
     # Generate triplets
-    triplets = generate_triplets(new_evidences, llm, character_name, state.get("backstory", ""))
+    triplets, graph_summary = generate_triplets(new_evidences, llm, character_name, state.get("backstory", ""))
     
     if triplets:
         # Add triplets to graph
         add_triplets(graph, triplets)
         
-        # Save graph
-        graph_path = save_graph(graph, book_name, character_name)
+        # Save graph (including summary)
+        graph_path = save_graph(graph, book_name, character_name, graph_summary)
         
         # Update cache with new evidence IDs
         if cache_key not in EVIDENCE_CACHE:

@@ -1,17 +1,13 @@
-"""Module for extracting knowledge triplets from text using LLM."""
-import json
 import logging
-from typing import List
-
-from langchain_openai import ChatOpenAI
+from langchain_core.language_models.chat_models import BaseChatModel
 
 from graph_creator_agent.prompts import TRIPLET_EXTRACTION_PROMPT
-from graph_creator_agent.types import Triplet, TripletList
+from graph_creator_agent.types import TripletList
 
 logger = logging.getLogger(__name__)
 
 
-def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI, character_name: str = "", backstory: str = "") -> list[Triplet]:
+def generate_triplets(evidence_list: list[dict], llm: BaseChatModel, character_name: str = "", backstory: str = "") -> tuple[list[dict], str]:
     """Generate triplets from evidence using LLM with structured output.
     
     Args:
@@ -21,12 +17,13 @@ def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI, character_name
         backstory: The backstory text to validate (used for context).
         
     Returns:
-        List of Triplet TypedDicts.
+        Tuple of (List of Triplet dicts, graph_summary string).
     """
     if not evidence_list:
-        return []
+        return [], ""
 
     all_triplets = []
+    graph_summary = ""
     
     # Configure LLM for structured output
     structured_llm = llm.with_structured_output(TripletList)
@@ -48,82 +45,28 @@ def generate_triplets(evidence_list: list[dict], llm: ChatOpenAI, character_name
     )
     
     try:
-        # Get structured LLM response
-        response: TripletList = structured_llm.invoke(prompt)
+        # Get structured LLM response (this returns a TripletList Pydantic object)
+        response = structured_llm.invoke(prompt)
         
-        # Extract triplets from response
-        triplets = response.get("triplets", [])
+        # Extract triplets and summary from Pydantic object
+        triplets = response.triplets
+        graph_summary = response.graph_summary
         
-        # Validate and ensure evidence_id is set correctly
+        # Convert to list of dicts for the graph store
         for triplet in triplets:
-            if not triplet.get("evidence_id"):
-                 logger.warning(f"Triplet missing evidence_id: {triplet}")
-                 continue
-
-            all_triplets.append(Triplet(
-                subject=triplet["subject"],
-                relation=triplet["relation"],
-                object=triplet["object"],
-                evidence_id=triplet["evidence_id"],
-            ))
+            all_triplets.append({
+                "subject": triplet.subject,
+                "relation": triplet.relation,
+                "object": triplet.object,
+                "evidence_id": triplet.evidence_id,
+            })
         
-        logger.info(f"Generated {len(all_triplets)} triplets in total")
+        logger.info(f"Generated {len(all_triplets)} triplets")
         
     except Exception as e:
-        logger.error(f"Error generating triplets in bulk: {e}")
-        # Fallback: try without structured output
-        try:
-            logger.warning("Falling back to JSON parsing")
-            response = llm.invoke(prompt)
-            response_text = response.content.strip()
-            
-            # Try to extract JSON from response
-            if "```" in response_text:
-                start = response_text.find("[")
-                end = response_text.rfind("]") + 1
-                if start != -1 and end > start:
-                    response_text = response_text[start:end]
-                # Check for wrapped json block specifically 
-                elif "```json" in response_text:
-                     start = response_text.find("{")
-                     end = response_text.rfind("}") + 1
-                     response_text = response_text[start:end]
-
-            # Try parsing as object with 'triplets' key first
-            try:
-                data = json.loads(response_text)
-                if isinstance(data, dict) and "triplets" in data:
-                    triplets = data["triplets"]
-                elif isinstance(data, list):
-                    triplets = data
-                else:
-                    raise ValueError("Response is not a list or dict with 'triplets' key")
-            except json.JSONDecodeError:
-                # If simple parse fails, try to find the list or dict again
-                 start_list = response_text.find("[")
-                 start_dict = response_text.find("{")
-                 
-                 if start_list != -1 and (start_dict == -1 or start_list < start_dict):
-                      end = response_text.rfind("]") + 1
-                      triplets = json.loads(response_text[start_list:end])
-                 elif start_dict != -1:
-                      end = response_text.rfind("}") + 1
-                      data = json.loads(response_text[start_dict:end])
-                      triplets = data.get("triplets", [])
-                 else:
-                      raise
-
-            
-            for triplet in triplets:
-                if all(key in triplet for key in ["subject", "relation", "object", "evidence_id"]):
-                    all_triplets.append(Triplet(
-                        subject=triplet["subject"],
-                        relation=triplet["relation"],
-                        object=triplet["object"],
-                        evidence_id=triplet["evidence_id"],
-                    ))
-            logger.info(f"Fallback: Generated {len(all_triplets)} triplets")
-        except Exception as fallback_error:
-            logger.error(f"Fallback parsing also failed: {fallback_error}")
+        logger.error(f"Structured output failed in graph creator: {e}")
+        # Very minimal fallback
+        all_triplets = []
+        graph_summary = "Error during triplet generation."
     
-    return all_triplets
+    return all_triplets, graph_summary

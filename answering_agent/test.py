@@ -10,7 +10,7 @@ logging.basicConfig(
 )
 
 # Import the main entry point
-from main import answer
+from answering_agent.main import answer
 
 def run_test():
     # --- 1. SETUP PATHS ---

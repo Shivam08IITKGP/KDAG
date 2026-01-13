@@ -46,11 +46,17 @@ def load_features(features_csv: str, labels_csv: str = "train.csv") -> tuple[np.
     # The 'label' column in train.csv is the ground truth
     df_merged = df_features.copy()
     
+    # Drop any rows that have NaN in the features (helps with corrupted CSVs)
+    initial_len = len(df_merged)
+    df_merged = df_merged.dropna(subset=[c for c in df_merged.columns if c.startswith("emb_") or c in ["llm_prediction", "contradiction_max"]])
+    if len(df_merged) < initial_len:
+        print(f"Dropped {initial_len - len(df_merged)} rows containing NaN values.")
+    
     # Get labels for each row_index
     labels = []
-    for idx in df_features["row_index"]:
+    for idx in df_merged["row_index"]:
         if idx < len(df_labels):
-            label_str = df_labels.iloc[idx]["label"]
+            label_str = df_labels.iloc[int(idx)]["label"]
             # Handle lowercase labels: "consistent" -> 1, "contradict" -> 0
             if isinstance(label_str, str):
                 labels.append(1 if label_str.lower() == "consistent" else 0)
@@ -247,8 +253,8 @@ def save_model(model, path: str, model_name: str):
 
 def main():
     parser = argparse.ArgumentParser(description="Train ML models on extracted features")
-    parser.add_argument("--input", "-i", default="features_output.csv", help="Input CSV with features")
-    parser.add_argument("--labels", "-l", default="train.csv", help="CSV with ground truth labels")
+    parser.add_argument("--input", "-i", default="output/features_output.csv", help="Input CSV with features")
+    parser.add_argument("--labels", "-l", default="utils/train.csv", help="CSV with ground truth labels")
     parser.add_argument("--output-dir", "-o", default="ML_answering_final", help="Output directory for models")
     parser.add_argument("--test-size", "-t", type=float, default=0.2, help="Test set fraction")
     parser.add_argument("--all", action="store_true", help="Train and evaluate on all samples (no split)")
