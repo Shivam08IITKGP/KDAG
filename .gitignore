@@ -1,28 +1,10 @@
-# Python
 __pycache__/
-*.py[cod]
-*$py.class
-.venv/
-build/
-dist/
-*.egg-info/
-
-# Environment
-.env
-
-# Logs
+*.pyc
+*.pyo
+*.log
 logs/
-
-# Data & Outputs
-graph_creator_agent/graph/*.graphml
-output/
-*.csv
-!utils/test.csv
-!utils/train.csv
-
-# macOS
 .DS_Store
-
-# IDEs
-.vscode/
-.idea/
+*.egg-info/
+*.env
+uv.lock
+.venv/
