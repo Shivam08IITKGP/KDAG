@@ -1,6 +1,0 @@
-2026-01-10 16:20:26 | INFO     | root | setup_logging:72 | Logging initialized. Log file: logs/run_20260110_162026.log
-2026-01-10 16:20:26 | INFO     | __main__ | main:169 | Starting Evidence-Grounded Backstory Consistency System
-2026-01-10 16:20:26 | INFO     | __main__ | read_train_data:86 | Reading first 2 rows from train.csv
-2026-01-10 16:20:26 | INFO     | __main__ | read_train_data:89 | Loaded 2 rows from train.csv
-2026-01-10 16:20:26 | INFO     | __main__ | main:175 | Processing 2 backstories
-2026-01-10 16:20:26 | WARNING  | __main__ | main:198 | Book 'In Search of the Castaways' not found in predefined paths.

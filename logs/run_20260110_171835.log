@@ -1,4 +1,0 @@
-2026-01-10 17:18:35 | INFO     | root | setup_logging:72 | Logging initialized. Log file: logs/run_20260110_171835.log
-2026-01-10 17:18:35 | INFO     | __main__ | main:124 | Starting Evidence-Grounded Backstory Consistency System
-2026-01-10 17:18:35 | INFO     | __main__ | read_input_file:86 | Reading input file: input.txt
-2026-01-10 17:18:35 | ERROR    | __main__ | main:133 | Error reading input file: [Errno 2] No such file or directory: 'input.txt'

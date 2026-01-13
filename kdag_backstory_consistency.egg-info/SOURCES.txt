@@ -1,7 +1,0 @@
-README.md
-pyproject.toml
-kdag_backstory_consistency.egg-info/PKG-INFO
-kdag_backstory_consistency.egg-info/SOURCES.txt
-kdag_backstory_consistency.egg-info/dependency_links.txt
-kdag_backstory_consistency.egg-info/requires.txt
-kdag_backstory_consistency.egg-info/top_level.txt
